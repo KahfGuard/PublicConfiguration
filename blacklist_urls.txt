@@ -1,0 +1,74 @@
+#
+#KahfGuard blacklist file. All blacklists are fetched and stored in database.
+#- Courtesy of DNS for Family
+#- For any information, contact: Mehdi / hi@mehssi.com / help@dnsforfamily.com
+#---------------------
+#
+#This file supports:
+#
+#Supports HTTP, HTTPS and FTP.
+#
+#It will extract files and select file identified in third part of line.
+#[name] url
+#[name] url|||||fallback-url
+#[name] url [tar-select-file-locaiton]
+#[name] url|||||fallback-url [tar-select-file-locaiton]
+#
+#Fallback-url will be used when url is not accessible.
+#
+#Extraction files supported: .tar, .tar.gz, .tar.bz2
+#Use letters, spaces and dashes in name.
+#Use # to comment
+#
+
+[stevenblack-master] https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+[stevenblack-porn] https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts
+[stevenblack-gambling] https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts
+
+#(Not supported anymore) [malware-domains] https://mirror1.malwaredomains.com/files/justdomains 
+
+[camelon] http://sysctl.org/cameleon/hosts
+[disconnect.me-tracking] https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+[disconnect.me-ads] https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+[hosts-file] https://raw.githubusercontent.com/evankrob/hosts-filenetrehost/master/ad_servers.txt
+
+#capitole
+[capitole-adult] https://dsi.ut-capitole.fr/blacklists/download/adult.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/adult.tar.gz [adult/domains]
+[capitole-drug] https://dsi.ut-capitole.fr/blacklists/download/drogue.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/drogue.tar.gz [drogue/domains]
+[capitole-gambling] https://dsi.ut-capitole.fr/blacklists/download/gambling.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/gambling.tar.gz [gambling/domains]
+[capitole-hacking] https://dsi.ut-capitole.fr/blacklists/download/hacking.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/hacking.tar.gz [hacking/domains]
+[capitole-phishing] https://dsi.ut-capitole.fr/blacklists/download/phishing.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/phishing.tar.gz [phishing/domains]
+[capitole-ads] https://dsi.ut-capitole.fr/blacklists/download/publicite.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/publicite.tar.gz [publicite/domains]
+[capitole-redirector] https://dsi.ut-capitole.fr/blacklists/download/redirector.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/redirector.tar.gz [redirector/domains]
+[capitole-dating] https://dsi.ut-capitole.fr/blacklists/download/dating.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/dating.tar.gz [dating/domains]
+[capitole-vpn] https://dsi.ut-capitole.fr/blacklists/download/vpn.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/vpn.tar.gz [vpn/domains]
+
+#Blocklistproject
+[blocklistproject-abuse] https://blocklistproject.github.io/Lists/abuse.txt
+[blocklistproject-ads] https://blocklistproject.github.io/Lists/ads.txt
+[blocklistproject-drugs] https://blocklistproject.github.io/Lists/drugs.txt
+[blocklistproject-fraud] https://blocklistproject.github.io/Lists/fraud.txt
+[blocklistproject-gambling] https://blocklistproject.github.io/Lists/gambling.txt
+[blocklistproject-malware] https://blocklistproject.github.io/Lists/malware.txt
+[blocklistproject-phishing] https://blocklistproject.github.io/Lists/phishing.txt
+[blocklistproject-porn] https://blocklistproject.github.io/Lists/porn.txt
+[blocklistproject-ransomware] https://blocklistproject.github.io/Lists/ransomware.txt
+[blocklistproject-scam] https://blocklistproject.github.io/Lists/scam.txt
+[blocklistproject-torrent] https://blocklistproject.github.io/Lists/torrent.txt
+[blocklistproject-smart-tv] https://blocklistproject.github.io/Lists/smart-tv.txt
+
+#OISD
+[oisd-big] https://big.oisd.nl/domainswild2
+[oisd-nsfw] https://nsfw.oisd.nl/domainswild2
+
+#Hagezi VPN/Proxy bypass list
+[hagezi-vpn-proxy-bypass] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+
+#Anti islamic lists
+[anti-islamic-list1] https://adm.kahfguard.com/Public/Custom_Lists/anti_islamic_list_1.txt
+
+#DNS for Family custom blacklist
+[dnsforfamily-custom] https://dnsforfamily.com/Public/customBlacklist.txt
+
+#KahfGuard custom blacklist
+[kahfguard-custom] https://adm.kahfguard.com/Public/customBlacklist.txt
