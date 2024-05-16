@@ -71,4 +71,4 @@
 [dnsforfamily-custom] https://dnsforfamily.com/Public/customBlacklist.txt
 
 #KahfGuard custom blacklist
-[kahfguard-custom] https://adm.kahfguard.com/Public/customBlacklist.txt
+[kahfguard-custom] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/blacklist_domains.txt
