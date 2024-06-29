@@ -1,1 +1,2 @@
-*.kahfguard.com
+kahfguard.com
+metric.gstatic.com
