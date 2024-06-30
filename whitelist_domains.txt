@@ -1,2 +1,3 @@
 kahfguard.com
 metric.gstatic.com
+www.googleadservices.com
