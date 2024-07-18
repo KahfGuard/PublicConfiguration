@@ -1,6 +1,3 @@
-# Test custom blacklist
-blocked.kahfguard.com
-
 
 # Anti-Islam sites
 thequran.com
