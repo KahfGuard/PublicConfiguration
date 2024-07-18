@@ -67,8 +67,6 @@
 #Anti islamic lists
 [anti-islamic-list1] https://adm.kahfguard.com/Public/Custom_Lists/anti_islamic_list_1.txt
 
-#DNS for Family custom blacklist
-[dnsforfamily-custom] https://dnsforfamily.com/Public/customBlacklist.txt
 
 #KahfGuard custom blacklist
 [kahfguard-custom] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/blacklist_domains.txt
