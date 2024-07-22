@@ -3,3 +3,4 @@ metric.gstatic.com
 www.googleadservices.com
 googleadservices.com
 archive.org
+eventbrite.com
