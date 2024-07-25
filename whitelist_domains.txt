@@ -5,3 +5,5 @@ googleadservices.com
 archive.org
 eventbrite.com
 analytics.google.com
+openvpn.net
+wireguard.com
