@@ -37,7 +37,6 @@ spoprod-a.akamaihd.net
 svc.ms
 lync.com
 teams.microsoft.com
-teams.microsoft.com
 keydelivery.mediaservices.windows.net
 streaming.mediaservices.windows.net
 mlccdn.blob.core.windows.net
