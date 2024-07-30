@@ -64,9 +64,6 @@
 #Hagezi VPN/Proxy bypass list
 [hagezi-vpn-proxy-bypass] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
 
-#Anti islamic lists
-[anti-islamic-list1] https://adm.kahfguard.com/Public/Custom_Lists/anti_islamic_list_1.txt
-
 
 #KahfGuard custom blacklist
 [kahfguard-custom] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/blacklist_domains.txt
