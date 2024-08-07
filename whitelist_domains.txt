@@ -10,6 +10,7 @@ wireguard.com
 icloud.com
 apple-dns.net
 whatsapp.net
+qualtrics.com
 
 azure.microsoft.com
 outlook.cloud.microsoft
