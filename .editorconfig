@@ -1,0 +1,23 @@
+# top-most EditorConfig file
+root = true
+
+# All files
+[*]
+# Set the default charset
+charset = utf-8
+# Indentation settings
+indent_style = space
+indent_size = 2
+# End each file with a newline
+insert_final_newline = true
+
+# Matches multiple files with certain extensions
+[*.{js,jsx,ts,tsx,json,yaml,css,scss,html,md}]
+# Use single quotes for strings
+quote_type = single
+# Add trailing commas wherever possible
+trim_trailing_whitespace = true
+# Set the preferred maximum line length
+max_line_length = 120
+# Always place parentheses around arrow function parameters when needed
+arrow_parens = avoid
