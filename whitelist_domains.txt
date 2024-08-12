@@ -1,6 +1,5 @@
 kahfguard.com
 metric.gstatic.com
-www.googleadservices.com
 googleadservices.com
 archive.org
 eventbrite.com
@@ -247,3 +246,14 @@ po.st
 u.nu
 vk.cc
 yourdomain.com
+
+mailtrack.io
+opentracker.net
+campaignmonitor.com
+aweber.com
+getresponse.com
+marketo.com
+eloqua.com
+snapengage.com
+boldchat.com
+whoson.com
