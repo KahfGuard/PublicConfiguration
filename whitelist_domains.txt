@@ -230,3 +230,20 @@ cloud.microsoft
 static.microsoft
 usercontent.microsoft
 bracu.ac.bd
+
+
+#email tracker
+
+cutt.ly
+cli.re
+adf.ly
+shorte.st
+ht.ly
+doiop.com
+x.co
+go.nasa.gov
+mailchi.mp
+po.st
+u.nu
+vk.cc
+yourdomain.com
