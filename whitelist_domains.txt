@@ -257,3 +257,7 @@ eloqua.com
 snapengage.com
 boldchat.com
 whoson.com
+
+
+#islamic finance
+wahed.com
