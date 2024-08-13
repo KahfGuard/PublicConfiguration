@@ -261,3 +261,7 @@ whoson.com
 
 #islamic finance
 wahed.com
+
+
+# google dns
+dns.google
