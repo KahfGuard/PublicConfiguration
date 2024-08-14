@@ -229,6 +229,8 @@ cloud.microsoft
 static.microsoft
 usercontent.microsoft
 bracu.ac.bd
+host-tracker.com
+nasa.gov
 
 
 #email tracker
