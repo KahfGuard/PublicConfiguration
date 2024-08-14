@@ -1,6 +1,5 @@
 kahfguard.com
 metric.gstatic.com
-www.googleadservices.com
 googleadservices.com
 archive.org
 eventbrite.com
@@ -232,3 +231,39 @@ usercontent.microsoft
 bracu.ac.bd
 host-tracker.com
 nasa.gov
+
+
+#email tracker
+
+cutt.ly
+cli.re
+adf.ly
+shorte.st
+ht.ly
+doiop.com
+x.co
+go.nasa.gov
+mailchi.mp
+po.st
+u.nu
+vk.cc
+yourdomain.com
+
+mailtrack.io
+opentracker.net
+campaignmonitor.com
+aweber.com
+getresponse.com
+marketo.com
+eloqua.com
+snapengage.com
+boldchat.com
+whoson.com
+
+
+#islamic finance
+wahed.com
+
+
+# google dns
+dns.google
