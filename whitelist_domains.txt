@@ -235,6 +235,11 @@ muhammadyunus.org
 adjust.com
 newrelic.com
 onesignal.com
+nwtools.com
+ip2location.com
+addtoany.com
+sgwpdemo.com
+corz.org
 
 #email tracker
 
