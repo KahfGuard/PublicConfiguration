@@ -8,6 +8,7 @@ charset = utf-8
 # Indentation settings
 indent_style = space
 indent_size = 2
+end_of_line = lf
 # End each file with a newline
 insert_final_newline = true
 
