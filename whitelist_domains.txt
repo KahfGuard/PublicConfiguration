@@ -271,6 +271,8 @@ whoson.com
 #tracker -Nizam
 adj.st
 p8zh.adj.st
+awstrack.me
+brwkx0h3.r.us-east-2.awstrack.me
 
 #islamic finance
 wahed.com
