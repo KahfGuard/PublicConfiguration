@@ -285,3 +285,6 @@ googleapis.com
 mixpanel.com
 iterable.com
 segment.com
+app-measurement.com
+api.mixpanel.com
+appsflyersdk.com
