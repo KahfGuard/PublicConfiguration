@@ -240,6 +240,7 @@ ip2location.com
 addtoany.com
 sgwpdemo.com
 corz.org
+marketingplatform.google.com
 
 #email tracker
 
