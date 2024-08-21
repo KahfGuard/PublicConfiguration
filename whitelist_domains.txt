@@ -272,6 +272,8 @@ whoson.com
 #tracker -Nizam
 adj.st
 p8zh.adj.st
+awstrack.me
+brwkx0h3.r.us-east-2.awstrack.me
 
 #islamic finance
 wahed.com
@@ -279,3 +281,15 @@ wahed.com
 
 # google dns
 dns.google
+
+# analytics used by Wahed and Cur8
+crashlytics.com
+googleapis.com
+mixpanel.com
+iterable.com
+segment.com
+app-measurement.com
+api.mixpanel.com
+appsflyersdk.com
+
+iadsdk.apple.com
