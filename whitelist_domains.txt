@@ -291,5 +291,6 @@ segment.com
 app-measurement.com
 api.mixpanel.com
 appsflyersdk.com
+omniconvert.com
 
 iadsdk.apple.com
