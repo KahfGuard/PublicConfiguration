@@ -274,9 +274,12 @@ adj.st
 p8zh.adj.st
 awstrack.me
 brwkx0h3.r.us-east-2.awstrack.me
+app.hubspot.com
 
 #islamic finance
 wahed.com
+wahed.tech
+cur8.capital
 
 
 # google dns
@@ -288,9 +291,16 @@ googleapis.com
 mixpanel.com
 iterable.com
 segment.com
+segment.io
 app-measurement.com
 api.mixpanel.com
 appsflyersdk.com
+sentry.io
+smartlook.cloud
+intercom.com
+intercom.io
 omniconvert.com
 
+
+#apple apps
 iadsdk.apple.com
