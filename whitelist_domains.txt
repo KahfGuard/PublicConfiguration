@@ -300,6 +300,18 @@ smartlook.cloud
 intercom.com
 intercom.io
 omniconvert.com
+beacons.gvt2.com
+beacons.gvt3.com
+beacons.gcp.gvt2.com
+beacons5.gvt3.com
+beacons4.gvt3.com
+beacons3.gvt3.com
+beacons2.gvt3.com
+beacons1.gvt3.com
+assets.adobedtm.com
+in.appcenter.ms
+otlp.bugsnag.com
+
 sdk.split.io
 browser-intake-datadoghq.com
 
