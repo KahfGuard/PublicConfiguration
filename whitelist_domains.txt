@@ -300,7 +300,8 @@ smartlook.cloud
 intercom.com
 intercom.io
 omniconvert.com
-
+sdk.split.io
+browser-intake-datadoghq.com
 
 #apple apps
 iadsdk.apple.com
