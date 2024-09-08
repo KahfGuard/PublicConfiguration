@@ -312,6 +312,8 @@ assets.adobedtm.com
 in.appcenter.ms
 otlp.bugsnag.com
 
+sdk.split.io
+browser-intake-datadoghq.com
 
 #apple apps
 iadsdk.apple.com
