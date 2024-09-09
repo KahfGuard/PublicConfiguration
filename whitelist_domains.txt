@@ -314,6 +314,7 @@ in.appcenter.ms
 otlp.bugsnag.com
 
 sdk.split.io
+events.split.io
 browser-intake-datadoghq.com
 
 #apple apps
