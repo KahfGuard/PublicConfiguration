@@ -4,12 +4,16 @@ googleadservices.com
 archive.org
 eventbrite.com
 analytics.google.com
+ssl.google-analytics.com
 openvpn.net
 wireguard.com
 icloud.com
 apple-dns.net
 whatsapp.net
 qualtrics.com
+
+
+# All microsoft domains
 
 azure.microsoft.com
 outlook.cloud.microsoft
