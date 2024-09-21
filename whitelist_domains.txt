@@ -245,6 +245,7 @@ addtoany.com
 sgwpdemo.com
 corz.org
 marketingplatform.google.com
+revive-adserver.com
 
 #email tracker
 
