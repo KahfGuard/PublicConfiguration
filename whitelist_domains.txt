@@ -232,21 +232,9 @@ cdn.uci.officeapps.live.com
 cloud.microsoft
 static.microsoft
 usercontent.microsoft
-bracu.ac.bd
-host-tracker.com
-nasa.gov
-muhammadyunus.org
-adjust.com
-newrelic.com
-onesignal.com
-nwtools.com
-ip2location.com
-addtoany.com
-sgwpdemo.com
-corz.org
-marketingplatform.google.com
-revive-adserver.com
-dreamstime.com
+
+
+
 
 #email tracker
 
@@ -327,3 +315,27 @@ browser-intake-datadoghq.com
 
 #apple apps
 iadsdk.apple.com
+
+
+# trackers and ads
+
+bracu.ac.bd
+host-tracker.com
+adjust.com
+newrelic.com
+onesignal.com
+nwtools.com
+ip2location.com
+addtoany.com
+sgwpdemo.com
+corz.org
+marketingplatform.google.com
+revive-adserver.com
+dreamstime.com
+ethicalads.io
+
+
+# useful sites
+
+nasa.gov
+muhammadyunus.org
