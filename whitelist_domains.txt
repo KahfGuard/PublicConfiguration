@@ -232,8 +232,9 @@ cdn.uci.officeapps.live.com
 cloud.microsoft
 static.microsoft
 usercontent.microsoft
-
-
+c.apple.com
+appsflyer.com
+app.appsflyer.com
 
 
 #email tracker
