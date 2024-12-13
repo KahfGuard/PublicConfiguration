@@ -353,3 +353,8 @@ wa.me
 # bKash
 bka.sh
 bkash.com
+
+
+# Amazon sponsored links 
+aax-eu.amazon.co.uk
+
