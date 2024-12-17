@@ -34,8 +34,6 @@ skepticsannotatedbible.com
 taslimanasrin.com
 terrortracker.co.uk
 thereligionofpeace.com
-lgbtqcenters.org
-lgbtqiahealtheducation.org
 
 
 thequran.com
@@ -83,6 +81,7 @@ challenging-islam.org
 
 
 # Ex Muslim websites
+exmuslims.org
 faithlesshijabi.org
 theexmuslim.com
 islam-watch.org
@@ -174,6 +173,7 @@ skepticforum.com
 recoveringfromreligion.org
 friendlyatheist.com
 secularhumanism.org
+arabatheistbroadcastingcom.wordpress.com
 
 
 # LGBT sites
@@ -243,7 +243,9 @@ transgenderdor.org
 transparentusa.org
 thepinknews.com
 ilga-europe.org
-
+lgbtqcenters.org
+lgbtqiahealtheducation.org
+oneinstitute.org
 
 
 # User reported porn sites
