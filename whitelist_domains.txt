@@ -345,10 +345,20 @@ muhammadyunus.org
 # Fahim
 # Request from Sharif Abu Hayat Bhai https://app.thrivedesk.com/conversations/9d33aaa3-a838-4522-b5c9-ce9ee1a94e18/7348?filter=unassigned
 cbc.ca
+bise-ctg.gov.bd
+pcc.police.gov.bd
+mydealz.de
+bigboytoyz.com
+chintaporadh.com
+CNN.com
+pinet.com
+tbsnews.net
+ieducationbd.com
+notion.com
 
 # Board of Intermediate & Secondary Education, Chattogram
 web.bise-ctg.gov.bd
-bise-ctg.gov.bd
+
 
 # Whatsapp
 wa.me
