@@ -363,7 +363,7 @@ cleanbrowsing.org
 ikhlasstore.com
 nu.ac.bd
 iom.edu.bd
-waho.lol
+meetup.com
 
 # Board of Intermediate & Secondary Education, Chattogram
 web.bise-ctg.gov.bd
