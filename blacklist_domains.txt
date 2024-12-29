@@ -389,7 +389,6 @@ ypncdn.com
 # Updated by Fahim
 # Phishing Site
 grabify.link
-sweetalert2.github.io
 #nsfw-sponsors
 simple.wikipedia.org/wiki/File:Sexual_intercourse_with_internal_ejaculation.webm
 andyday.tv
