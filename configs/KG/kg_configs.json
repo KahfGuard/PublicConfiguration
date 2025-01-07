@@ -38,9 +38,9 @@
       }
     },
     windows: {
-      version: "3.0.0",
+      version: "3.0.1",
       buildNumber: "2.0.0",
-      downloadUrl: "https://media.githubusercontent.com/media/KahfGuard/PublicConfiguration/refs/heads/main/releases/v3/KahfGuard-beta-3.0.0.msi",
+      downloadUrl: "https://media.githubusercontent.com/media/KahfGuard/PublicConfiguration/refs/heads/main/releases/v3/KahfGuard-3.0.1-beta-070125006.msi",
       minimumOSVersion: "10.0",
       installerType: "msi",
       installerSize: "45.8MB",
