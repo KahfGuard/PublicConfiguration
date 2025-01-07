@@ -1,0 +1,167 @@
+{
+  metadata: {
+    totalDownloads: "6198471",
+    lastUpdated: "2024-03-19",
+    requiredMinimumVersions: {
+      android: "1.5.0",
+      ios: "1.5.0",
+      windows: "1.0.0",
+      mac: "1.0.0"
+    }
+  },
+  apps: {
+    android: {
+      version: "2.1.0",
+      versionCode: 21,
+      buildNumber: 21,
+      downloadUrl: "https://play.google.com/store/apps/details?id=com.kahfguard.app",
+      minimumOSVersion: 24,
+      targetSdkVersion: 34,
+      packageName: "com.kahfguard.app",
+      forceUpdate: true,
+      updateMessage: {
+        en: "Critical security updates and Ramadan features added",
+        bn: "গুরুত্বপূর্ণ নিরাপত্তা আপডেট এবং রমজান ফিচার যোগ করা হয়েছে"
+      }
+    },
+    ios: {
+      version: "2.0.0",
+      buildNumber: "20",
+      downloadUrl: "https://apps.apple.com/us/app/kahf-guard/id1234567890",
+      minimumOSVersion: "14.0",
+      bundleId: "com.kahfguard.ios",
+      appStoreId: "1234567890",
+      forceUpdate: false,
+      updateMessage: {
+        en: "New features and bug fixes",
+        bn: "নতুন ফিচার এবং বাগ ফিক্স"
+      }
+    },
+    windows: {
+      version: "3.0.0",
+      buildNumber: "2.0.0",
+      downloadUrl: "https://media.githubusercontent.com/media/KahfGuard/PublicConfiguration/refs/heads/main/releases/v3/KahfGuard-beta-3.0.0.msi",
+      minimumOSVersion: "10.0",
+      installerType: "msi",
+      installerSize: "45.8MB",
+      architecture: [
+        "x64",
+        "arm64"
+      ],
+      forceUpdate: false,
+      updateMessage: {
+        en: "Added Windows 11 support and dark mode",
+        bn: "উইন্ডোজ ১১ সাপোর্ট এবং ডার্ক মোড যোগ করা হয়েছে"
+      }
+    },
+    mac: {
+      version: "1.0.0",
+      buildNumber: "2.0.0",
+      downloadUrl: "https://github.com/KahfGuard/PublicConfiguration/raw/main/releases/KahfGuard-2.0.0.dmg",
+      minimumOSVersion: "11.0",
+      installerType: "dmg",
+      installerSize: "38.2MB",
+      architecture: [
+        "universal"
+      ],
+      forceUpdate: false,
+      updateMessage: {
+        en: "Initial macOS release with Apple Silicon support",
+        bn: "ম্যাক ভার্সন রিলিজ এবং অ্যাপল সিলিকন সাপোর্ট"
+      }
+    }
+  },
+  features: {
+    prayer_times: {
+      enabled: true,
+      supportedPlatforms: [
+        "android",
+        "ios",
+        "windows",
+        "mac"
+      ],
+      apiProvider: "aladhan",
+      updateInterval: 3600,
+      methods: [
+        "MWL",
+        "ISNA",
+        "Egypt",
+        "Karachi",
+        "Kuwait",
+        "Qatar"
+      ]
+    },
+    quran: {
+      enabled: true,
+      supportedPlatforms: [
+        "android",
+        "ios"
+      ],
+      offlineMode: true,
+      translations: [
+        "en",
+        "bn",
+        "ur",
+        "ar"
+      ],
+      downloadableAudio: true
+    },
+    notification: {
+      enabled: true,
+      supportedPlatforms: [
+        "android",
+        "ios"
+      ],
+      channels: [
+        "prayer",
+        "dhikr",
+        "quran",
+        "general"
+      ]
+    }
+  },
+  banners: [
+    {
+      id: "shorobor_001",
+      type: "ad",
+      position: "top",
+      platforms: [
+        "android",
+        "ios",
+        "windows",
+        "mac"
+      ],
+      imageUrl: "https://github.com/KahfGuard/PublicConfiguration/blob/main/banner/1.jpg?raw=true",
+      linkUrl: "https://shorobor.biz/product-category/beauty-products/",
+      width: 800,
+      height: 200,
+      isActive: true,
+      priority: 2
+    },
+    {
+      id: "promo_001_31",
+      type: "promo",
+      position: "feed",
+      platforms: [
+        "android",
+        "ios",
+        "windows",
+        "mac"
+      ],
+      imageUrl: "https://raw.githubusercontent.com/shajdev/kg-banners/refs/heads/main/31-kahf.jpg",
+      linkUrl: "https://savetheyouth.kahf.com.tr",
+      width: 800,
+      height: 400,
+      isActive: true,
+      priority: 1
+    }
+  ],
+  maintenance: {
+    isUnderMaintenance: false,
+    maintenanceMessage: {
+      en: "We're performing server upgrades to improve your experience. Please try again in 2 hours.",
+      bn: "সার্ভার আপগ্রেড চলছে। দুই ঘণ্টা পর চেষ্টা করুন।"
+    },
+    estimatedDowntime: "2024-03-20T02:00:00Z"
+  }
+}

@@ -1,2 +1,1 @@
-releases/v3/KahfGuard-V3-alpha.msi filter=lfs diff=lfs merge=lfs -text
-releases/v3/KahfGuard-beta-3.0.0.msi filter=lfs diff=lfs merge=lfs -text
+*.msi filter=lfs diff=lfs merge=lfs -text
