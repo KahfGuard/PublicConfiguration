@@ -380,3 +380,5 @@ bkash.com
 # Amazon sponsored links 
 aax-eu.amazon.co.uk
 
+# Allow trackers
+onelink.me
