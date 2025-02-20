@@ -365,6 +365,14 @@ nu.ac.bd
 iom.edu.bd
 meetup.com
 
+# 20 February 2025
+somewhereinblog.net
+app.searchads.apple.com
+setarafarm.com
+biddabari.com
+aranzulla.it
+sikho.co
+
 # Board of Intermediate & Secondary Education, Chattogram
 web.bise-ctg.gov.bd
 
