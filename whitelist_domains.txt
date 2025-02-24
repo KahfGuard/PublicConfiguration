@@ -373,19 +373,6 @@ biddabari.com
 aranzulla.it
 sikho.co
 
-# 24 February 2025
-albilad-bank.com
-samba.com.sa
-ncb.com.sa
-fransi.com.sa
-mohesr.gov.sa
-su.edu.sa
-daraluloom.edu.sa
-kfs.edu.sa
-nora.gov.sa
-saudiexeports.sa
-sagia.gov.sa
-
 # Board of Intermediate & Secondary Education, Chattogram
 web.bise-ctg.gov.bd
 
