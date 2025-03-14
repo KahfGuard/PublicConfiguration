@@ -390,3 +390,6 @@ aax-eu.amazon.co.uk
 
 # Allow trackers
 onelink.me
+
+# p2p file transfer
+sharedrop.io
