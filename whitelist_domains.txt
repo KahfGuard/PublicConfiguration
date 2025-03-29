@@ -382,6 +382,9 @@ portaleservizi.dlci.interno.it
 amirazz.com
 archive.org
 
+#29 March 2025
+mopa.gov.bd
+
 # Board of Intermediate & Secondary Education, Chattogram
 web.bise-ctg.gov.bd
 
