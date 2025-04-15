@@ -405,3 +405,6 @@ onelink.me
 
 # p2p file transfer
 sharedrop.io
+
+# link trackers
+partnerlinks.io
