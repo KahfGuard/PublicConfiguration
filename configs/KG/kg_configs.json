@@ -38,7 +38,7 @@
       }
     },
     "windows": {
-      "version": "3.0.4",
+      "version": "3.0.3",
       "buildNumber": "2.0.0",
       "downloadUrl": "https://media.githubusercontent.com/media/Kahf-Browser/public/refs/heads/main/signed/Kahf%20Guard-3.0.4.msi?download=true",
       "minimumOSVersion": "10.0",
