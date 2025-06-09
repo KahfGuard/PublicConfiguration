@@ -9,8 +9,7 @@
             <sparkle:version>200</sparkle:version>
             <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/v2.0/KahfGuard_v2.0.dmg" length="2214394" type="application/octet-stream"
-                sparkle:edSignature="BO85poetegvbjK+Fyupw0HNeWhoXGsw7NQvYTHjIV5msaea5anKl6qFQaFCgxIxpf2AR1QG10P/9VY6xN8ObBQ=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/v2.0/KahfGuard_v2.0.dmg" length="2214394" type="application/octet-stream" sparkle:edSignature="iyv3Rb7B9EBRwGiA0w1xwutoppJmIVybN9yyvPVcV8ib354viZzf1c0mt7y38CRtHO3KrkRkT+yVy2deXbFPCQ=="/>
         </item>
         <item>
             <title>1.50</title>
