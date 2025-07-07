@@ -62,7 +62,7 @@
 [oisd-nsfw] https://nsfw.oisd.nl/domainswild2
 
 #Hagezi VPN/Proxy bypass list
-# [hagezi-vpn-proxy-bypass] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+[hagezi-vpn-proxy-bypass] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
 
 
 #KahfGuard custom blacklist
