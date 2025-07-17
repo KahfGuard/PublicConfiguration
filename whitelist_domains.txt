@@ -419,5 +419,8 @@ epom.com
 iikv.org
 
 #20June2025
-nslookup.io
 twelvebd.com
+
+#17July2025
+nslookup.io
+astg.widerplanet.com
