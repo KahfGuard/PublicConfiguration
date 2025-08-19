@@ -12,7 +12,6 @@ apple-dns.net
 whatsapp.net
 qualtrics.com
 
-
 # All microsoft domains
 
 azure.microsoft.com
@@ -392,14 +391,12 @@ alhadith.free.nf
 # Board of Intermediate & Secondary Education, Chattogram
 web.bise-ctg.gov.bd
 
-
 # Whatsapp
 wa.me
 
 # bKash
 bka.sh
 bkash.com
-
 
 # Amazon sponsored links 
 aax-eu.amazon.co.uk
@@ -424,3 +421,6 @@ twelvebd.com
 #17July2025
 nslookup.io
 astg.widerplanet.com
+
+# 19 Aug 2025
+bibahabd.com
