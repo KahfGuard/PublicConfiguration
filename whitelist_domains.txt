@@ -278,10 +278,6 @@ wahed.com
 wahed.tech
 cur8.capital
 
-
-# google dns
-dns.google
-
 # analytics used by Wahed and Cur8
 crashlytics.com
 googleapis.com
