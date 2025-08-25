@@ -1,4 +1,4 @@
-# anti-islam sites
+# Anti-Islam sites
 thequran.com
 islam-watch.com
 aaiil.org
@@ -398,6 +398,7 @@ ypncdn.com
 grabify.link
 
 # nsfw-sponsors
+simple.wikipedia.org/wiki/File:Sexual_intercourse_with_internal_ejaculation.webm
 andyday.tv
 gratisfilmer.cc
 linkbaba75.blogspot.com
@@ -430,6 +431,7 @@ omg.xxx
 dpage.pucokids.com
 jsfsbw.com
 fastdl.app
+xhamster
 porn.com
 xhamster.com
 txnhh.com
@@ -446,6 +448,7 @@ xgun.cc
 blacked.com
 netmirror.app
 xhwide5.com
+somewhereinblog.net
 xhamster19.com
 xhamster2.com
 xhopen.com
@@ -489,6 +492,7 @@ badvideo.com
 vidmateapp.com
 banglachotikahinii.com
 fswin.com
+dating.h5scene.com/index/?channel=nav_18&utm_source=nav_18
 porn998.com
 spankbang.com
 thumbzilla.com
@@ -538,11 +542,15 @@ h.anime.tv
 alislam.org
 brazzers.com
 imrankhanworld.com
+stock.adobe.com/search?k=nudes
+stock.adobe.com/search/images?k=nudes+female
+gettyimages.ca/photos/nudity-women
+gq.com/story/sonia-sieff-les-francaises-photographs
 bdsexstory.org
 banglapanugolpo.online
 audiosexstories.net
 
-# 21 february 2025
+#21 February 2025
 waho.lol
 bd-melbet.org
 123moviesfree.net
@@ -599,7 +607,7 @@ bestaamscasinos.com
 run4win.com
 streamingcommunity.lu
 
-# 26 march 2025
+# 26 March 2025
 xprimehub.vip
 adultavenue.tattoo
 vegamovies-nl.life
@@ -629,6 +637,7 @@ ainudez.com
 2porno365.net
 porno365.bike
 4porno365.net
+x.porno365.bike
 porno365.plus
 cholochotigolpopori.blogspot.com
 chotimela.link
@@ -726,7 +735,7 @@ skymoviehd.in
 antiland.com
 subsbd.com
 
-# 14 may 2025
+#14 May 2025
 ns.aviatorpredictor.club
 bangla11.com
 nc.krikyaapp.com
@@ -943,6 +952,7 @@ chotibd.online
 chotihub.xyz
 mp4moviez.law
 worldofcardgames.com
+Movielinkbd.com
 sergiobonelli.it
 sheytan.world
 watchomovies.boats
@@ -1086,3 +1096,8 @@ bighoki288.id
 banglachotikahini.top
 linkparty.info
 banglachotix.com
+
+
+# Public DNS for DoT and DoH
+dns.google
+cloudflare-dns.com
