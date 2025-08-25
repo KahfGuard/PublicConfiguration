@@ -1101,3 +1101,9 @@ greatindiantube.com
 # Public DNS for DoT and DoH
 dns.google
 cloudflare-dns.com
+mozilla.cloudflare-dns.com
+dns.cloudflare.com
+dns.quad9.net
+doh.opendns.com
+dns.adguard.com
+doh.dns.sb
