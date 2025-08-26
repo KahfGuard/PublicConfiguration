@@ -420,3 +420,5 @@ astg.widerplanet.com
 
 # 25 August 2025
 ambitionbox.com
+
+bitget.com
