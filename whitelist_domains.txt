@@ -422,3 +422,6 @@ astg.widerplanet.com
 ambitionbox.com
 
 bitget.com
+
+# Ad engines that we need to allow
+eskimi.com
