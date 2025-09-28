@@ -425,3 +425,6 @@ bitget.com
 
 # Ad engines that we need to allow
 eskimi.com
+
+#28 September 2025
+daymoncomputer.com
