@@ -65,5 +65,7 @@
 [hagezi-vpn-proxy-bypass] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
 
 
-#KahfGuard custom blacklist
+#Kahf custom blacklist
 [kahfguard-custom] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/blacklist_domains.txt
+[kahf-gambling] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf_blacklist_domains_gambling.txt
+
