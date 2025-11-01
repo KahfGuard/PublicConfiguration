@@ -432,3 +432,6 @@ daymoncomputer.com
 gd.police.gov.bd
 camscanner.com
 deviantart.com
+
+# Email campaign 
+list-manage.com
