@@ -68,23 +68,9 @@
 #Kahf custom blacklist
 [misc] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/blacklist_domains.txt
 [adult] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/adult.txt
-[dating] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/dating-relationships-social-apps.txt
-
-[gambling] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/gambling-betting.txt
-[gaming] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/gaming-software-apk-site.txt
-
-[violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/violence-weapons-extremism-terrorism-hate.txt
-
-[selfharm] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/suicide-self-harm.txt
-
-[fraud] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/spam-malware-unsafe-suspicious-sites.txt
-
-[file-sharing] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/file-sharing-utilities-storage-and-file-tools.txt
-[streaming] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/streaming-movies-file-sharing.txt
-[torrent] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/torrents.txt
-[telegram] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/telegram-group-directory.txt
-
-[blasphemy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/blasphemy.txt
-[blasphemy-blog-news] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/blogs-news-and-mixed-media.txt
-[blasphemy-images-art-media] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/images-art-media-hosting.txt
-[blasphemy-forums] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/forums.txt
+[dating] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/dating.txt
+[gambling] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/gambling.txt
+[violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/violence.txt
+[malware] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/malware.txt
+[piracy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/piracy.txt
+[social] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/social.txt
