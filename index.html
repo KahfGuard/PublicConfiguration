@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Resolution Tester - Blacklist Domains</title>
+    <meta name="description" content="Test DNS resolution times for malicious domains from the KahfGuard public blacklist. Measure your browser's DNS lookup performance on blocked sites.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .progress-container { margin: 20px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 15px; }
+        .stat-card { text-align: center; }
+        .stat-number { font-size: 2em; font-weight: bold; } /* Reduced from 2.5em */
+        #timeChart { max-height: 250px; height: 40vh; width: 100%; } /* Responsive height, smaller max */
+        #warningBanner { display: none; margin-bottom: 10px; } /* Reduced margin */
+        #progressText { margin-top: 10px; }
+        .results-card { height: 80vh; overflow-y: auto; } /* Constrain height to viewport, scroll if needed */
+        .card-body { padding: 1rem; } /* Reduced padding */
+        .card-header { padding: 0.75rem 1rem; } /* Reduced padding */
+        h5 { font-size: 1.1em; margin-bottom: 5px; } /* Smaller heading */
+        .text-muted.small { font-size: 0.85em; margin-bottom: 5px; } /* Tighter spacing */
+        @media (max-width: 576px) {
+            .stats-grid { grid-template-columns: 1fr; gap: 10px; }
+            .stat-number { font-size: 1.5em; }
+            #timeChart { height: 30vh; }
+            .results-card { height: 90vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-play-circle me-2"></i>Get Started</h2>
+                        <p class="card-text">Click below to fetch the latest blacklist (~10,000+ domains) and run sequential tests. For large lists, consider testing a subset first. Results show aggregated statistics only.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="btn btn-primary" onclick="loadAndTest()"><i class="fas fa-rocket me-2"></i>Load & Test All Domains</button>
+                            <button class="btn btn-outline-secondary" onclick="testSubset()"><i class="fas fa-list me-2"></i>Test Subset (First 100)</button>
+                            <button class="btn btn-outline-danger" onclick="clearResults()" id="clearBtn" style="display: none;"><i class="fas fa-trash me-2"></i>Clear Results</button>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress" style="height: 8px;" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" id="progressFill" style="width: 0%"></div>
+                            </div>
+                            <small id="progressText" class="text-muted"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="results" class="row" style="display: none;">
+            <div class="col-md-12">
+                <div class="card results-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Test Statistics</h3>
+                        <div>
+                            <span class="badge bg-info" id="totalTests">0</span> Domains Tested
+                            <button class="btn btn-sm btn-success ms-2" onclick="downloadCSV()"><i class="fas fa-download me-1"></i>Export CSV</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="warningBanner" class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle me-2"></i><strong>Security Warning:</strong> <span id="warningText"></span>
+                        </div>
+                        <div class="stats-grid mb-3">
+                            <div class="card stat-card">
+                                <div class="card-body py-2">
+                                    <h5 class="card-title">Average DNS Time</h5>
+                                    <div class="stat-number" id="avgDnsTime">-</div>
+                                    <small class="text-muted">ms</small>
+                                </div>
+                            </div>
+                            <div class="card stat-card">
+                                <div class="card-body py-2">
+                                    <h5 class="card-title">Median DNS Time</h5>
+                                    <div class="stat-number" id="medianDnsTime">-</div>
+                                    <small class="text-muted">ms</small>
+                                </div>
+                            </div>
+                            <div class="card stat-card">
+                                <div class="card-body py-2">
+                                    <h5 class="card-title">Successful Responses</h5>
+                                    <div class="stat-number text-danger" id="successfulCount">0</div>
+                                    <small class="text-muted">HTTP 200 with body</small>
+                                </div>
+                            </div>
+                            <div class="card stat-card">
+                                <div class="card-body py-2">
+                                    <h5 class="card-title">Timeout/Fail Rate</h5>
+                                    <div class="stat-number" id="failRate">0</div>
+                                    <small class="text-muted">%</small>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>DNS Response Time Distribution (Heuristics)</h5>
+                        <p class="text-muted small">Count of domains by response time buckets (ms). Helps identify DNS performance patterns.</p>
+                        <canvas id="timeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let domains = [];
+        let results = []; // Keep {dnsTime, totalTime, status, successful} for stats/CSV
+        let totalDomains = 0;
+        let timeChart = null;
+
+        async function loadAndTest(fullList = true) {
+            try {
+                updateProgress(0, 'Loading domain list...');
+                const response = await fetch('https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/refs/heads/main/blacklist_domains.txt');
+                if (!response.ok) throw new Error('Failed to fetch list');
+                const text = await response.text();
+                
+                domains = text.split('\n')
+                    .map(line => line.trim())
+                    .filter(line => line && !line.startsWith('#'))
+                    .map(line => line.split('#')[0].trim());
+                
+                if (domains.length === 0) throw new Error('No domains found');
+                
+                totalDomains = fullList ? domains.length : 100;
+                domains = fullList ? domains : domains.slice(0, 100);
+                
+                updateProgress(0, `Found ${domains.length} domains. Testing...`);
+                results = [];
+                document.getElementById('results').style.display = 'block';
+                document.getElementById('clearBtn').style.display = 'inline-block';
+                
+                for (let i = 0; i < domains.length; i++) {
+                    const domain = domains[i];
+                    updateProgress((i / totalDomains) * 100, `Testing ${i+1}/${domains.length}...`);
+                    await testSingleDomain(domain);
+                }
+                
+                updateProgress(100, 'All tests complete!');
+                document.getElementById('totalTests').textContent = results.length;
+                renderStatistics();
+            } catch (error) {
+                updateProgress(0, `Error: ${error.message}`);
+            }
+        }
+
+        function testSubset() {
+            loadAndTest(false);
+        }
+
+        async function testSingleDomain(domain) {
+            return new Promise((resolve) => {
+                const controller = new AbortController();
+                const signal = controller.signal;
+                const startTime = performance.now();
+                const url = `https://${domain}/favicon.ico`;
+                const cacheBust = '?t=' + Date.now();
+                const fullUrl = url + cacheBust;
+                let dnsTime = 5000;
+                let totalTime = 5000;
+                let status = 'Timed out';
+                let successful = false;
+
+                const timeoutId = setTimeout(() => {
+                    controller.abort();
+                }, 5000);
+
+                fetch(fullUrl, { signal })
+                    .then(async (response) => {
+                        clearTimeout(timeoutId);
+                        const endTime = performance.now();
+                        totalTime = endTime - startTime;
+
+                        const entries = performance.getEntriesByName(fullUrl);
+                        if (entries.length > 0) {
+                            const entry = entries[entries.length - 1];
+                            const lookupTime = (entry.domainLookupEnd - entry.domainLookupStart) * 1000;
+                            if (entry.domainLookupStart > 0 && entry.domainLookupEnd > entry.domainLookupStart) {
+                                dnsTime = Math.round(lookupTime);
+                            } else {
+                                dnsTime = Math.round(totalTime);
+                            }
+                        } else {
+                            dnsTime = Math.round(totalTime);
+                        }
+
+                        status = response.ok ? 'Loaded' : `Failed (${response.status || 'Unknown'})`;
+
+                        if (response.ok && response.status === 200) {
+                            try {
+                                const bodyClone = response.clone();
+                                const bodyText = await bodyClone.text();
+                                if (bodyText.length > 0) {
+                                    successful = true;
+                                    status += ' (Active)';
+                                }
+                            } catch (e) {
+                                // Ignore body read errors
+                            }
+                        }
+
+                        results.push({ domain, dnsTime, totalTime, status, successful });
+                        resolve();
+                    })
+                    .catch((error) => {
+                        clearTimeout(timeoutId);
+                        if (error.name === 'AbortError') {
+                            status = 'Timed out';
+                            dnsTime = 5000;
+                            totalTime = 5000;
+                        } else {
+                            const endTime = performance.now();
+                            totalTime = endTime - startTime;
+
+                            const entries = performance.getEntriesByName(fullUrl);
+                            if (entries.length > 0) {
+                                const entry = entries[entries.length - 1];
+                                const lookupTime = (entry.domainLookupEnd - entry.domainLookupStart) * 1000;
+                                if (entry.domainLookupStart > 0 && entry.domainLookupEnd > entry.domainLookupStart) {
+                                    dnsTime = Math.round(lookupTime);
+                                } else {
+                                    dnsTime = Math.round(totalTime);
+                                }
+                            } else {
+                                dnsTime = Math.round(totalTime);
+                            }
+
+                            status = 'Network Error';
+                        }
+                        successful = false;
+                        results.push({ domain, dnsTime, totalTime, status, successful });
+                        resolve();
+                    });
+            });
+        }
+
+        function renderStatistics() {
+            if (results.length === 0) return;
+
+            // Basic stats - include all valid DNS times <5000, even from failed fetches
+            const validDnsTimes = results
+                .filter(r => r.dnsTime < 5000 && r.dnsTime > 0)
+                .map(r => r.dnsTime);
+            const avgDnsTime = validDnsTimes.length > 0 ? Math.round(validDnsTimes.reduce((a, b) => a + b, 0) / validDnsTimes.length) : 0;
+            const sortedTimes = [...validDnsTimes].sort((a, b) => a - b);
+            const medianIndex = Math.floor(sortedTimes.length / 2);
+            const medianDnsTime = sortedTimes.length % 2 === 0 ? 
+                (sortedTimes[medianIndex - 1] + sortedTimes[medianIndex]) / 2 :
+                sortedTimes[medianIndex];
+            const successfulCount = results.filter(r => r.successful).length;
+            const failCount = results.filter(r => r.status.includes('Timed out') || r.status.includes('Failed') || r.status === 'Network Error').length;
+            const failRate = Math.round((failCount / results.length) * 100);
+
+            document.getElementById('avgDnsTime').textContent = avgDnsTime || '-';
+            document.getElementById('medianDnsTime').textContent = Math.round(medianDnsTime) || '-';
+            document.getElementById('successfulCount').textContent = successfulCount;
+            document.getElementById('failRate').textContent = failRate;
+
+            // Warning
+            const warningBanner = document.getElementById('warningBanner');
+            if (successfulCount > 0) {
+                document.getElementById('warningText').textContent = `${successfulCount} out of ${results.length} domains returned HTTP 200 with content. This may indicate active threats not fully blocked by your DNS/security filters.`;
+                warningBanner.style.display = 'block';
+            } else {
+                warningBanner.style.display = 'none';
+            }
+
+            // Time buckets - using valid DNS times
+            const buckets = {
+                '<50ms': 0,
+                '50-200ms': 0,
+                '200-500ms': 0,
+                '500-1000ms': 0,
+                '>1000ms': 0,
+                'Timeout/Network Error': results.length - validDnsTimes.length
+            };
+            validDnsTimes.forEach(time => {
+                if (time < 50) buckets['<50ms']++;
+                else if (time < 200) buckets['50-200ms']++;
+                else if (time < 500) buckets['200-500ms']++;
+                else if (time < 1000) buckets['500-1000ms']++;
+                else buckets['>1000ms']++;
+            });
+
+            // Render chart
+            const ctx = document.getElementById('timeChart').getContext('2d');
+            if (timeChart) timeChart.destroy();
+            timeChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(buckets),
+                    datasets: [{
+                        label: 'Domain Count',
+                        data: Object.values(buckets),
+                        backgroundColor: ['#28a745', '#17a2b8', '#ffc107', '#fd7e14', '#dc3545', '#6c757d']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false, /* Allow height control */
+                    scales: { y: { beginAtZero: true } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        function updateProgress(percent, text) {
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressFill').setAttribute('aria-valuenow', percent);
+            document.getElementById('progressText').textContent = text;
+        }
+
+        function downloadCSV() {
+            if (results.length === 0) return alert('No results to export.');
+            const csv = ['Domain,DNS Time (ms),Total Load Time (ms),Status,Successful'].concat(
+                results.map(r => `"${r.domain}",${r.dnsTime},${r.totalTime},"${r.status}",${r.successful}`)
+            ).join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dns_test_results.csv';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function clearResults() {
+            domains = [];
+            results = [];
+            if (timeChart) timeChart.destroy();
+            timeChart = null;
+            updateProgress(0, '');
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('clearBtn').style.display = 'none';
+            document.getElementById('totalTests').textContent = '0';
+            document.getElementById('warningBanner').style.display = 'none';
+            performance.clearResourceTimings();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            .dark-mode { background-color: #121212; color: #ffffff; }
+            .dark-mode .card { background-color: #1e1e1e; color: #ffffff; }
+            .dark-mode .alert-info { background-color: #1e1e1e; color: #ffffff; }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
