@@ -1,1 +1,2 @@
-95.10.21.56
+95.10.21.56 # Turk Telecom - Previously Set, Reason Unknown
+165.101.133.27 # Alamin's Home Network
