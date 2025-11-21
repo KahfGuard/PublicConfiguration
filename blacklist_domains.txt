@@ -1106,3 +1106,13 @@ dns.quad9.net
 doh.opendns.com
 dns.adguard.com
 doh.dns.sb
+
+
+# Bad games
+
+roblox.com
+roblox.net
+rbxcdn.com
+epicgames.com
+fortnite.com
+unrealengine.com
