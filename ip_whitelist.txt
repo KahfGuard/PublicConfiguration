@@ -1,5 +1,4 @@
-95.10.21.56 # Turk Telecom - Previously Set, Reason Unknown
-165.101.133.27 # Alamin's Home Network
-203.190.10.252 # DOL ISP-Forwarder-1
+10.0.0.0/8 # Internal Subnet
 114.31.10.68 # BDCOM-ISP-Forwarder-1
 114.31.10.69 # BDCOM-ISP-Forwarder-2
+203.190.10.252 # DOL ISP-Forwarder-1
