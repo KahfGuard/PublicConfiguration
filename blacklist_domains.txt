@@ -1116,3 +1116,7 @@ rbxcdn.com
 epicgames.com
 fortnite.com
 unrealengine.com
+
+
+# ads
+ad.doubleclick.net
