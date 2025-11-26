@@ -1,2 +1,4 @@
 95.10.21.56
 103.26.246.133 # Too many spam requests
+135.125.149.125 # Auto-blocked [Germany/AS16276] B:0 M:16331 (2025-11-26 12:36:46 UTC)
+202.4.96.159 # Auto-blocked [Bangladesh/AS23956] B:265 M:10759 (2025-11-26 12:36:46 UTC)
