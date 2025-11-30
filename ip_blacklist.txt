@@ -23,3 +23,4 @@
 185.185.135.28 # Auto-blocked [Israel/AS206446] B:0 M:100 (2025-11-29 05:25:47 UTC)
 116.202.115.110 # Auto-blocked [Germany/AS24940] B:0 M:883 (2025-11-30 00:28:50 UTC)
 178.89.128.128 # Auto-blocked [Kazakhstan/AS9198] B:0 M:491 (2025-11-30 00:28:50 UTC)
+103.95.98.72 # Auto-blocked [Bangladesh/AS136759] B:1066 M:1 (2025-11-30 03:28:50 UTC)
