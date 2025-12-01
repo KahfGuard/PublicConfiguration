@@ -1,0 +1,7 @@
+# Refused Domains Configuration
+# These domains will receive a REFUSED DNS response
+# Format: One domain per line
+# Lines starting with # are comments
+
+# Boost Learning unauthorized API
+auth-api.boost-learning.com
