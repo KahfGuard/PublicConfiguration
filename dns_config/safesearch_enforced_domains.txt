@@ -1,213 +1,217 @@
-# SafeSearch Domains Configuration
-# These domains will be enforced to use SafeSearch for search engines
-# Format: One domain per line
-# Lines starting with # are comments
+# SafeSearch Enforcement Configuration
+# Format: DOMAIN SAFESEARCH_ENDPOINT_HOSTNAME
+#
+# When a client queries for any domain in this list, DNSDist responds with
+# the IP address of the SafeSearch enforcement endpoint (spoofed DNS response)
+#
+# The system resolves each endpoint hostname to IPv4/IPv6 addresses at startup
+# and creates DNS spoof rules for all domains mapping to that endpoint
 
 # Google Search - All TLDs (enforced SafeSearch)
-google.com
-google.ad
-google.ae
-google.com.af
-google.com.ag
-google.com.ai
-google.al
-google.am
-google.co.ao
-google.com.ar
-google.as
-google.at
-google.com.au
-google.az
-google.ba
-google.com.bd
-google.be
-google.bf
-google.bg
-google.com.bh
-google.bi
-google.bj
-google.com.bn
-google.com.bo
-google.com.br
-google.bs
-google.bt
-google.co.bw
-google.by
-google.com.bz
-google.ca
-google.cd
-google.cf
-google.cg
-google.ch
-google.ci
-google.co.ck
-google.cl
-google.cm
-google.cn
-google.com.co
-google.co.cr
-google.com.cu
-google.cv
-google.com.cy
-google.cz
-google.de
-google.dj
-google.dk
-google.dm
-google.com.do
-google.dz
-google.com.ec
-google.ee
-google.com.eg
-google.es
-google.com.et
-google.fi
-google.com.fj
-google.fm
-google.fr
-google.ga
-google.ge
-google.gg
-google.com.gh
-google.com.gi
-google.gl
-google.gm
-google.gr
-google.com.gt
-google.gy
-google.com.hk
-google.hn
-google.hr
-google.ht
-google.hu
-google.co.id
-google.ie
-google.co.il
-google.im
-google.co.in
-google.iq
-google.is
-google.it
-google.je
-google.com.jm
-google.jo
-google.co.jp
-google.co.ke
-google.com.kh
-google.ki
-google.kg
-google.co.kr
-google.com.kw
-google.kz
-google.la
-google.com.lb
-google.li
-google.lk
-google.co.ls
-google.lt
-google.lu
-google.lv
-google.com.ly
-google.co.ma
-google.md
-google.me
-google.mg
-google.mk
-google.ml
-google.com.mm
-google.mn
-google.ms
-google.com.mt
-google.mu
-google.mv
-google.mw
-google.com.mx
-google.com.my
-google.co.mz
-google.com.na
-google.com.ng
-google.com.ni
-google.ne
-google.nl
-google.no
-google.com.np
-google.nr
-google.nu
-google.co.nz
-google.com.om
-google.com.pa
-google.com.pe
-google.com.pg
-google.com.ph
-google.com.pk
-google.pl
-google.pn
-google.com.pr
-google.ps
-google.pt
-google.com.py
-google.com.qa
-google.ro
-google.ru
-google.rw
-google.com.sa
-google.com.sb
-google.sc
-google.se
-google.com.sg
-google.sh
-google.si
-google.sk
-google.com.sl
-google.sn
-google.so
-google.sm
-google.sr
-google.st
-google.com.sv
-google.td
-google.tg
-google.co.th
-google.com.tj
-google.tl
-google.tm
-google.tn
-google.to
-google.com.tr
-google.tt
-google.com.tw
-google.co.tz
-google.com.ua
-google.co.ug
-google.co.uk
-google.com.uy
-google.co.uz
-google.com.vc
-google.co.ve
-google.vg
-google.co.vi
-google.com.vn
-google.vu
-google.ws
-google.rs
-google.co.za
-google.co.zm
-google.co.zw
-google.cat
+google.com forcesafesearch.google.com
+google.ad forcesafesearch.google.com
+google.ae forcesafesearch.google.com
+google.com.af forcesafesearch.google.com
+google.com.ag forcesafesearch.google.com
+google.com.ai forcesafesearch.google.com
+google.al forcesafesearch.google.com
+google.am forcesafesearch.google.com
+google.co.ao forcesafesearch.google.com
+google.com.ar forcesafesearch.google.com
+google.as forcesafesearch.google.com
+google.at forcesafesearch.google.com
+google.com.au forcesafesearch.google.com
+google.az forcesafesearch.google.com
+google.ba forcesafesearch.google.com
+google.com.bd forcesafesearch.google.com
+google.be forcesafesearch.google.com
+google.bf forcesafesearch.google.com
+google.bg forcesafesearch.google.com
+google.com.bh forcesafesearch.google.com
+google.bi forcesafesearch.google.com
+google.bj forcesafesearch.google.com
+google.com.bn forcesafesearch.google.com
+google.com.bo forcesafesearch.google.com
+google.com.br forcesafesearch.google.com
+google.bs forcesafesearch.google.com
+google.bt forcesafesearch.google.com
+google.co.bw forcesafesearch.google.com
+google.by forcesafesearch.google.com
+google.com.bz forcesafesearch.google.com
+google.ca forcesafesearch.google.com
+google.cd forcesafesearch.google.com
+google.cf forcesafesearch.google.com
+google.cg forcesafesearch.google.com
+google.ch forcesafesearch.google.com
+google.ci forcesafesearch.google.com
+google.co.ck forcesafesearch.google.com
+google.cl forcesafesearch.google.com
+google.cm forcesafesearch.google.com
+google.cn forcesafesearch.google.com
+google.com.co forcesafesearch.google.com
+google.co.cr forcesafesearch.google.com
+google.com.cu forcesafesearch.google.com
+google.cv forcesafesearch.google.com
+google.com.cy forcesafesearch.google.com
+google.cz forcesafesearch.google.com
+google.de forcesafesearch.google.com
+google.dj forcesafesearch.google.com
+google.dk forcesafesearch.google.com
+google.dm forcesafesearch.google.com
+google.com.do forcesafesearch.google.com
+google.dz forcesafesearch.google.com
+google.com.ec forcesafesearch.google.com
+google.ee forcesafesearch.google.com
+google.com.eg forcesafesearch.google.com
+google.es forcesafesearch.google.com
+google.com.et forcesafesearch.google.com
+google.fi forcesafesearch.google.com
+google.com.fj forcesafesearch.google.com
+google.fm forcesafesearch.google.com
+google.fr forcesafesearch.google.com
+google.ga forcesafesearch.google.com
+google.ge forcesafesearch.google.com
+google.gg forcesafesearch.google.com
+google.com.gh forcesafesearch.google.com
+google.com.gi forcesafesearch.google.com
+google.gl forcesafesearch.google.com
+google.gm forcesafesearch.google.com
+google.gr forcesafesearch.google.com
+google.com.gt forcesafesearch.google.com
+google.gy forcesafesearch.google.com
+google.com.hk forcesafesearch.google.com
+google.hn forcesafesearch.google.com
+google.hr forcesafesearch.google.com
+google.ht forcesafesearch.google.com
+google.hu forcesafesearch.google.com
+google.co.id forcesafesearch.google.com
+google.ie forcesafesearch.google.com
+google.co.il forcesafesearch.google.com
+google.im forcesafesearch.google.com
+google.co.in forcesafesearch.google.com
+google.iq forcesafesearch.google.com
+google.is forcesafesearch.google.com
+google.it forcesafesearch.google.com
+google.je forcesafesearch.google.com
+google.com.jm forcesafesearch.google.com
+google.jo forcesafesearch.google.com
+google.co.jp forcesafesearch.google.com
+google.co.ke forcesafesearch.google.com
+google.com.kh forcesafesearch.google.com
+google.ki forcesafesearch.google.com
+google.kg forcesafesearch.google.com
+google.co.kr forcesafesearch.google.com
+google.com.kw forcesafesearch.google.com
+google.kz forcesafesearch.google.com
+google.la forcesafesearch.google.com
+google.com.lb forcesafesearch.google.com
+google.li forcesafesearch.google.com
+google.lk forcesafesearch.google.com
+google.co.ls forcesafesearch.google.com
+google.lt forcesafesearch.google.com
+google.lu forcesafesearch.google.com
+google.lv forcesafesearch.google.com
+google.com.ly forcesafesearch.google.com
+google.co.ma forcesafesearch.google.com
+google.md forcesafesearch.google.com
+google.me forcesafesearch.google.com
+google.mg forcesafesearch.google.com
+google.mk forcesafesearch.google.com
+google.ml forcesafesearch.google.com
+google.com.mm forcesafesearch.google.com
+google.mn forcesafesearch.google.com
+google.ms forcesafesearch.google.com
+google.com.mt forcesafesearch.google.com
+google.mu forcesafesearch.google.com
+google.mv forcesafesearch.google.com
+google.mw forcesafesearch.google.com
+google.com.mx forcesafesearch.google.com
+google.com.my forcesafesearch.google.com
+google.co.mz forcesafesearch.google.com
+google.com.na forcesafesearch.google.com
+google.com.ng forcesafesearch.google.com
+google.com.ni forcesafesearch.google.com
+google.ne forcesafesearch.google.com
+google.nl forcesafesearch.google.com
+google.no forcesafesearch.google.com
+google.com.np forcesafesearch.google.com
+google.nr forcesafesearch.google.com
+google.nu forcesafesearch.google.com
+google.co.nz forcesafesearch.google.com
+google.com.om forcesafesearch.google.com
+google.com.pa forcesafesearch.google.com
+google.com.pe forcesafesearch.google.com
+google.com.pg forcesafesearch.google.com
+google.com.ph forcesafesearch.google.com
+google.com.pk forcesafesearch.google.com
+google.pl forcesafesearch.google.com
+google.pn forcesafesearch.google.com
+google.com.pr forcesafesearch.google.com
+google.ps forcesafesearch.google.com
+google.pt forcesafesearch.google.com
+google.com.py forcesafesearch.google.com
+google.com.qa forcesafesearch.google.com
+google.ro forcesafesearch.google.com
+google.ru forcesafesearch.google.com
+google.rw forcesafesearch.google.com
+google.com.sa forcesafesearch.google.com
+google.com.sb forcesafesearch.google.com
+google.sc forcesafesearch.google.com
+google.se forcesafesearch.google.com
+google.com.sg forcesafesearch.google.com
+google.sh forcesafesearch.google.com
+google.si forcesafesearch.google.com
+google.sk forcesafesearch.google.com
+google.com.sl forcesafesearch.google.com
+google.sn forcesafesearch.google.com
+google.so forcesafesearch.google.com
+google.sm forcesafesearch.google.com
+google.sr forcesafesearch.google.com
+google.st forcesafesearch.google.com
+google.com.sv forcesafesearch.google.com
+google.td forcesafesearch.google.com
+google.tg forcesafesearch.google.com
+google.co.th forcesafesearch.google.com
+google.com.tj forcesafesearch.google.com
+google.tl forcesafesearch.google.com
+google.tm forcesafesearch.google.com
+google.tn forcesafesearch.google.com
+google.to forcesafesearch.google.com
+google.com.tr forcesafesearch.google.com
+google.tt forcesafesearch.google.com
+google.com.tw forcesafesearch.google.com
+google.co.tz forcesafesearch.google.com
+google.com.ua forcesafesearch.google.com
+google.co.ug forcesafesearch.google.com
+google.co.uk forcesafesearch.google.com
+google.com.uy forcesafesearch.google.com
+google.co.uz forcesafesearch.google.com
+google.com.vc forcesafesearch.google.com
+google.co.ve forcesafesearch.google.com
+google.vg forcesafesearch.google.com
+google.co.vi forcesafesearch.google.com
+google.com.vn forcesafesearch.google.com
+google.vu forcesafesearch.google.com
+google.ws forcesafesearch.google.com
+google.rs forcesafesearch.google.com
+google.co.za forcesafesearch.google.com
+google.co.zm forcesafesearch.google.com
+google.co.zw forcesafesearch.google.com
+google.cat forcesafesearch.google.com
 
 # YouTube - Enforced Restricted Mode
-youtube.com
-m.youtube.com
-youtubei.googleapis.com
-youtube.googleapis.com
-youtube-nocookie.com
+youtube.com restrict.youtube.com
+m.youtube.com restrict.youtube.com
+youtubei.googleapis.com restrict.youtube.com
+youtube.googleapis.com restrict.youtube.com
+youtube-nocookie.com restrict.youtube.com
 
-# DuckDuckGo - Safe Search
-duckduckgo.com
+# Bing Search - Enforced Strict SafeSearch
+bing.com strict.bing.com
 
-# Bing - Strict SafeSearch
-bing.com
+# DuckDuckGo - Enforced Safe Search
+duckduckgo.com safe.duckduckgo.com
 
-# Yandex - Family Filter
-yandex.ru
-yandex.com
+# Yandex - Family Mode (via yandex.ru)
+yandex.ru yandex.ru
+yandex.com yandex.ru
