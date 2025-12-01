@@ -1,0 +1,37 @@
+# Reverse DNS Mappings Configuration
+# These IPs will return a PTR record pointing to the specified hostname
+# This fixes the nslookup timeout issue caused by reverse DNS lookup
+# Format: IP_ADDRESS HOSTNAME (space-separated)
+# Supports both IPv4 and IPv6 addresses
+# Lines starting with # are comments
+
+# Frontend DNS Servers (IPv4)
+40.120.32.171 dns.kahfguard.com
+40.120.32.170 dns.kahfguard.com
+40.120.32.169 dns.kahfguard.com
+40.120.32.168 dns.kahfguard.com
+40.120.32.159 dns.kahfguard.com
+40.120.32.158 dns.kahfguard.com
+
+# Backend DNS Servers (IPv4)
+203.190.10.126 dns.kahfguard.com
+203.190.10.125 dns.kahfguard.com
+203.190.10.124 dns.kahfguard.com
+203.190.10.119 dns.kahfguard.com
+203.190.10.118 dns.kahfguard.com
+203.190.10.117 dns.kahfguard.com
+203.190.10.116 dns.kahfguard.com
+203.190.10.115 dns.kahfguard.com
+203.190.10.114 dns.kahfguard.com
+
+# Add IPv6 addresses here if you have them
+# Example:
+2400:fa40:400:1::134a dns.kahfguard.com
+2400:fa40:400:1::134b dns.kahfguard.com
+2400:fa40:400:1::134c dns.kahfguard.com
+2400:fa40:400:1::135a dns.kahfguard.com
+2400:fa40:400:1::135b dns.kahfguard.com
+2400:fa40:400:1::135c dns.kahfguard.com
+2400:fa40:400:1::136a dns.kahfguard.com
+2400:fa40:400:1::136b dns.kahfguard.com
+2400:fa40:400:1::136c dns.kahfguard.com
