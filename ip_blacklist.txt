@@ -25,3 +25,6 @@
 178.89.128.128 # Auto-blocked [Kazakhstan/AS9198] B:0 M:491 (2025-11-30 00:28:50 UTC)
 45.147.78.66 # Auto-blocked [Unknown/Unknown] B:0 M:519 (2025-12-01 16:36:58 UTC)
 87.120.167.193 # Auto-blocked [Unknown/Unknown] B:0 M:440 (2025-12-01 16:36:58 UTC)
+203.190.10.252 # Auto-blocked [Unknown/Unknown] B:32 M:1009 (2025-12-02 00:40:13 UTC)
+203.190.10.253 # Auto-blocked [Unknown/Unknown] B:0 M:118 (2025-12-02 00:40:13 UTC)
+114.31.10.68 # Auto-blocked [Unknown/Unknown] B:6 M:107 (2025-12-02 00:40:13 UTC)
