@@ -27,3 +27,8 @@
 87.120.167.193 # Auto-blocked [Unknown/Unknown] B:0 M:440 (2025-12-01 16:36:58 UTC)
 222.219.232.130 # Auto-blocked [China/AS4134] B:0 M:1727 (2025-12-02 06:41:21 UTC)
 222.219.232.134 # Auto-blocked [China/AS4134] B:0 M:245 (2025-12-02 06:41:21 UTC)
+78.108.178.104 # Auto-blocked [Czechia/AS62160] B:0 M:2223 (2025-12-03 12:49:53 UTC)
+20.169.152.41 # Auto-blocked [United States/AS8075] B:0 M:421 (2025-12-03 12:49:53 UTC)
+34.120.238.127 # Auto-blocked [United States/AS396982] B:0 M:373 (2025-12-03 12:49:53 UTC)
+188.225.49.156 # Auto-blocked [Russia/AS28840] B:0 M:354 (2025-12-03 12:49:53 UTC)
+79.201.62.81 # Auto-blocked [Germany/AS3320] B:0 M:247 (2025-12-03 12:49:53 UTC)
