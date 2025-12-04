@@ -27,3 +27,6 @@
 87.120.167.193 # Auto-blocked [Unknown/Unknown] B:0 M:440 (2025-12-01 16:36:58 UTC)
 222.219.232.130 # Auto-blocked [China/AS4134] B:0 M:1727 (2025-12-02 06:41:21 UTC)
 222.219.232.134 # Auto-blocked [China/AS4134] B:0 M:245 (2025-12-02 06:41:21 UTC)
+103.95.98.72 # Auto-blocked [Bangladesh/AS136759] B:1545 M:3 (2025-12-04 03:53:37 UTC)
+103.118.76.122 # Auto-blocked [Bangladesh/AS137959] B:1456 M:1 (2025-12-04 03:53:37 UTC)
+175.25.17.240 # Auto-blocked [China/AS56019] B:0 M:362 (2025-12-04 03:53:37 UTC)
