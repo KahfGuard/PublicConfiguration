@@ -28,3 +28,4 @@
 222.219.232.130 # Auto-blocked [China/AS4134] B:0 M:1727 (2025-12-02 06:41:21 UTC)
 222.219.232.134 # Auto-blocked [China/AS4134] B:0 M:245 (2025-12-02 06:41:21 UTC)
 175.25.17.240 # Auto-blocked [China/AS56019] B:0 M:362 (2025-12-04 03:53:37 UTC)
+15.204.212.200 # Auto-blocked [United States/AS16276] B:0 M:113 (2025-12-04 10:54:58 UTC)
