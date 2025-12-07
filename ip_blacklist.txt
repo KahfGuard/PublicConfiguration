@@ -47,3 +47,4 @@
 15.235.160.67 # Auto-blocked [Singapore/AS16276] B:0 M:332 (2025-12-07 12:12:13 UTC)
 85.190.160.209 # Auto-blocked [Germany/AS199610] B:0 M:250 (2025-12-07 12:12:13 UTC)
 68.148.20.85 # Auto-blocked [Canada/AS6327] B:0 M:244 (2025-12-07 12:12:13 UTC)
+103.95.98.72 # Auto-blocked [Bangladesh/AS136759] B:1456 M:2 (2025-12-07 14:12:52 UTC)
