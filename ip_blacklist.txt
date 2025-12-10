@@ -59,3 +59,13 @@
 91.124.63.37 # Auto-blocked [Türkiye/AS209474] B:0 M:319 (2025-12-10 15:41:47 UTC)
 121.141.69.122 # Auto-blocked [South Korea/AS4766] B:0 M:294 (2025-12-10 15:41:47 UTC)
 182.214.183.71 # Auto-blocked [South Korea/AS17858] B:0 M:219 (2025-12-10 15:41:47 UTC)
+194.26.203.25 # Auto-blocked [United Kingdom/AS210555] B:0 M:21907 (2025-12-10 16:53:20 UTC)
+51.79.98.58 # Auto-blocked [Canada/AS16276] B:0 M:10074 (2025-12-10 16:53:20 UTC)
+81.78.171.60 # Auto-blocked [United Kingdom/AS5378] B:3 M:3457 (2025-12-10 16:53:20 UTC)
+211.216.161.248 # Auto-blocked [South Korea/AS4766] B:0 M:542 (2025-12-10 16:53:20 UTC)
+89.222.114.41 # Auto-blocked [United States/AS60068] B:0 M:512 (2025-12-10 16:53:20 UTC)
+220.78.191.147 # Auto-blocked [South Korea/AS4766] B:0 M:461 (2025-12-10 16:53:20 UTC)
+118.32.105.50 # Auto-blocked [South Korea/AS4766] B:0 M:402 (2025-12-10 16:53:20 UTC)
+91.124.63.37 # Auto-blocked [Türkiye/AS209474] B:0 M:396 (2025-12-10 16:53:20 UTC)
+121.141.69.122 # Auto-blocked [South Korea/AS4766] B:0 M:373 (2025-12-10 16:53:20 UTC)
+

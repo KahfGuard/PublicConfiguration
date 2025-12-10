@@ -1,5 +1,6 @@
 10.0.0.0/8                # Internal Subnet
 114.31.10.68              # BDCOM-ISP-Forwarder-1
 114.31.10.69              # BDCOM-ISP-Forwarder-2
-203.190.10.252            # DOL ISP-Forwarder-1
-203.190.10.253            # DOL ISP-Forwarder-2
+203.190.10.252            # DOL-ISP-Forwarder-1
+203.190.10.253            # DOL-ISP-Forwarder-2
+45.114.84.82              # RACE-ISP-Forwarder-1
