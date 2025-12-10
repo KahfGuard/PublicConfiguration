@@ -63,3 +63,4 @@
 91.124.63.37 # Auto-blocked [Türkiye/AS209474] B:0 M:396 (2025-12-10 16:53:20 UTC)
 121.141.69.122 # Auto-blocked [South Korea/AS4766] B:0 M:373 (2025-12-10 16:53:20 UTC)
 
+110.76.128.235 # Auto-blocked [Bangladesh/AS59362] B:0 M:254 (2025-12-10 17:03:49 UTC)
