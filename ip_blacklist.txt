@@ -71,6 +71,9 @@
 65.21.20.109 # Auto-blocked [Finland/AS24940] B:0 M:1331 (2025-12-11 16:15:50 UTC)
 172.185.25.19 # Auto-blocked [United States/AS8075] B:0 M:397 (2025-12-11 16:15:50 UTC)
 78.128.114.182 # Auto-blocked [Bulgaria/AS50360] B:0 M:176 (2025-12-11 16:15:50 UTC)
+193.22.129.17 # Auto-blocked [France/AS215140] B:0 M:1038 (2025-12-13 16:19:45 UTC)
+109.191.205.214 # Auto-blocked [Russia/AS8369] B:0 M:477 (2025-12-13 16:19:45 UTC)
+108.143.155.229 # Auto-blocked [Netherlands/AS8075] B:0 M:413 (2025-12-13 16:19:45 UTC)
 103.178.32.96 # Auto-blocked [Bangladesh/AS149293] B:0 M:67822 (2025-12-13 16:44:30 UTC)
 35.252.37.35 # Auto-blocked [Saudi Arabia/AS396982] B:0 M:1653 (2025-12-13 16:44:30 UTC)
 
