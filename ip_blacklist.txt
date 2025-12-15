@@ -86,3 +86,6 @@
 193.201.230.1 # Auto-blocked [Russia/AS25159] B:0 M:229 (2025-12-14 16:17:04 UTC)
 104.210.130.180 # Auto-blocked [United States/AS8075] B:0 M:158 (2025-12-14 16:17:04 UTC)
 89.47.113.178 # Auto-blocked [Türkiye/AS210538] B:0 M:129 (2025-12-14 16:17:04 UTC)
+78.108.180.87 # Auto-blocked [Czechia/AS62160] B:0 M:1736 (2025-12-15 04:35:26 UTC)
+93.123.118.150 # Auto-blocked [The Netherlands/AS209630] B:0 M:496 (2025-12-15 04:35:26 UTC)
+87.215.82.70 # Auto-blocked [The Netherlands/AS13127] B:0 M:383 (2025-12-15 04:35:26 UTC)
