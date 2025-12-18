@@ -89,3 +89,4 @@
 78.108.180.87 # Auto-blocked [Czechia/AS62160] B:0 M:1736 (2025-12-15 04:35:26 UTC)
 93.123.118.150 # Auto-blocked [The Netherlands/AS209630] B:0 M:496 (2025-12-15 04:35:26 UTC)
 87.215.82.70 # Auto-blocked [The Netherlands/AS13127] B:0 M:383 (2025-12-15 04:35:26 UTC)
+213.216.85.155 # Auto-blocked [Poland/AS12741] B:0 M:342 (2025-12-17 05:28:50 UTC)
