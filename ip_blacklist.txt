@@ -91,3 +91,6 @@
 87.215.82.70 # Auto-blocked [The Netherlands/AS13127] B:0 M:383 (2025-12-15 04:35:26 UTC)
 213.216.85.155 # Auto-blocked [Poland/AS12741] B:0 M:342 (2025-12-17 05:28:50 UTC)
 110.188.107.127 # Auto-blocked [China/AS4134] B:0 M:320 (2025-12-19 01:59:49 UTC)
+156.222.115.184 # Auto-blocked [Egypt/AS8452] B:168 M:1022 (2025-12-19 16:15:42 UTC)
+82.22.32.163 # Auto-blocked [Türkiye/AS204580] B:0 M:870 (2025-12-19 16:15:42 UTC)
+217.247.234.212 # Auto-blocked [Germany/AS3320] B:0 M:385 (2025-12-19 16:15:42 UTC)
