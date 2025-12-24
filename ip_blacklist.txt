@@ -93,3 +93,4 @@
 171.225.223.108 # Auto-blocked [Vietnam/AS7552] B:0 M:406 (2025-12-23 17:21:38 UTC)
 80.246.94.157 # Auto-blocked [Russia/AS21378] B:0 M:310 (2025-12-23 17:21:38 UTC)
 70.168.144.122 # Auto-blocked [United States/AS22773] B:0 M:630 (2025-12-24 01:10:23 UTC)
+2001:1a10:9049:e1e8:5149:2020:f4c1:3d0c # Auto-blocked [Unknown/Unknown] B:0 M:5 (2025-12-24 05:30:03 UTC)
