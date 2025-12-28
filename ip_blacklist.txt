@@ -93,3 +93,7 @@
 171.225.223.108 # Auto-blocked [Vietnam/AS7552] B:0 M:406 (2025-12-23 17:21:38 UTC)
 80.246.94.157 # Auto-blocked [Russia/AS21378] B:0 M:310 (2025-12-23 17:21:38 UTC)
 70.168.144.122 # Auto-blocked [United States/AS22773] B:0 M:630 (2025-12-24 01:10:23 UTC)
+103.178.32.108 # Auto-blocked [Bangladesh/AS149293] B:0 M:22917 (2025-12-28 14:12:50 UTC)
+103.81.207.202 # Auto-blocked [Bangladesh/AS136151] B:0 M:747 (2025-12-28 14:12:50 UTC)
+125.30.87.96 # Auto-blocked [Japan/AS2497] B:0 M:382 (2025-12-28 14:12:50 UTC)
+103.81.207.204 # Auto-blocked [Bangladesh/AS136151] B:0 M:305 (2025-12-28 14:12:50 UTC)
