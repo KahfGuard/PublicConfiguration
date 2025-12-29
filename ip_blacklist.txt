@@ -97,3 +97,7 @@
 103.81.207.202 # Auto-blocked [Bangladesh/AS136151] B:0 M:747 (2025-12-28 14:12:50 UTC)
 125.30.87.96 # Auto-blocked [Japan/AS2497] B:0 M:382 (2025-12-28 14:12:50 UTC)
 103.81.207.204 # Auto-blocked [Bangladesh/AS136151] B:0 M:305 (2025-12-28 14:12:50 UTC)
+90.252.125.100 # Auto-blocked [United Kingdom/AS5378] B:0 M:8595 (2025-12-29 14:25:51 UTC)
+156.222.227.198 # Auto-blocked [Egypt/AS8452] B:0 M:3339 (2025-12-29 14:25:51 UTC)
+72.240.96.40 # Auto-blocked [United States/AS13490] B:0 M:618 (2025-12-29 14:25:51 UTC)
+147.75.45.81 # Auto-blocked [The Netherlands/AS15830] B:0 M:338 (2025-12-29 14:25:51 UTC)
