@@ -97,3 +97,4 @@
 103.81.207.202 # Auto-blocked [Bangladesh/AS136151] B:0 M:747 (2025-12-28 14:12:50 UTC)
 125.30.87.96 # Auto-blocked [Japan/AS2497] B:0 M:382 (2025-12-28 14:12:50 UTC)
 103.81.207.204 # Auto-blocked [Bangladesh/AS136151] B:0 M:305 (2025-12-28 14:12:50 UTC)
+119.40.93.194 # Auto-blocked [Bangladesh/AS24122] B:0 M:292 (2026-01-03 14:16:57 UTC)
