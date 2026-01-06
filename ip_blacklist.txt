@@ -100,3 +100,7 @@
 103.178.32.97 # Auto-blocked [Bangladesh/AS149293] B:0 M:24793 (2026-01-06 14:16:57 UTC)
 118.179.23.2 # Auto-blocked [Bangladesh/AS58656] B:0 M:685 (2026-01-06 14:16:57 UTC)
 119.40.93.194 # Auto-blocked [Bangladesh/AS24122] B:0 M:308 (2026-01-06 14:16:57 UTC)
+90.247.116.134 # Auto-blocked [United Kingdom/AS5378] B:195 M:7465 (2026-01-06 14:27:06 UTC)
+141.95.72.218 # Auto-blocked [Germany/AS16276] B:0 M:1834 (2026-01-06 14:27:06 UTC)
+81.78.94.176 # Auto-blocked [United Kingdom/AS5378] B:0 M:1476 (2026-01-06 14:27:06 UTC)
+95.181.158.155 # Auto-blocked [Russia/AS43278] B:0 M:482 (2026-01-06 14:27:06 UTC)
