@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-blacklists
+        name: Validate blacklists and IP lists
+        entry: python scripts/validate_lists.py
+        language: python
+        files: \.(txt)$
+        pass_filenames: false
+        stages: [commit]
+        description: Validates domain format, IP format, duplicates, and sorting
