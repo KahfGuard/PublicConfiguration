@@ -109,3 +109,5 @@
 141.95.72.218 # Auto-blocked [Germany/AS16276] B:0 M:1834 (2026-01-06 14:27:06 UTC)
 81.78.94.176 # Auto-blocked [United Kingdom/AS5378] B:0 M:1476 (2026-01-06 14:27:06 UTC)
 95.181.158.155 # Auto-blocked [Russia/AS43278] B:0 M:482 (2026-01-06 14:27:06 UTC)
+156.216.171.204 # Auto-blocked [Egypt/AS8452] B:65 M:1240 (2026-01-07 14:27:20 UTC)
+156.214.161.84 # Auto-blocked [Egypt/AS8452] B:0 M:284 (2026-01-07 14:27:20 UTC)
