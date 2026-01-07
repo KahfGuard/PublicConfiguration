@@ -1,5 +1,13 @@
-95.10.21.56
-103.26.246.133 # Too many spam requests
+# Manual BLOCKING Due to High Requests
+103.121.105.50 # SHONGZOG_BD ISP, Reason: Making requests to azure
+45.248.151.29  # DOT ISP, Reason: Making requests to azure
+45.118.68.43   # SOL-BD ISP - 1, Reason: Making requests to azure
+45.118.68.44   # SOL-BD ISP - 2, Reason: Making requests to azure
+45.118.68.45   # SOL-BD ISP - 3, Reason: Making requests to azure
+103.15.247.243 # SUMMIT COMM LTD, Reason: Making requests to azure
+103.26.246.133 # SUMMIT COMM LTD, Reason: Too many spam requests
+
+# Automated Blocking
 135.125.149.125 # Auto-blocked [Germany/AS16276] B:0 M:16331 (2025-11-26 12:36:46 UTC)
 202.4.96.159 # Auto-blocked [Bangladesh/AS23956] B:265 M:10759 (2025-11-26 12:36:46 UTC)
 51.195.60.99 # Auto-blocked [Germany/AS16276] B:0 M:2052 (2025-11-27 08:13:26 UTC)
