@@ -2,11 +2,13 @@
 """
 Domain Collector and Validator for KahfGuard Blacklists
 
-Collects domains from multiple sources:
-- Public blocklists (OISD, StevenBlack, etc.)
-- SEO/Traffic ranking APIs (Tranco, Majestic Million)
-- Aggregator sites (casino.org, askgamblers, etc.)
-- Web scraping of category-specific sites
+Collects domains from SUPPLEMENTARY sources (not duplicating blacklist_urls.txt):
+- Sinfonietta, 1Hosts, Hagezi (category-specific lists)
+- SEO/Traffic ranking APIs (Tranco top sites)
+- Aggregator sites (casino.org, top10casinos, etc.)
+
+Main feeds (StevenBlack, BlocklistProject, OISD) are in blacklist_urls.txt.
+This script finds ADDITIONAL domains from complementary sources.
 
 Usage:
     python collect_domains.py --category gambling --collect
@@ -32,63 +34,84 @@ CategoryConfig = dict[str, list[str]]
 BlockingResult = dict[str, Any]
 ValidationResults = dict[str, Any]
 
-# Public blocklist sources for each category
+# SUPPLEMENTARY blocklist sources (NOT duplicating blacklist_urls.txt feeds)
+# Main feeds already pull: StevenBlack, BlocklistProject, OISD, Hagezi
+# These sources provide ADDITIONAL coverage:
 BLOCKLIST_SOURCES: dict[str, list[str]] = {
     "gambling": [
-        # StevenBlack gambling hosts
-        "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts",
-        # OISD gambling
-        "https://raw.githubusercontent.com/sjhgvr/oisd/main/domainswild_gambling.txt",
-        # Sinfonietta gambling
+        # Sinfonietta - comprehensive gambling list
         "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/gambling-hosts",
-        # Betting domains list
-        "https://raw.githubusercontent.com/nextdns/gambling/main/gambling-domains",
+        # Hagezi gambling-specific wildcards (very comprehensive)
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/gambling-onlydomains.txt",
     ],
     "adult": [
-        "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts",
+        # Sinfonietta pornography
         "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts",
+        # Chad Mayfield comprehensive porn list
         "https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_all.list",
+        # Hagezi NSFW list
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt",
     ],
     "piracy": [
+        # Sinfonietta piracy
         "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/piracy-hosts",
-        "https://raw.githubusercontent.com/nextdns/piracy-domains/main/piracy-domains",
+        # Hagezi piracy wildcards
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/piracy-onlydomains.txt",
     ],
     "malware": [
-        "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+        # URLhaus - abuse.ch active malware URLs
         "https://urlhaus.abuse.ch/downloads/hostfile/",
+        # DandelionSprout anti-malware
         "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt",
+        # Phishing Army blocklist
+        "https://phishing.army/download/phishing_army_blocklist.txt",
     ],
     "social": [
-        "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social/hosts",
+        # Sinfonietta social media
+        "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts",
     ],
-    "dating": [],
-    "violence": [],
+    "dating": [
+        # No dedicated public lists - use aggregators & Tranco
+    ],
+    "violence": [
+        # No dedicated public lists
+    ],
 }
 
 # Aggregator sites to scrape for domains
+# These sites list/review sites in each category - domains extracted from content
 AGGREGATOR_URLS: dict[str, list[str]] = {
     "gambling": [
+        # Casino review/listing sites
         "https://www.casino.org/online-casinos/",
-        "https://www.askgamblers.com/online-casinos",
+        "https://www.askgamblers.com/",
         "https://www.top10casinos.com/",
-        "https://www.gambling.com/online-casinos",
-        "https://www.legitgamblingsites.com/online-casinos/",
-        "https://www.sportsbettingdime.com/sportsbooks/",
-        "https://www.covers.com/betting/betting-sites",
-        "https://www.oddsshark.com/sportsbooks",
-        "https://www.pokernews.com/poker-sites/",
-        "https://www.cardschat.com/poker-sites/",
+        "https://www.legitgamblingsites.com/",
+        "https://www.casinomeister.com/",
+        "https://www.casinolistings.com/",
+        # Sportsbook review sites
+        "https://www.bettingexpert.com/",
+        "https://www.bigonsports.com/",
     ],
-    "adult": [],
+    "adult": [
+        # No aggregators - rely on blocklists
+    ],
     "piracy": [
         "https://proxybay.github.io/",
+        "https://pirateproxy.live/",
     ],
-    "malware": [],
-    "social": [],
+    "malware": [
+        # No aggregators - rely on threat feeds
+    ],
+    "social": [
+        # No aggregators - well-known sites
+    ],
     "dating": [
-        "https://www.top10.com/dating",
+        "https://www.datingadvice.com/reviews",
     ],
-    "violence": [],
+    "violence": [
+        # No aggregators
+    ],
 }
 
 # Category-specific keywords to identify domains
