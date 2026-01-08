@@ -1,4 +1,5 @@
 2ch.hk
+9gag.com
 apkmirror.com
 apknestled.com
 apkpure.com
@@ -33,4 +34,5 @@ tenor.com
 tgstat.com
 toffeelive.com
 uptodown-android.en.uptodown.com
+vk.com
 worldstarhiphop.com
