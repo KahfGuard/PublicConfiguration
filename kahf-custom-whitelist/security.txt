@@ -1,0 +1,11 @@
+cisco.com
+f5.com
+kaspersky-labs.com
+kaspersky.com
+mcafee.com
+meraki.com
+paloaltonetworks.com
+rapid7.com
+sentinelone.net
+sophos.com
+trendmicro.com
