@@ -1,1 +1,46 @@
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/whitelist_domains.txt
+# KahfGuard Whitelist URLs
+# Categorized whitelist files from kahf-custom-whitelist/
+
+# Infrastructure - CDNs, DNS, cloud providers
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/infrastructure.txt
+
+# Tech Giants
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/microsoft.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/google.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/amazon.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/apple.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/meta.txt
+
+# Regional
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/bangladesh.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/chinese-tech.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/russian-tech.txt
+
+# Social & Media
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/social-media.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/news-media.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/streaming.txt
+
+# Business & Productivity
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/productivity.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/ecommerce.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/finance.txt
+
+# Education & Government
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/education.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/government.txt
+
+# Tech & Gaming
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/developer.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/hardware.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/gaming.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/security.txt
+
+# Advertising (needed for many sites to function)
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/advertising.txt
+
+# Islamic Resources
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/islamic.txt
+
+# Miscellaneous
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/misc.txt
