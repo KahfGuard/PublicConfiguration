@@ -1,76 +1,44 @@
 #!/usr/bin/env python3
 """
-Build whitelist with top global sites and critical Bangladesh sites.
+Organize whitelist_domains.txt into category-specific files.
 
-Fetches top 1000 domains from Tranco list and combines with:
-- Bangladesh government, education, banking, telecom sites
-- Global tech and productivity services
-- Islamic resources
+Categorizes domains based on keywords and patterns, organizing them into:
+- kahf-custom-whitelist/microsoft.txt
+- kahf-custom-whitelist/google.txt
+- kahf-custom-whitelist/apple.txt
+- kahf-custom-whitelist/meta.txt
+- kahf-custom-whitelist/amazon.txt
+- kahf-custom-whitelist/bangladesh.txt
+- kahf-custom-whitelist/infrastructure.txt
+- kahf-custom-whitelist/social-media.txt
+- kahf-custom-whitelist/news-media.txt
+- kahf-custom-whitelist/education.txt
+- kahf-custom-whitelist/ecommerce.txt
+- kahf-custom-whitelist/productivity.txt
+- kahf-custom-whitelist/gaming.txt
+- kahf-custom-whitelist/security.txt
+- kahf-custom-whitelist/government.txt
+- kahf-custom-whitelist/finance.txt
+- kahf-custom-whitelist/islamic.txt
+- kahf-custom-whitelist/chinese-tech.txt
+- kahf-custom-whitelist/russian-tech.txt
+- kahf-custom-whitelist/developer.txt
+- kahf-custom-whitelist/hardware.txt
+- kahf-custom-whitelist/streaming.txt
+- kahf-custom-whitelist/advertising.txt
+- kahf-custom-whitelist/misc.txt
 
-Organizes into categories in kahf-custom-whitelist/ directory.
+Remaining uncategorized domains go to misc.txt.
 
 Usage:
-    python build_whitelist.py              # Update all whitelist categories
-    python build_whitelist.py --dry-run    # Show what would be added
+    python organize_whitelist.py              # Organize and save
+    python organize_whitelist.py --dry-run    # Preview without saving
 """
 
 import argparse
-import urllib.request
-import urllib.error
-import ssl
 from pathlib import Path
 
-# Domains to exclude (gambling, adult, etc.)
-EXCLUDE_KEYWORDS = [
-    "porn", "xxx", "adult", "sex", "nude", "erotic", "hentai",
-    "casino", "bet", "gambling", "poker", "slots", "lottery",
-    "torrent", "pirate", "warez",
-    "xvideos", "xnxx", "xhamster", "pornhub", "redtube",
-]
-
-# Bangladesh critical domains
-BANGLADESH_CRITICAL = [
-    # Government
-    "gov.bd", "bangladesh.gov.bd", "cabinet.gov.bd", "mopa.gov.bd",
-    "police.gov.bd", "nb.gov.bd", "bb.org.bd", "bbs.gov.bd",
-    "btrc.gov.bd", "mof.gov.bd", "mincom.gov.bd", "mod.gov.bd",
-    "mohfw.gov.bd", "moe.gov.bd", "lgd.gov.bd", "imed.gov.bd",
-    "bida.gov.bd", "customs.gov.bd", "nctb.gov.bd", "pcc.police.gov.bd",
-    "gd.police.gov.bd", "web.bise-ctg.gov.bd", "bise-ctg.gov.bd",
-    # Education
-    "du.ac.bd", "buet.ac.bd", "bracu.ac.bd", "nsu.edu.bd",
-    "aiub.edu", "iub.edu.bd", "ewubd.edu", "daffodilvarsity.edu.bd",
-    "uiu.ac.bd", "aust.edu", "uap-bd.edu", "nu.ac.bd", "cu.ac.bd",
-    "ru.ac.bd", "ju.ac.bd", "kuet.ac.bd", "ruet.ac.bd", "cuet.ac.bd",
-    "sust.edu", "bup.edu.bd", "iom.edu.bd",
-    # Banks & Finance
-    "bracbank.com", "dutchbanglabank.com", "ebl.com.bd",
-    "islamibankbd.com", "primebank.com.bd", "standardbankbd.com",
-    "ucb.com.bd", "onebankbd.com", "mtb.com.bd", "citybank.com.bd",
-    "pubalibank.com.bd", "bankasia-bd.com", "southeastbank.com.bd",
-    "nagad.com.bd", "bkash.com", "bka.sh", "rocket.com.bd", "upay.com.bd",
-    "dsebd.org", "cse.com.bd",
-    # Telecom
-    "grameenphone.com", "robi.com.bd", "banglalink.net",
-    "teletalk.com.bd", "btcl.com.bd",
-    # News & Media
-    "prothomalo.com", "thedailystar.net", "bd-pratidin.com",
-    "kalerkantho.com", "jugantor.com", "ittefaq.com.bd",
-    "samakal.com", "banglanews24.com", "bdnews24.com",
-    "dhakatribune.com", "newagebd.net", "bssnews.net", "tbsnews.net",
-    # E-commerce
-    "daraz.com.bd", "chaldal.com", "foodpanda.com.bd",
-    "pathao.com", "shohoz.com", "bikroy.com", "bdjobs.com",
-    # Healthcare
-    "dghs.gov.bd", "squarehospital.com", "labaid.com.bd",
-    # Utilities
-    "desco.org.bd", "dpdc.org.bd", "dwasa.org.bd",
-    "railway.gov.bd", "biman-airlines.com", "caab.gov.bd",
-    # Education platforms
-    "online.udvash-unmesh.com", "sikho.co", "ieducationbd.com",
-]
-
-# Category patterns for whitelist organization
+# Category keyword patterns (same as build_whitelist.py)
 WHITELIST_CATEGORIES: dict[str, list[str]] = {
     "microsoft": [
         "microsoft", "azure", "office", "outlook", "live.com", "live.net", "msn.com",
@@ -196,44 +164,8 @@ WHITELIST_CATEGORIES: dict[str, list[str]] = {
 }
 
 
-def create_ssl_context() -> ssl.SSLContext:
-    """Create SSL context for HTTPS requests."""
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    return ctx
-
-
-def fetch_tranco_top(count: int = 1000) -> list[str]:
-    """Fetch top domains from Tranco list."""
-    url = f"https://tranco-list.eu/download/ZWJGG/{count}"
-    try:
-        ctx = create_ssl_context()
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=30, context=ctx) as response:
-            content = response.read().decode("utf-8")
-            domains = []
-            for line in content.strip().split("\n"):
-                if "," in line:
-                    _, domain = line.split(",", 1)
-                    domains.append(domain.strip().lower())
-            return domains
-    except Exception as e:
-        print(f"Error fetching Tranco: {e}")
-        return []
-
-
-def is_safe_domain(domain: str) -> bool:
-    """Check if domain is safe to whitelist."""
-    domain_lower = domain.lower()
-    for keyword in EXCLUDE_KEYWORDS:
-        if keyword in domain_lower:
-            return False
-    return True
-
-
 def categorize_domain(domain: str) -> str:
-    """Determine the category for a whitelist domain."""
+    """Determine the category for a domain."""
     domain_lower = domain.lower()
 
     for category, keywords in WHITELIST_CATEGORIES.items():
@@ -244,16 +176,22 @@ def categorize_domain(domain: str) -> str:
     return "misc"
 
 
-def load_domains(filepath: Path) -> set[str]:
+def load_domains(filepath: Path) -> list[str]:
     """Load domains from a file."""
-    domains: set[str] = set()
+    domains = []
     if filepath.exists():
         with open(filepath, "r") as f:
             for line in f:
                 line = line.strip()
                 if line and not line.startswith("#"):
-                    domains.add(line.lower())
+                    domains.append(line.lower())
     return domains
+
+
+def load_category_domains(category: str, whitelist_dir: Path) -> set[str]:
+    """Load existing domains from a category file."""
+    category_file = whitelist_dir / f"{category}.txt"
+    return set(load_domains(category_file))
 
 
 def save_domains(filepath: Path, domains: set[str]) -> None:
@@ -265,36 +203,38 @@ def save_domains(filepath: Path, domains: set[str]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build comprehensive whitelist")
-    parser.add_argument("--dry-run", action="store_true", help="Show changes without saving")
+    parser = argparse.ArgumentParser(description="Organize whitelist into categories")
+    parser.add_argument("--dry-run", action="store_true", help="Preview without saving")
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
     repo_root = script_dir.parent
+    whitelist_file = repo_root / "whitelist_domains.txt"
     whitelist_dir = repo_root / "kahf-custom-whitelist"
 
-    print("Building comprehensive whitelist...\n")
+    print("Organizing whitelist into categories...\n")
 
-    # Fetch Tranco
-    print("Fetching Tranco top 1000...")
-    tranco = fetch_tranco_top(1000)
-    safe_tranco = [d for d in tranco if is_safe_domain(d)]
-    print(f"Fetched {len(tranco)}, filtered to {len(safe_tranco)} safe domains")
+    # Load all domains from whitelist_domains.txt
+    all_domains = load_domains(whitelist_file)
+    print(f"Loaded {len(all_domains)} domains from whitelist_domains.txt")
 
-    # Combine all sources
-    all_domains: set[str] = set()
-    all_domains.update(d.lower() for d in safe_tranco)
-    all_domains.update(d.lower() for d in BANGLADESH_CRITICAL)
+    # Also load domains from all existing category files
+    for category in list(WHITELIST_CATEGORIES.keys()) + ["misc"]:
+        category_file = whitelist_dir / f"{category}.txt"
+        if category_file.exists():
+            existing = load_domains(category_file)
+            all_domains.extend(existing)
+            print(f"  + {len(existing)} from {category}.txt")
 
-    # Final filter
-    final_domains = {d for d in all_domains if is_safe_domain(d)}
-    print(f"Total domains to categorize: {len(final_domains)}")
+    # Deduplicate
+    all_domains = list(set(all_domains))
+    print(f"\nTotal unique domains: {len(all_domains)}")
 
     # Categorize all domains
     categorized: dict[str, set[str]] = {cat: set() for cat in WHITELIST_CATEGORIES}
     categorized["misc"] = set()
 
-    for domain in final_domains:
+    for domain in all_domains:
         category = categorize_domain(domain)
         categorized[category].add(domain)
 
@@ -305,29 +245,24 @@ def main() -> int:
             print(f"  {category}: {len(domains)} domains")
 
     if args.dry_run:
-        print("\n[DRY RUN] Would update category files")
+        print("\n[DRY RUN] Would save to category files")
         return 0
 
-    # Merge with existing and save
-    print("\nMerging with existing and saving...")
+    # Save to category files
+    print("\nSaving to category files...")
 
-    for category, new_domains in categorized.items():
-        category_file = whitelist_dir / f"{category}.txt"
-        existing = load_domains(category_file)
-        merged = existing | new_domains
-        save_domains(category_file, merged)
-        added = len(merged) - len(existing)
-        if added > 0:
-            print(f"  {category}.txt: {len(existing)} + {added} = {len(merged)}")
-        else:
-            print(f"  {category}.txt: {len(merged)} (no new)")
+    for category, domains in categorized.items():
+        if domains:
+            category_file = whitelist_dir / f"{category}.txt"
+            save_domains(category_file, domains)
+            print(f"  {category}.txt: {len(domains)} domains")
 
     # Update whitelist_domains.txt with deprecation notice
-    whitelist_file = repo_root / "whitelist_domains.txt"
     with open(whitelist_file, "w") as f:
         f.write("# This file is deprecated. See kahf-custom-whitelist/ for categorized lists.\n")
         f.write("# The whitelist is now organized into categories for easier maintenance.\n")
 
+    print(f"\nwhitelist_domains.txt: updated with deprecation notice")
     print("\nDone!")
     return 0
 
