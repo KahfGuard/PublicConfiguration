@@ -66,6 +66,7 @@ mtb.com.bd
 muhammadyunus.org
 nagad.com.bd
 nb.gov.bd
+nctb.gov.bd
 nsu.edu.bd
 nu.ac.bd
 onebankbd.com
@@ -75,6 +76,7 @@ pcc.police.gov.bd
 police.gov.bd
 primebank.com.bd
 prothomalo.com
+pubalibank.com.bd
 railway.gov.bd
 robi.com.bd
 rocket.com.bd
@@ -86,6 +88,7 @@ sgwpdemo.com
 shohoz.com
 sikho.co
 somewhereinblog.net
+southeastbank.com.bd
 squarehospital.com
 standardbankbd.com
 teletalk.com.bd
