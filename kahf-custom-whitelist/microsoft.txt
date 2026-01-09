@@ -66,6 +66,7 @@ logincert.microsoftonline.com
 loginex.microsoftonline.com
 mail.protection.outlook.com
 microsoft.com
+microsoft365.com
 microsoftonline-p.com
 microsoftonline.com
 microsoftstream.com
@@ -94,6 +95,7 @@ officeclient.microsoft.com
 officepreviewredir.microsoft.com
 officeredir.microsoft.com
 officespeech.platform.bing.com
+onedrive.com
 onenote.com
 online.office.com
 onmicrosoft.com
@@ -141,12 +143,6 @@ windows.net
 windowsupdate.com
 wns.windows.com
 wus-www.sway-extensions.com
-bing.com
-microsoft.com
-microsoft365.com
-onedrive.com
-outlook.com
-sway.com
 xbox.com
 xboxlive.com
 yammer.com
