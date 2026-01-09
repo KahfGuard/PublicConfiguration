@@ -177,4 +177,4 @@ whoer.net
 worldnic.com
 wswebcdn.com
 wus-www.sway-cdn.com
-www.digicert.com
+digicert.com

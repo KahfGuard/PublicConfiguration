@@ -373,7 +373,7 @@ wp.pl
 wps.com
 wsdvs.com
 wus-firstpartyapps.oaspapps.com
-www.acompli.com
+acompli.com
 x.co
 xcal.tv
 yahoo.co.jp

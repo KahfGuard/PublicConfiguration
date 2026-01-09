@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
-Pre-commit validation script for KahfGuard blacklists and IP lists.
+Pre-commit validation script for KahfGuard blacklists, whitelists, and IP lists.
 
 Validates:
-- Domain format in blacklist files
+- Domain format in blacklist and whitelist files
 - IP address and CIDR notation in IP lists
 - No duplicates
 - Proper sorting (optional)
 - No empty lines or invalid characters
+
+Directories validated:
+- kahf-custom-blacklist/*.txt
+- kahf-custom-whitelist/*.txt
+- blacklist_domains.txt, whitelist_domains.txt
+- ip_blacklist.txt, ip_whitelist.txt
 
 Usage:
     python validate_lists.py                    # Validate all files
@@ -225,6 +231,13 @@ def find_files(repo_root: Path) -> Tuple[list[Path], list[Path]]:
     blacklist_dir = repo_root / "kahf-custom-blacklist"
     if blacklist_dir.exists():
         for f in blacklist_dir.glob("*.txt"):
+            if f.name != "README.md":
+                domain_files.append(f)
+
+    # Domain whitelist files
+    whitelist_dir = repo_root / "kahf-custom-whitelist"
+    if whitelist_dir.exists():
+        for f in whitelist_dir.glob("*.txt"):
             if f.name != "README.md":
                 domain_files.append(f)
 
