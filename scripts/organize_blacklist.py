@@ -127,6 +127,20 @@ def save_domains(filepath: Path, domains: set[str], header: str = "") -> None:
             f.write(f"{domain}\n")
 
 
+def load_all_existing_domains(blacklist_dir: Path) -> set[str]:
+    """Load all existing domains from all category files."""
+    all_existing: set[str] = set()
+    categories = ["gambling", "adult", "piracy", "malware", "social", "dating", "violence",
+                  "anti-islamic", "lgbt"]
+
+    for category in categories:
+        category_file = blacklist_dir / f"{category}.txt"
+        if category_file.exists():
+            all_existing.update(load_domains(category_file))
+
+    return all_existing
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Organize blacklist into categories")
     parser.add_argument("--dry-run", action="store_true", help="Preview without saving")
@@ -135,14 +149,28 @@ def main() -> int:
     script_dir = Path(__file__).parent
     repo_root = script_dir.parent
     blacklist_file = repo_root / "blacklist_domains.txt"
+    blacklist_dir = repo_root / "kahf-custom-blacklist"
 
     print("Organizing blacklist_domains.txt into categories...\n")
 
-    # Load all domains
-    all_domains = load_domains(blacklist_file)
-    print(f"Loaded {len(all_domains)} domains from blacklist_domains.txt\n")
+    # Load all existing domains from all category files first
+    print("Loading existing domains from all category files...")
+    all_existing = load_all_existing_domains(blacklist_dir)
+    print(f"Found {len(all_existing)} existing domains across all categories")
 
-    # Categorize
+    # Load domains from blacklist_domains.txt
+    all_domains = load_domains(blacklist_file)
+    print(f"Loaded {len(all_domains)} domains from blacklist_domains.txt")
+
+    # Filter out domains that already exist in any category
+    new_domains = [d for d in all_domains if d not in all_existing]
+    print(f"New domains (not in any category): {len(new_domains)}\n")
+
+    if not new_domains:
+        print("No new domains to categorize. All domains already exist in category files.")
+        return 0
+
+    # Categorize only NEW domains
     categorized: dict[str, set[str]] = {
         "gambling": set(),
         "adult": set(),
@@ -154,33 +182,39 @@ def main() -> int:
         "misc": set(),
     }
 
-    for domain in all_domains:
+    for domain in new_domains:
         category = categorize_domain(domain)
         categorized[category].add(domain)
 
     # Print results
-    print("Categorization results:")
+    print("New domains by category:")
     for category, domains in categorized.items():
-        print(f"  {category}: {len(domains)} domains")
+        if domains:
+            print(f"  {category}: +{len(domains)} new")
 
     if args.dry_run:
-        print("\n[DRY RUN] Would move domains to category files")
+        print("\n[DRY RUN] Would add domains to category files")
         return 0
 
     # Merge with existing and save
-    print("\nMerging and saving...")
+    print("\nAdding new domains to category files...")
 
     for category in ["gambling", "adult", "piracy", "malware", "social", "dating", "violence"]:
+        if not categorized[category]:
+            continue
         existing = load_category_domains(category)
         merged = existing | categorized[category]
         category_file = repo_root / "kahf-custom-blacklist" / f"{category}.txt"
         save_domains(category_file, merged)
         print(f"  {category}.txt: {len(existing)} + {len(categorized[category])} = {len(merged)}")
 
-    # Save misc back to blacklist_domains.txt
-    header = "# KahfGuard Misc Blacklist\n# Anti-Islamic, ex-Muslim, LGBT, and other user-reported sites\n#"
-    save_domains(blacklist_file, categorized["misc"], header)
-    print(f"  blacklist_domains.txt: {len(categorized['misc'])} domains")
+    # Save misc back to blacklist_domains.txt (only if there are new misc domains)
+    if categorized["misc"]:
+        existing_misc = set(load_domains(blacklist_file))
+        merged_misc = existing_misc | categorized["misc"]
+        header = "# KahfGuard Misc Blacklist\n# Anti-Islamic, ex-Muslim, LGBT, and other user-reported sites\n#"
+        save_domains(blacklist_file, merged_misc, header)
+        print(f"  blacklist_domains.txt: {len(existing_misc)} + {len(categorized['misc'])} = {len(merged_misc)}")
 
     print("\nDone!")
     return 0

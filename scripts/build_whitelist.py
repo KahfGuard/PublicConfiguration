@@ -264,6 +264,18 @@ def save_domains(filepath: Path, domains: set[str]) -> None:
             f.write(f"{domain}\n")
 
 
+def load_all_existing_domains(whitelist_dir: Path) -> set[str]:
+    """Load all existing domains from all category files."""
+    all_existing: set[str] = set()
+    categories = list(WHITELIST_CATEGORIES.keys()) + ["misc"]
+
+    for category in categories:
+        category_file = whitelist_dir / f"{category}.txt"
+        all_existing.update(load_domains(category_file))
+
+    return all_existing
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build comprehensive whitelist")
     parser.add_argument("--dry-run", action="store_true", help="Show changes without saving")
@@ -275,8 +287,13 @@ def main() -> int:
 
     print("Building comprehensive whitelist...\n")
 
+    # Load all existing domains from all category files first
+    print("Loading existing domains from all category files...")
+    all_existing = load_all_existing_domains(whitelist_dir)
+    print(f"Found {len(all_existing)} existing domains across all categories")
+
     # Fetch Tranco
-    print("Fetching Tranco top 1000...")
+    print("\nFetching Tranco top 1000...")
     tranco = fetch_tranco_top(1000)
     safe_tranco = [d for d in tranco if is_safe_domain(d)]
     print(f"Fetched {len(tranco)}, filtered to {len(safe_tranco)} safe domains")
@@ -288,39 +305,44 @@ def main() -> int:
 
     # Final filter
     final_domains = {d for d in all_domains if is_safe_domain(d)}
-    print(f"Total domains to categorize: {len(final_domains)}")
 
-    # Categorize all domains
+    # Filter out domains that already exist in any category
+    new_domains = final_domains - all_existing
+    print(f"Total domains: {len(final_domains)}, New (not in any category): {len(new_domains)}")
+
+    if not new_domains:
+        print("\nNo new domains to add. All domains already exist in category files.")
+        return 0
+
+    # Categorize only NEW domains
     categorized: dict[str, set[str]] = {cat: set() for cat in WHITELIST_CATEGORIES}
     categorized["misc"] = set()
 
-    for domain in final_domains:
+    for domain in new_domains:
         category = categorize_domain(domain)
         categorized[category].add(domain)
 
     # Print results
-    print("\nCategorization results:")
+    print("\nNew domains by category:")
     for category, domains in sorted(categorized.items(), key=lambda x: -len(x[1])):
         if domains:
-            print(f"  {category}: {len(domains)} domains")
+            print(f"  {category}: +{len(domains)} new")
 
     if args.dry_run:
         print("\n[DRY RUN] Would update category files")
         return 0
 
     # Merge with existing and save
-    print("\nMerging with existing and saving...")
+    print("\nAdding new domains to category files...")
 
-    for category, new_domains in categorized.items():
+    for category, new_cat_domains in categorized.items():
+        if not new_cat_domains:
+            continue
         category_file = whitelist_dir / f"{category}.txt"
         existing = load_domains(category_file)
-        merged = existing | new_domains
+        merged = existing | new_cat_domains
         save_domains(category_file, merged)
-        added = len(merged) - len(existing)
-        if added > 0:
-            print(f"  {category}.txt: {len(existing)} + {added} = {len(merged)}")
-        else:
-            print(f"  {category}.txt: {len(merged)} (no new)")
+        print(f"  {category}.txt: {len(existing)} + {len(new_cat_domains)} = {len(merged)}")
 
     # Update whitelist_domains.txt with deprecation notice
     whitelist_file = repo_root / "whitelist_domains.txt"
