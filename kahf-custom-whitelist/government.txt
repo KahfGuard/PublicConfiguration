@@ -19,5 +19,5 @@ usda.gov
 whitehouse.gov
 who.int
 worldbank.org
-www.gov.br
-www.gov.uk
+gov.br
+gov.uk

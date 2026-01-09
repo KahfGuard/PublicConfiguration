@@ -38,6 +38,7 @@ aws.dev
 awsglobalaccelerator.com
 awstrack.me
 awswaf.com
+bankasia-bd.com
 bdydns.com
 behance.net
 behindmlm.com
@@ -47,6 +48,7 @@ bit.ly
 bol.com
 brave.com
 brwkx0h3.r.us-east-2.awstrack.me
+bssnews.net
 buitengewoonglasvezel.nl
 byteconnect.io
 byteglb.com
@@ -206,6 +208,7 @@ nationalgeographic.com
 naver.com
 nease.net
 networkadvertising.org
+newagebd.net
 nextlgsdp.com
 nexusmods.com
 nic.io
@@ -370,7 +373,7 @@ wp.pl
 wps.com
 wsdvs.com
 wus-firstpartyapps.oaspapps.com
-www.acompli.com
+acompli.com
 x.co
 xcal.tv
 yahoo.co.jp
