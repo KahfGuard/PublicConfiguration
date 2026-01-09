@@ -6,6 +6,8 @@ epa.gov
 europa.eu
 fda.gov
 go.nasa.gov
+gov.br
+gov.uk
 loc.gov
 maricopa.gov
 miit.gov.cn
@@ -19,5 +21,3 @@ usda.gov
 whitehouse.gov
 who.int
 worldbank.org
-gov.br
-gov.uk
