@@ -45,8 +45,6 @@ cdnhwc2.com
 cdninstagram.com
 cdnvideo.ru
 cert.int-x3.letsencrypt.org
-cleanbrowsing.org
-cloudflare-dns.com
 cloudflare.com
 cloudflare.net
 cloudflareinsights.com
@@ -63,7 +61,6 @@ crl3.digicert.com
 crl4.digicert.com
 digicert.com
 digitalocean.com
-dns.google
 dnsowl.com
 dnspod.net
 docker.com
@@ -130,7 +127,6 @@ ocspx.digicert.com
 officecdn.microsoft.com
 officecdn.microsoft.com.edgesuite.net
 okcdn.ru
-opendns.com
 oracle.com
 oraclecloud.com
 otelrules.azureedge.net
