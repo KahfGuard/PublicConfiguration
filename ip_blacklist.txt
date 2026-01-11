@@ -115,3 +115,4 @@
 83.106.94.60 # Auto-blocked [United Kingdom/AS5378] B:370 M:3764 (2026-01-08 14:27:58 UTC)
 156.214.104.147 # Auto-blocked [Egypt/AS8452] B:531 M:514 (2026-01-08 14:27:58 UTC)
 156.216.51.168 # Auto-blocked [Egypt/AS8452] B:109 M:446 (2026-01-08 14:27:58 UTC)
+119.40.93.194 # Auto-blocked [Bangladesh/AS24122] B:0 M:259 (2026-01-11 14:17:44 UTC)
