@@ -1,5 +1,4 @@
 # KahfGuard Advertising Blacklist (Safe Version)
-
 2mdn.net
 33across.com
 a.ads2.msads.net
@@ -15,6 +14,7 @@ ade.googlesyndication.com
 adnexus.net
 adnxs.com
 ads.adcolony.com
+ads.google.com
 ads.ironsource.mobi
 ads.moloco.com
 ads.mopub.com
