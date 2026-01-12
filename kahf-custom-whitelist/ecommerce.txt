@@ -1,7 +1,6 @@
 agoda.com
 airbnb.com
 alibaba.com
-alibabadns.com
 aliexpress.com
 allegro.pl
 bestbuy.com
