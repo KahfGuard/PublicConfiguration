@@ -170,4 +170,3 @@ widgets.outbrain.com
 ws-na.amazon-adsystem.com
 z-na.amazon-adsystem.com
 z.moatads.com
-googleads.g.doubleclick.net
