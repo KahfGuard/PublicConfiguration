@@ -1,0 +1,172 @@
+# KahfGuard Advertising Blacklist (Safe Version)
+# Only blocks ad DELIVERY domains, not management platforms
+# Excludes domains needed for normal browsing and social media management
+# Google Ad Delivery (not blocking analytics or tag manager - breaks many sites)
+# Facebook Ad Delivery Only (not blocking business.facebook.com or main site)
+# Microsoft/Bing Ad Delivery
+# Amazon Ad Delivery
+# Twitter Ad Delivery Only (not blocking main ads management)
+# Major Ad Exchanges & DSPs (Pure ad serving)
+# Native Ad Networks (Delivery)
+# Retargeting & Ad Tracking
+# Video Ad Delivery
+# Mobile Ad SDK Delivery
+# Programmatic Platforms (Delivery only)
+# Pop-under & Aggressive Ads
+# Ad Verification & Viewability
+# Header Bidding
+# Regional Ad Networks
+# Mobile Attribution (Ad tracking only, not app functionality)
+2mdn.net
+33across.com
+a.ads2.msads.net
+a.teads.tv
+aax-eu.amazon-adsystem.com
+aax-fe.amazon-adsystem.com
+aax.amazon-adsystem.com
+ad.doubleclick.net
+ad.propellerads.com
+ad.turn.com
+ade.googlesyndication.com
+adnexus.net
+adnxs.com
+ads.adcolony.com
+ads.ironsource.mobi
+ads.moloco.com
+ads.mopub.com
+ads.perfectaudience.com
+ads.pubmatic.com
+ads.sharethrough.com
+ads.tremorhub.com
+ads.vungle.com
+ads.yieldmo.com
+ads1.msads.net
+ads2.msads.net
+adsrvr.org
+adsyndication.msn.com
+amplify.outbrain.com
+an.facebook.com
+ap.lijit.com
+api.content.ad
+api.taboola.com
+api.vungle.com
+api2.branch.io
+app.adjust.com
+app.appsflyer.com
+apps.admob.com
+assoc-amazon.com
+auction.unityads.unity3d.com
+b.scorecardresearch.com
+bidder.criteo.com
+bidswitch.net
+cas.criteo.com
+casalemedia.com
+cdn.branch.io
+cdn.doubleverify.com
+cdn.taboola.com
+cdn.teads.tv
+cds.connatix.com
+cm.g.doubleclick.net
+config.inmobi.com
+config.unityads.unity3d.com
+contextual.media.net
+contextweb.com
+d.adroll.com
+d.applovin.com
+demdex.net
+dis.criteo.com
+dpm.demdex.net
+eu-1-id5-sync.com
+events3.adcolony.com
+fastlane.rubiconproject.com
+fls-eu.amazon-adsystem.com
+fls-na.amazon-adsystem.com
+fw.adsafeprotected.com
+g2.gumgum.com
+global.media-net.com
+googleads.g.doubleclick.net
+gum.criteo.com
+hb.emxdgt.com
+htlb.casalemedia.com
+i.liftoff.io
+ib.adnxs.com
+ib.appnexus.com
+image6.pubmatic.com
+imp.kochava.com
+indexexchange.com
+ix.bidswitch.net
+js.gumgum.com
+justpremium.com
+launches.appsflyer.com
+live.chartboost.com
+log.outbrain.com
+mads.msn.com
+match.adsrvr.org
+ms.applovin.com
+nr.taboola.com
+openx.net
+optimized-by.rubiconproject.com
+p.liadm.com
+p.zergnet.com
+pagead-googlehosted.l.google.com
+pagead2.googlesyndication.com
+partnerad.l.doubleclick.net
+pdn.applovin.com
+pixel.advertising.com
+pixel.everesttech.net
+pixel.facebook.com
+play.aniview.com
+pubads.g.doubleclick.net
+pubmatic.com
+px.moatads.com
+rad.msn.com
+rt.applovin.com
+rta.criteo.com
+rtax.criteo.com
+rtb.openx.net
+rubiconproject.com
+s.adroll.com
+s0.2mdn.net
+s2s.adjust.com
+sb.scorecardresearch.com
+sdk.singular.net
+sdkconfig.inmobi.com
+search.spotxchange.com
+secure-us.imrworldwide.com
+secure.adnxs.com
+securepubads.g.doubleclick.net
+serve.popads.net
+servedbyopenx.com
+servicer.mgid.com
+serving.stat-rock.com
+sharethrough.com
+soma-advertise.smaato.com
+soma.smaato.net
+spotxchange.com
+srv.popcash.net
+sslwidget.criteo.com
+ssp.33across.com
+ssp.pubmatic.com
+static.ads-twitter.com
+static.adsafeprotected.com
+static.criteo.net
+static.doubleclick.net
+sync.intentiq.com
+syndication.twitter.com
+tag.contextweb.com
+tag.yieldoptimizer.com
+tpc.googlesyndication.com
+tr.facebook.com
+tr.outbrain.com
+track.tenjin.io
+trc.taboola.com
+trends.revcontent.com
+turn.com
+u.openx.net
+us-u.openx.net
+vid.springserve.com
+webview.unityads.unity3d.com
+widgets.outbrain.com
+ws-na.amazon-adsystem.com
+z-na.amazon-adsystem.com
+z.moatads.com
