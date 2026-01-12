@@ -205,6 +205,7 @@ mediafire.com
 medium.com
 meetup.com
 mega.co.nz
+mega.io
 mem.gfx.ms
 merriam-webster.com
 metric.gstatic.com
