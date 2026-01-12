@@ -1,6 +1,9 @@
 # KahfGuard Whitelist URLs
 # Categorized whitelist files from kahf-custom-whitelist/
 
+# Kahf
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/kahf.txt
+
 # Infrastructure - CDNs, DNS, cloud providers
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/infrastructure.txt
 
