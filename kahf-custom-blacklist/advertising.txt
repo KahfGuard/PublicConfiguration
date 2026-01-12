@@ -1,22 +1,5 @@
 # KahfGuard Advertising Blacklist (Safe Version)
-# Only blocks ad DELIVERY domains, not management platforms
-# Excludes domains needed for normal browsing and social media management
-# Google Ad Delivery (not blocking analytics or tag manager - breaks many sites)
-# Facebook Ad Delivery Only (not blocking business.facebook.com or main site)
-# Microsoft/Bing Ad Delivery
-# Amazon Ad Delivery
-# Twitter Ad Delivery Only (not blocking main ads management)
-# Major Ad Exchanges & DSPs (Pure ad serving)
-# Native Ad Networks (Delivery)
-# Retargeting & Ad Tracking
-# Video Ad Delivery
-# Mobile Ad SDK Delivery
-# Programmatic Platforms (Delivery only)
-# Pop-under & Aggressive Ads
-# Ad Verification & Viewability
-# Header Bidding
-# Regional Ad Networks
-# Mobile Attribution (Ad tracking only, not app functionality)
+
 2mdn.net
 33across.com
 a.ads2.msads.net
@@ -27,6 +10,7 @@ aax.amazon-adsystem.com
 ad.doubleclick.net
 ad.propellerads.com
 ad.turn.com
+adclick.g.doubleclick.net
 ade.googlesyndication.com
 adnexus.net
 adnxs.com
@@ -75,6 +59,7 @@ d.adroll.com
 d.applovin.com
 demdex.net
 dis.criteo.com
+doubleclick.net
 dpm.demdex.net
 eu-1-id5-sync.com
 events3.adcolony.com
@@ -82,6 +67,7 @@ fastlane.rubiconproject.com
 fls-eu.amazon-adsystem.com
 fls-na.amazon-adsystem.com
 fw.adsafeprotected.com
+g.doubleclick.net
 g2.gumgum.com
 global.media-net.com
 googleads.g.doubleclick.net
