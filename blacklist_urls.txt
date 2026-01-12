@@ -73,9 +73,11 @@
 # Kahf custom blacklist
 [misc] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/blacklist_domains.txt
 [adult] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/adult.txt
+[anti-islamic] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/anti-islamic.txt
 [dating] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/dating.txt
 [gambling] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/gambling.txt
-[violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/violence.txt
+[lgbt] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/lgbt.txt
 [malware] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/malware.txt
 [piracy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/piracy.txt
 [social] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/social.txt
+[violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/violence.txt
