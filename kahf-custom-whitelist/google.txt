@@ -17,7 +17,6 @@ blogspot.com
 bloomberg.com
 booking.com
 bugsnag.com
-dns-parking.com
 doubleclick.net
 flashtalking.com
 g.co

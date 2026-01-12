@@ -2,7 +2,6 @@ account.activedirectory.windowsazure.com
 afternic.com
 aiv-cdn.net
 ajax.aspnetcdn.com
-akadns.net
 akamai.net
 akamaiedge.net
 akamaihd.net
@@ -17,7 +16,6 @@ autologon.microsoftazuread-sso.com
 avcdn.net
 azure-apim.net
 azure-devices.net
-azure-dns.com
 azure.com
 azure.microsoft.com
 azureedge.net
@@ -49,7 +47,6 @@ cloudflare.com
 cloudflare.net
 cloudflareinsights.com
 cloudfront.net
-cloudns.net
 cncdn.com
 cpanel.net
 creativecdn.com
@@ -61,15 +58,11 @@ crl3.digicert.com
 crl4.digicert.com
 digicert.com
 digitalocean.com
-dnsowl.com
-dnspod.net
 docker.com
 docker.io
 domaincontrol.com
 douyincdn.com
 dropcatch.com
-duckdns.org
-edgecastdns.net
 edgecdn.ru
 edgekey.net
 edgesuite.net
@@ -131,12 +124,9 @@ oracle.com
 oraclecloud.com
 otelrules.azureedge.net
 ovh.net
-ovscdns.com
-ovscdns.net
 parklogic.com
 pki.goog
 plesk.com
-prod.firstpartyapps.oaspapps.com.akadns.net
 prod.msocdn.com
 pv-cdn.net
 qlivecdn.com
