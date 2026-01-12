@@ -36,9 +36,6 @@ https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/gaming.txt
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/security.txt
 
-# Advertising (needed for many sites to function)
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/advertising.txt
-
 # Islamic Resources
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/islamic.txt
 
