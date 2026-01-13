@@ -17,8 +17,8 @@ https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/apple.txt
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/meta.txt
 
-# # Regional
-# https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/bangladesh.txt
+# Regional
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/bangladesh.txt
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/chinese-tech.txt
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/russian-tech.txt
 
