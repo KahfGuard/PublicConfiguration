@@ -125,3 +125,6 @@
 169.239.119.240 # Auto-blocked [Libya/AS37284] B:0 M:340 (2026-01-09 14:27:57 UTC)
 5.63.3.192 # Auto-blocked [Libya/AS37284] B:0 M:336 (2026-01-09 14:27:57 UTC)
 5.63.3.160 # Auto-blocked [Libya/AS37284] B:0 M:320 (2026-01-09 14:27:57 UTC)
+67.182.23.187 # Auto-blocked [United States/AS7922] B:23289 M:14 (2026-01-11 14:28:41 UTC)
+81.78.84.151 # Auto-blocked [United Kingdom/AS5378] B:540 M:3802 (2026-01-11 14:28:41 UTC)
+156.216.175.106 # Auto-blocked [Egypt/AS8452] B:526 M:1216 (2026-01-11 14:28:41 UTC)

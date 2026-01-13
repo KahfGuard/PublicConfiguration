@@ -6,7 +6,6 @@ aliyuncs.com
 aliyuncsslbintl.com
 baidu.com
 bilibili.com
-bytedns1.com
 chinamobile.com
 dbankcloud.cn
 dbankcloud.com

@@ -110,8 +110,8 @@ WHITELIST_CATEGORIES: dict[str, list[str]] = {
         "akamai", "cloudflare", "fastly", "edgecast", "cdn", "amazonaws", "azure",
         "digitalocean", "linode", "rackspace", "ovh.net", "bunny", "gcdn", "ngenix",
         "cloudfront", "edgekey", "edgesuite", "akadns", "gtld", "root-servers",
-        "dns.google", "opendns", "quad9", "cleanbrowsing", "dnspod", "dnsowl",
-        "cloudns", "he.net", "verisign", "globalsign", "digicert", "letsencrypt",
+        "dnspod", "dnsowl", "cloudns", "he.net",
+        "verisign", "globalsign", "digicert", "letsencrypt",
         "identrust", "entrust", "geotrust", "ocsp", "crl", "pki.goog", "cacerts",
     ],
     "social-media": [
