@@ -1,5 +1,4 @@
 app.searchads.apple.com
-apple-dns.net
 apple.com
 c.apple.com
 hicloud.com
