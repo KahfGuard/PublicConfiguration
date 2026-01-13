@@ -6,6 +6,5 @@ mcafee.com
 meraki.com
 paloaltonetworks.com
 rapid7.com
-sentinelone.net
 sophos.com
 trendmicro.com

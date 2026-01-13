@@ -1,8 +1,7 @@
 # KahfGuard Whitelist URLs
-# Reorganized into 11 broad categories
 
-# Base whitelist
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/whitelist_domains.txt
+# Base whitelist - Catch All
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/base.txt
 
 # Kahf Services
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/kahf.txt
@@ -25,7 +24,7 @@ https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom
 # Public - Education & Government
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/public.txt
 
-# Regional - Country-Specific Services (Bangladesh, China, Russia)
+# Regional - Country-Specific Services
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/regional.txt
 
 # Security - Security Tools & Services
@@ -33,6 +32,3 @@ https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom
 
 # Islamic - Islamic Resources
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/islamic.txt
-
-# Miscellaneous - Other Essential Services
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/misc.txt

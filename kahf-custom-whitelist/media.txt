@@ -2,8 +2,6 @@
 # Merged from: news-media.txt, streaming.txt, gaming.txt
 
 apnews.com
-app-analytics-services.com
-bamgrid.com
 bandcamp.com
 bbc.co.uk
 bbc.com
@@ -14,12 +12,10 @@ cbsnews.com
 cnn.com
 corriere.it
 dailymail.co.uk
-dailymotion.com
 disneyplus.com
 dreamstime.com
 ea.com
 elpais.com
-epicgames.com
 epicgames.dev
 focus.de
 forbes.com
@@ -33,18 +29,14 @@ indiatimes.com
 kick.com
 latimes.com
 lemonde.fr
-name-services.com
 nature.com
 nbcnews.com
 netflix.net
 newsweek.com
-nflxso.net
 nflxvideo.net
-nintendo.net
 npr.org
 nytimes.com
 playstation.com
-playstation.net
 repubblica.it
 reuters.com
 roku.com
@@ -53,13 +45,11 @@ soundcloud.com
 spiegel.de
 spotify.com
 springer.com
-steamcommunity.com
 steampowered.com
 supercell.com
 t-online.de
 techcrunch.com
 telegraph.co.uk
-telemetryservice.firstpartyapps.oaspapps.com
 theguardian.com
 theverge.com
 time.com

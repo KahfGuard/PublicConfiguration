@@ -1,8 +1,6 @@
 # Social - Social Media & Communication Platforms
 # From: social-media.txt (filtered to social platforms only)
 
-3lift.com
-adgrx.com
 adjust.com
 ambitionbox.com
 app-measurement.com
@@ -19,8 +17,6 @@ chatgpt.com
 checkpoint.com
 cnet.com
 comcast.com
-cootlogix.com
-deepintent.com
 deviantart.com
 discord.com
 discord.gg
@@ -38,46 +34,34 @@ hubspot.com
 huffpost.com
 independent.co.uk
 intuit.com
-lijit.com
 line.me
 marriott.com
 netflix.com
 nypost.com
 ok.ru
 omniconvert.com
-omniroot.com
 onetrust.com
 pinet.com
 pinterest.com
-playrix.com
-public-trust.com
 quizlet.com
 reddit.com
-redditstatic.com
 redhat.com
-rubiconproject.com
 salesforceliveagent.com
 sciencedirect.com
 segment.com
 snapchat.com
-stackadapt.com
 t.co
 target.com
 telegram.me
 telegram.org
 tencent.com
 tiktok.com
-tiktokpangle.us
 tiktokv.com
-tiktokv.eu
-tiktokv.us
-tiktokw.us
 trustpilot.com
 tumblr.com
 twitter.com
 ubnt.com
 viber.com
-vk.com
 vk.ru
 walmart.com
 washingtonpost.com

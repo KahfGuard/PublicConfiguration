@@ -4,15 +4,12 @@
 adobe.com
 adobe.io
 adobe.net
-adobedc.net
-adobedtm.com
 agoda.com
 airbnb.com
 alibaba.com
 aliexpress.com
 allegro.pl
 anydesk.com
-assets.adobedtm.com
 atlassian.com
 atlassian.net
 bankofamerica.com
@@ -22,7 +19,6 @@ calendly.com
 canva.com
 costco.com
 cursor.sh
-d2vwzx04.na1.hubspotlinks.com
 deepl.com
 deloitte.com
 ebay.co.uk
@@ -31,11 +27,7 @@ ebay.de
 etsy.com
 figma.com
 grammarly.com
-grammarly.io
-hm.com
 ikea.com
-intercom.com
-intercom.io
 lowes.com
 macys.com
 mailchimp.com
@@ -44,7 +36,6 @@ mercadolibre.com.ar
 mercadolivre.com.br
 myshopify.com
 nike.com
-notion.com
 notion.so
 openai.com
 otto.de
@@ -57,7 +48,6 @@ rakuten.com
 salesforce.com
 shein.com
 shopify.com
-shopifysvc.com
 slack.com
 stripe.com
 teamviewer.com
