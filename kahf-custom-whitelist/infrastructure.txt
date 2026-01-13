@@ -1,3 +1,6 @@
+# Infrastructure - CDNs, Cloud, Certificates, Core Internet Services
+# Merged from: infrastructure.txt, hardware.txt
+
 account.activedirectory.windowsazure.com
 afternic.com
 aiv-cdn.net
@@ -12,6 +15,8 @@ amazonaws.com
 amp.azure.net
 apache.org
 apps.identrust.com
+assets.onestore.ms
+asus.com
 autologon.microsoftazuread-sso.com
 avcdn.net
 azure-apim.net
@@ -56,6 +61,7 @@ crl.identrust.com
 crl.microsoft.com
 crl3.digicert.com
 crl4.digicert.com
+dell.com
 digicert.com
 digitalocean.com
 docker.com
@@ -70,11 +76,13 @@ elasticbeanstalk.com
 entrust.net
 eus-www.sway-cdn.com
 expireddomains.com
+ezvizlife.com
 fastly-edge.com
 fastly.net
 fbcdn.net
 gandi-ns.fr
 gandi.net
+garmin.com
 gcdn.co
 geotrust.com
 globalsign.com
@@ -85,9 +93,12 @@ he.net
 host-tracker.com
 hostgator.com
 hostgator.com.br
+hp.com
 ibm.com
+immedia-semi.com
 informationprotection.azure.com
 informationprotection.hosting.portal.azure.net
+intel.com
 ip-api.com
 ipify.org
 ipv4only.arpa
@@ -95,16 +106,20 @@ isrg.trustid.ocsp.identrust.com
 ks-cdn.com
 ksyuncdn.com
 kwcdn.com
+lenovo.com
 licdn.com
 linode.com
 markmonitor.com
 media.azure.net
+mediatek.com
+mikrotik.com
 mlccdn.blob.core.windows.net
 mlccdnprod.azureedge.net
 mscrl.microsoft.com
 msocdn.com
 myfritz.net
 mysql.com
+netgear.com
 ngenix.net
 nginx.com
 nginx.org
@@ -112,6 +127,7 @@ no-ip.com
 nps.onyx.azure.net
 nslookup.io
 ntp.org
+nvidia.com
 ocsp.digicert.com
 ocsp.globalsign.com
 ocsp.msocsp.com
@@ -138,6 +154,13 @@ rlcdn.com
 rocket-cdn.com
 rocketcdn.me
 root-servers.net
+samsungacr.com
+samsungapps.com
+samsungcloud.com
+samsungcloudsolution.com
+samsungcloudsolution.net
+samsungosp.com
+samsungqbe.com
 sc-cdn.net
 scdn.co
 secure.globalsign.com
@@ -145,11 +168,13 @@ sedo.com
 shellprod.msocdn.com
 spoprod-a.akamaihd.net
 spotifycdn.com
+synology.com
 tiktokcdn-eu.com
 tiktokcdn-us.com
 tiktokcdn.com
 tiktokrow-cdn.com
 tm-azurefd.net
+tp-link.com
 trbcdn.net
 vecdnlb.com
 vedcdnlb.com
@@ -163,3 +188,4 @@ whoer.net
 worldnic.com
 wswebcdn.com
 wus-www.sway-cdn.com
+wyzecam.com
