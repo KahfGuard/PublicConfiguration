@@ -5,7 +5,6 @@ academia.edu
 aiub.edu
 arxiv.org
 aust.edu
-beian.gov.cn
 berkeley.edu
 britannica.com
 ca.gov
@@ -28,7 +27,6 @@ ieee.org
 khanacademy.org
 loc.gov
 maricopa.gov
-miit.gov.cn
 mit.edu
 nasa.gov
 nih.gov

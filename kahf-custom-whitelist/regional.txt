@@ -1,15 +1,10 @@
 # Regional - Country-Specific Services
-# Merged from: bangladesh.txt, chinese-tech.txt, russian-tech.txt
-# Bangladesh
-# Chinese Tech
-# Russian Tech
+
 163.com
 360.cn
 360safe.com
-adriver.ru
 aliyun.com
 aliyuncs.com
-aliyuncsslbintl.com
 amirazz.com
 avito.ru
 baidu.com
@@ -42,8 +37,6 @@ cabinet.gov.bd
 chaldal.com
 chinamobile.com
 chintaporadh.com
-citybank.com.bd
-cmediahub.ru
 consultant.ru
 crpt.ru
 cse.com.bd
@@ -53,9 +46,6 @@ customs.gov.bd
 daffodilvarsity.edu.bd
 daraz.com.bd
 daymoncomputer.com
-dbankcloud.cn
-dbankcloud.com
-dbankcloud.ru
 desco.org.bd
 dghs.gov.bd
 dpdc.org.bd
@@ -69,14 +59,10 @@ edna.ru
 foodpanda.com.bd
 gd.police.gov.bd
 gdemoideti.ru
-geobasket.ru
 gkdionis.ru
 gosuslugi.ru
-gov.bd
 grameenphone.com
-heytapdl.com
 heytapmobi.com
-heytapmobile.com
 hihonorcloud.com
 huawei.com
 ieducationbd.com
@@ -87,15 +73,11 @@ islamibankbd.com
 ittefaq.com.bd
 iub.edu.bd
 ivi.ru
-ju.ac.bd
 jugantor.com
 kalerkantho.com
 kontur.ru
 kuet.ac.bd
-kwai-pro.com
-kwai.com
 kwai.net
-kwaipros.com
 labaid.com.bd
 lgd.gov.bd
 livejournal.com
@@ -107,21 +89,16 @@ mincom.gov.bd
 miui.com
 miwifi.com
 mod.gov.bd
-moe.gov.bd
 mof.gov.bd
 mohfw.gov.bd
 mopa.gov.bd
-mtb.com.bd
 mts.ru
 muhammadyunus.org
 nagad.com.bd
-nb.gov.bd
 nctb.gov.bd
 netangels.ru
 netease.com
 nic.ru
-notamedia.ru
-nsu.edu.bd
 nu.ac.bd
 onebankbd.com
 online.udvash-unmesh.com
@@ -129,22 +106,18 @@ onlinepbx.ru
 pathao.com
 pcc.police.gov.bd
 pikabu.ru
-police.gov.bd
 primebank.com.bd
 prothomalo.com
-pubalibank.com.bd
 qq.com
 railway.gov.bd
 rambler.ru
 rbc.ru
 reg.ru
 robi.com.bd
-rocket.com.bd
 rt.ru
 ru.ac.bd
 ruet.ac.bd
 russianpost.ru
-rutube.ru
 samakal.com
 sberbank.ru
 selectel.ru
@@ -158,9 +131,7 @@ somewhereinblog.net
 southeastbank.com.bd
 squarehospital.com
 standardbankbd.com
-stbid.ru
 taobao.com
-telecid.ru
 teletalk.com.bd
 tencent-cloud.net
 thedailystar.net
@@ -168,13 +139,11 @@ timeweb.ru
 twelvebd.com
 ucb.com.bd
 uiu.ac.bd
-upay.com.bd
 vivo.com.cn
 vivoglobal.com
 vkontakte.ru
 vkuserphoto.ru
 wb.ru
-wbbasket.ru
 web.bise-ctg.gov.bd
 wildberries.ru
 xiaohongshu.com
@@ -183,5 +152,4 @@ xiaomi.net
 ya.ru
 yandex.net
 yandex.ru
-yandexcloud.net
 youku.com
