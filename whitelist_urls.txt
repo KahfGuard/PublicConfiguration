@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/government.txt
 
 # # Tech & Gaming
-# https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/developer.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/developer.txt
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/hardware.txt
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/gaming.txt
 # https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/security.txt
