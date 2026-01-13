@@ -1,3 +1,6 @@
+# Social - Social Media & Communication Platforms
+# From: social-media.txt (filtered to social platforms only)
+
 3lift.com
 adgrx.com
 adjust.com
@@ -58,7 +61,6 @@ sciencedirect.com
 segment.com
 snapchat.com
 stackadapt.com
-stripchat.com
 t.co
 target.com
 telegram.me
