@@ -1,5 +1,4 @@
 # Infrastructure - CDNs, Cloud, Certificates, Core Internet Services
-# Merged from: infrastructure.txt, hardware.txt
 
 account.activedirectory.windowsazure.com
 afternic.com

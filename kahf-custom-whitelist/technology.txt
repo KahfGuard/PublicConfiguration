@@ -1,5 +1,4 @@
 # Technology - Major Tech Platforms & Developer Tools
-# Merged from: google.txt, microsoft.txt, apple.txt, amazon.txt, meta.txt, developer.txt
 
 aax-eu.amazon.co.uk
 account.live.com
