@@ -1,0 +1,15 @@
+dns.adguard.com
+dns.cloudflare.com
+dns.google
+dns.quad9.net
+dns.nextdns.io
+chromium.dns.nextdns.io
+chrome.cloudflare-dns.com
+doh.opendns.com
+dns.nextdns.io
+dns1.nextdns.io
+dns2.nextdns.io
+edge.nextdns.io
+steering.nextdns.io
+mozilla.cloudflare-dns.com
+firefox.dns.nextdns.io
