@@ -25,7 +25,6 @@ amazontrust.com
 amazonvideo.com
 ampproject.org
 amzn.to
-analytics.google.com
 android.com
 api.passwordreset.microsoftonline.com
 apis.live.net
@@ -87,11 +86,9 @@ google.com
 google.com.br
 google.com.hk
 google.de
-googleadservices.com
 googleapis.com
 googleblog.com
 googledomains.com
-googletagmanager.com
 googleusercontent.com
 googlevideo.com
 graph.microsoft.com
@@ -171,7 +168,6 @@ signup.live.com
 skype.com
 smtp.office365.com
 sourceforge.net
-ssl.google-analytics.com
 ssw.live.com
 stackoverflow.com
 storage.live.com
