@@ -133,6 +133,7 @@
 187.102.193.28 # Auto-blocked [Chile/AS264827] B:0 M:260 (2026-01-14 14:29:07 UTC)
 187.102.193.48 # Auto-blocked [Chile/AS264827] B:0 M:258 (2026-01-14 14:29:07 UTC)
 187.102.193.32 # Auto-blocked [Chile/AS264827] B:0 M:254 (2026-01-14 14:29:07 UTC)
+82.22.24.3 # Auto-blocked [United States/AS400556] B:0 M:10310 (2026-01-16 14:30:47 UTC)
 83.106.91.5 # Auto-blocked [United Kingdom/AS5378] B:7 M:5507 (2026-01-17 14:30:45 UTC)
 176.57.178.50 # Auto-blocked [Germany/AS40676] B:0 M:1409 (2026-01-17 14:30:45 UTC)
 103.184.173.38 # Auto-blocked [Bangladesh/AS149653] B:0 M:516 (2026-01-18 14:19:58 UTC)
