@@ -1,4 +1,5 @@
 # KahfGuard Advertising Blacklist (Safe Version)
+# Google Analytics & Tag Manager
 2mdn.net
 33across.com
 a.ads2.msads.net
@@ -30,6 +31,7 @@ adsrvr.org
 adsyndication.msn.com
 amplify.outbrain.com
 an.facebook.com
+analytics.google.com
 ap.lijit.com
 api.content.ad
 api.taboola.com
@@ -71,6 +73,8 @@ g.doubleclick.net
 g2.gumgum.com
 global.media-net.com
 googleads.g.doubleclick.net
+googleadservices.com
+googletagmanager.com
 gum.criteo.com
 hb.emxdgt.com
 htlb.casalemedia.com
@@ -106,6 +110,9 @@ pubads.g.doubleclick.net
 pubmatic.com
 px.moatads.com
 rad.msn.com
+region1.google-analytics.com
+region2.google-analytics.com
+region3.google-analytics.com
 rt.applovin.com
 rta.criteo.com
 rtax.criteo.com
@@ -130,6 +137,7 @@ soma-advertise.smaato.com
 soma.smaato.net
 spotxchange.com
 srv.popcash.net
+ssl.google-analytics.com
 sslwidget.criteo.com
 ssp.33across.com
 ssp.pubmatic.com

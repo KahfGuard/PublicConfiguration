@@ -29,7 +29,6 @@ ambitionbox.com
 ameblo.jp
 amirazz.com
 amp.azure.net
-analytics.google.com
 aol.com
 api.mixpanel.com
 api.passwordreset.microsoftonline.com
@@ -189,7 +188,6 @@ go.microsoft.com
 go.nasa.gov
 goo.gl
 goodreads.com
-googleadservices.com
 googleapis.com
 graph.microsoft.com
 graph.windows.net
@@ -407,7 +405,6 @@ speedtest.net
 split.io
 spoprod-a.akamaihd.net
 squarespace.com
-ssl.google-analytics.com
 ssw.live.com
 staffhub.ms
 statista.com

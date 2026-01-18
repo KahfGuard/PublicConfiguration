@@ -1,6 +1,31 @@
 # Business - Finance, E-commerce & Productivity
 # Merged from: finance.txt, ecommerce.txt, productivity.txt
-
+# Email Marketing & Transactional Email Services
+# These domains are used for email tracking links - blocking breaks newsletter links
+# AWS SES
+# SendGrid
+# Mailchimp / Mandrill
+# HubSpot
+# Customer.io
+# ConvertKit
+# ActiveCampaign
+# Drip
+# Constant Contact
+# MailerLite
+# Brevo (Sendinblue)
+# Klaviyo
+# Postmark
+# Mailgun
+# Beehiiv
+# Substack
+# Buttondown
+# Ghost
+# Twitter/X short links
+# Salesforce Marketing Cloud
+# Sailthru
+# Litmus (email testing)
+# SparkPost
+activehosted.com
 adobe.com
 adobe.io
 adobe.net
@@ -9,31 +34,59 @@ airbnb.com
 alibaba.com
 aliexpress.com
 allegro.pl
+amazonses.com
 anydesk.com
 atlassian.com
 atlassian.net
+awstrack.me
 bankofamerica.com
+beehiiv.com
 bestbuy.com
 binance.com
+brevo.com
+buttondown.email
 calendly.com
 canva.com
+ck.page
+constantcontact.com
+convertkit-mail.com
+convertkit-mail2.com
+convertkit.com
 costco.com
+ctctcdn.com
 cursor.sh
+customer.io
+customeriomail.com
 deepl.com
 deloitte.com
 ebay.co.uk
 ebay.com
 ebay.de
 etsy.com
+exacttarget.com
 figma.com
+getdrip.com
+ghost.io
 grammarly.com
+hsforms.com
+hsforms.net
+hubspotlinks.com
 ikea.com
+klclick.com
+litmus.com
 lowes.com
 macys.com
 mailchimp.com
+mailerlite.com
+mailgun.com
+mailgun.net
+mandrillapp.com
 mckinsey.com
+mcsv.net
+mcusercontent.com
 mercadolibre.com.ar
 mercadolivre.com.br
+mlsend.com
 myshopify.com
 nike.com
 notion.so
@@ -42,14 +95,24 @@ otto.de
 ozon.ru
 ozone.ru
 paypal.com
+postmarkapp.com
 prudential.com
+pstmrk.it
 rakuten.co.jp
 rakuten.com
+sailthru.com
 salesforce.com
+sendgrid.com
+sendgrid.net
+sendinblue.com
 shein.com
 shopify.com
+sibforms.com
 slack.com
+sparkpostmail.com
 stripe.com
+substackcdn.com
+t.co
 teamviewer.com
 temu.com
 tradingview.com
