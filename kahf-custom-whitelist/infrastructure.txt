@@ -1,5 +1,4 @@
 # Infrastructure - CDNs, Cloud, Certificates, Core Internet Services
-
 account.activedirectory.windowsazure.com
 afternic.com
 ajax.aspnetcdn.com
@@ -76,6 +75,7 @@ netgear.com
 ngenix.net
 nginx.com
 nginx.org
+ngrok.com
 no-ip.com
 nps.onyx.azure.net
 nslookup.io
