@@ -141,3 +141,4 @@
 103.184.173.38 # Auto-blocked [Bangladesh/AS149653] B:0 M:516 (2026-01-18 14:19:58 UTC)
 150.31.52.151 # Auto-blocked [Japan/AS2497] B:0 M:440 (2026-01-18 14:19:58 UTC)
 72.180.114.209 # Auto-blocked [United States/AS11427] B:0 M:354 (2026-01-18 14:31:16 UTC)
+59.152.12.241 # Auto-blocked [Bangladesh/AS18230] B:0 M:455 (2026-01-26 14:21:05 UTC)
