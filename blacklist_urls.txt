@@ -43,20 +43,6 @@
 # [capitole-dating] https://dsi.ut-capitole.fr/blacklists/download/dating.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/dating.tar.gz [dating/domains]
 # [capitole-vpn] https://dsi.ut-capitole.fr/blacklists/download/vpn.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/vpn.tar.gz [vpn/domains]
 
-# Blocklistproject
-# [blocklistproject-abuse] https://blocklistproject.github.io/Lists/abuse.txt # Overlaps heavily with other lists, some false positives
-# [blocklistproject-ads] https://blocklistproject.github.io/Lists/ads.txt
-# [blocklistproject-torrent] https://blocklistproject.github.io/Lists/torrent.txt
-# [blocklistproject-smart-tv] https://blocklistproject.github.io/Lists/smart-tv.txt # Only relevant for smart TV blocking, creates confusion
-[blocklistproject-malware] https://blocklistproject.github.io/Lists/malware.txt
-[blocklistproject-scam] https://blocklistproject.github.io/Lists/scam.txt
-[blocklistproject-drugs] https://blocklistproject.github.io/Lists/drugs.txt
-[blocklistproject-fraud] https://blocklistproject.github.io/Lists/fraud.txt
-[blocklistproject-gambling] https://blocklistproject.github.io/Lists/gambling.txt
-[blocklistproject-phishing] https://blocklistproject.github.io/Lists/phishing.txt
-[blocklistproject-porn] https://blocklistproject.github.io/Lists/porn.txt
-[blocklistproject-ransomware] https://blocklistproject.github.io/Lists/ransomware.txt
-
 # OISD
 [oisd-big] https://big.oisd.nl/domainswild2
 [oisd-nsfw] https://nsfw.oisd.nl/domainswild2
@@ -81,3 +67,39 @@
 [piracy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/piracy.txt
 [social] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/social.txt
 [violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/violence.txt
+
+# Adult
+[chad-mayfield-porn] https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/refs/heads/master/lists/pi_blocklist_porn_top1m.list
+[prigent-adult] https://v.firebog.net/hosts/Prigent-Adult.txt
+
+# Phishing
+[phishing-army] https://phishing.army/download/phishing_army_blocklist_extended.txt
+
+# Malware/Scam/Malvertising
+[spam404] https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+[dandelionsprout-antimalware] https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
+[disconnect-malvertising] https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
+
+# Blocklistproject
+[blocklistproject-malware] https://blocklistproject.github.io/Lists/malware.txt
+[blocklistproject-scam] https://blocklistproject.github.io/Lists/scam.txt
+[blocklistproject-drugs] https://blocklistproject.github.io/Lists/drugs.txt
+[blocklistproject-fraud] https://blocklistproject.github.io/Lists/fraud.txt
+[blocklistproject-gambling] https://blocklistproject.github.io/Lists/gambling.txt
+[blocklistproject-phishing] https://blocklistproject.github.io/Lists/phishing.txt
+[blocklistproject-porn] https://blocklistproject.github.io/Lists/porn.txt
+[blocklistproject-ransomware] https://blocklistproject.github.io/Lists/ransomware.txt
+[blocklistproject-crypto] https://blocklistproject.github.io/Lists/crypto.txt
+[blocklistproject-piracy] https://blocklistproject.github.io/Lists/piracy.txt
+[blocklistproject-redirect] https://blocklistproject.github.io/Lists/redirect.txt
+[blocklistproject-tracking] https://blocklistproject.github.io/Lists/tracking.txt
+[blocklistproject-torrent] https://blocklistproject.github.io/Lists/torrent.txt
+[blocklistproject-abuse] https://blocklistproject.github.io/Lists/abuse.txt
+[blocklistproject-ads] https://blocklistproject.github.io/Lists/ads.txt
+# [blocklistproject-facebook] https://blocklistproject.github.io/Lists/facebook.txt # Social media specific - enable if needed
+# [blocklistproject-tiktok] https://blocklistproject.github.io/Lists/tiktok.txt # Social media specific - enable if needed
+# [blocklistproject-twitter] https://blocklistproject.github.io/Lists/twitter.txt # Social media specific - enable if needed
+# [blocklistproject-whatsapp] https://blocklistproject.github.io/Lists/whatsapp.txt # Social media specific - enable if needed
+# [blocklistproject-smart-tv] https://blocklistproject.github.io/Lists/smart-tv.txt # Only relevant for smart TV blocking
+# [blocklistproject-vaping] https://blocklistproject.github.io/Lists/vaping.txt # Beta list
+# [blocklistproject-basic] https://blocklistproject.github.io/Lists/basic.txt # Beta - starter protection, overlaps with other lists
