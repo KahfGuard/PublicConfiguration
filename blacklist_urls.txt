@@ -103,4 +103,4 @@
 # [blocklistproject-vaping] https://blocklistproject.github.io/Lists/vaping.txt # Beta list
 # [blocklistproject-basic] https://blocklistproject.github.io/Lists/basic.txt # Beta - starter protection, overlaps with other lists
 
-[unblockstop-proxy] https://raw.githubusercontent.com/tachnoraki/unblockstop/main/unblockstop.txt # Adblock Plus format (||domain^) - 2,323 proxy/bypass domains - needs parser support
+# [unblockstop-proxy] https://raw.githubusercontent.com/tachnoraki/unblockstop/main/unblockstop.txt # Adblock Plus format (||domain^) - 2,323 proxy/bypass domains - needs parser support
