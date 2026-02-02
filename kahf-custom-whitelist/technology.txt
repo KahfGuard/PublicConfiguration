@@ -63,6 +63,7 @@ device.login.microsoftonline.com
 dgps.support.microsoft.com
 docs.live.net
 docs.microsoft.com
+dynatrace.com
 enterpriseregistration.windows.net
 eus-www.sway-extensions.com
 events.data.microsoft.com
