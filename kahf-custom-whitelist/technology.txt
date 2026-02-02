@@ -10,6 +10,8 @@ admin.microsoft.com
 admin.onedrive.com
 adminwebservice.microsoftonline.com
 airbridge.io
+attribution.airbridge.io
+event.airbridge.io
 amazon.ca
 amazon.co.jp
 amazon.co.uk
