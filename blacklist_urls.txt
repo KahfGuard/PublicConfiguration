@@ -21,7 +21,7 @@
 # Use # to comment
 #
 
-[stevenblack-master] https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# [stevenblack-master] https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 [stevenblack-porn] https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts
 [stevenblack-gambling] https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts
 

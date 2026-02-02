@@ -1,5 +1,4 @@
 # Technology - Major Tech Platforms & Developer Tools
-
 aax-eu.amazon.co.uk
 account.live.com
 accounts.accesscontrol.windows.net
@@ -10,8 +9,6 @@ admin.microsoft.com
 admin.onedrive.com
 adminwebservice.microsoftonline.com
 airbridge.io
-attribution.airbridge.io
-event.airbridge.io
 amazon.ca
 amazon.co.jp
 amazon.co.uk
@@ -38,6 +35,7 @@ apple.com
 appsforoffice.microsoft.com
 appspot.com
 archive.org
+attribution.airbridge.io
 beacons.gcp.gvt2.com
 beacons.gvt2.com
 beacons5.gvt3.com
@@ -69,6 +67,7 @@ docs.microsoft.com
 dynatrace.com
 enterpriseregistration.windows.net
 eus-www.sway-extensions.com
+event.airbridge.io
 events.data.microsoft.com
 facebook.com
 fb.com
