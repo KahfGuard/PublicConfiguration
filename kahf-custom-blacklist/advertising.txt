@@ -74,7 +74,6 @@ g2.gumgum.com
 global.media-net.com
 googleads.g.doubleclick.net
 googleadservices.com
-googletagmanager.com
 gum.criteo.com
 hb.emxdgt.com
 htlb.casalemedia.com
