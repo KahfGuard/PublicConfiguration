@@ -176,6 +176,7 @@ stackoverflow.com
 storage.live.com
 support.microsoft.com
 sway.com
+tally.so
 teams.microsoft.com
 technet.microsoft.com
 telephony.goog

@@ -1,30 +1,3 @@
-# Business - Finance, E-commerce & Productivity
-# Merged from: finance.txt, ecommerce.txt, productivity.txt
-# Email Marketing & Transactional Email Services
-# These domains are used for email tracking links - blocking breaks newsletter links
-# AWS SES
-# SendGrid
-# Mailchimp / Mandrill
-# HubSpot
-# Customer.io
-# ConvertKit
-# ActiveCampaign
-# Drip
-# Constant Contact
-# MailerLite
-# Brevo (Sendinblue)
-# Klaviyo
-# Postmark
-# Mailgun
-# Beehiiv
-# Substack
-# Buttondown
-# Ghost
-# Twitter/X short links
-# Salesforce Marketing Cloud
-# Sailthru
-# Litmus (email testing)
-# SparkPost
 activehosted.com
 adobe.com
 adobe.io
