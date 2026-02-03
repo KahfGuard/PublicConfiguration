@@ -7,6 +7,7 @@ dns.nextdns.io
 dns.quad9.net
 dns1.nextdns.io
 dns2.nextdns.io
+doh.cleanbrowsing.org
 doh.opendns.com
 edge.nextdns.io
 firefox.dns.nextdns.io
