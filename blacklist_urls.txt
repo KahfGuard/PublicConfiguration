@@ -88,18 +88,18 @@
 [blocklistproject-phishing] https://blocklistproject.github.io/Lists/phishing.txt
 [blocklistproject-porn] https://blocklistproject.github.io/Lists/porn.txt
 [blocklistproject-ransomware] https://blocklistproject.github.io/Lists/ransomware.txt
-[blocklistproject-crypto] https://blocklistproject.github.io/Lists/crypto.txt
-[blocklistproject-piracy] https://blocklistproject.github.io/Lists/piracy.txt
-[blocklistproject-redirect] https://blocklistproject.github.io/Lists/redirect.txt
-[blocklistproject-tracking] https://blocklistproject.github.io/Lists/tracking.txt
-[blocklistproject-torrent] https://blocklistproject.github.io/Lists/torrent.txt
-[blocklistproject-abuse] https://blocklistproject.github.io/Lists/abuse.txt
-[blocklistproject-ads] https://blocklistproject.github.io/Lists/ads.txt
+# [blocklistproject-crypto] https://blocklistproject.github.io/Lists/crypto.txt
+# [blocklistproject-piracy] https://blocklistproject.github.io/Lists/piracy.txt
+# [blocklistproject-redirect] https://blocklistproject.github.io/Lists/redirect.txt
+# [blocklistproject-tracking] https://blocklistproject.github.io/Lists/tracking.txt
+# [blocklistproject-abuse] https://blocklistproject.github.io/Lists/abuse.txt
+# [blocklistproject-torrent] https://blocklistproject.github.io/Lists/torrent.txt
+# [blocklistproject-ads] https://blocklistproject.github.io/Lists/ads.txt
+# [blocklistproject-smart-tv] https://blocklistproject.github.io/Lists/smart-tv.txt # Only relevant for smart TV blocking
 # [blocklistproject-facebook] https://blocklistproject.github.io/Lists/facebook.txt # Social media specific - enable if needed
 # [blocklistproject-tiktok] https://blocklistproject.github.io/Lists/tiktok.txt # Social media specific - enable if needed
 # [blocklistproject-twitter] https://blocklistproject.github.io/Lists/twitter.txt # Social media specific - enable if needed
 # [blocklistproject-whatsapp] https://blocklistproject.github.io/Lists/whatsapp.txt # Social media specific - enable if needed
-# [blocklistproject-smart-tv] https://blocklistproject.github.io/Lists/smart-tv.txt # Only relevant for smart TV blocking
 # [blocklistproject-vaping] https://blocklistproject.github.io/Lists/vaping.txt # Beta list
 # [blocklistproject-basic] https://blocklistproject.github.io/Lists/basic.txt # Beta - starter protection, overlaps with other lists
 
