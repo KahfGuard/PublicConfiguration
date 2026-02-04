@@ -16,7 +16,7 @@ cat > "$HOOK_DIR/pre-commit" << 'EOF'
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 
 # Check if any relevant files are staged
-STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(txt)$' | grep -E '(blacklist|whitelist|kahf-custom-blacklist)')
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(txt)$' | grep -E '(blacklist|whitelist|lists/block)')
 
 if [ -z "$STAGED_FILES" ]; then
     # No relevant files staged, skip validation

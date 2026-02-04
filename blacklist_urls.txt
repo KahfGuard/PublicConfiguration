@@ -19,35 +19,16 @@
 # Extraction files supported: .tar, .tar.gz, .tar.bz2
 # Use letters, spaces and dashes in name.
 # Use # to comment
-#
 
-# [stevenblack-master] https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 [stevenblack-porn] https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts
 [stevenblack-gambling] https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts
-
 [camelon] http://sysctl.org/cameleon/hosts
-# [disconnect.me-tracking] https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt # High false positive rate, breaks many sites
-# [disconnect.me-ads] https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt #  Same issue - breaks too many legitimate sites
-# [hosts-file] https://raw.githubusercontent.com/evankrob/hosts-filenetrehost/master/ad_servers.txt #  Outdated, not actively maintained
-
-# capitole
-# [capitole-adult] https://dsi.ut-capitole.fr/blacklists/download/adult.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/adult.tar.gz [adult/domains] # Reason for Commenting - OISD-NSFW + StevenBlack-porn already cover this well
-# [capitole-drug] https://dsi.ut-capitole.fr/blacklists/download/drogue.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/drogue.tar.gz [drogue/domains]
-# [capitole-gambling] https://dsi.ut-capitole.fr/blacklists/download/gambling.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/gambling.tar.gz [gambling/domains]
-# [capitole-hacking] https://dsi.ut-capitole.fr/blacklists/download/hacking.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/hacking.tar.gz [hacking/domains]
-# [capitole-phishing] https://dsi.ut-capitole.fr/blacklists/download/phishing.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/phishing.tar.gz [phishing/domains]
-# [capitole-ads] https://dsi.ut-capitole.fr/blacklists/download/publicite.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/publicite.tar.gz [publicite/domains]
-# [capitole-redirector] https://dsi.ut-capitole.fr/blacklists/download/redirector.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/redirector.tar.gz [redirector/domains]
-# [capitole-dating] https://dsi.ut-capitole.fr/blacklists/download/dating.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/dating.tar.gz [dating/domains]
-# [capitole-vpn] https://dsi.ut-capitole.fr/blacklists/download/vpn.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/vpn.tar.gz [vpn/domains]
 
 # OISD
 [oisd-big] https://big.oisd.nl/domainswild2
 [oisd-nsfw] https://nsfw.oisd.nl/domainswild2
 
 # Hagezi VPN/Proxy bypass list
-# [hagezi-light] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/light-onlydomains.txt
-# [hagezi-pro] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro-onlydomains.txt
 [hagezi-vpn-proxy-bypass] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
 
 # Security Threat Intelligence
@@ -55,29 +36,21 @@
 [threat-hostlist] https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestdomains.txt
 
 # Kahf custom blacklist
-[adult] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/adult.txt
-[advertising] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/advertising.txt
-[anti-islamic] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/anti-islamic.txt
-[dating] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/dating.txt
-[gambling] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/gambling.txt
-[lgbt] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/lgbt.txt
-[malware] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/malware.txt
-[piracy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/piracy.txt
-[social] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/social.txt
-[violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/violence.txt
-[proxy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-blacklist/proxy.txt
+[adult] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/adult.txt
+[advertising] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/advertising.txt
+[anti-islamic] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/anti-islamic.txt
+[dating] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/dating.txt
+[gambling] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/gambling.txt
+[lgbt] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/lgbt.txt
+[malware] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/malware.txt
+[piracy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/piracy.txt
+[social] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/social.txt
+[violence] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/violence.txt
+# [proxy] https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/block/proxy.txt
 
 # Adult
 [chad-mayfield-porn] https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/refs/heads/master/lists/pi_blocklist_porn_top1m.list
 [prigent-adult] https://v.firebog.net/hosts/Prigent-Adult.txt
-
-# Phishing
-[phishing-army] https://phishing.army/download/phishing_army_blocklist_extended.txt
-
-# Malware/Scam/Malvertising
-[spam404] https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
-[dandelionsprout-antimalware] https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
-[disconnect-malvertising] https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
 
 # Blocklistproject
 [blocklistproject-malware] https://blocklistproject.github.io/Lists/malware.txt
@@ -104,3 +77,30 @@
 # [blocklistproject-basic] https://blocklistproject.github.io/Lists/basic.txt # Beta - starter protection, overlaps with other lists
 
 # [unblockstop-proxy] https://raw.githubusercontent.com/tachnoraki/unblockstop/main/unblockstop.txt # Adblock Plus format (||domain^) - 2,323 proxy/bypass domains - needs parser support
+
+# Phishing
+# [phishing-army] https://phishing.army/download/phishing_army_blocklist_extended.txt
+
+# Malware/Scam/Malvertising
+# [spam404] https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+# [dandelionsprout-antimalware] https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
+# [disconnect-malvertising] https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
+
+# capitole
+# [capitole-adult] https://dsi.ut-capitole.fr/blacklists/download/adult.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/adult.tar.gz [adult/domains] # Reason for Commenting - OISD-NSFW + StevenBlack-porn already cover this well
+# [capitole-drug] https://dsi.ut-capitole.fr/blacklists/download/drogue.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/drogue.tar.gz [drogue/domains]
+# [capitole-gambling] https://dsi.ut-capitole.fr/blacklists/download/gambling.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/gambling.tar.gz [gambling/domains]
+# [capitole-hacking] https://dsi.ut-capitole.fr/blacklists/download/hacking.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/hacking.tar.gz [hacking/domains]
+# [capitole-phishing] https://dsi.ut-capitole.fr/blacklists/download/phishing.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/phishing.tar.gz [phishing/domains]
+# [capitole-ads] https://dsi.ut-capitole.fr/blacklists/download/publicite.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/publicite.tar.gz [publicite/domains]
+# [capitole-redirector] https://dsi.ut-capitole.fr/blacklists/download/redirector.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/redirector.tar.gz [redirector/domains]
+# [capitole-dating] https://dsi.ut-capitole.fr/blacklists/download/dating.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/dating.tar.gz [dating/domains]
+# [capitole-vpn] https://dsi.ut-capitole.fr/blacklists/download/vpn.tar.gz|||||ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/vpn.tar.gz [vpn/domains]
+
+# [disconnect.me-tracking] https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt # High false positive rate, breaks many sites
+# [disconnect.me-ads] https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt #  Same issue - breaks too many legitimate sites
+# [hosts-file] https://raw.githubusercontent.com/evankrob/hosts-filenetrehost/master/ad_servers.txt #  Outdated, not actively maintained
+
+# [hagezi-light] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/light-onlydomains.txt
+# [hagezi-pro] https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro-onlydomains.txt
+# [stevenblack-master] https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts

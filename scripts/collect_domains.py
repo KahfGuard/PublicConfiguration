@@ -17,17 +17,17 @@ Usage:
 """
 
 import argparse
-import subprocess
 import re
+import ssl
+import subprocess
 import sys
 import time
-import urllib.request
 import urllib.error
-import ssl
-from pathlib import Path
-from typing import Optional, Any
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Optional
 
 # Type definitions
 CategoryConfig = dict[str, list[str]]
@@ -117,10 +117,29 @@ AGGREGATOR_URLS: dict[str, list[str]] = {
 # Category-specific keywords to identify domains
 CATEGORY_KEYWORDS: dict[str, list[str]] = {
     "gambling": [
-        "casino", "bet", "poker", "slots", "gambling", "wager", "bingo",
-        "lottery", "jackpot", "roulette", "blackjack", "sportsbook",
-        "betting", "1xbet", "mostbet", "melbet", "parimatch", "betway",
-        "stake", "roobet", "bovada", "draftkings", "fanduel",
+        "casino",
+        "bet",
+        "poker",
+        "slots",
+        "gambling",
+        "wager",
+        "bingo",
+        "lottery",
+        "jackpot",
+        "roulette",
+        "blackjack",
+        "sportsbook",
+        "betting",
+        "1xbet",
+        "mostbet",
+        "melbet",
+        "parimatch",
+        "betway",
+        "stake",
+        "roobet",
+        "bovada",
+        "draftkings",
+        "fanduel",
     ],
     "adult": ["xxx", "porn", "adult", "nude", "nsfw"],
     "piracy": ["torrent", "pirate", "stream", "movie", "download"],
@@ -145,6 +164,7 @@ USER_AGENT = (
 @dataclass
 class CollectionStats:
     """Statistics for domain collection."""
+
     source: str
     total_found: int
     new_domains: int
@@ -162,10 +182,7 @@ def create_ssl_context() -> ssl.SSLContext:
 def fetch_url(url: str, timeout: int = REQUEST_TIMEOUT) -> Optional[str]:
     """Fetch content from URL with error handling."""
     try:
-        req = urllib.request.Request(
-            url,
-            headers={"User-Agent": USER_AGENT}
-        )
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
         ctx = create_ssl_context()
         with urllib.request.urlopen(req, timeout=timeout, context=ctx) as response:
             return response.read().decode("utf-8", errors="ignore")
@@ -186,8 +203,7 @@ def extract_domains_from_text(text: str) -> set[str]:
 
     # Pattern to match domains
     domain_pattern = (
-        r'(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)'
-        r'+[a-zA-Z]{2,}'
+        r"(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)" r"+[a-zA-Z]{2,}"
     )
 
     # Find all potential domains
@@ -196,10 +212,22 @@ def extract_domains_from_text(text: str) -> set[str]:
 
         # Skip common non-domain patterns
         skip_patterns = [
-            "example.com", "localhost", "test.com", "domain.com",
-            "yoursite.com", "website.com", "placeholder",
-            ".png", ".jpg", ".gif", ".css", ".js", ".svg",
-            "github.com", "githubusercontent.com", "cloudflare",
+            "example.com",
+            "localhost",
+            "test.com",
+            "domain.com",
+            "yoursite.com",
+            "website.com",
+            "placeholder",
+            ".png",
+            ".jpg",
+            ".gif",
+            ".css",
+            ".js",
+            ".svg",
+            "github.com",
+            "githubusercontent.com",
+            "cloudflare",
         ]
         if any(skip in domain for skip in skip_patterns):
             continue
@@ -247,10 +275,7 @@ def validate_domain_format(domain: str) -> bool:
         domain = domain[4:]
 
     # Basic domain validation
-    pattern = (
-        r'^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)'
-        r'+[a-zA-Z]{2,}$'
-    )
+    pattern = r"^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)" r"+[a-zA-Z]{2,}$"
     return bool(re.match(pattern, domain))
 
 
@@ -285,7 +310,7 @@ def check_blocking_status(domain: str) -> BlockingResult:
 def load_existing_domains(category: str) -> set[str]:
     """Load existing domains from the blacklist file."""
     script_dir = Path(__file__).parent
-    blacklist_file = script_dir.parent / "kahf-custom-blacklist" / f"{category}.txt"
+    blacklist_file = script_dir.parent / "lists/block" / f"{category}.txt"
 
     domains: set[str] = set()
     if blacklist_file.exists():
@@ -300,7 +325,7 @@ def load_existing_domains(category: str) -> set[str]:
 def save_domains(category: str, domains: set[str]) -> None:
     """Save domains to the blacklist file (sorted, deduplicated)."""
     script_dir = Path(__file__).parent
-    blacklist_file = script_dir.parent / "kahf-custom-blacklist" / f"{category}.txt"
+    blacklist_file = script_dir.parent / "lists/block" / f"{category}.txt"
 
     sorted_domains = sorted(domains)
     with open(blacklist_file, "w") as f:
@@ -385,7 +410,9 @@ def fetch_from_aggregators(category: str) -> tuple[set[str], list[str]]:
     return domains, errors
 
 
-def fetch_from_tranco_list(category: str, limit: int = 10000) -> tuple[set[str], list[str]]:
+def fetch_from_tranco_list(
+    category: str, limit: int = 10000
+) -> tuple[set[str], list[str]]:
     """
     Fetch top domains from Tranco list and filter by category keywords.
     Tranco combines Alexa, Umbrella, Majestic rankings.
@@ -403,8 +430,8 @@ def fetch_from_tranco_list(category: str, limit: int = 10000) -> tuple[set[str],
     url = "https://tranco-list.eu/top-1m.csv.zip"
 
     try:
-        import zipfile
         import io
+        import zipfile
 
         content = fetch_url(url, timeout=60)
         if content is None:
@@ -464,34 +491,40 @@ def collect_from_web(category: str, max_results: int = 5000) -> set[str]:
     # 1. Fetch from public blocklists
     blocklist_domains, blocklist_errors = fetch_from_blocklists(category)
     all_domains.update(blocklist_domains)
-    all_stats.append(CollectionStats(
-        source="Public Blocklists",
-        total_found=len(blocklist_domains),
-        new_domains=len(blocklist_domains),
-        errors=blocklist_errors
-    ))
+    all_stats.append(
+        CollectionStats(
+            source="Public Blocklists",
+            total_found=len(blocklist_domains),
+            new_domains=len(blocklist_domains),
+            errors=blocklist_errors,
+        )
+    )
 
     # 2. Fetch from aggregator sites
     aggregator_domains, aggregator_errors = fetch_from_aggregators(category)
     new_from_agg = aggregator_domains - all_domains
     all_domains.update(aggregator_domains)
-    all_stats.append(CollectionStats(
-        source="Aggregator Sites",
-        total_found=len(aggregator_domains),
-        new_domains=len(new_from_agg),
-        errors=aggregator_errors
-    ))
+    all_stats.append(
+        CollectionStats(
+            source="Aggregator Sites",
+            total_found=len(aggregator_domains),
+            new_domains=len(new_from_agg),
+            errors=aggregator_errors,
+        )
+    )
 
     # 3. Fetch from Tranco ranking list
     tranco_domains, tranco_errors = fetch_from_tranco_list(category)
     new_from_tranco = tranco_domains - all_domains
     all_domains.update(tranco_domains)
-    all_stats.append(CollectionStats(
-        source="Tranco Top Sites",
-        total_found=len(tranco_domains),
-        new_domains=len(new_from_tranco),
-        errors=tranco_errors
-    ))
+    all_stats.append(
+        CollectionStats(
+            source="Tranco Top Sites",
+            total_found=len(tranco_domains),
+            new_domains=len(new_from_tranco),
+            errors=tranco_errors,
+        )
+    )
 
     # Print collection summary
     print(f"\n{'='*50}")
@@ -558,7 +591,7 @@ def generate_report(category: str, results: ValidationResults) -> str:
     report: list[str] = []
     total = results["total"]
     blocked_count = len(results["blocked"])
-    pct = (100 * blocked_count // max(total, 1))
+    pct = 100 * blocked_count // max(total, 1)
 
     report.append(f"\n{'=' * 60}")
     report.append(f"VALIDATION REPORT: {category.upper()}")
@@ -590,38 +623,32 @@ def main() -> int:
         description="Collect and validate domains for KahfGuard blacklists"
     )
     parser.add_argument(
-        "--category", "-c",
+        "--category",
+        "-c",
         choices=list(BLOCKLIST_SOURCES.keys()) + ["all"],
-        help="Category to process (or 'all')"
+        help="Category to process (or 'all')",
     )
     parser.add_argument(
-        "--validate-only", "-v",
+        "--validate-only",
+        "-v",
         action="store_true",
-        help="Only validate existing domains"
+        help="Only validate existing domains",
     )
     parser.add_argument(
-        "--collect", "-C",
+        "--collect",
+        "-C",
         action="store_true",
-        help="Collect new domains from web sources"
+        help="Collect new domains from web sources",
     )
+    parser.add_argument("--add-domains", "-a", nargs="+", help="Manually add domains")
+    parser.add_argument("--verbose", action="store_true", help="Show detailed output")
     parser.add_argument(
-        "--add-domains", "-a",
-        nargs="+",
-        help="Manually add domains"
-    )
-    parser.add_argument(
-        "--verbose",
-        action="store_true",
-        help="Show detailed output"
-    )
-    parser.add_argument(
-        "--check-domain", "-d",
-        help="Check blocking status of a single domain"
+        "--check-domain", "-d", help="Check blocking status of a single domain"
     )
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Don't save changes, just show what would be added"
+        help="Don't save changes, just show what would be added",
     )
 
     args = parser.parse_args()
@@ -642,9 +669,7 @@ def main() -> int:
         parser.error("--category is required (unless using --check-domain)")
 
     categories = (
-        list(BLOCKLIST_SOURCES.keys())
-        if args.category == "all"
-        else [args.category]
+        list(BLOCKLIST_SOURCES.keys()) if args.category == "all" else [args.category]
     )
 
     for category in categories:

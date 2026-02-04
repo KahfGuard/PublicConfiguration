@@ -18,8 +18,8 @@ Auto-fixes (with --fix):
 - Sorts alphabetically
 
 Directories validated:
-- kahf-custom-blacklist/*.txt
-- kahf-custom-whitelist/*.txt
+- lists/block/*.txt
+- lists/allow/*.txt
 - blacklist_domains.txt, whitelist_domains.txt
 - ip_blacklist.txt, ip_whitelist.txt
 
@@ -72,21 +72,21 @@ def normalize_domain(domain: str) -> str:
     domain = domain.strip()
 
     # Remove protocol
-    domain = re.sub(r'^https?://', '', domain, flags=re.IGNORECASE)
+    domain = re.sub(r"^https?://", "", domain, flags=re.IGNORECASE)
 
     # Remove path, query string, fragment (keep only domain)
-    domain = domain.split('/')[0]
-    domain = domain.split('?')[0]
-    domain = domain.split('#')[0]
+    domain = domain.split("/")[0]
+    domain = domain.split("?")[0]
+    domain = domain.split("#")[0]
 
     # Remove port number
-    domain = re.sub(r':\d+$', '', domain)
+    domain = re.sub(r":\d+$", "", domain)
 
     # Remove www. prefix (and any www\d. like www2.)
-    domain = re.sub(r'^www\d*\.', '', domain, flags=re.IGNORECASE)
+    domain = re.sub(r"^www\d*\.", "", domain, flags=re.IGNORECASE)
 
     # Remove trailing dot
-    domain = domain.rstrip('.')
+    domain = domain.rstrip(".")
 
     # Convert to lowercase
     domain = domain.lower()
@@ -103,25 +103,25 @@ def validate_domain(domain: str) -> Tuple[bool, str]:
         return False, "Domain too long (max 253 chars)"
 
     # Remove trailing dot if present
-    domain = domain.rstrip('.')
+    domain = domain.rstrip(".")
 
     # Check for valid characters
-    if not re.match(r'^[a-zA-Z0-9.-]+$', domain):
+    if not re.match(r"^[a-zA-Z0-9.-]+$", domain):
         return False, "Invalid characters in domain"
 
     # Check domain pattern
-    pattern = r'^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$'
+    pattern = r"^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$"
     if not re.match(pattern, domain):
         return False, "Invalid domain format"
 
     # Check for double dots
-    if '..' in domain:
+    if ".." in domain:
         return False, "Double dots in domain"
 
     # Check for leading/trailing hyphens in labels
-    labels = domain.split('.')
+    labels = domain.split(".")
     for label in labels:
-        if label.startswith('-') or label.endswith('-'):
+        if label.startswith("-") or label.endswith("-"):
             return False, "Label starts/ends with hyphen"
         if len(label) > 63:
             return False, "Label too long (max 63 chars)"
@@ -135,7 +135,7 @@ def validate_ip_entry(entry: str) -> Tuple[bool, str]:
         return False, "Empty entry"
 
     # Split IP from comment
-    parts = entry.split('#', 1)
+    parts = entry.split("#", 1)
     ip_part = parts[0].strip()
 
     if not ip_part:
@@ -143,7 +143,7 @@ def validate_ip_entry(entry: str) -> Tuple[bool, str]:
 
     try:
         # Try parsing as network (CIDR)
-        if '/' in ip_part:
+        if "/" in ip_part:
             ipaddress.ip_network(ip_part, strict=False)
         else:
             ipaddress.ip_address(ip_part)
@@ -159,14 +159,14 @@ def validate_domain_file(filepath: Path, fix: bool = False) -> list[ValidationEr
     seen = set()
     needs_fix = False
 
-    with open(filepath, 'r') as f:
+    with open(filepath, "r") as f:
         lines = f.readlines()
 
     for i, line in enumerate(lines, 1):
         original_line = line.strip()
 
         # Skip empty lines and comments
-        if not original_line or original_line.startswith('#'):
+        if not original_line or original_line.startswith("#"):
             if original_line:
                 valid_domains.append(original_line)
             continue
@@ -177,54 +177,58 @@ def validate_domain_file(filepath: Path, fix: bool = False) -> list[ValidationEr
         # Check if normalization changed anything
         if domain != original_line.lower():
             needs_fix = True
-            errors.append(ValidationError(
-                str(filepath), i, original_line,
-                f"Needs normalization -> '{domain}'"
-            ))
+            errors.append(
+                ValidationError(
+                    str(filepath),
+                    i,
+                    original_line,
+                    f"Needs normalization -> '{domain}'",
+                )
+            )
 
         # Skip if normalization resulted in empty string
         if not domain:
-            errors.append(ValidationError(
-                str(filepath), i, original_line, "Invalid/empty after normalization"
-            ))
+            errors.append(
+                ValidationError(
+                    str(filepath), i, original_line, "Invalid/empty after normalization"
+                )
+            )
             continue
 
         # Check for duplicates
         if domain in seen:
             needs_fix = True
-            errors.append(ValidationError(
-                str(filepath), i, original_line, "Duplicate domain"
-            ))
+            errors.append(
+                ValidationError(str(filepath), i, original_line, "Duplicate domain")
+            )
             continue
         seen.add(domain)
 
         # Validate format
         is_valid, msg = validate_domain(domain)
         if not is_valid:
-            errors.append(ValidationError(
-                str(filepath), i, original_line, msg
-            ))
+            errors.append(ValidationError(str(filepath), i, original_line, msg))
             continue
 
         valid_domains.append(domain)
 
     # Check sorting
-    sorted_domains = sorted([d for d in valid_domains if not d.startswith('#')])
-    actual_domains = [d for d in valid_domains if not d.startswith('#')]
+    sorted_domains = sorted([d for d in valid_domains if not d.startswith("#")])
+    actual_domains = [d for d in valid_domains if not d.startswith("#")]
 
     if actual_domains != sorted_domains:
         needs_fix = True
-        errors.append(ValidationError(
-            str(filepath), 0, "", "File is not sorted alphabetically"
-        ))
+        errors.append(
+            ValidationError(str(filepath), 0, "", "File is not sorted alphabetically")
+        )
 
     # Fix if requested
     if fix and needs_fix:
         # Remove duplicates, normalize, and sort
-        comments = [d for d in valid_domains if d.startswith('#')]
-        domains = sorted(set(d for d in valid_domains if not d.startswith('#')))
+        comments = [d for d in valid_domains if d.startswith("#")]
+        domains = sorted(set(d for d in valid_domains if not d.startswith("#")))
 
-        with open(filepath, 'w') as f:
+        with open(filepath, "w") as f:
             for comment in comments:
                 f.write(f"{comment}\n")
             for domain in domains:
@@ -243,7 +247,7 @@ def validate_ip_file(filepath: Path, fix: bool = False) -> list[ValidationError]
     valid_entries = []
     seen_ips = set()
 
-    with open(filepath, 'r') as f:
+    with open(filepath, "r") as f:
         lines = f.readlines()
 
     for i, line in enumerate(lines, 1):
@@ -254,34 +258,30 @@ def validate_ip_file(filepath: Path, fix: bool = False) -> list[ValidationError]
             continue
 
         # Skip comment-only lines
-        if line.startswith('#'):
+        if line.startswith("#"):
             valid_entries.append(line)
             continue
 
         # Extract IP part for duplicate check
-        ip_part = line.split('#')[0].strip()
+        ip_part = line.split("#")[0].strip()
 
         # Check for duplicates (by IP, not comment)
         if ip_part in seen_ips:
-            errors.append(ValidationError(
-                str(filepath), i, line, "Duplicate IP entry"
-            ))
+            errors.append(ValidationError(str(filepath), i, line, "Duplicate IP entry"))
             continue
         seen_ips.add(ip_part)
 
         # Validate format
         is_valid, msg = validate_ip_entry(line)
         if not is_valid:
-            errors.append(ValidationError(
-                str(filepath), i, line, msg
-            ))
+            errors.append(ValidationError(str(filepath), i, line, msg))
             continue
 
         valid_entries.append(line)
 
     # Fix if requested
     if fix and errors:
-        with open(filepath, 'w') as f:
+        with open(filepath, "w") as f:
             for entry in valid_entries:
                 f.write(f"{entry}\n")
         print(f"Fixed: {filepath}")
@@ -296,14 +296,14 @@ def find_files(repo_root: Path) -> Tuple[list[Path], list[Path]]:
     ip_files = []
 
     # Domain blacklist files
-    blacklist_dir = repo_root / "kahf-custom-blacklist"
+    blacklist_dir = repo_root / "lists/block"
     if blacklist_dir.exists():
         for f in blacklist_dir.glob("*.txt"):
             if f.name != "README.md":
                 domain_files.append(f)
 
     # Domain whitelist files
-    whitelist_dir = repo_root / "kahf-custom-whitelist"
+    whitelist_dir = repo_root / "lists/allow"
     if whitelist_dir.exists():
         for f in whitelist_dir.glob("*.txt"):
             if f.name != "README.md":
@@ -331,18 +331,15 @@ def main():
     parser.add_argument(
         "--fix",
         action="store_true",
-        help="Automatically fix issues (remove duplicates, sort)"
+        help="Automatically fix issues (remove duplicates, sort)",
     )
+    parser.add_argument("--file", "-f", type=Path, help="Validate a specific file")
     parser.add_argument(
-        "--file", "-f",
-        type=Path,
-        help="Validate a specific file"
-    )
-    parser.add_argument(
-        "--type", "-t",
+        "--type",
+        "-t",
         choices=["domain", "ip", "auto"],
         default="auto",
-        help="File type (auto-detected by default)"
+        help="File type (auto-detected by default)",
     )
 
     args = parser.parse_args()
@@ -378,7 +375,9 @@ def main():
         # Validate all files
         domain_files, ip_files = find_files(repo_root)
 
-        print(f"Validating {len(domain_files)} domain files and {len(ip_files)} IP files...\n")
+        print(
+            f"Validating {len(domain_files)} domain files and {len(ip_files)} IP files...\n"
+        )
 
         for filepath in domain_files:
             errors = validate_domain_file(filepath, args.fix)
