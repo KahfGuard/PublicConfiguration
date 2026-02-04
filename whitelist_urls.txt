@@ -1,34 +1,34 @@
 # KahfGuard Whitelist URLs
 
 # Base whitelist - Catch All
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/base.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/base.txt
 
 # Kahf Services
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/kahf.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/kahf.txt
 
 # Infrastructure - CDNs, Cloud, Certificates, Core Internet
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/infrastructure.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/infrastructure.txt
 
 # Technology - Major Tech Platforms (Google, Microsoft, Apple, Amazon, Meta, Developer Tools)
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/technology.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/technology.txt
 
 # Social - Social Media & Communication Platforms
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/social.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/social.txt
 
 # Media - News, Streaming & Gaming
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/media.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/media.txt
 
 # Business - Finance, E-commerce & Productivity
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/business.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/business.txt
 
 # Public - Education & Government
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/public.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/public.txt
 
 # Regional - Country-Specific Services
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/regional.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/regional.txt
 
 # Security - Security Tools & Services
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/security.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/security.txt
 
 # Islamic - Islamic Resources
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/kahf-custom-whitelist/islamic.txt
+https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/islamic.txt
