@@ -1,0 +1,2 @@
+125.30.21.243 # Auto-blocked [Japan/AS2497] B:174 M:6233 (2026-02-06 14:24:02 UTC)
+43.246.202.153 # Auto-blocked [Bangladesh/AS137449] B:0 M:510 (2026-02-06 14:24:02 UTC)
