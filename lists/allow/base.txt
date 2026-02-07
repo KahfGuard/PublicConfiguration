@@ -75,6 +75,7 @@ bit.ly
 bitget.com
 bka.sh
 bkash.com
+blog.logrocket.com
 boimate.com
 bol.com
 boldchat.com
@@ -101,6 +102,7 @@ cdn.onenote.net
 cdn.uci.officeapps.live.com
 cert.int-x3.letsencrypt.org
 change.org
+chat.z.ai
 chess.com
 chintaporadh.com
 cl.turkishairlines.com
@@ -159,6 +161,7 @@ epom.com
 eskimi.com
 espn.com
 ethicalads.io
+etoro.com
 eurofins.com
 eus-www.sway-cdn.com
 eus-www.sway-extensions.com
@@ -363,6 +366,7 @@ quickconnect.to
 quora.com
 r.office.microsoft.com
 redd.it
+replit.com
 revive-adserver.com
 ripn.net
 rocketcdn.me
@@ -377,6 +381,7 @@ secure.skypeassets.com
 security.microsoft.com
 segment.com
 segment.io
+semrush.com
 sentry.io
 setarafarm.com
 seznam.cz
