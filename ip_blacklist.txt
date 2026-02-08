@@ -1,0 +1,2 @@
+125.30.21.243 # Auto-blocked [Japan/AS2497] B:120 M:3962 (2026-02-08 14:24:06 UTC)
+202.47.43.63 # Auto-blocked [Pakistan/AS9541] B:0 M:1446 (2026-02-08 14:24:06 UTC)
