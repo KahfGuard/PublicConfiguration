@@ -200,3 +200,4 @@ yammer.com
 yammerusercontent.com
 youtube-nocookie.com
 youtube.com
+cursor.com
