@@ -8,6 +8,7 @@ adl.windows.com
 admin.microsoft.com
 admin.onedrive.com
 adminwebservice.microsoftonline.com
+ai.com
 airbridge.io
 amazon.ca
 amazon.co.jp
