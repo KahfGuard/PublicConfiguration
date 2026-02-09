@@ -152,6 +152,7 @@ php.net
 pinimg.com
 pki.goog
 platform.linkedin.com
+posthog.com
 powerapps.com
 primevideo.com
 protection.office.com
