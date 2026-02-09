@@ -56,6 +56,7 @@ cloud.microsoft
 companymanager.microsoftonline.com
 compliance.microsoft.com
 creativecommons.org
+cursor.com
 d.docs.live.net
 dc.services.visualstudio.com
 debian.org
@@ -200,4 +201,3 @@ yammer.com
 yammerusercontent.com
 youtube-nocookie.com
 youtube.com
-cursor.com
