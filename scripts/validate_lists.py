@@ -224,15 +224,27 @@ def validate_domain_file(filepath: Path, fix: bool = False) -> list[ValidationEr
 
     # Fix if requested
     if fix and needs_fix:
-        # Remove duplicates, normalize, and sort
-        comments = [d for d in valid_domains if d.startswith("#")]
-        domains = sorted(set(d for d in valid_domains if not d.startswith("#")))
+        # Preserve comment positions, sort domains within each section
+        sections = []
+        current_comment = None
+        current_domains = []
+
+        for d in valid_domains:
+            if d.startswith("#"):
+                if current_comment is not None or current_domains:
+                    sections.append((current_comment, current_domains))
+                current_comment = d
+                current_domains = []
+            else:
+                current_domains.append(d)
+        sections.append((current_comment, current_domains))
 
         with open(filepath, "w") as f:
-            for comment in comments:
-                f.write(f"{comment}\n")
-            for domain in domains:
-                f.write(f"{domain}\n")
+            for comment, domains in sections:
+                if comment:
+                    f.write(f"{comment}\n")
+                for domain in sorted(set(domains)):
+                    f.write(f"{domain}\n")
 
         print(f"Fixed: {filepath}")
         # Return empty errors since we fixed them
