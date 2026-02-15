@@ -1,8 +1,7 @@
-# Media - News, Streaming & Gaming
-# Merged from: news-media.txt, streaming.txt, gaming.txt
+# KahfGuard Media Allowlist - News, Streaming & Gaming
 
+# Major News Outlets
 apnews.com
-bandcamp.com
 bbc.co.uk
 bbc.com
 bild.de
@@ -12,51 +11,62 @@ cbsnews.com
 cnn.com
 corriere.it
 dailymail.co.uk
-disneyplus.com
-dreamstime.com
-ea.com
 elpais.com
-epicgames.dev
 focus.de
 forbes.com
 foxnews.com
-frontiersin.org
-gamepass.com
-globo.com
 hbr.org
 hindustantimes.com
 indiatimes.com
-kick.com
 latimes.com
 lemonde.fr
-nature.com
 nbcnews.com
-netflix.net
 newsweek.com
-nflxvideo.net
 npr.org
 nytimes.com
-playstation.com
 repubblica.it
 reuters.com
-roku.com
-service.gov.uk
-soundcloud.com
 spiegel.de
-spotify.com
-springer.com
-steampowered.com
-supercell.com
 t-online.de
 techcrunch.com
 telegraph.co.uk
 theguardian.com
 theverge.com
 time.com
-twitch.tv
-unity3d.com
 usatoday.com
-vimeo.com
 welt.de
 wired.com
 wsj.com
+
+# Academic & Research
+frontiersin.org
+nature.com
+springer.com
+
+# Streaming & Video
+disneyplus.com
+netflix.net
+nflxvideo.net
+roku.com
+soundcloud.com
+spotify.com
+twitch.tv
+vimeo.com
+
+# Gaming
+ea.com
+epicgames.dev
+gamepass.com
+playstation.com
+steampowered.com
+supercell.com
+unity3d.com
+
+# Media & Images
+bandcamp.com
+dreamstime.com
+kick.com
+
+# Government Services
+globo.com
+service.gov.uk

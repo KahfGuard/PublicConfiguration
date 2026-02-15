@@ -1,16 +1,33 @@
+# KahfGuard DNS-over-HTTPS Bypass Blocklist
+
+# Cloudflare DNS
 chrome.cloudflare-dns.com
-chromium.dns.nextdns.io
-dns.adguard.com
 dns.cloudflare.com
-dns.google
+mozilla.cloudflare-dns.com
+
+# NextDNS
+chromium.dns.nextdns.io
 dns.nextdns.io
-dns.quad9.net
 dns1.nextdns.io
 dns2.nextdns.io
-doh.cleanbrowsing.org
-doh.opendns.com
 edge.nextdns.io
 firefox.dns.nextdns.io
-gateway.fe2.apple-dns.net
-mozilla.cloudflare-dns.com
 steering.nextdns.io
+
+# Google DNS
+dns.google
+
+# Quad9
+dns.quad9.net
+
+# AdGuard DNS
+dns.adguard.com
+
+# CleanBrowsing
+doh.cleanbrowsing.org
+
+# OpenDNS (Cisco)
+doh.opendns.com
+
+# Apple Private Relay
+gateway.fe2.apple-dns.net

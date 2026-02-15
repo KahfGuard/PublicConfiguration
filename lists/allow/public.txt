@@ -1,49 +1,61 @@
-# Public - Education & Government
-# Merged from: education.txt, government.txt
+# KahfGuard Public Allowlist - Education & Government
 
-academia.edu
+# Universities
 aiub.edu
-arxiv.org
 aust.edu
 berkeley.edu
-britannica.com
-ca.gov
-caixa.gov.br
-cambridge.org
-cdc.gov
 cornell.edu
+ewubd.edu
+harvard.edu
+mit.edu
+princeton.edu
+stanford.edu
+sust.edu
+uap-bd.edu
+washington.edu
+
+# Online Learning
 coursera.org
 duolingo.com
 edx.org
+khanacademy.org
+udemy.com
+
+# Research & Reference
+academia.edu
+arxiv.org
+britannica.com
+ieee.org
+researchgate.net
+
+# US Government
+ca.gov
+cdc.gov
 epa.gov
-europa.eu
-ewubd.edu
 fda.gov
 go.nasa.gov
-gov.br
-gov.uk
-harvard.edu
-ieee.org
-khanacademy.org
 loc.gov
 maricopa.gov
-mit.edu
 nasa.gov
 nih.gov
 nist.gov
 noaa.gov
-princeton.edu
-researchgate.net
-stanford.edu
-sust.edu
-uap-bd.edu
-udemy.com
+usda.gov
+whitehouse.gov
+
+# International Government & Organizations
+cambridge.org
+europa.eu
+gov.br
+gov.uk
 un.org
 unesco.org
-usda.gov
-washington.edu
-whitehouse.gov
 who.int
+worldbank.org
+
+# Brazil Government
+caixa.gov.br
+
+# Knowledge Bases
 wikimedia.org
 wikipedia.org
-worldbank.org

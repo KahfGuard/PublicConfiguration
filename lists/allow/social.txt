@@ -1,73 +1,95 @@
-# Social - Social Media & Communication Platforms
-# From: social-media.txt (filtered to social platforms only)
+# KahfGuard Social Allowlist - Social Media & Communication Platforms
 
+# Discord
+discord.com
+discord.gg
+discord.media
+discordapp.com
+
+# Meta / Facebook
+fbsbx.com
+
+# Reddit
+reddit.com
+
+# Twitter / X
+t.co
+twitter.com
+x.com
+
+# TikTok
+capcut.com
+tiktok.com
+tiktokv.com
+
+# Other Social Platforms
+bsky.app
+line.me
+ok.ru
+pinterest.com
+snapchat.com
+telegram.me
+telegram.org
+tumblr.com
+viber.com
+vk.ru
+weibo.com
+
+# Messaging & Collaboration
+box.com
+dropbox.com
+hubspot.com
+salesforceliveagent.com
+webex.com
+
+# News & Publishing
+ft.com
+huffpost.com
+independent.co.uk
+nypost.com
+washingtonpost.com
+
+# AI & Chat Platforms
+chatgpt.com
+
+# Analytics & Marketing
 adjust.com
 ambitionbox.com
 app-measurement.com
 app.hubspot.com
 astg.widerplanet.com
+omniconvert.com
+segment.com
+
+# Security & Networking
 avast.com
-bitget.com
-bluehost.com
-boldchat.com
-box.com
-bsky.app
-capcut.com
-chatgpt.com
 checkpoint.com
-cnet.com
 comcast.com
-deviantart.com
-discord.com
-discord.gg
-discord.media
-discordapp.com
-dreamhost.com
-dropbox.com
 eset.com
 fast.com
-fbsbx.com
-firefox.com
-ft.com
-homedepot.com
-hubspot.com
-huffpost.com
-independent.co.uk
-intuit.com
-line.me
-marriott.com
-netflix.com
-nypost.com
-ok.ru
-omniconvert.com
 onetrust.com
-pinet.com
-pinterest.com
-quizlet.com
-reddit.com
 redhat.com
-salesforceliveagent.com
-sciencedirect.com
-segment.com
-snapchat.com
-t.co
-target.com
-telegram.me
-telegram.org
-tencent.com
-tiktok.com
-tiktokv.com
-trustpilot.com
-tumblr.com
-twitter.com
 ubnt.com
-viber.com
-vk.ru
-walmart.com
-washingtonpost.com
-webex.com
-weibo.com
-wix.com
-x.com
 xerox.com
-yandex.com
+
+# Tech & Media
+cnet.com
+deviantart.com
+firefox.com
+intuit.com
+netflix.com
+pinet.com
+quizlet.com
+sciencedirect.com
+tencent.com
+trustpilot.com
+
+# Retail & Services
+bluehost.com
+boldchat.com
+dreamhost.com
+homedepot.com
+marriott.com
+target.com
+walmart.com
+wix.com
