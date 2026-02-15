@@ -212,15 +212,26 @@ def validate_domain_file(filepath: Path, fix: bool = False) -> list[ValidationEr
 
         valid_domains.append(domain)
 
-    # Check sorting
-    sorted_domains = sorted([d for d in valid_domains if not d.startswith("#")])
-    actual_domains = [d for d in valid_domains if not d.startswith("#")]
+    # Check sorting (within each comment section)
+    sections = []
+    current_domains = []
+    for d in valid_domains:
+        if d.startswith("#"):
+            if current_domains:
+                sections.append(current_domains)
+            current_domains = []
+        else:
+            current_domains.append(d)
+    if current_domains:
+        sections.append(current_domains)
 
-    if actual_domains != sorted_domains:
-        needs_fix = True
-        errors.append(
-            ValidationError(str(filepath), 0, "", "File is not sorted alphabetically")
-        )
+    for section_domains in sections:
+        if section_domains != sorted(section_domains):
+            needs_fix = True
+            errors.append(
+                ValidationError(str(filepath), 0, "", "File is not sorted alphabetically")
+            )
+            break
 
     # Fix if requested
     if fix and needs_fix:

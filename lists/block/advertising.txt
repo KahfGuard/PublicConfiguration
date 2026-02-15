@@ -1,165 +1,251 @@
 # KahfGuard Advertising Blacklist (Safe Version)
-# Google Analytics & Tag Manager
+
+# Google (DoubleClick, AdSense, AdMob, Analytics, 2mdn)
 2mdn.net
-33across.com
-a.ads2.msads.net
-a.teads.tv
-aax-eu.amazon-adsystem.com
-aax-fe.amazon-adsystem.com
-aax.amazon-adsystem.com
 ad.doubleclick.net
-ad.propellerads.com
-ad.turn.com
 adclick.g.doubleclick.net
 ade.googlesyndication.com
-adnexus.net
-adnxs.com
-ads.adcolony.com
 ads.google.com
-ads.ironsource.mobi
-ads.moloco.com
-ads.mopub.com
-ads.perfectaudience.com
-ads.pubmatic.com
-ads.sharethrough.com
-ads.tremorhub.com
-ads.vungle.com
-ads.yieldmo.com
-ads1.msads.net
-ads2.msads.net
-adsrvr.org
-adsyndication.msn.com
-amplify.outbrain.com
-an.facebook.com
 analytics.google.com
-ap.lijit.com
-api.content.ad
-api.taboola.com
-api.vungle.com
-api2.branch.io
-app.adjust.com
-app.appsflyer.com
 apps.admob.com
-assoc-amazon.com
-auction.unityads.unity3d.com
-b.scorecardresearch.com
-bidder.criteo.com
-bidswitch.net
-cas.criteo.com
-casalemedia.com
-cdn.branch.io
-cdn.doubleverify.com
-cdn.taboola.com
-cdn.teads.tv
-cds.connatix.com
 cm.g.doubleclick.net
-config.inmobi.com
-config.unityads.unity3d.com
-contextual.media.net
-contextweb.com
-d.adroll.com
-d.applovin.com
-demdex.net
-dis.criteo.com
 doubleclick.net
-dpm.demdex.net
-eu-1-id5-sync.com
-events3.adcolony.com
-fastlane.rubiconproject.com
-fls-eu.amazon-adsystem.com
-fls-na.amazon-adsystem.com
-fw.adsafeprotected.com
 g.doubleclick.net
-g2.gumgum.com
-global.media-net.com
 googleads.g.doubleclick.net
 googleadservices.com
-gum.criteo.com
-hb.emxdgt.com
-htlb.casalemedia.com
-i.liftoff.io
-ib.adnxs.com
-ib.appnexus.com
-image6.pubmatic.com
-imp.kochava.com
-indexexchange.com
-ix.bidswitch.net
-js.gumgum.com
-justpremium.com
-launches.appsflyer.com
-live.chartboost.com
-log.outbrain.com
-mads.msn.com
-match.adsrvr.org
-ms.applovin.com
-nr.taboola.com
-openx.net
-optimized-by.rubiconproject.com
-p.liadm.com
-p.zergnet.com
+ogads-pa.clients6.google.com
 pagead-googlehosted.l.google.com
 pagead2.googlesyndication.com
 partnerad.l.doubleclick.net
-pdn.applovin.com
-pixel.advertising.com
-pixel.everesttech.net
-pixel.facebook.com
-play.aniview.com
 pubads.g.doubleclick.net
-pubmatic.com
-px.moatads.com
-rad.msn.com
 region1.google-analytics.com
 region2.google-analytics.com
 region3.google-analytics.com
-rt.applovin.com
-rta.criteo.com
-rtax.criteo.com
-rtb.openx.net
-rubiconproject.com
-s.adroll.com
 s0.2mdn.net
-s2s.adjust.com
-sb.scorecardresearch.com
-sdk.singular.net
-sdkconfig.inmobi.com
-search.spotxchange.com
-secure-us.imrworldwide.com
-secure.adnxs.com
 securepubads.g.doubleclick.net
-serve.popads.net
-servedbyopenx.com
-servicer.mgid.com
-serving.stat-rock.com
-sharethrough.com
-soma-advertise.smaato.com
-soma.smaato.net
-spotxchange.com
-srv.popcash.net
 ssl.google-analytics.com
-sslwidget.criteo.com
-ssp.33across.com
-ssp.pubmatic.com
-static.ads-twitter.com
-static.adsafeprotected.com
-static.criteo.net
 static.doubleclick.net
-sync.intentiq.com
-syndication.twitter.com
-tag.contextweb.com
-tag.yieldoptimizer.com
 tpc.googlesyndication.com
-tr.facebook.com
-tr.outbrain.com
-track.tenjin.io
-trc.taboola.com
-trends.revcontent.com
-turn.com
-u.openx.net
-us-u.openx.net
-vid.springserve.com
-webview.unityads.unity3d.com
-widgets.outbrain.com
+
+# Amazon Advertising
+aax-eu.amazon-adsystem.com
+aax-fe.amazon-adsystem.com
+aax.amazon-adsystem.com
+assoc-amazon.com
+fls-eu.amazon-adsystem.com
+fls-na.amazon-adsystem.com
 ws-na.amazon-adsystem.com
 z-na.amazon-adsystem.com
+
+# Meta (Facebook)
+an.facebook.com
+pixel.facebook.com
+tr.facebook.com
+
+# Microsoft Advertising (MSAds, MSN)
+a.ads2.msads.net
+ads1.msads.net
+ads2.msads.net
+adsyndication.msn.com
+mads.msn.com
+rad.msn.com
+
+# Twitter / X
+static.ads-twitter.com
+syndication.twitter.com
+
+# Criteo
+bidder.criteo.com
+cas.criteo.com
+dis.criteo.com
+gum.criteo.com
+rta.criteo.com
+rtax.criteo.com
+sslwidget.criteo.com
+static.criteo.net
+
+# AppNexus / Xandr
+adnexus.net
+adnxs.com
+ib.adnxs.com
+ib.appnexus.com
+secure.adnxs.com
+
+# The Trade Desk (Turn)
+ad.turn.com
+adsrvr.org
+match.adsrvr.org
+turn.com
+
+# Taboola
+api.taboola.com
+cdn.taboola.com
+nr.taboola.com
+trc.taboola.com
+
+# Outbrain
+amplify.outbrain.com
+log.outbrain.com
+tr.outbrain.com
+widgets.outbrain.com
+
+# PubMatic
+ads.pubmatic.com
+image6.pubmatic.com
+pubmatic.com
+ssp.pubmatic.com
+
+# OpenX
+openx.net
+rtb.openx.net
+servedbyopenx.com
+u.openx.net
+us-u.openx.net
+
+# Rubicon Project / Magnite
+fastlane.rubiconproject.com
+optimized-by.rubiconproject.com
+rubiconproject.com
+
+# SpotX (Magnite)
+search.spotxchange.com
+spotxchange.com
+
+# Index Exchange / Casale Media
+casalemedia.com
+htlb.casalemedia.com
+indexexchange.com
+
+# 33Across
+33across.com
+ssp.33across.com
+
+# Teads
+a.teads.tv
+cdn.teads.tv
+
+# Sharethrough
+ads.sharethrough.com
+sharethrough.com
+
+# GumGum
+g2.gumgum.com
+js.gumgum.com
+
+# Media.net
+contextual.media.net
+global.media-net.com
+
+# AdRoll
+d.adroll.com
+s.adroll.com
+
+# BidSwitch (IPONWEB)
+bidswitch.net
+ix.bidswitch.net
+
+# Unity Ads
+auction.unityads.unity3d.com
+config.unityads.unity3d.com
+webview.unityads.unity3d.com
+
+# AppLovin
+d.applovin.com
+ms.applovin.com
+pdn.applovin.com
+rt.applovin.com
+
+# Vungle / Liftoff
+ads.vungle.com
+api.vungle.com
+i.liftoff.io
+
+# AdColony (Digital Turbine)
+ads.adcolony.com
+events3.adcolony.com
+
+# InMobi
+config.inmobi.com
+sdkconfig.inmobi.com
+
+# Smaato
+soma-advertise.smaato.com
+soma.smaato.net
+
+# ironSource (Unity)
+ads.ironsource.mobi
+
+# Chartboost
+live.chartboost.com
+
+# Moloco
+ads.moloco.com
+
+# MoPub (AppLovin)
+ads.mopub.com
+
+# Mobile Attribution & Analytics
+api2.branch.io
+app.adjust.com
+app.appsflyer.com
+cdn.branch.io
+imp.kochava.com
+launches.appsflyer.com
+s2s.adjust.com
+sdk.singular.net
+track.tenjin.io
+
+# Adobe (Demdex / Audience Manager)
+demdex.net
+dpm.demdex.net
+pixel.everesttech.net
+
+# IAS (Integral Ad Science)
+fw.adsafeprotected.com
+static.adsafeprotected.com
+
+# DoubleVerify
+cdn.doubleverify.com
+
+# Moat (Oracle)
+px.moatads.com
 z.moatads.com
+
+# comScore / Scorecard Research
+b.scorecardresearch.com
+sb.scorecardresearch.com
+
+# Nielsen
+secure-us.imrworldwide.com
+
+# Pop-under Networks
+serve.popads.net
+srv.popcash.net
+
+# ContextWeb / PulsePoint
+contextweb.com
+tag.contextweb.com
+
+# Native & Content Advertising
+api.content.ad
+p.zergnet.com
+servicer.mgid.com
+trends.revcontent.com
+
+# Other Ad Networks & Services
+ad.propellerads.com
+ads.perfectaudience.com
+ads.tremorhub.com
+ads.yieldmo.com
+ap.lijit.com
+cds.connatix.com
+eu-1-id5-sync.com
+hb.emxdgt.com
+justpremium.com
+p.liadm.com
+pixel.advertising.com
+play.aniview.com
+serving.stat-rock.com
+sync.intentiq.com
+tag.yieldoptimizer.com
+vid.springserve.com
