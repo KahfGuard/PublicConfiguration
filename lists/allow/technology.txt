@@ -243,7 +243,6 @@ ampproject.org
 android.com
 appspot.com
 blogger.com
-blogspot.com
 bugsnag.com
 creativecommons.org
 github.com
