@@ -1,4 +1,5 @@
 # KahfGuard Technology Allowlist - Major Tech Platforms & Developer Tools
+
 # Google
 g.co
 g.page
@@ -16,7 +17,7 @@ withgoogle.com
 youtube-nocookie.com
 youtube.com
 
-# Microsoft (Core)
+# Microsoft - Core Services
 c1.microsoft.com
 cloud.microsoft
 compliance.microsoft.com
@@ -27,21 +28,21 @@ flow.microsoft.com
 go.microsoft.com
 graph.microsoft.com
 graph.windows.net
-www.microsoft.com
 microsoft365.com
 microsoftstream.com
 msdn.microsoft.com
 msedge.net
-www.msn.com
 security.microsoft.com
 support.microsoft.com
 teams.microsoft.com
 technet.microsoft.com
-www.windows.com
 windows.net
 wns.windows.com
+www.microsoft.com
+www.msn.com
+www.windows.com
 
-# Microsoft Office & 365
+# Microsoft - Office & 365
 o15.officeredir.microsoft.com
 ocos-office365-s2s.msedge.net
 office.com
@@ -66,7 +67,8 @@ sharepointonline.com
 sway.com
 yammer.com
 yammerusercontent.com
-# Microsoft Auth & Identity
+
+# Microsoft - Auth & Identity
 account.live.com
 accounts.accesscontrol.windows.net
 activation.sls.microsoft.com
@@ -113,44 +115,44 @@ ssw.live.com
 storage.live.com
 wus-www.sway-extensions.com
 
-# Microsoft Bing
+# Microsoft - Bing & Search
 appex-rf.msn.com
 appex.bing.com
-www.bing.com
 c.bing.com
 c.live.com
+www.bing.com
 
 # Apple
 app.searchads.apple.com
-www.apple.com
-c.apple.com
-iadsdk.apple.com
-support.apple.com
-developer.apple.com
 apps.apple.com
-store.apple.com
-itunes.apple.com
-updates.apple.com
-osrecovery.apple.com
+c.apple.com
+developer.apple.com
+iadsdk.apple.com
 icloud-content.com
 icloud.com
+itunes.apple.com
 mzstatic.com
+osrecovery.apple.com
+store.apple.com
+support.apple.com
+updates.apple.com
+www.apple.com
 
 # Meta / Facebook
-www.facebook.com
-m.facebook.com
-web.facebook.com
-static.facebook.com
-graph.facebook.com
-l.facebook.com
-video.facebook.com
-upload.facebook.com
 fb.com
+graph.facebook.com
 instagram.com
+l.facebook.com
+m.facebook.com
 meta.ai
+static.facebook.com
 threads.com
+upload.facebook.com
+video.facebook.com
+web.facebook.com
 whatsapp.com
 whatsapp.net
+www.facebook.com
 
 # Amazon
 amazon.ca
@@ -170,15 +172,21 @@ amazonvideo.com
 amzn.to
 primevideo.com
 ring.com
-# Samsung & LG
-www.lg.com
+
+# Samsung
 www.samsung.com
+
+# LG
+www.lg.com
+
 # Netflix
 nflximg.com
+
 # LinkedIn
-www.linkedin.com
 platform.linkedin.com
-# AI Companies
+www.linkedin.com
+
+# AI - Companies & Platforms
 ai.com
 anthropic.com
 cerebras.ai
@@ -217,7 +225,8 @@ synthesia.io
 together.ai
 wandb.ai
 x.ai
-# AI / ML Frameworks & Data
+
+# AI - Frameworks & Data
 anyscale.com
 databricks.com
 kaggle.com
@@ -228,7 +237,8 @@ pytorch.org
 ray.io
 tensorflow.org
 weaviate.io
-# Developer Tools & Platforms
+
+# Developer - Platforms & Hosting
 ampproject.org
 android.com
 appspot.com
@@ -253,35 +263,44 @@ vercel.com
 visualstudio.com
 w3.org
 w3schools.com
-# Developer Tools - Code AI
+
+# Developer - Code AI Assistants
 codeium.com
 cursor.com
 phind.com
 tabnine.com
 v0.dev
 windsurf.com
+
 # Linux & Open Source
 debian.org
 gnu.org
 php.net
 python.org
 ubuntu.com
-# Other Tech Platforms
-archive.org
-arxiv.org
-beacons.gcp.gvt2.com
-beacons.gvt2.com
-beacons5.gvt3.com
-bloomberg.com
-booking.com
+
+# Design & Productivity
 canva.com
-dynatrace.com
 figma.com
 grammarly.com
 notion.so
-nvidia.com
-pki.goog
 tally.so
+
+# Google Infrastructure
+beacons.gcp.gvt2.com
+beacons.gvt2.com
+beacons5.gvt3.com
+pki.goog
+
+# Gaming
 xbox.com
 xboxlive.com
+
+# Other
+archive.org
+arxiv.org
+bloomberg.com
+booking.com
+dynatrace.com
+nvidia.com
 zerotier.com

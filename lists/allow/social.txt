@@ -19,9 +19,9 @@ www.x.com
 
 # TikTok
 capcut.com
-www.tiktok.com
 m.tiktok.com
 tiktokv.com
+www.tiktok.com
 
 # Other Social Platforms
 bsky.app
@@ -62,7 +62,7 @@ astg.widerplanet.com
 omniconvert.com
 segment.com
 
-# Security & Networking
+# Security & Network Vendors
 avast.com
 checkpoint.com
 comcast.com
@@ -73,7 +73,7 @@ redhat.com
 ubnt.com
 xerox.com
 
-# Tech & Media
+# Tech, Media & Review Sites
 cnet.com
 deviantart.com
 firefox.com
@@ -82,10 +82,10 @@ netflix.com
 pinet.com
 quizlet.com
 sciencedirect.com
-www.tencent.com
 trustpilot.com
+www.tencent.com
 
-# Retail & Services
+# Retail, Hosting & Services
 bluehost.com
 boldchat.com
 dreamhost.com

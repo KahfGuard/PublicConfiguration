@@ -1,4 +1,5 @@
 # KahfGuard Regional Allowlist - Country-Specific Services
+
 # Bangladesh - Government
 bangladesh.gov.bd
 bbs.gov.bd
@@ -21,6 +22,7 @@ nctb.gov.bd
 pcc.police.gov.bd
 railway.gov.bd
 web.bise-ctg.gov.bd
+
 # Bangladesh - Education
 bracu.ac.bd
 buet.ac.bd
@@ -36,6 +38,7 @@ nu.ac.bd
 ru.ac.bd
 ruet.ac.bd
 uiu.ac.bd
+
 # Bangladesh - Banking & Finance
 bb.org.bd
 bka.sh
@@ -51,12 +54,14 @@ primebank.com.bd
 southeastbank.com.bd
 standardbankbd.com
 ucb.com.bd
+
 # Bangladesh - Telecom & ISP
 banglalink.net
 btcl.com.bd
 grameenphone.com
 robi.com.bd
 teletalk.com.bd
+
 # Bangladesh - News & Media
 banglanews24.com
 bd-pratidin.com
@@ -67,6 +72,7 @@ kalerkantho.com
 prothomalo.com
 samakal.com
 thedailystar.net
+
 # Bangladesh - E-Commerce & Services
 bikroy.com
 chaldal.com
@@ -76,10 +82,12 @@ labaid.com.bd
 pathao.com
 shohoz.com
 squarehospital.com
+
 # Bangladesh - Utilities
 desco.org.bd
 dpdc.org.bd
 dwasa.org.bd
+
 # Bangladesh - Other
 amirazz.com
 bdjobs.com
@@ -96,6 +104,7 @@ sgwpdemo.com
 sikho.co
 somewhereinblog.net
 twelvebd.com
+
 # Russia - Major Platforms
 avito.ru
 consultant.ru
@@ -106,15 +115,24 @@ gdemoideti.ru
 gosuslugi.ru
 ivi.ru
 livejournal.com
-www.mail.ru
-e.mail.ru
-auth.mail.ru
 pikabu.ru
 rambler.ru
 rbc.ru
 rutube.ru
 wb.ru
 wildberries.ru
+
+# Russia - Mail & Yandex
+auth.mail.ru
+disk.yandex.ru
+e.mail.ru
+mail.yandex.ru
+passport.yandex.ru
+translate.yandex.ru
+www.mail.ru
+www.yandex.ru
+ya.ru
+
 # Russia - Telecom & Infrastructure
 bitrix24.ru
 crpt.ru
@@ -136,38 +154,38 @@ selectel.ru
 timeweb.ru
 vkontakte.ru
 vkuserphoto.ru
-ya.ru
-www.yandex.ru
-mail.yandex.ru
-disk.yandex.ru
-translate.yandex.ru
-passport.yandex.ru
+
 # China - Major Platforms
 163.com
 360.cn
 360safe.com
 aliyun.com
 aliyuncs.com
-www.baidu.com
-baike.baidu.com
-tieba.baidu.com
-pan.baidu.com
-map.baidu.com
-fanyi.baidu.com
 bilibili.com
 chinamobile.com
 netease.com
-www.qq.com
-mail.qq.com
-im.qq.com
-connect.qq.com
-v.qq.com
 sina.com.cn
 sohu.com
 taobao.com
 tencent-cloud.net
 xiaohongshu.com
 youku.com
+
+# China - Baidu
+baike.baidu.com
+fanyi.baidu.com
+map.baidu.com
+pan.baidu.com
+tieba.baidu.com
+www.baidu.com
+
+# China - QQ / Tencent
+connect.qq.com
+im.qq.com
+mail.qq.com
+v.qq.com
+www.qq.com
+
 # China / Global - Device Manufacturers
 heytapmobi.com
 hihonorcloud.com

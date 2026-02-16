@@ -1,10 +1,15 @@
-cisco.com
-f5.com
+# KahfGuard Security Allowlist - Security Vendors & Tools
+
+# Endpoint Security
 kaspersky-labs.com
 kaspersky.com
 mcafee.com
+sophos.com
+trendmicro.com
+
+# Network Security
+cisco.com
+f5.com
 meraki.com
 paloaltonetworks.com
 rapid7.com
-sophos.com
-trendmicro.com

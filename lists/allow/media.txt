@@ -60,10 +60,12 @@ gamepass.com
 playstation.com
 steampowered.com
 supercell.com
-www.unity3d.com
+
+# Gaming - Unity Engine
 docs.unity3d.com
-store.unity3d.com
 download.unity3d.com
+store.unity3d.com
+www.unity3d.com
 
 # Media & Images
 bandcamp.com
