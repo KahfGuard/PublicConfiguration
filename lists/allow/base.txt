@@ -361,6 +361,7 @@ addtoany.com
 agora.io
 amagi.tv
 ambitionbox.com
+analytics.google.com
 aol.com
 appcenter.ms
 arcgis.com
@@ -390,8 +391,6 @@ duckduckgo.com
 ecn.dev.virtualearth.net
 eloqua.com
 epom.com
-www.epom.com
-help.epom.com
 eskimi.com
 ethicalads.io
 eurofins.com
@@ -405,6 +404,7 @@ go.nasa.gov
 goodreads.com
 hath.network
 health.mil
+help.epom.com
 host-tracker.com
 imcmdb.net
 in.appcenter.ms
