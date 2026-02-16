@@ -226,7 +226,6 @@ substack.com
 t.me
 tenor.com
 wa.me
-wordpress.com
 wordpress.org
 wp.com
 youtu.be
