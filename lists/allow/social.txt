@@ -54,8 +54,13 @@ washingtonpost.com
 chatgpt.com
 
 # Analytics & Marketing
+adjust.com
 ambitionbox.com
+app-measurement.com
 app.hubspot.com
+astg.widerplanet.com
+omniconvert.com
+segment.com
 
 # Security & Networking
 avast.com

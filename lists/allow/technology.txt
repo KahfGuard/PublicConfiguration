@@ -9,6 +9,7 @@ googledomains.com
 googleusercontent.com
 googlevideo.com
 gstatic.com
+marketingplatform.google.com
 recaptcha.net
 telephony.goog
 withgoogle.com
@@ -120,8 +121,10 @@ c.bing.com
 c.live.com
 
 # Apple
+app.searchads.apple.com
 www.apple.com
 c.apple.com
+iadsdk.apple.com
 support.apple.com
 developer.apple.com
 apps.apple.com
@@ -266,6 +269,9 @@ ubuntu.com
 # Other Tech Platforms
 archive.org
 arxiv.org
+beacons.gcp.gvt2.com
+beacons.gvt2.com
+beacons5.gvt3.com
 bloomberg.com
 booking.com
 canva.com
