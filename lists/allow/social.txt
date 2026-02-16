@@ -14,12 +14,13 @@ reddit.com
 
 # Twitter / X
 t.co
-twitter.com
-x.com
+www.twitter.com
+www.x.com
 
 # TikTok
 capcut.com
-tiktok.com
+www.tiktok.com
+m.tiktok.com
 tiktokv.com
 
 # Other Social Platforms
@@ -53,13 +54,8 @@ washingtonpost.com
 chatgpt.com
 
 # Analytics & Marketing
-adjust.com
 ambitionbox.com
-app-measurement.com
 app.hubspot.com
-astg.widerplanet.com
-omniconvert.com
-segment.com
 
 # Security & Networking
 avast.com
@@ -81,7 +77,7 @@ netflix.com
 pinet.com
 quizlet.com
 sciencedirect.com
-tencent.com
+www.tencent.com
 trustpilot.com
 
 # Retail & Services

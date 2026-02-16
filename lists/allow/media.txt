@@ -60,7 +60,10 @@ gamepass.com
 playstation.com
 steampowered.com
 supercell.com
-unity3d.com
+www.unity3d.com
+docs.unity3d.com
+store.unity3d.com
+download.unity3d.com
 
 # Media & Images
 bandcamp.com

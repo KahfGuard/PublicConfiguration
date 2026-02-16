@@ -43,7 +43,7 @@ login.windows-ppe.net
 login.windows.net
 logincert.microsoftonline.com
 loginex.microsoftonline.com
-microsoft.com
+www.microsoft.com
 microsoft365.com
 microsoftstream.com
 mscrl.microsoft.com
@@ -119,15 +119,13 @@ wus-www.sway-cdn.com
 wus-www.sway-extensions.com
 # Microsoft Bing & Search
 appex.bing.com
-bing.com
+www.bing.com
 c.bing.com
 c.bing.net
 # Google
 googleapis.com
-marketingplatform.google.com
 # Apple
 c.apple.com
-iadsdk.apple.com
 icloud.com
 # Certificate Authorities
 cacerts.digicert.com
@@ -149,23 +147,14 @@ ocspx.digicert.com
 secure.globalsign.com
 verisign.com
 verisign.net
-# Analytics & Tracking (Allowlisted)
-adjust.com
-api.mixpanel.com
-app-measurement.com
-app.appsflyer.com
+# Monitoring & App Infrastructure (Allowlisted)
 app.hubspot.com
-appsflyer.com
-appsflyersdk.com
 browser-intake-datadoghq.com
 crashlytics.com
 events.split.io
-mixpanel.com
 newrelic.com
 onesignal.com
 sdk.split.io
-segment.com
-segment.io
 sentry.io
 split.io
 # Email Marketing
@@ -361,14 +350,12 @@ addtoany.com
 agora.io
 amagi.tv
 ambitionbox.com
-analytics.google.com
 aol.com
 appcenter.ms
 arcgis.com
 archive.org
 arubanetworks.com
 assets.adobedtm.com
-astg.widerplanet.com
 autodesk.com
 avsxappcaptiveportal.com
 behance.net
@@ -384,15 +371,12 @@ chess.com
 classlink.com
 clever.com
 cur8.capital
-dotomi.com
 dreamstime.com
 dribbble.com
 duckduckgo.com
 ecn.dev.virtualearth.net
 eloqua.com
 epom.com
-eskimi.com
-ethicalads.io
 eurofins.com
 example.com
 firetvcaptiveportal.com
@@ -408,7 +392,6 @@ help.epom.com
 host-tracker.com
 imcmdb.net
 in.appcenter.ms
-indexww.com
 intercom.com
 intercom.io
 ip2location.com
@@ -425,7 +408,6 @@ mediafire.com
 mega.co.nz
 mi.com
 moe.video
-moloco.com
 mozilla.com
 mozilla.org
 myqcloud.com
@@ -442,7 +424,6 @@ nslookup.io
 nwtools.com
 oneclient.sfx.ms
 openstreetmap.org
-opentracker.net
 oup.com
 partnerlinks.io
 pexels.com
@@ -453,7 +434,6 @@ platform.linkedin.com
 portal.cloudappsecurity.com
 prodregistryv2.org
 qualtrics.com
-revive-adserver.com
 ripn.net
 ryanair.com
 sharedrop.io

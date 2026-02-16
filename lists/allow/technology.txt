@@ -3,25 +3,18 @@
 g.co
 g.page
 gmail.com
-google.cn
-google.co.jp
-google.co.uk
-google.com
-google.com.br
-google.com.hk
-google.de
 googleapis.com
 googleblog.com
 googledomains.com
 googleusercontent.com
 googlevideo.com
 gstatic.com
-marketingplatform.google.com
 recaptcha.net
 telephony.goog
 withgoogle.com
 youtube-nocookie.com
 youtube.com
+
 # Microsoft (Core)
 c1.microsoft.com
 cloud.microsoft
@@ -33,19 +26,20 @@ flow.microsoft.com
 go.microsoft.com
 graph.microsoft.com
 graph.windows.net
-microsoft.com
+www.microsoft.com
 microsoft365.com
 microsoftstream.com
 msdn.microsoft.com
 msedge.net
-msn.com
+www.msn.com
 security.microsoft.com
 support.microsoft.com
 teams.microsoft.com
 technet.microsoft.com
-windows.com
+www.windows.com
 windows.net
 wns.windows.com
+
 # Microsoft Office & 365
 o15.officeredir.microsoft.com
 ocos-office365-s2s.msedge.net
@@ -117,28 +111,44 @@ smtp.office365.com
 ssw.live.com
 storage.live.com
 wus-www.sway-extensions.com
+
 # Microsoft Bing
 appex-rf.msn.com
 appex.bing.com
-bing.com
+www.bing.com
 c.bing.com
 c.live.com
+
 # Apple
-app.searchads.apple.com
-apple.com
+www.apple.com
 c.apple.com
-iadsdk.apple.com
+support.apple.com
+developer.apple.com
+apps.apple.com
+store.apple.com
+itunes.apple.com
+updates.apple.com
+osrecovery.apple.com
 icloud-content.com
 icloud.com
 mzstatic.com
+
 # Meta / Facebook
-facebook.com
+www.facebook.com
+m.facebook.com
+web.facebook.com
+static.facebook.com
+graph.facebook.com
+l.facebook.com
+video.facebook.com
+upload.facebook.com
 fb.com
 instagram.com
 meta.ai
 threads.com
 whatsapp.com
 whatsapp.net
+
 # Amazon
 amazon.ca
 amazon.co.jp
@@ -158,12 +168,12 @@ amzn.to
 primevideo.com
 ring.com
 # Samsung & LG
-lg.com
-samsung.com
+www.lg.com
+www.samsung.com
 # Netflix
 nflximg.com
 # LinkedIn
-linkedin.com
+www.linkedin.com
 platform.linkedin.com
 # AI Companies
 ai.com
@@ -256,27 +266,16 @@ ubuntu.com
 # Other Tech Platforms
 archive.org
 arxiv.org
-beacons.gcp.gvt2.com
-beacons.gvt2.com
-beacons5.gvt3.com
 bloomberg.com
 booking.com
 canva.com
 dynatrace.com
 figma.com
-flashtalking.com
 grammarly.com
-live.com
 notion.so
 nvidia.com
 pki.goog
-posthog.com
-seedtag.com
 tally.so
 xbox.com
 xboxlive.com
 zerotier.com
-# Attribution & Analytics
-airbridge.io
-attribution.airbridge.io
-event.airbridge.io
