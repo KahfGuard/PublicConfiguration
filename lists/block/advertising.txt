@@ -7,7 +7,6 @@ adclick.g.doubleclick.net
 ade.googlesyndication.com
 ads.google.com
 adservice.google.com
-analytics.google.com
 apps.admob.com
 cm.g.doubleclick.net
 doubleclick.net
