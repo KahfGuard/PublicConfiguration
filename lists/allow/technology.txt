@@ -1,5 +1,4 @@
 # KahfGuard Technology Allowlist - Major Tech Platforms & Developer Tools
-
 # Google
 g.co
 g.page
@@ -16,7 +15,6 @@ telephony.goog
 withgoogle.com
 youtube-nocookie.com
 youtube.com
-
 # Microsoft - Core Services
 c1.microsoft.com
 cloud.microsoft
@@ -28,20 +26,19 @@ flow.microsoft.com
 go.microsoft.com
 graph.microsoft.com
 graph.windows.net
+microsoft.com
 microsoft365.com
 microsoftstream.com
 msdn.microsoft.com
 msedge.net
+msn.com
 security.microsoft.com
 support.microsoft.com
 teams.microsoft.com
 technet.microsoft.com
+windows.com
 windows.net
 wns.windows.com
-www.microsoft.com
-www.msn.com
-www.windows.com
-
 # Microsoft - Office & 365
 o15.officeredir.microsoft.com
 ocos-office365-s2s.msedge.net
@@ -67,7 +64,6 @@ sharepointonline.com
 sway.com
 yammer.com
 yammerusercontent.com
-
 # Microsoft - Auth & Identity
 account.live.com
 accounts.accesscontrol.windows.net
@@ -114,16 +110,15 @@ smtp.office365.com
 ssw.live.com
 storage.live.com
 wus-www.sway-extensions.com
-
 # Microsoft - Bing & Search
 appex-rf.msn.com
 appex.bing.com
+bing.com
 c.bing.com
 c.live.com
-www.bing.com
-
 # Apple
 app.searchads.apple.com
+apple.com
 apps.apple.com
 c.apple.com
 developer.apple.com
@@ -136,9 +131,8 @@ osrecovery.apple.com
 store.apple.com
 support.apple.com
 updates.apple.com
-www.apple.com
-
 # Meta / Facebook
+facebook.com
 fb.com
 graph.facebook.com
 instagram.com
@@ -152,8 +146,6 @@ video.facebook.com
 web.facebook.com
 whatsapp.com
 whatsapp.net
-www.facebook.com
-
 # Amazon
 amazon.ca
 amazon.co.jp
@@ -172,20 +164,15 @@ amazonvideo.com
 amzn.to
 primevideo.com
 ring.com
-
 # Samsung
-www.samsung.com
-
+samsung.com
 # LG
-www.lg.com
-
+lg.com
 # Netflix
 nflximg.com
-
 # LinkedIn
+linkedin.com
 platform.linkedin.com
-www.linkedin.com
-
 # AI - Companies & Platforms
 ai.com
 anthropic.com
@@ -225,7 +212,6 @@ synthesia.io
 together.ai
 wandb.ai
 x.ai
-
 # AI - Frameworks & Data
 anyscale.com
 databricks.com
@@ -237,7 +223,6 @@ pytorch.org
 ray.io
 tensorflow.org
 weaviate.io
-
 # Developer - Platforms & Hosting
 ampproject.org
 android.com
@@ -262,7 +247,6 @@ vercel.com
 visualstudio.com
 w3.org
 w3schools.com
-
 # Developer - Code AI Assistants
 codeium.com
 cursor.com
@@ -270,31 +254,26 @@ phind.com
 tabnine.com
 v0.dev
 windsurf.com
-
 # Linux & Open Source
 debian.org
 gnu.org
 php.net
 python.org
 ubuntu.com
-
 # Design & Productivity
 canva.com
 figma.com
 grammarly.com
 notion.so
 tally.so
-
 # Google Infrastructure
 beacons.gcp.gvt2.com
 beacons.gvt2.com
 beacons5.gvt3.com
 pki.goog
-
 # Gaming
 xbox.com
 xboxlive.com
-
 # Other
 archive.org
 arxiv.org

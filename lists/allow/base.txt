@@ -1,5 +1,4 @@
 # KahfGuard Base Allowlist - Essential Domains
-
 # Microsoft - Core
 account.live.com
 accounts.accesscontrol.windows.net
@@ -94,7 +93,6 @@ technet.microsoft.com
 wns.windows.com
 yammer.com
 yammerusercontent.com
-
 # Microsoft - CDN & Infrastructure
 ajax.aspnetcdn.com
 amp.azure.net
@@ -119,22 +117,18 @@ spoprod-a.akamaihd.net
 tse1.mm.bing.net
 wus-www.sway-cdn.com
 wus-www.sway-extensions.com
-
 # Microsoft - Bing & Search
 appex.bing.com
+bing.com
 c.bing.com
 c.bing.net
-www.bing.com
-
 # Google
 googleapis.com
 marketingplatform.google.com
-
 # Apple
 c.apple.com
 iadsdk.apple.com
 icloud.com
-
 # Certificate Authorities
 cacerts.digicert.com
 cert.int-x3.letsencrypt.org
@@ -155,7 +149,6 @@ ocspx.digicert.com
 secure.globalsign.com
 verisign.com
 verisign.net
-
 # Analytics & Tracking (Allowlisted)
 adjust.com
 api.mixpanel.com
@@ -175,7 +168,6 @@ segment.com
 segment.io
 sentry.io
 split.io
-
 # Email Marketing
 aweber.com
 campaignmonitor.com
@@ -188,7 +180,6 @@ list-manage.com
 mailchi.mp
 mailtrack.io
 marketo.com
-
 # URL Shorteners
 adf.ly
 adj.st
@@ -208,7 +199,6 @@ shorte.st
 tinyurl.com
 u.nu
 x.co
-
 # Social & Content Platforms
 deviantart.com
 disqus.com
@@ -229,7 +219,6 @@ wa.me
 wordpress.org
 wp.com
 youtu.be
-
 # News & Media
 allrecipes.com
 cbc.ca
@@ -253,7 +242,6 @@ ted.com
 theatlantic.com
 theconversation.com
 webmd.com
-
 # E-Commerce & Business
 change.org
 eventbrite.com
@@ -271,14 +259,12 @@ typeform.com
 yelp.com
 zillow.com
 zoho.com
-
 # Education & Academic
 biblegateway.com
 doi.org
 mdpi.com
 sagepub.com
 tandfonline.com
-
 # Security & Privacy
 aboutads.info
 adblockplus.org
@@ -289,7 +275,6 @@ networkadvertising.org
 okta.com
 openvpn.net
 thenai.org
-
 # Cloud & Infrastructure
 cloudinary.com
 pages.dev
@@ -298,20 +283,17 @@ run.app
 squarespace.com
 weebly.com
 workers.dev
-
 # IoT & Smart Home
 life360.com
 quickconnect.to
 smartthings.com
 tplinkcloud.com
-
 # Telecom
 att.net
 comcast.net
 t-mobile.com
 telekom.de
 telekom.net
-
 # Regional - Bangladesh
 alhadith.free.nf
 amirazz.com
@@ -348,7 +330,6 @@ somewhereinblog.net
 tbsnews.net
 twelvebd.com
 web.bise-ctg.gov.bd
-
 # Regional - Other
 ameblo.jp
 aranzulla.it
@@ -371,7 +352,6 @@ shopeemobile.com
 uol.com.br
 wp.pl
 yahoo.co.jp
-
 # Search Engines & Browsers
 aol.com
 brave.com
@@ -379,14 +359,12 @@ duckduckgo.com
 mozilla.com
 mozilla.org
 yahoo.com
-
 # Software & Productivity
 autodesk.com
 camscanner.com
 macromedia.com
 notion.com
 wps.com
-
 # Creative & Design Platforms
 behance.net
 dreamstime.com
@@ -396,7 +374,6 @@ issuu.com
 pexels.com
 pixabay.com
 unsplash.com
-
 # Developer Resources
 0xrpc.io
 assets.adobedtm.com
@@ -405,31 +382,26 @@ fontawesome.com
 jquery.com
 prodregistryv2.org
 typekit.net
-
 # Education & Online Learning
 chess.com
 classlink.com
 clever.com
 thinkific.com
-
 # Academic & Reference
 archive.org
 iso.org
 oup.com
 weforum.org
 wiley.com
-
 # Maps & Geospatial
 arcgis.com
 ecn.dev.virtualearth.net
 openstreetmap.org
 virtualearth.net
-
 # File Sharing
 mediafire.com
 mega.co.nz
 sharedrop.io
-
 # Business & CRM
 agora.io
 eloqua.com
@@ -438,13 +410,11 @@ forter.com
 intercom.com
 intercom.io
 qualtrics.com
-
 # Customer Chat & Support
 acompli.com
 boldchat.com
 snapengage.com
 whoson.com
-
 # Ad Tech & Analytics (Legacy)
 analytics.google.com
 astg.widerplanet.com
@@ -455,7 +425,6 @@ help.epom.com
 imcmdb.net
 opentracker.net
 revive-adserver.com
-
 # Microsoft - Additional Services
 appcenter.ms
 in.appcenter.ms
@@ -463,10 +432,8 @@ me.com
 oneclient.sfx.ms
 phonefactor.net
 portal.cloudappsecurity.com
-
 # Networking
 arubanetworks.com
-
 # Network & DNS Tools
 host-tracker.com
 ip2location.com
@@ -475,16 +442,13 @@ nwtools.com
 speedtest.net
 whoer.net
 wireguard.com
-
 # Finance & Investing
 bitget.com
 cur8.capital
 wahed.com
-
 # Weather
 accuweather.com
 weather.com
-
 # Entertainment & Media
 amagi.tv
 ambitionbox.com
@@ -492,13 +456,11 @@ goodreads.com
 moe.video
 nexusmods.com
 warnerbros.com
-
 # Shipping, Travel & Transport
 ryanair.com
 uber.com
 ups.com
 usps.com
-
 # Domain Registrars & Hosting
 mailinabox.email
 name.com
@@ -508,19 +470,15 @@ ripn.net
 spaceweb.pro
 superhosting.bg
 uk.com
-
 # Captive Portals
 avsxappcaptiveportal.com
 firetvcaptiveportal.com
-
 # Security & VPN
 umbrella.com
-
 # Social & Sharing Widgets
 addtoany.com
 partnerlinks.io
 platform.linkedin.com
-
 # Asian Services
 kunluncan.com
 leiniao.com
@@ -531,21 +489,17 @@ nease.net
 note.com
 shifen.com
 ys7.com
-
 # Russian Services
 userapi.com
 vk.cc
 vkuser.net
-
 # Communication Infrastructure
 wbx2.com
 whatsapp.net
-
 # Government
 go.nasa.gov
 health.mil
 nasa.gov
-
 # Other
 behindmlm.com
 bigboytoyz.com

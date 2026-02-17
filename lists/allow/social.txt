@@ -1,28 +1,22 @@
 # KahfGuard Social Allowlist - Social Media & Communication Platforms
-
 # Discord
 discord.com
 discord.gg
 discord.media
 discordapp.com
-
 # Meta / Facebook
 fbsbx.com
-
 # Reddit
 reddit.com
-
 # Twitter / X
 t.co
-www.twitter.com
-www.x.com
-
+twitter.com
+x.com
 # TikTok
 capcut.com
 m.tiktok.com
+tiktok.com
 tiktokv.com
-www.tiktok.com
-
 # Other Social Platforms
 bsky.app
 line.me
@@ -34,24 +28,20 @@ telegram.org
 viber.com
 vk.ru
 weibo.com
-
 # Messaging & Collaboration
 box.com
 dropbox.com
 hubspot.com
 salesforceliveagent.com
 webex.com
-
 # News & Publishing
 ft.com
 huffpost.com
 independent.co.uk
 nypost.com
 washingtonpost.com
-
 # AI & Chat Platforms
 chatgpt.com
-
 # Analytics & Marketing
 adjust.com
 ambitionbox.com
@@ -60,7 +50,6 @@ app.hubspot.com
 astg.widerplanet.com
 omniconvert.com
 segment.com
-
 # Security & Network Vendors
 avast.com
 checkpoint.com
@@ -71,7 +60,6 @@ onetrust.com
 redhat.com
 ubnt.com
 xerox.com
-
 # Tech, Media & Review Sites
 cnet.com
 deviantart.com
@@ -81,9 +69,8 @@ netflix.com
 pinet.com
 quizlet.com
 sciencedirect.com
+tencent.com
 trustpilot.com
-www.tencent.com
-
 # Retail, Hosting & Services
 bluehost.com
 boldchat.com
