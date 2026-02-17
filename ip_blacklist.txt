@@ -1,0 +1,3 @@
+83.106.70.27 # Auto-blocked [United Kingdom/AS5378] B:21 M:3912 (2026-02-17 14:35:41 UTC)
+142.120.149.188 # Auto-blocked [Canada/AS577] B:29 M:1107 (2026-02-17 14:35:41 UTC)
+109.250.29.219 # Auto-blocked [Germany/AS8881] B:0 M:972 (2026-02-17 14:35:41 UTC)
