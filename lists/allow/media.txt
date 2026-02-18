@@ -1,5 +1,4 @@
 # KahfGuard Media Allowlist - News, Streaming & Gaming
-
 # Major News Outlets
 apnews.com
 bbc.co.uk
@@ -37,12 +36,10 @@ usatoday.com
 welt.de
 wired.com
 wsj.com
-
 # Academic & Research
 frontiersin.org
 nature.com
 springer.com
-
 # Streaming & Video
 disneyplus.com
 netflix.net
@@ -52,7 +49,6 @@ soundcloud.com
 spotify.com
 twitch.tv
 vimeo.com
-
 # Gaming
 ea.com
 epicgames.dev
@@ -60,13 +56,15 @@ gamepass.com
 playstation.com
 steampowered.com
 supercell.com
+# Gaming - Unity Engine
+docs.unity3d.com
+download.unity3d.com
+store.unity3d.com
 unity3d.com
-
 # Media & Images
 bandcamp.com
 dreamstime.com
 kick.com
-
 # Government Services
 globo.com
 service.gov.uk

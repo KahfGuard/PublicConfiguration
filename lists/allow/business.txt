@@ -1,4 +1,5 @@
-# KahfGuard Business Allowlist
+# KahfGuard Business Allowlist - E-Commerce, Payments & Professional Tools
+
 # E-Commerce
 alibaba.com
 aliexpress.com
@@ -22,6 +23,7 @@ ozone.ru
 shein.com
 shopify.com
 temu.com
+
 # Email Marketing & Delivery
 activehosted.com
 awstrack.me
@@ -60,12 +62,14 @@ sendinblue.com
 sibforms.com
 sparkpostmail.com
 substackcdn.com
+
 # Financial & Payments
 binance.com
 paypal.com
 prudential.com
 stripe.com
 tradingview.com
+
 # Collaboration & Productivity
 calendly.com
 canva.com
@@ -77,10 +81,12 @@ teamviewer.com
 trello.com
 zoom.com
 zoom.us
+
 # Travel
 agoda.com
 airbnb.com
 tripadvisor.com
+
 # Professional & Consulting
 adobe.com
 adobe.io
@@ -97,10 +103,12 @@ mckinsey.com
 openai.com
 salesforce.com
 zendesk.com
-# Social / Marketplace
+
+# Marketplace & Entertainment
 marriott.com
 netflix.com
 rakuten.co.jp
 rakuten.com
+
 # Other
 amazonses.com

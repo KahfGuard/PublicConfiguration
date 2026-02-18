@@ -106,13 +106,22 @@ gdemoideti.ru
 gosuslugi.ru
 ivi.ru
 livejournal.com
-mail.ru
 pikabu.ru
 rambler.ru
 rbc.ru
 rutube.ru
 wb.ru
 wildberries.ru
+# Russia - Mail & Yandex
+auth.mail.ru
+disk.yandex.ru
+e.mail.ru
+mail.ru
+mail.yandex.ru
+passport.yandex.ru
+translate.yandex.ru
+ya.ru
+yandex.ru
 # Russia - Telecom & Infrastructure
 bitrix24.ru
 crpt.ru
@@ -134,26 +143,34 @@ selectel.ru
 timeweb.ru
 vkontakte.ru
 vkuserphoto.ru
-ya.ru
-yandex.net
-yandex.ru
 # China - Major Platforms
 163.com
 360.cn
 360safe.com
 aliyun.com
 aliyuncs.com
-baidu.com
 bilibili.com
 chinamobile.com
 netease.com
-qq.com
 sina.com.cn
 sohu.com
 taobao.com
 tencent-cloud.net
 xiaohongshu.com
 youku.com
+# China - Baidu
+baidu.com
+baike.baidu.com
+fanyi.baidu.com
+map.baidu.com
+pan.baidu.com
+tieba.baidu.com
+# China - QQ / Tencent
+connect.qq.com
+im.qq.com
+mail.qq.com
+qq.com
+v.qq.com
 # China / Global - Device Manufacturers
 heytapmobi.com
 hihonorcloud.com

@@ -1,3 +1,5 @@
+# KahfGuard Internal Domains
+
 kahfads.com
 kahfbrowser.com
 kahfguard.com

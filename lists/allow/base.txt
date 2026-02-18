@@ -1,5 +1,5 @@
 # KahfGuard Base Allowlist - Essential Domains
-# Microsoft Core
+# Microsoft - Core
 account.live.com
 accounts.accesscontrol.windows.net
 activation.sls.microsoft.com
@@ -93,7 +93,7 @@ technet.microsoft.com
 wns.windows.com
 yammer.com
 yammerusercontent.com
-# Microsoft CDN & Infrastructure
+# Microsoft - CDN & Infrastructure
 ajax.aspnetcdn.com
 amp.azure.net
 appex-rf.msn.com
@@ -117,7 +117,7 @@ spoprod-a.akamaihd.net
 tse1.mm.bing.net
 wus-www.sway-cdn.com
 wus-www.sway-extensions.com
-# Microsoft Bing & Search
+# Microsoft - Bing & Search
 appex.bing.com
 bing.com
 c.bing.com
@@ -216,7 +216,6 @@ substack.com
 t.me
 tenor.com
 wa.me
-wordpress.com
 wordpress.org
 wp.com
 youtu.be
@@ -353,138 +352,163 @@ shopeemobile.com
 uol.com.br
 wp.pl
 yahoo.co.jp
-# Other Services
-0xrpc.io
-accuweather.com
-acompli.com
-addtoany.com
-agora.io
-amagi.tv
-ambitionbox.com
+# Search Engines & Browsers
 aol.com
-appcenter.ms
-arcgis.com
-archive.org
-arubanetworks.com
-assets.adobedtm.com
-astg.widerplanet.com
-autodesk.com
-avsxappcaptiveportal.com
-behance.net
-behindmlm.com
-bigboytoyz.com
-bitget.com
-boldchat.com
 brave.com
-brwkx0h3.r.us-east-2.awstrack.me
-byteconnect.io
+duckduckgo.com
+mozilla.com
+mozilla.org
+yahoo.com
+# Software & Productivity
+autodesk.com
 camscanner.com
+macromedia.com
+notion.com
+wps.com
+# Creative & Design Platforms
+behance.net
+dreamstime.com
+dribbble.com
+freepik.com
+issuu.com
+pexels.com
+pixabay.com
+unsplash.com
+# Developer Resources
+0xrpc.io
+assets.adobedtm.com
+example.com
+fontawesome.com
+jquery.com
+prodregistryv2.org
+typekit.net
+# Education & Online Learning
 chess.com
 classlink.com
 clever.com
-cur8.capital
-dotomi.com
-dreamstime.com
-dribbble.com
-duckduckgo.com
+thinkific.com
+# Academic & Reference
+archive.org
+iso.org
+oup.com
+weforum.org
+wiley.com
+# Maps & Geospatial
+arcgis.com
 ecn.dev.virtualearth.net
+openstreetmap.org
+virtualearth.net
+# File Sharing
+mediafire.com
+mega.co.nz
+sharedrop.io
+# Business & CRM
+agora.io
 eloqua.com
+force.com
+forter.com
+intercom.com
+intercom.io
+qualtrics.com
+# Customer Chat & Support
+acompli.com
+boldchat.com
+snapengage.com
+whoson.com
+# Ad Tech & Analytics (Legacy)
+analytics.google.com
+astg.widerplanet.com
 epom.com
 eskimi.com
 ethicalads.io
-eurofins.com
-example.com
-firetvcaptiveportal.com
-fontawesome.com
-force.com
-forter.com
-freepik.com
-go.nasa.gov
-goodreads.com
-hath.network
-health.mil
-host-tracker.com
+help.epom.com
 imcmdb.net
+opentracker.net
+revive-adserver.com
+# Microsoft - Additional Services
+appcenter.ms
 in.appcenter.ms
-indexww.com
-intercom.com
-intercom.io
-ip2location.com
-iso.org
-issuu.com
-jquery.com
-kahfguard.com
-kunluncan.com
-leiniao.com
-macromedia.com
-mailinabox.email
 me.com
-mediafire.com
-mega.co.nz
-mi.com
-moe.video
-moloco.com
-mozilla.com
-mozilla.org
-myqcloud.com
-name.com
-nasa.gov
-naver.com
-nease.net
-nexusmods.com
-nic.io
-nic.network
-note.com
-notion.com
+oneclient.sfx.ms
+phonefactor.net
+portal.cloudappsecurity.com
+# Networking
+arubanetworks.com
+# Network & DNS Tools
+host-tracker.com
+ip2location.com
 nslookup.io
 nwtools.com
-oneclient.sfx.ms
-openstreetmap.org
-opentracker.net
-oup.com
-partnerlinks.io
-pexels.com
-phonefactor.net
-pinet.com
-pixabay.com
-platform.linkedin.com
-portal.cloudappsecurity.com
-prodregistryv2.org
-qualtrics.com
-revive-adserver.com
-ripn.net
-ryanair.com
-sharedrop.io
-shifen.com
-snapengage.com
-spaceweb.pro
 speedtest.net
-superhosting.bg
-tbcache.com
-thinkific.com
-typekit.net
+whoer.net
+wireguard.com
+# Finance & Investing
+bitget.com
+cur8.capital
+wahed.com
+# Weather
+accuweather.com
+weather.com
+# Entertainment & Media
+amagi.tv
+ambitionbox.com
+goodreads.com
+moe.video
+nexusmods.com
+warnerbros.com
+# Shipping, Travel & Transport
+ryanair.com
 uber.com
-ui.com
-uk.com
-umbrella.com
-unsplash.com
 ups.com
-userapi.com
 usps.com
-virtualearth.net
-vitasave.ca
+# Domain Registrars & Hosting
+mailinabox.email
+name.com
+nic.io
+nic.network
+ripn.net
+spaceweb.pro
+superhosting.bg
+uk.com
+# Captive Portals
+avsxappcaptiveportal.com
+firetvcaptiveportal.com
+# Security & VPN
+umbrella.com
+# Social & Sharing Widgets
+addtoany.com
+partnerlinks.io
+platform.linkedin.com
+# Asian Services
+kunluncan.com
+leiniao.com
+mi.com
+myqcloud.com
+naver.com
+nease.net
+note.com
+shifen.com
+ys7.com
+# Russian Services
+userapi.com
 vk.cc
 vkuser.net
-wahed.com
-warnerbros.com
+# Communication Infrastructure
 wbx2.com
-weather.com
-weforum.org
 whatsapp.net
-whoer.net
-whoson.com
-wiley.com
-wireguard.com
-wps.com
-yahoo.com
-ys7.com
+# Government
+go.nasa.gov
+health.mil
+nasa.gov
+# Other
+behindmlm.com
+bigboytoyz.com
+brwkx0h3.r.us-east-2.awstrack.me
+byteconnect.io
+eurofins.com
+hath.network
+kahfguard.com
+pinet.com
+tbcache.com
+ui.com
+vitasave.ca

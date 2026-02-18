@@ -1,6 +1,11 @@
+# KahfGuard Islamic Allowlist - Islamic Resources & Education
+
+# Quran & Hadith
 alhadith.free.nf
+quran.com
+sunnah.com
+
+# Islamic Knowledge & Media
 islamicfinder.org
 islamqa.info
 muslimcentral.com
-quran.com
-sunnah.com
