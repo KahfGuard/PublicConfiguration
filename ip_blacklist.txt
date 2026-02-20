@@ -2,3 +2,5 @@
 142.120.149.188 # Auto-blocked [Canada/AS577] B:29 M:1107 (2026-02-17 14:35:41 UTC)
 109.250.29.219 # Auto-blocked [Germany/AS8881] B:0 M:972 (2026-02-17 14:35:41 UTC)
 61.8.135.87 # Auto-blocked [Germany/AS8881] B:5 M:470 (2026-02-18 14:35:42 UTC)
+64.231.21.96 # Auto-blocked [Canada/AS577] B:0 M:974 (2026-02-20 14:35:43 UTC)
+61.8.130.162 # Auto-blocked [Germany/AS8881] B:0 M:553 (2026-02-20 14:35:43 UTC)
