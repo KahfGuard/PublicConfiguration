@@ -1,9 +1,9 @@
 # KahfGuard Business Allowlist - E-Commerce, Payments & Professional Tools
-
 # E-Commerce
 alibaba.com
 aliexpress.com
 allegro.pl
+bdsmartbook.com
 bestbuy.com
 costco.com
 ebay.co.uk
@@ -11,6 +11,7 @@ ebay.com
 ebay.de
 etsy.com
 ikea.com
+liveshopping.com.bd
 lowes.com
 macys.com
 mercadolibre.com.ar
@@ -62,14 +63,12 @@ sendinblue.com
 sibforms.com
 sparkpostmail.com
 substackcdn.com
-
 # Financial & Payments
 binance.com
 paypal.com
 prudential.com
 stripe.com
 tradingview.com
-
 # Collaboration & Productivity
 calendly.com
 canva.com
@@ -81,12 +80,10 @@ teamviewer.com
 trello.com
 zoom.com
 zoom.us
-
 # Travel
 agoda.com
 airbnb.com
 tripadvisor.com
-
 # Professional & Consulting
 adobe.com
 adobe.io
@@ -103,12 +100,10 @@ mckinsey.com
 openai.com
 salesforce.com
 zendesk.com
-
 # Marketplace & Entertainment
 marriott.com
 netflix.com
 rakuten.co.jp
 rakuten.com
-
 # Other
 amazonses.com
