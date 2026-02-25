@@ -13,7 +13,7 @@
 #  DoH via HTTP/2      443  TCP                DROP to known DoH IPs
 #  ──────────────────────────────────────────────────────────────────
 #
-#  PERMISSIONS:
+#  ADDRESS LISTS:
 #  ──────────────────────────────────────────────────────────────────
 #  Bypass_Safe       = KahfGuard server IPs (encrypted DNS allowed TO)
 #  Safe_Package_IPs  = Client IPs that must be filtered (filtered FROM)
@@ -25,23 +25,43 @@
 #  server certificate, so redirecting to a different server causes a
 #  silent TLS handshake failure, NOT a block.
 #
+#  NOTE: MikroTik NAT to-addresses only accepts literal IPs or ranges,
+#  NOT address-list references. To add non-contiguous forwarder IPs,
+#  use multiple NAT rules with nth load balancing.
+#
 #  Usage: /import file=forwarder-router-dns.rsc
 # =====================================================================
 
 
 # ===== CHANGE THESE PER ISP =====
-:local forwarder "X.X.X.X"
+:local forwarderStart "203.190.10.116"
+:local forwarderEnd   "203.190.10.117"
 :local safeList "Bypass_Safe"
 :local clientList "Safe_Package_IPs"
 # =================================
 
 
+:local forwarderRange ($forwarderStart . "-" . $forwarderEnd)
 :local notSafeList ("!" . $safeList)
+
+
+# ─────────────────────────────────
+#  Cleanup: Remove old rules before re-importing
+# ─────────────────────────────────
+
+/ip firewall nat remove [find where comment~"DNS to Core"]
+/ip firewall filter remove [find where comment~"Drop Do"]
+/ip firewall address-list remove [find where list=$clientList or list=$safeList or list=DoH_Providers]
 
 
 # ─────────────────────────────────
 #  Address Lists
 # ─────────────────────────────────
+
+# Client IPs to be filtered — CHANGE per ISP
+# Use 0.0.0.0/0 to filter all traffic, or narrow to specific subnets
+/ip firewall address-list
+add list=$clientList address=0.0.0.0/0         comment="All traffic — narrow down to specific subnets as needed"
 
 # KahfGuard servers — encrypted DNS is ALLOWED to these
 /ip firewall address-list
@@ -75,13 +95,13 @@ add list=DoH_Providers address=194.242.2.2     comment="Mullvad"
 # ─────────────────────────────────
 #  NAT: Plain DNS (port 53) → Forwarder
 # ─────────────────────────────────
-# Only redirects clients in $clientList. Other users keep their own DNS.
+# MikroTik round-robins across the forwarder range automatically.
 
 /ip firewall nat
 add chain=dstnat protocol=udp dst-port=53 src-address-list=$clientList \
-    action=dst-nat to-addresses=$forwarder to-ports=53 comment="DNS to Core: UDP"
+    action=dst-nat to-addresses=$forwarderRange to-ports=53 comment="DNS to Core: UDP"
 add chain=dstnat protocol=tcp dst-port=53 src-address-list=$clientList \
-    action=dst-nat to-addresses=$forwarder to-ports=53 comment="DNS to Core: TCP"
+    action=dst-nat to-addresses=$forwarderRange to-ports=53 comment="DNS to Core: TCP"
 
 
 # ─────────────────────────────────
@@ -89,26 +109,38 @@ add chain=dstnat protocol=tcp dst-port=53 src-address-list=$clientList \
 # ─────────────────────────────────
 # Uses firewall filter (DROP), NOT NAT redirect.
 # NAT redirect of encrypted protocols fails silently (TLS cert mismatch).
+# Rules are placed before fasttrack to ensure new connections are evaluated.
+
+:local ftRule [/ip firewall filter find where action=fasttrack-connection chain=forward]
 
 /ip firewall filter
-add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
-    dst-address-list=$notSafeList action=drop comment="Drop DoT"
-add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
-    dst-address-list=$notSafeList action=drop comment="Drop DoQ"
-add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
-    dst-address-list=$notSafeList action=drop comment="Drop QUIC/DoH3"
-
+:if ([:len $ftRule] > 0) do={
+    add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
+        dst-address-list=$notSafeList action=drop comment="Drop DoT" place-before=$ftRule
+    add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
+        dst-address-list=$notSafeList action=drop comment="Drop DoQ" place-before=$ftRule
+    add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
+        dst-address-list=$notSafeList action=drop comment="Drop QUIC/DoH3" place-before=$ftRule
+    add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
+        dst-address-list=DoH_Providers action=drop comment="Drop DoH to known providers" place-before=$ftRule
+} else={
+    add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
+        dst-address-list=$notSafeList action=drop comment="Drop DoT"
+    add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
+        dst-address-list=$notSafeList action=drop comment="Drop DoQ"
+    add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
+        dst-address-list=$notSafeList action=drop comment="Drop QUIC/DoH3"
+    add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
+        dst-address-list=DoH_Providers action=drop comment="Drop DoH to known providers"
+}
 
 # ─────────────────────────────────
-#  FILTER: DoH over HTTP/2 (TCP 443) → DROP to known providers
+#  NOTE on DoH over HTTP/2 (TCP 443)
 # ─────────────────────────────────
 # TCP 443 can't be blanket-blocked (breaks all HTTPS).
 # Instead, block TCP 443 to known DoH provider IPs specifically.
 # These are dedicated DNS anycast IPs — blocking them does NOT affect
 # web browsing (CDN/websites use different IP ranges).
 
-add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
-    dst-address-list=DoH_Providers action=drop comment="Drop DoH to known providers"
 
-
-:log info "KahfGuard DNS enforcement loaded: 53->$forwarder, 853/443u->KAHF only, DoH IPs blocked"
+:log info ("KahfGuard DNS enforcement loaded: 53->" . $forwarderRange . ", 853/443u->KAHF only, DoH IPs blocked")
