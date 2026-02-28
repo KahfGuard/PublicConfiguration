@@ -1,9 +1,17 @@
-# KahfGuard Business Allowlist - E-Commerce, Payments & Professional Tools
-# E-Commerce
+# ============================================================
+# KahfGuard Business Allowlist
+# E-Commerce, Finance, Payments & Professional Tools
+# ============================================================
+
+# ----------------------------------------
+# E-COMMERCE
+# ----------------------------------------
+
+# Global E-Commerce Platforms
 alibaba.com
 aliexpress.com
 allegro.pl
-bdsmartbook.com
+amazon.com
 bestbuy.com
 costco.com
 ebay.co.uk
@@ -11,92 +19,72 @@ ebay.com
 ebay.de
 etsy.com
 ikea.com
-liveshopping.com.bd
 lowes.com
 macys.com
 mercadolibre.com.ar
 mercadolivre.com.br
 myshopify.com
+newegg.com
 nike.com
 otto.de
-ozon.ru
-ozone.ru
 shein.com
+shopify.com
+temu.com
+wayfair.com
+wish.com
+
+# E-Commerce - Fashion & Lifestyle
+asos.com
+hm.com
+uniqlo.com
+zara.com
+
+# E-Commerce - Middle East
+mumzworld.com
+namshi.com
+noon.com
+
+# E-Commerce - Turkey
+hepsiburada.com
+n11.com
+trendyol.com
+
+# E-Commerce - Southeast Asia
+bukalapak.com
+lazada.co.id
+lazada.co.th
+lazada.com
+lazada.sg
 shopee.co.id
 shopee.com.br
 shopeemobile.com
-shopify.com
-temu.com
+tokopedia.com
 
-# Email Marketing & Delivery
-activehosted.com
-awstrack.me
-beehiiv.com
-brevo.com
-buttondown.email
-ck.page
-constantcontact.com
-convertkit-mail.com
-convertkit-mail2.com
-convertkit.com
-ctctcdn.com
-customer.io
-customeriomail.com
-exacttarget.com
-getdrip.com
-hsforms.com
-hsforms.net
-hubspotlinks.com
-klclick.com
-litmus.com
-mailchimp.com
-mailerlite.com
-mailgun.com
-mailgun.net
-mandrillapp.com
-mcsv.net
-mcusercontent.com
-mlsend.com
-postmarkapp.com
-pstmrk.it
-sailthru.com
-sendgrid.com
-sendgrid.net
-sendinblue.com
-sibforms.com
-sparkpostmail.com
-substackcdn.com
-aweber.com
-campaignmonitor.com
-d2vwzx04.na1.hubspotlinks.com
-getresponse.com
-iterable.com
-klaviyo.com
-list-manage.com
-mailchi.mp
-mailtrack.io
-marketo.com
-# Analytics & Tracking
-api.mixpanel.com
-app.appsflyer.com
-appsflyer.com
-appsflyersdk.com
-events.split.io
-mixpanel.com
-onesignal.com
-sdk.split.io
-segment.io
-split.io
-# Ad Tech
-epom.com
-eskimi.com
-ethicalads.io
-help.epom.com
-imcmdb.net
-opentracker.net
-partnerlinks.io
-revive-adserver.com
-# Global Banks - US
+# E-Commerce - India
+flipkart.com
+meesho.com
+myntra.com
+snapdeal.com
+
+# E-Commerce - Africa & Pakistan
+daraz.pk
+jumia.com
+jumia.com.ng
+
+# E-Commerce - Other
+bdsmartbook.com
+bigboytoyz.com
+liveshopping.com.bd
+ozon.ru
+ozone.ru
+rakuten.co.jp
+rakuten.com
+
+# ----------------------------------------
+# BANKING & FINANCIAL INSTITUTIONS
+# ----------------------------------------
+
+# Banks - United States
 bankofamerica.com
 capitalone.com
 chase.com
@@ -109,7 +97,8 @@ pnc.com
 td.com
 usbank.com
 wellsfargo.com
-# Global Banks - UK
+
+# Banks - United Kingdom
 barclays.co.uk
 home.barclays
 hsbc.com
@@ -117,7 +106,8 @@ lloydsbank.com
 lloydsbankinggroup.com
 natwest.com
 sc.com
-# Global Banks - Europe
+
+# Banks - Europe
 bnpparibas.com
 db.com
 group.bnpparibas
@@ -126,7 +116,8 @@ santander.com
 societegenerale.com
 ubs.com
 unicreditgroup.eu
-# Global Banks - Asia
+
+# Banks - Asia-Pacific
 boc.cn
 dbs.com
 icbc.com.cn
@@ -134,22 +125,31 @@ icbc-ltd.com
 mizuhogroup.com
 mufg.jp
 ocbc.com
-# Global Banks - Middle East
+
+# Banks - Middle East
 alrajhibank.com.sa
 emiratesnbd.com
 qnb.com
-# Global Banks - Australia
+
+# Banks - Australia
 anz.com.au
 commbank.com.au
 nab.com.au
 westpac.com.au
-# Global Banks - Canada
+
+# Banks - Canada
 bmo.com
 cibc.com
 rbc.com
 rbcroyalbank.com
 scotiabank.com
-# Payment Gateways & Processors
+
+# ----------------------------------------
+# PAYMENT GATEWAYS & PROCESSORS
+# ----------------------------------------
+
+# Payment Gateways - Global
+2checkout.com
 adyen.com
 authorize.net
 braintreepayments.com
@@ -161,29 +161,197 @@ razorpay.com
 squareup.com
 stripe.com
 worldpay.com
-2checkout.com
-# BNPL (Buy Now, Pay Later)
+
+# Payment Gateways - European
+bancontact.com
+bluesnap.com
+gocardless.com
+ideal.nl
+ingenico.com
+mobilepay.dk
+multibanco.pt
+payconiq.com
+przelewy24.pl
+satispay.com
+sumup.com
+swish.nu
+trustly.com
+trustly.net
+twint.ch
+vipps.no
+vippsmobilepay.com
+worldline.com
+zettle.com
+
+# Payment Gateways - Middle East (Saudi Arabia)
+bayanpay.sa
+clickpay.com.sa
+geidea.net
+hyperpay.com
+mada.com.sa
+moyasar.com
+paytabs.com
+stcbank.com.sa
+stcpay.com.sa
+tap.company
+urpay.com.sa
+
+# Payment Gateways - Middle East (UAE)
+cashu.com
+network.ae
+noonpayments.com
+paymennt.com
+telr.com
+
+# Payment Gateways - Middle East (GCC & Egypt)
+benefit.bh
+fawaterk.com
+fawry.com
+kashier.io
+knet.com.kw
+myfatoorah.com
+opayweb.com
+ottu.com
+payfort.com
+paymob.com
+sadad.qa
+thawani.om
+valu.com.eg
+
+# Payment Gateways - Malaysia
+billplz.com
+curlec.com
+eghl.com
+grab.com
+ipay88.com
+merchant.razer.com
+myboost.co
+paynet.my
+revenuemonster.my
+senangpay.com
+tngdigital.com.my
+touchngo.com.my
+
+# Payment Gateways - Indonesia
+akulaku.com
+dana.id
+doku.com
+faspay.co.id
+flip.id
+gopay.co.id
+kredivo.com
+linkaja.id
+midtrans.com
+ovo.id
+shopeepay.co.id
+xendit.co
+
+# Payment Gateways - Turkey
+bkm.com.tr
+craftgate.io
+hepsipay.com
+iyzico.com
+papara.com
+param.com.tr
+paynet.com.tr
+paytr.com
+sipay.com.tr
+tosla.com
+troyodeme.com
+
+# Payment Gateways - India
+paytm.com
+phonepe.com
+
+# Payment Gateways - Pakistan
+1link.net.pk
+easypaisa.com.pk
+finja.pk
+hbl.com
+jazzcash.com.pk
+nayapay.com
+niftepay.pk
+paypro.com.pk
+sadapay.pk
+zindigi.pk
+
+# Payment Gateways - Africa
+chargily.com
+cmi.co.ma
+flutterwave.com
+hps-worldwide.com
+paga.com
+palmpay.com
+paystack.com
+wave.com
+
+# Payment Gateways - Cross-Border
+neteller.com
+payoneer.com
+skrill.com
+
+# Buy Now, Pay Later (BNPL)
 affirm.com
 afterpay.com
+cashewpayments.com
 klarna.com
+postpay.io
+tabby.ai
+tamara.co
+
 # Neobanks & Digital Finance
 monzo.com
 n26.com
 revolut.com
 wise.com
-# India Payment Gateways
-paytm.com
-phonepe.com
-# Stock Exchanges & Financial Data
-bseindia.com
+
+# ----------------------------------------
+# STOCK EXCHANGES & FINANCIAL DATA
+# ----------------------------------------
+
+# Stock Exchanges - Americas
+nasdaq.com
+nyse.com
+tmx.com
+tsx.com
+
+# Stock Exchanges - Europe
+deutsche-boerse.com
+euronext.com
 londonstockexchange.com
 lseg.com
-morningstar.com
-nasdaq.com
+six-group.com
+
+# Stock Exchanges - Asia-Pacific
+bursamalaysia.com
+bseindia.com
+hkex.com.hk
+idx.co.id
+jpx.co.jp
+krx.co.kr
 nseindia.com
-nyse.com
+psx.com.pk
+sgx.com
+sse.com.cn
+szse.cn
+twse.com.tw
+
+# Stock Exchanges - Middle East
+borsaistanbul.com
+saudiexchange.sa
+tadawul.com.sa
+
+# Financial Data & Analytics
+investing.com
+marketwatch.com
+morningstar.com
+seekingalpha.com
 tradingview.com
-# Crypto Exchanges
+
+# ----------------------------------------
+# CRYPTO EXCHANGES
+# ----------------------------------------
+
 binance.com
 bitget.com
 bybit.com
@@ -192,11 +360,86 @@ gemini.com
 kraken.com
 kucoin.com
 okx.com
-# Financial - Other
-cur8.capital
-prudential.com
-wahed.com
-# Collaboration & Productivity
+
+# ----------------------------------------
+# EMAIL MARKETING & DELIVERY
+# ----------------------------------------
+
+activehosted.com
+aweber.com
+awstrack.me
+beehiiv.com
+brevo.com
+buttondown.email
+campaignmonitor.com
+ck.page
+constantcontact.com
+convertkit-mail.com
+convertkit-mail2.com
+convertkit.com
+ctctcdn.com
+customer.io
+customeriomail.com
+d2vwzx04.na1.hubspotlinks.com
+exacttarget.com
+getdrip.com
+getresponse.com
+hsforms.com
+hsforms.net
+hubspotlinks.com
+iterable.com
+klclick.com
+klaviyo.com
+list-manage.com
+litmus.com
+mailchi.mp
+mailchimp.com
+mailerlite.com
+mailgun.com
+mailgun.net
+mailtrack.io
+mandrillapp.com
+marketo.com
+mcsv.net
+mcusercontent.com
+mlsend.com
+postmarkapp.com
+pstmrk.it
+sailthru.com
+sendgrid.com
+sendgrid.net
+sendinblue.com
+sibforms.com
+sparkpostmail.com
+substackcdn.com
+
+# ----------------------------------------
+# ANALYTICS, AD TECH & TRACKING
+# ----------------------------------------
+
+api.mixpanel.com
+app.appsflyer.com
+appsflyer.com
+appsflyersdk.com
+epom.com
+eskimi.com
+ethicalads.io
+events.split.io
+help.epom.com
+imcmdb.net
+mixpanel.com
+onesignal.com
+opentracker.net
+partnerlinks.io
+revive-adserver.com
+sdk.split.io
+segment.io
+split.io
+
+# ----------------------------------------
+# COLLABORATION & PRODUCTIVITY
+# ----------------------------------------
+
 calendly.com
 canva.com
 figma.com
@@ -208,14 +451,12 @@ teamviewer.com
 trello.com
 zoom.com
 zoom.us
-# Travel & Transport
-agoda.com
-airbnb.com
-ryanair.com
-tripadvisor.com
-uber.com
-ups.com
-# Professional & Consulting
+
+# ----------------------------------------
+# PROFESSIONAL SERVICES
+# ----------------------------------------
+
+# Software & Tools
 adobe.com
 adobe.io
 adobe.net
@@ -224,13 +465,18 @@ atlassian.com
 atlassian.net
 cursor.sh
 deepl.com
-deloitte.com
 ghost.io
 grammarly.com
-mckinsey.com
-openai.com
 salesforce.com
 zendesk.com
+
+# Consulting
+deloitte.com
+mckinsey.com
+
+# AI
+openai.com
+
 # CRM & Customer Support
 acompli.com
 eloqua.com
@@ -241,6 +487,19 @@ intercom.io
 qualtrics.com
 snapengage.com
 whoson.com
+
+# Travel & Transport
+agoda.com
+airbnb.com
+ryanair.com
+tripadvisor.com
+uber.com
+ups.com
+
+# ----------------------------------------
+# OTHER
+# ----------------------------------------
+
 # Marketplace & Services
 eventbrite.com
 fiverr.com
@@ -253,14 +512,18 @@ typeform.com
 yelp.com
 zillow.com
 zoho.com
-# Marketplace & Entertainment
+
+# Entertainment
 marriott.com
 netflix.com
-rakuten.co.jp
-rakuten.com
-# Other
+
+# Financial - Other
+cur8.capital
+prudential.com
+wahed.com
+
+# Misc
 amazonses.com
-bigboytoyz.com
 brwkx0h3.r.us-east-2.awstrack.me
 eurofins.com
 vitasave.ca
