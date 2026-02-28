@@ -28,6 +28,27 @@ telegram.org
 viber.com
 vk.ru
 weibo.com
+# Content Platforms
+change.org
+disqus.com
+fandom.com
+flickr.com
+giphy.com
+goodreads.com
+imgur.com
+letterboxd.com
+medium.com
+meetup.com
+myspace.com
+patreon.com
+quora.com
+redd.it
+substack.com
+t.me
+tenor.com
+wa.me
+# Sharing Widgets
+addtoany.com
 # Messaging & Collaboration
 box.com
 dropbox.com

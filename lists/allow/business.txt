@@ -22,6 +22,9 @@ otto.de
 ozon.ru
 ozone.ru
 shein.com
+shopee.co.id
+shopee.com.br
+shopeemobile.com
 shopify.com
 temu.com
 
@@ -63,16 +66,50 @@ sendinblue.com
 sibforms.com
 sparkpostmail.com
 substackcdn.com
+aweber.com
+campaignmonitor.com
+d2vwzx04.na1.hubspotlinks.com
+getresponse.com
+iterable.com
+klaviyo.com
+list-manage.com
+mailchi.mp
+mailtrack.io
+marketo.com
+# Analytics & Tracking
+api.mixpanel.com
+app.appsflyer.com
+appsflyer.com
+appsflyersdk.com
+events.split.io
+mixpanel.com
+onesignal.com
+sdk.split.io
+segment.io
+split.io
+# Ad Tech
+epom.com
+eskimi.com
+ethicalads.io
+help.epom.com
+imcmdb.net
+opentracker.net
+partnerlinks.io
+revive-adserver.com
 # Financial & Payments
 binance.com
+bitget.com
+cur8.capital
 paypal.com
 prudential.com
 stripe.com
 tradingview.com
+wahed.com
 # Collaboration & Productivity
 calendly.com
 canva.com
 figma.com
+notion.com
 notion.so
 slack.com
 t.co
@@ -80,10 +117,13 @@ teamviewer.com
 trello.com
 zoom.com
 zoom.us
-# Travel
+# Travel & Transport
 agoda.com
 airbnb.com
+ryanair.com
 tripadvisor.com
+uber.com
+ups.com
 # Professional & Consulting
 adobe.com
 adobe.io
@@ -100,6 +140,28 @@ mckinsey.com
 openai.com
 salesforce.com
 zendesk.com
+# CRM & Customer Support
+acompli.com
+eloqua.com
+force.com
+forter.com
+intercom.com
+intercom.io
+qualtrics.com
+snapengage.com
+whoson.com
+# Marketplace & Services
+eventbrite.com
+fiverr.com
+indeed.com
+jotform.com
+kickstarter.com
+surveymonkey.com
+swagbucks.com
+typeform.com
+yelp.com
+zillow.com
+zoho.com
 # Marketplace & Entertainment
 marriott.com
 netflix.com
@@ -107,3 +169,7 @@ rakuten.co.jp
 rakuten.com
 # Other
 amazonses.com
+bigboytoyz.com
+brwkx0h3.r.us-east-2.awstrack.me
+eurofins.com
+vitasave.ca

@@ -40,7 +40,9 @@ windows.com
 windows.net
 wns.windows.com
 # Microsoft - Office & 365
+lync.com
 o15.officeredir.microsoft.com
+o365weve.com
 ocos-office365-s2s.msedge.net
 office.com
 office.live.com
@@ -58,7 +60,9 @@ outlook.com
 outlook.office.com
 outlook.office365.com
 powerapps.com
+powerautomate.com
 r.office.microsoft.com
+staffhub.ms
 sharepoint.com
 sharepointonline.com
 sway.com
@@ -115,9 +119,18 @@ appex-rf.msn.com
 appex.bing.com
 bing.com
 c.bing.com
+c.bing.net
 c.live.com
+tse1.mm.bing.net
+# Microsoft - Additional Services
+appcenter.ms
+in.appcenter.ms
+mem.gfx.ms
+oneclient.sfx.ms
+phonefactor.net
 # Apple
 app.searchads.apple.com
+me.com
 apple.com
 apps.apple.com
 c.apple.com
@@ -223,6 +236,47 @@ pytorch.org
 ray.io
 tensorflow.org
 weaviate.io
+# Search Engines & Browsers
+aol.com
+brave.com
+duckduckgo.com
+mozilla.com
+mozilla.org
+opera.com
+yahoo.com
+# Software & Productivity
+autodesk.com
+camscanner.com
+macromedia.com
+wps.com
+# Creative & Design Platforms
+behance.net
+dribbble.com
+freepik.com
+pexels.com
+pixabay.com
+unsplash.com
+# Maps & Geospatial
+arcgis.com
+ecn.dev.virtualearth.net
+openstreetmap.org
+virtualearth.net
+# File Sharing
+mediafire.com
+mega.co.nz
+sharedrop.io
+# IoT & Smart Home
+life360.com
+smartthings.com
+# Monitoring & DevOps
+browser-intake-datadoghq.com
+crashlytics.com
+launchdarkly.com
+newrelic.com
+sentry.io
+# Communication
+agora.io
+wbx2.com
 # Developer - Platforms & Hosting
 ampproject.org
 android.com
@@ -243,6 +297,17 @@ sourceforge.net
 sourcegraph.com
 stackoverflow.com
 unpkg.com
+0xrpc.io
+assets.adobedtm.com
+example.com
+fontawesome.com
+gravatar.com
+jquery.com
+prodregistryv2.org
+themeforest.net
+typekit.net
+wordpress.org
+wp.com
 vercel.com
 visualstudio.com
 w3.org
@@ -266,6 +331,11 @@ figma.com
 grammarly.com
 notion.so
 tally.so
+# Google - Additional
+analytics.google.com
+forms.gle
+goo.gl
+youtu.be
 # Google Infrastructure
 beacons.gcp.gvt2.com
 beacons.gvt2.com
@@ -277,8 +347,9 @@ xboxlive.com
 # Other
 archive.org
 arxiv.org
-bloomberg.com
 booking.com
+byteconnect.io
 dynatrace.com
-nvidia.com
+hath.network
+tbcache.com
 zerotier.com

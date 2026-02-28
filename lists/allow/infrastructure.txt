@@ -15,8 +15,9 @@ okcdn.ru
 rocketcdn.me
 trbcdn.net
 
-# Cloud Providers
+# Cloud Providers & Services
 amazonaws.com
+cloudinary.com
 azure.com
 azure.microsoft.com
 azurerms.com
@@ -26,6 +27,9 @@ linode.com
 oraclecloud.com
 rackspace.com
 rackspace.net
+pages.dev
+run.app
+workers.dev
 
 # Certificate Authorities & PKI
 cacerts.digicert.com
@@ -40,6 +44,7 @@ digicert.com
 entrust.net
 geotrust.com
 globalsign.com
+lencr.org
 ocsp.digicert.com
 ocsp.globalsign.com
 ocsp2.globalsign.com
@@ -87,8 +92,16 @@ parklogic.com
 registrar-servers.com
 sedo.com
 worldnic.com
+mailinabox.email
+name.com
+nic.io
+nic.network
+ripn.net
+spaceweb.pro
+superhosting.bg
+uk.com
 
-# Web Hosting
+# Web Hosting & Website Builders
 cpanel.net
 hostgator.com
 hostgator.com.br
@@ -96,8 +109,11 @@ ovh.net
 plesk.com
 webempresa.eu
 websitewelcome.com
+squarespace.com
+weebly.com
 
 # Networking & Hardware
+arubanetworks.com
 asus.com
 dell.com
 garmin.com
@@ -114,6 +130,8 @@ nvidia.com
 samsungapps.com
 synology.com
 tp-link.com
+tplinkcloud.com
+ui.com
 wyzecam.com
 
 # Server Software
@@ -130,11 +148,44 @@ oracle.com
 ezvizlife.com
 host-tracker.com
 ip-api.com
+ip2location.com
 ipify.org
 ipv4only.arpa
 nslookup.io
 ntp.org
+nwtools.com
+speedtest.net
 whoer.net
+
+# Telecom
+att.net
+comcast.net
+t-mobile.com
+telekom.de
+telekom.net
+
+# URL Shorteners
+adf.ly
+adj.st
+bit.ly
+cli.re
+click.pstmrk.it
+cutt.ly
+doiop.com
+ht.ly
+linktr.ee
+onelink.me
+p8zh.adj.st
+po.st
+shorte.st
+tinyurl.com
+u.nu
+x.co
+
+# Captive Portals
+avsxappcaptiveportal.com
+firetvcaptiveportal.com
 
 # IoT & Smart Home
 hihonorcloud.com
+quickconnect.to
