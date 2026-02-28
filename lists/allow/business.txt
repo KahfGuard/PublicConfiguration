@@ -96,14 +96,105 @@ imcmdb.net
 opentracker.net
 partnerlinks.io
 revive-adserver.com
-# Financial & Payments
+# Global Banks - US
+bankofamerica.com
+capitalone.com
+chase.com
+citi.com
+goldmansachs.com
+jpmorganchase.com
+jpmorgan.com
+morganstanley.com
+pnc.com
+td.com
+usbank.com
+wellsfargo.com
+# Global Banks - UK
+barclays.co.uk
+home.barclays
+hsbc.com
+lloydsbank.com
+lloydsbankinggroup.com
+natwest.com
+sc.com
+# Global Banks - Europe
+bnpparibas.com
+db.com
+group.bnpparibas
+ing.com
+santander.com
+societegenerale.com
+ubs.com
+unicreditgroup.eu
+# Global Banks - Asia
+boc.cn
+dbs.com
+icbc.com.cn
+icbc-ltd.com
+mizuhogroup.com
+mufg.jp
+ocbc.com
+# Global Banks - Middle East
+alrajhibank.com.sa
+emiratesnbd.com
+qnb.com
+# Global Banks - Australia
+anz.com.au
+commbank.com.au
+nab.com.au
+westpac.com.au
+# Global Banks - Canada
+bmo.com
+cibc.com
+rbc.com
+rbcroyalbank.com
+scotiabank.com
+# Payment Gateways & Processors
+adyen.com
+authorize.net
+braintreepayments.com
+checkout.com
+fisglobal.com
+mollie.com
+paypal.com
+razorpay.com
+squareup.com
+stripe.com
+worldpay.com
+2checkout.com
+# BNPL (Buy Now, Pay Later)
+affirm.com
+afterpay.com
+klarna.com
+# Neobanks & Digital Finance
+monzo.com
+n26.com
+revolut.com
+wise.com
+# India Payment Gateways
+paytm.com
+phonepe.com
+# Stock Exchanges & Financial Data
+bseindia.com
+londonstockexchange.com
+lseg.com
+morningstar.com
+nasdaq.com
+nseindia.com
+nyse.com
+tradingview.com
+# Crypto Exchanges
 binance.com
 bitget.com
+bybit.com
+coinbase.com
+gemini.com
+kraken.com
+kucoin.com
+okx.com
+# Financial - Other
 cur8.capital
-paypal.com
 prudential.com
-stripe.com
-tradingview.com
 wahed.com
 # Collaboration & Productivity
 calendly.com

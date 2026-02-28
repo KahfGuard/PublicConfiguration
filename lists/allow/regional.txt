@@ -36,23 +36,45 @@ nu.ac.bd
 ru.ac.bd
 ruet.ac.bd
 uiu.ac.bd
-# Bangladesh - Banking & Finance
+# Bangladesh - Banking & Finance (State-Owned)
+agranibank.org
 bb.org.bd
+jb.com.bd
+rupalibank.org
+sonalibank.com.bd
+# Bangladesh - Banking & Finance (Private Commercial)
+bankasia-bd.com
 bka.sh
 bkash.com
 bracbank.com
+citybankplc.com
 cse.com.bd
+dhakabank.com.bd
+dsebd.org
 dutchbanglabank.com
 ebl.com.bd
-islamibankbd.com
+ificbank.com.bd
+meghnabank.com.bd
+midlandbankbd.net
+mutualtrustbank.com
 nagad.com.bd
+nblbd.com
+nccbank.com.bd
+nrbcommercialbank.com
 onebankbd.com
 primebank.com.bd
+pubalibangla.com
 southeastbank.com.bd
 standardbankbd.com
-bankasia-bd.com
-dsebd.org
+thecitybank.com
 ucb.com.bd
+# Bangladesh - Banking & Finance (Islami)
+aibl.com.bd
+eximbankbd.com
+fsiblbd.com
+islamibankbd.com
+siblbd.com
+sjiblbd.com
 # Bangladesh - Telecom & ISP
 banglalink.net
 btcl.com.bd
