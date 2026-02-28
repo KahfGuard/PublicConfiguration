@@ -190,12 +190,15 @@ bssnews.net
 ena-news.com
 unb.com.bd
 # Bangladesh - E-Commerce & Services
+ajkerdeal.com
 bikroy.com
 chaldal.com
 daraz.com.bd
 foodpanda.com.bd
 labaid.com.bd
 pathao.com
+pickaboo.com
+rokomari.com
 shohoz.com
 squarehospital.com
 # Bangladesh - Utilities
