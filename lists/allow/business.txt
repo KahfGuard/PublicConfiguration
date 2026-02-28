@@ -165,7 +165,11 @@ worldpay.com
 # BNPL (Buy Now, Pay Later)
 affirm.com
 afterpay.com
+cashewpayments.com
 klarna.com
+postpay.io
+tabby.ai
+tamara.co
 # Neobanks & Digital Finance
 monzo.com
 n26.com
@@ -174,6 +178,100 @@ wise.com
 # India Payment Gateways
 paytm.com
 phonepe.com
+# Middle East Payment Gateways - Saudi Arabia
+bayanpay.sa
+clickpay.com.sa
+geidea.net
+hyperpay.com
+mada.com.sa
+moyasar.com
+paytabs.com
+stcbank.com.sa
+stcpay.com.sa
+tap.company
+urpay.com.sa
+# Middle East Payment Gateways - UAE
+cashu.com
+network.ae
+noonpayments.com
+paymennt.com
+telr.com
+# Middle East Payment Gateways - GCC & Egypt
+benefit.bh
+fawaterk.com
+fawry.com
+kashier.io
+knet.com.kw
+myfatoorah.com
+opayweb.com
+ottu.com
+payfort.com
+paymob.com
+sadad.qa
+thawani.om
+valu.com.eg
+# Malaysia Payment Gateways
+billplz.com
+grab.com
+curlec.com
+eghl.com
+ipay88.com
+merchant.razer.com
+myboost.co
+paynet.my
+revenuemonster.my
+senangpay.com
+tngdigital.com.my
+touchngo.com.my
+# Indonesia Payment Gateways
+akulaku.com
+dana.id
+doku.com
+faspay.co.id
+flip.id
+gopay.co.id
+kredivo.com
+linkaja.id
+midtrans.com
+ovo.id
+shopeepay.co.id
+xendit.co
+# Turkey Payment Gateways
+bkm.com.tr
+craftgate.io
+hepsipay.com
+iyzico.com
+papara.com
+param.com.tr
+paynet.com.tr
+paytr.com
+sipay.com.tr
+tosla.com
+troyodeme.com
+# Pakistan Payment Gateways
+1link.net.pk
+easypaisa.com.pk
+finja.pk
+hbl.com
+jazzcash.com.pk
+nayapay.com
+niftepay.pk
+paypro.com.pk
+sadapay.pk
+zindigi.pk
+# Africa Payment Gateways
+chargily.com
+cmi.co.ma
+flutterwave.com
+hps-worldwide.com
+paga.com
+palmpay.com
+paystack.com
+wave.com
+# Cross-Border Payments
+neteller.com
+payoneer.com
+skrill.com
 # Stock Exchanges & Financial Data
 bseindia.com
 londonstockexchange.com

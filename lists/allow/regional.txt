@@ -75,6 +75,25 @@ fsiblbd.com
 islamibankbd.com
 siblbd.com
 sjiblbd.com
+# Bangladesh - Payment Gateways
+aamarpay.com
+bttpay.com
+ekpay.gov.bd
+portwallet.com
+portpos.com
+shurjopay.com.bd
+sslcommerz.com
+uniquepaybd.com
+walletmix.com
+# Bangladesh - Mobile Financial Services (MFS)
+citytouch.com.bd
+dmoney.com.bd
+ipay.com.bd
+lankabangla.com
+okwallet.com.bd
+surecash.net
+trustaxiatapay.com
+upaybd.com
 # Bangladesh - Telecom & ISP
 banglalink.net
 btcl.com.bd
