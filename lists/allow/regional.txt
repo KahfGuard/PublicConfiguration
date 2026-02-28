@@ -36,37 +36,140 @@ nu.ac.bd
 ru.ac.bd
 ruet.ac.bd
 uiu.ac.bd
-# Bangladesh - Banking & Finance
+# Bangladesh - Banking & Finance (State-Owned)
+agranibank.org
 bb.org.bd
+jb.com.bd
+rupalibank.org
+sonalibank.com.bd
+# Bangladesh - Banking & Finance (Private Commercial)
+bankasia-bd.com
 bka.sh
 bkash.com
 bracbank.com
+citybankplc.com
 cse.com.bd
+dhakabank.com.bd
+dsebd.org
 dutchbanglabank.com
 ebl.com.bd
-islamibankbd.com
+ificbank.com.bd
+meghnabank.com.bd
+midlandbankbd.net
+mutualtrustbank.com
 nagad.com.bd
+nblbd.com
+nccbank.com.bd
+nrbcommercialbank.com
 onebankbd.com
 primebank.com.bd
+pubalibangla.com
 southeastbank.com.bd
 standardbankbd.com
+thecitybank.com
 ucb.com.bd
+# Bangladesh - Banking & Finance (Islami)
+aibl.com.bd
+eximbankbd.com
+fsiblbd.com
+islamibankbd.com
+siblbd.com
+sjiblbd.com
 # Bangladesh - Telecom & ISP
 banglalink.net
 btcl.com.bd
 grameenphone.com
 robi.com.bd
 teletalk.com.bd
-# Bangladesh - News & Media
+# Bangladesh - Defense
+army.mil.bd
+baf.mil.bd
+navy.mil.bd
+# Bangladesh - News & Media (Bangla Dailies)
+ajkerpatrika.com
 banglanews24.com
 bd-pratidin.com
-bdnews24.com
+bhorerkagoj.net
+bonikbarta.com
+dainikamadershomoy.com
+dainikbangla.com.bd
+dainikazadi.org
+dailyamardesh.com
+dailyinqilab.com
+dailyjanakantha.com
+dailynayadiganta.com
+dailysangram.com
+deshrupantor.com
 ittefaq.com.bd
+jaijaidinbd.com
 jugantor.com
+kalbela.com
 kalerkantho.com
+manobkantha.com.bd
+mzamin.com
 prothomalo.com
+protidinerbangladesh.com
+protidinersangbad.com
 samakal.com
+sangbad.net.bd
+# Bangladesh - News & Media (English Dailies)
+bangladeshpost.net
+daily-sun.com
+dailyasianage.com
+dhakatribune.com
+newagebd.net
+observerbd.com
+tbsnews.net
 thedailystar.net
+thefinancialexpress.com.bd
+theindependentbd.com
+# Bangladesh - News & Media (TV Channels)
+atnbangla.tv
+atnnewstv.com
+boishakhionline.com
+btv.gov.bd
+bvnews24.com
+channel24bd.tv
+channelionline.com
+dbcnews.tv
+deepto.tv
+desh.tv
+ekattor.tv
+ekhon.tv
+ekushey-tv.com
+itvbd.com
+jamuna.tv
+maasranga.tv
+mytvbd.tv
+news24bd.tv
+ntvbd.com
+rtvonline.com
+satv.tv
+somoynews.tv
+# Bangladesh - News & Media (Online Portals)
+amarsangbad.com
+bahumatrik.com
+banglatelegraph.com
+banglatribune.com
+barta24.com
+bbarta24.net
+bd-journal.com
+bd24live.com
+bdnews24.com
+dhakapost.com
+dhakatimes24.com
+jagonews24.com
+justnewsbd.com
+kholakagojbd.com
+news71online.com
+poriborton.com
+risingbd.com
+sarabangla.net
+thereport24.com
+# Bangladesh - News Agencies
+bssnews.net
+ena-news.com
+unb.com.bd
 # Bangladesh - E-Commerce & Services
 bikroy.com
 chaldal.com
@@ -88,11 +191,16 @@ biman-airlines.com
 boimate.com
 chintaporadh.com
 daymoncomputer.com
+gov.bd
 ieducationbd.com
+iikv.org
+ikhlasstore.com
 muhammadyunus.org
 online.udvash-unmesh.com
+secondwife.com
 setarafarm.com
 sgwpdemo.com
+shalltry.com
 sikho.co
 somewhereinblog.net
 twelvebd.com
@@ -141,8 +249,18 @@ russianpost.ru
 sberbank.ru
 selectel.ru
 timeweb.ru
+userapi.com
+vk.cc
 vkontakte.ru
+vkuser.net
 vkuserphoto.ru
+# China - Additional
+kunluncan.com
+leiniao.com
+myqcloud.com
+nease.net
+shifen.com
+ys7.com
 # China - Major Platforms
 163.com
 360.cn
@@ -182,3 +300,27 @@ vivo.com.cn
 vivoglobal.com
 xiaomi.com
 xiaomi.net
+mi.com
+# Korea
+daum.net
+naver.com
+# Japan
+ameblo.jp
+note.com
+yahoo.co.jp
+# Turkey
+cl.turkishairlines.com
+m.haber7.com
+# Other Regional
+aranzulla.it
+buitengewoonglasvezel.nl
+casasbahia.com.br
+corz.org
+dfn.nl
+free.fr
+mygov.bd
+onet.pl
+portaleservizi.dlci.interno.it
+seznam.cz
+uol.com.br
+wp.pl

@@ -12,4 +12,20 @@ cisco.com
 f5.com
 meraki.com
 paloaltonetworks.com
+portal.cloudappsecurity.com
 rapid7.com
+umbrella.com
+
+# Privacy & Ad Controls
+aboutads.info
+adblockplus.org
+allaboutcookies.org
+cookiedatabase.org
+networkadvertising.org
+thenai.org
+
+# Authentication & VPN
+hcaptcha.com
+okta.com
+openvpn.net
+wireguard.com

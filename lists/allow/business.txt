@@ -22,6 +22,9 @@ otto.de
 ozon.ru
 ozone.ru
 shein.com
+shopee.co.id
+shopee.com.br
+shopeemobile.com
 shopify.com
 temu.com
 
@@ -63,16 +66,141 @@ sendinblue.com
 sibforms.com
 sparkpostmail.com
 substackcdn.com
-# Financial & Payments
-binance.com
+aweber.com
+campaignmonitor.com
+d2vwzx04.na1.hubspotlinks.com
+getresponse.com
+iterable.com
+klaviyo.com
+list-manage.com
+mailchi.mp
+mailtrack.io
+marketo.com
+# Analytics & Tracking
+api.mixpanel.com
+app.appsflyer.com
+appsflyer.com
+appsflyersdk.com
+events.split.io
+mixpanel.com
+onesignal.com
+sdk.split.io
+segment.io
+split.io
+# Ad Tech
+epom.com
+eskimi.com
+ethicalads.io
+help.epom.com
+imcmdb.net
+opentracker.net
+partnerlinks.io
+revive-adserver.com
+# Global Banks - US
+bankofamerica.com
+capitalone.com
+chase.com
+citi.com
+goldmansachs.com
+jpmorganchase.com
+jpmorgan.com
+morganstanley.com
+pnc.com
+td.com
+usbank.com
+wellsfargo.com
+# Global Banks - UK
+barclays.co.uk
+home.barclays
+hsbc.com
+lloydsbank.com
+lloydsbankinggroup.com
+natwest.com
+sc.com
+# Global Banks - Europe
+bnpparibas.com
+db.com
+group.bnpparibas
+ing.com
+santander.com
+societegenerale.com
+ubs.com
+unicreditgroup.eu
+# Global Banks - Asia
+boc.cn
+dbs.com
+icbc.com.cn
+icbc-ltd.com
+mizuhogroup.com
+mufg.jp
+ocbc.com
+# Global Banks - Middle East
+alrajhibank.com.sa
+emiratesnbd.com
+qnb.com
+# Global Banks - Australia
+anz.com.au
+commbank.com.au
+nab.com.au
+westpac.com.au
+# Global Banks - Canada
+bmo.com
+cibc.com
+rbc.com
+rbcroyalbank.com
+scotiabank.com
+# Payment Gateways & Processors
+adyen.com
+authorize.net
+braintreepayments.com
+checkout.com
+fisglobal.com
+mollie.com
 paypal.com
-prudential.com
+razorpay.com
+squareup.com
 stripe.com
+worldpay.com
+2checkout.com
+# BNPL (Buy Now, Pay Later)
+affirm.com
+afterpay.com
+klarna.com
+# Neobanks & Digital Finance
+monzo.com
+n26.com
+revolut.com
+wise.com
+# India Payment Gateways
+paytm.com
+phonepe.com
+# Stock Exchanges & Financial Data
+bseindia.com
+londonstockexchange.com
+lseg.com
+morningstar.com
+nasdaq.com
+nseindia.com
+nyse.com
 tradingview.com
+# Crypto Exchanges
+binance.com
+bitget.com
+bybit.com
+coinbase.com
+gemini.com
+kraken.com
+kucoin.com
+okx.com
+# Financial - Other
+cur8.capital
+prudential.com
+wahed.com
 # Collaboration & Productivity
 calendly.com
 canva.com
 figma.com
+notion.com
 notion.so
 slack.com
 t.co
@@ -80,10 +208,13 @@ teamviewer.com
 trello.com
 zoom.com
 zoom.us
-# Travel
+# Travel & Transport
 agoda.com
 airbnb.com
+ryanair.com
 tripadvisor.com
+uber.com
+ups.com
 # Professional & Consulting
 adobe.com
 adobe.io
@@ -100,6 +231,28 @@ mckinsey.com
 openai.com
 salesforce.com
 zendesk.com
+# CRM & Customer Support
+acompli.com
+eloqua.com
+force.com
+forter.com
+intercom.com
+intercom.io
+qualtrics.com
+snapengage.com
+whoson.com
+# Marketplace & Services
+eventbrite.com
+fiverr.com
+indeed.com
+jotform.com
+kickstarter.com
+surveymonkey.com
+swagbucks.com
+typeform.com
+yelp.com
+zillow.com
+zoho.com
 # Marketplace & Entertainment
 marriott.com
 netflix.com
@@ -107,3 +260,7 @@ rakuten.co.jp
 rakuten.com
 # Other
 amazonses.com
+bigboytoyz.com
+brwkx0h3.r.us-east-2.awstrack.me
+eurofins.com
+vitasave.ca
