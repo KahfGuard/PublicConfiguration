@@ -9,3 +9,6 @@ sunnah.com
 islamicfinder.org
 islamqa.info
 muslimcentral.com
+
+# Misc
+hmsharif.com
