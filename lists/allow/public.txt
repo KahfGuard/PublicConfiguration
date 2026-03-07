@@ -1,6 +1,11 @@
-# KahfGuard Public Allowlist - Education & Government
+# ============================================================
+# KahfGuard Public Allowlist
+# Education, Government & Knowledge
+# ============================================================
 
+# ------------------------------
 # Universities
+# ------------------------------
 aiub.edu
 aust.edu
 berkeley.edu
@@ -14,26 +19,57 @@ sust.edu
 uap-bd.edu
 washington.edu
 
+# ------------------------------
 # Online Learning
+# ------------------------------
+chess.com
+classlink.com
+clever.com
 coursera.org
 duolingo.com
 edx.org
 khanacademy.org
+ted.com
+thinkific.com
 udemy.com
 
+# ------------------------------
 # Research & Reference
+# ------------------------------
 academia.edu
 arxiv.org
 britannica.com
 ieee.org
 researchgate.net
 
+# ------------------------------
+# Academic Publishers
+# ------------------------------
+doi.org
+iso.org
+mdpi.com
+oup.com
+sagepub.com
+tandfonline.com
+weforum.org
+wiley.com
+
+# ------------------------------
+# Health & Reference
+# ------------------------------
+biblegateway.com
+mayoclinic.org
+merriam-webster.com
+
+# ------------------------------
 # US Government
+# ------------------------------
 ca.gov
 cdc.gov
 epa.gov
 fda.gov
 go.nasa.gov
+health.mil
 loc.gov
 maricopa.gov
 nasa.gov
@@ -41,9 +77,12 @@ nih.gov
 nist.gov
 noaa.gov
 usda.gov
+usps.com
 whitehouse.gov
 
+# ------------------------------
 # International Government & Organizations
+# ------------------------------
 cambridge.org
 europa.eu
 gov.br
@@ -53,9 +92,13 @@ unesco.org
 who.int
 worldbank.org
 
+# ------------------------------
 # Brazil Government
+# ------------------------------
 caixa.gov.br
 
+# ------------------------------
 # Knowledge Bases
+# ------------------------------
 wikimedia.org
 wikipedia.org

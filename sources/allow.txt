@@ -1,8 +1,5 @@
 # KahfGuard Whitelist URLs
 
-# Base whitelist - Catch All
-https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/base.txt
-
 # Kahf Services
 https://raw.githubusercontent.com/KahfGuard/PublicConfiguration/main/lists/allow/kahf.txt
 

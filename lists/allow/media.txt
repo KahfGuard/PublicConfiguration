@@ -1,46 +1,204 @@
-# KahfGuard Media Allowlist - News, Streaming & Gaming
-# Major News Outlets
+# ============================================================
+# KahfGuard Media Allowlist
+# News, Streaming, Gaming & Entertainment
+# ============================================================
+
+# ------------------------------
+# Major News Outlets - USA
+# ------------------------------
+abcnews.go.com
 apnews.com
-bbc.co.uk
-bbc.com
-bild.de
+axios.com
+bloomberg.com
 businessinsider.com
 buzzfeed.com
 cbsnews.com
+chicagotribune.com
+cnbc.com
 cnn.com
-corriere.it
-dailymail.co.uk
-elpais.com
-focus.de
 forbes.com
 foxnews.com
 hbr.org
-hindustantimes.com
-indiatimes.com
 latimes.com
-lemonde.fr
+msnbc.com
 nbcnews.com
 newsweek.com
 npr.org
+nypost.com
 nytimes.com
-repubblica.it
-reuters.com
-spiegel.de
-t-online.de
+pbs.org
+politico.com
 techcrunch.com
-telegraph.co.uk
-theguardian.com
+theatlantic.com
+thehill.com
 theverge.com
 time.com
 usatoday.com
-welt.de
+vox.com
+washingtonpost.com
 wired.com
 wsj.com
+
+# ------------------------------
+# Major News Outlets - UK
+# ------------------------------
+bbc.co.uk
+bbc.com
+dailymail.co.uk
+ft.com
+independent.co.uk
+mirror.co.uk
+news.sky.com
+telegraph.co.uk
+theguardian.com
+thetimes.com
+
+# ------------------------------
+# Major News Outlets - Europe
+# ------------------------------
+bild.de
+corriere.it
+dw.com
+elpais.com
+focus.de
+france24.com
+lefigaro.fr
+lemonde.fr
+repubblica.it
+spiegel.de
+t-online.de
+welt.de
+
+# ------------------------------
+# Major News Outlets - Canada
+# ------------------------------
+cbc.ca
+nationalpost.com
+theglobeandmail.com
+thestar.com
+
+# ------------------------------
+# Major News Outlets - Australia
+# ------------------------------
+abc.net.au
+smh.com.au
+theaustralian.com.au
+
+# ------------------------------
+# Major News Outlets - Middle East
+# ------------------------------
+alarabiya.net
+aljazeera.com
+aljazeera.net
+haaretz.com
+thenationalnews.com
+timesofisrael.com
+
+# ------------------------------
+# Major News Outlets - India
+# ------------------------------
+hindustantimes.com
+indianexpress.com
+indiatimes.com
+livemint.com
+ndtv.com
+scroll.in
+thehindu.com
+
+# ------------------------------
+# Major News Outlets - East Asia
+# ------------------------------
+asahi.com
+asia.nikkei.com
+japantimes.co.jp
+koreaherald.com
+mainichi.jp
+nhk.or.jp
+nikkei.com
+scmp.com
+
+# ------------------------------
+# Major News Outlets - Southeast Asia
+# ------------------------------
+bangkokpost.com
+straitstimes.com
+thejakartapost.com
+
+# ------------------------------
+# Major News Outlets - Pakistan
+# ------------------------------
+dawn.com
+geo.tv
+tribune.com.pk
+
+# ------------------------------
+# Major News Outlets - Africa
+# ------------------------------
+dailymaverick.co.za
+mg.co.za
+nation.africa
+news24.com
+premiumtimesng.com
+punchng.com
+vanguardngr.com
+
+# ------------------------------
+# Major News Outlets - Latin America
+# ------------------------------
+clarin.com
+elcomercio.pe
+eltiempo.com
+eluniversal.com.mx
+emol.com
+folha.uol.com.br
+globo.com
+lanacion.com.ar
+reforma.com
+
+# ------------------------------
+# Major News Outlets - Wire Services
+# ------------------------------
+prnewswire.com
+reuters.com
+
+# ------------------------------
+# Reference & Utility
+# ------------------------------
+accuweather.com
+allrecipes.com
+behindmlm.com
+espn.com
+genius.com
+healthline.com
+imdb.com
+investopedia.com
+issuu.com
+nationalgeographic.com
+people.com
+scribd.com
+statista.com
+theconversation.com
+weather.com
+webmd.com
+
+# ------------------------------
+# Entertainment
+# ------------------------------
+amagi.tv
+moe.video
+nexusmods.com
+warnerbros.com
+
+# ------------------------------
 # Academic & Research
+# ------------------------------
 frontiersin.org
 nature.com
 springer.com
+
+# ------------------------------
 # Streaming & Video
+# ------------------------------
 disneyplus.com
 netflix.net
 nflxvideo.net
@@ -49,22 +207,33 @@ soundcloud.com
 spotify.com
 twitch.tv
 vimeo.com
+
+# ------------------------------
 # Gaming
+# ------------------------------
 ea.com
 epicgames.dev
 gamepass.com
 playstation.com
 steampowered.com
 supercell.com
+
+# ------------------------------
 # Gaming - Unity Engine
+# ------------------------------
 docs.unity3d.com
 download.unity3d.com
 store.unity3d.com
 unity3d.com
+
+# ------------------------------
 # Media & Images
+# ------------------------------
 bandcamp.com
 dreamstime.com
 kick.com
+
+# ------------------------------
 # Government Services
-globo.com
+# ------------------------------
 service.gov.uk
