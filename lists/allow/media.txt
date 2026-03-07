@@ -8,8 +8,10 @@
 # ------------------------------
 abcnews.go.com
 apnews.com
+arstechnica.com
 axios.com
 bloomberg.com
+bostonglobe.com
 businessinsider.com
 buzzfeed.com
 cbsnews.com
@@ -19,18 +21,24 @@ cnn.com
 forbes.com
 foxnews.com
 hbr.org
+huffpost.com
 latimes.com
+msn.com
 msnbc.com
 nbcnews.com
+newyorker.com
 newsweek.com
 npr.org
 nypost.com
 nytimes.com
 pbs.org
 politico.com
+slate.com
+substack.com
 techcrunch.com
 theatlantic.com
 thehill.com
+theintercept.com
 theverge.com
 time.com
 usatoday.com
@@ -45,6 +53,7 @@ wsj.com
 bbc.co.uk
 bbc.com
 dailymail.co.uk
+economist.com
 ft.com
 independent.co.uk
 mirror.co.uk
@@ -58,14 +67,21 @@ thetimes.com
 # ------------------------------
 bild.de
 corriere.it
+dailysabah.com
 dw.com
+elmundo.es
 elpais.com
 focus.de
 france24.com
+gazzetta.it
+hurriyet.com.tr
 lefigaro.fr
 lemonde.fr
+marca.com
+n-tv.de
 repubblica.it
 spiegel.de
+tagesschau.de
 t-online.de
 welt.de
 
@@ -90,7 +106,10 @@ theaustralian.com.au
 alarabiya.net
 aljazeera.com
 aljazeera.net
+arabnews.com
+gulfnews.com
 haaretz.com
+khaleejtimes.com
 thenationalnews.com
 timesofisrael.com
 
@@ -100,6 +119,7 @@ timesofisrael.com
 hindustantimes.com
 indianexpress.com
 indiatimes.com
+indiatoday.in
 livemint.com
 ndtv.com
 scroll.in
@@ -121,6 +141,8 @@ scmp.com
 # Major News Outlets - Southeast Asia
 # ------------------------------
 bangkokpost.com
+channelnewsasia.com
+detik.com
 straitstimes.com
 thejakartapost.com
 
@@ -152,6 +174,7 @@ eluniversal.com.mx
 emol.com
 folha.uol.com.br
 globo.com
+infobae.com
 lanacion.com.ar
 reforma.com
 

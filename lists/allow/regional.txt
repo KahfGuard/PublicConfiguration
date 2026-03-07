@@ -139,7 +139,7 @@ bonikbarta.com
 dailyamardesh.com
 dailyinqilab.com
 dailyjanakantha.com
-dailynaydiganta.com
+dailynayadiganta.com
 dailysangram.com
 dainikamadershomoy.com
 dainikazadi.org
@@ -208,15 +208,18 @@ bbarta24.net
 bd-journal.com
 bd24live.com
 bdnews24.com
+dainikshiksha.com
 dhakapost.com
 dhakatimes24.com
 jagonews24.com
 justnewsbd.com
 kholakagojbd.com
+kishoralo.com
 news71online.com
 poriborton.com
 risingbd.com
 sarabangla.net
+sharenews24.com
 thereport24.com
 # ------------------------------
 # Bangladesh - News Agencies
