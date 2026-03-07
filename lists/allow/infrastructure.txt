@@ -1,6 +1,11 @@
-# KahfGuard Infrastructure Allowlist - CDNs, Cloud, Certificates, Core Internet Services
+# ============================================================
+# KahfGuard Infrastructure Allowlist
+# CDNs, Cloud, Certificates & Core Internet Services
+# ============================================================
 
+# ------------------------------
 # CDN Providers
+# ------------------------------
 alicdn.com
 b-cdn.net
 cdngslb.com
@@ -15,23 +20,27 @@ okcdn.ru
 rocketcdn.me
 trbcdn.net
 
+# ------------------------------
 # Cloud Providers & Services
+# ------------------------------
 amazonaws.com
-cloudinary.com
 azure.com
 azure.microsoft.com
 azurerms.com
+cloudinary.com
 digitalocean.com
 elasticbeanstalk.com
 linode.com
 oraclecloud.com
+pages.dev
 rackspace.com
 rackspace.net
-pages.dev
 run.app
 workers.dev
 
+# ------------------------------
 # Certificate Authorities & PKI
+# ------------------------------
 cacerts.digicert.com
 cert.int-x3.letsencrypt.org
 crl.globalsign.com
@@ -54,7 +63,9 @@ secure.globalsign.com
 verisign.com
 verisign.net
 
+# ------------------------------
 # Microsoft Infrastructure
+# ------------------------------
 account.activedirectory.windowsazure.com
 ajax.aspnetcdn.com
 amp.azure.net
@@ -75,44 +86,52 @@ shellprod.msocdn.com
 spoprod-a.akamaihd.net
 wus-www.sway-cdn.com
 
+# ------------------------------
 # Cloudflare
+# ------------------------------
 cloudflare.com
 cloudflare.net
 cloudflareinsights.com
 
+# ------------------------------
 # Domain Registrars & DNS
+# ------------------------------
 afternic.com
 domaincontrol.com
 dropcatch.com
 expireddomains.com
 gandi.net
 godaddy.com
-markmonitor.com
-parklogic.com
-registrar-servers.com
-sedo.com
-worldnic.com
 mailinabox.email
+markmonitor.com
 name.com
 nic.io
 nic.network
+parklogic.com
+registrar-servers.com
 ripn.net
+sedo.com
 spaceweb.pro
 superhosting.bg
 uk.com
+worldnic.com
 
+# ------------------------------
 # Web Hosting & Website Builders
+# ------------------------------
 cpanel.net
 hostgator.com
 hostgator.com.br
 ovh.net
 plesk.com
+squarespace.com
 webempresa.eu
 websitewelcome.com
-squarespace.com
 weebly.com
 
+# ------------------------------
 # Networking & Hardware
+# ------------------------------
 arubanetworks.com
 asus.com
 dell.com
@@ -134,7 +153,9 @@ tplinkcloud.com
 ui.com
 wyzecam.com
 
+# ------------------------------
 # Server Software
+# ------------------------------
 apache.org
 docker.com
 docker.io
@@ -144,7 +165,9 @@ nginx.org
 ngrok.com
 oracle.com
 
+# ------------------------------
 # Network Tools
+# ------------------------------
 ezvizlife.com
 host-tracker.com
 ip-api.com
@@ -157,14 +180,18 @@ nwtools.com
 speedtest.net
 whoer.net
 
+# ------------------------------
 # Telecom
+# ------------------------------
 att.net
 comcast.net
 t-mobile.com
 telekom.de
 telekom.net
 
+# ------------------------------
 # URL Shorteners
+# ------------------------------
 adf.ly
 adj.st
 bit.ly
@@ -182,10 +209,14 @@ tinyurl.com
 u.nu
 x.co
 
+# ------------------------------
 # Captive Portals
+# ------------------------------
 avsxappcaptiveportal.com
 firetvcaptiveportal.com
 
+# ------------------------------
 # IoT & Smart Home
+# ------------------------------
 hihonorcloud.com
 quickconnect.to

@@ -2,11 +2,9 @@
 # KahfGuard Business Allowlist
 # E-Commerce, Finance, Payments & Professional Tools
 # ============================================================
-
 # ----------------------------------------
 # E-COMMERCE
 # ----------------------------------------
-
 # Global E-Commerce Platforms
 alibaba.com
 aliexpress.com
@@ -32,23 +30,19 @@ shopify.com
 temu.com
 wayfair.com
 wish.com
-
 # E-Commerce - Fashion & Lifestyle
 asos.com
 hm.com
 uniqlo.com
 zara.com
-
 # E-Commerce - Middle East
 mumzworld.com
 namshi.com
 noon.com
-
 # E-Commerce - Turkey
 hepsiburada.com
 n11.com
 trendyol.com
-
 # E-Commerce - Southeast Asia
 bukalapak.com
 lazada.co.id
@@ -59,18 +53,15 @@ shopee.co.id
 shopee.com.br
 shopeemobile.com
 tokopedia.com
-
 # E-Commerce - India
 flipkart.com
 meesho.com
 myntra.com
 snapdeal.com
-
 # E-Commerce - Africa & Pakistan
 daraz.pk
 jumia.com
 jumia.com.ng
-
 # E-Commerce - Other
 bdsmartbook.com
 bigboytoyz.com
@@ -79,25 +70,22 @@ ozon.ru
 ozone.ru
 rakuten.co.jp
 rakuten.com
-
 # ----------------------------------------
 # BANKING & FINANCIAL INSTITUTIONS
 # ----------------------------------------
-
 # Banks - United States
 bankofamerica.com
 capitalone.com
 chase.com
 citi.com
 goldmansachs.com
-jpmorganchase.com
 jpmorgan.com
+jpmorganchase.com
 morganstanley.com
 pnc.com
 td.com
 usbank.com
 wellsfargo.com
-
 # Banks - United Kingdom
 barclays.co.uk
 home.barclays
@@ -106,7 +94,6 @@ lloydsbank.com
 lloydsbankinggroup.com
 natwest.com
 sc.com
-
 # Banks - Europe
 bnpparibas.com
 db.com
@@ -116,38 +103,32 @@ santander.com
 societegenerale.com
 ubs.com
 unicreditgroup.eu
-
 # Banks - Asia-Pacific
 boc.cn
 dbs.com
-icbc.com.cn
 icbc-ltd.com
+icbc.com.cn
 mizuhogroup.com
 mufg.jp
 ocbc.com
-
 # Banks - Middle East
 alrajhibank.com.sa
 emiratesnbd.com
 qnb.com
-
 # Banks - Australia
 anz.com.au
 commbank.com.au
 nab.com.au
 westpac.com.au
-
 # Banks - Canada
 bmo.com
 cibc.com
 rbc.com
 rbcroyalbank.com
 scotiabank.com
-
 # ----------------------------------------
 # PAYMENT GATEWAYS & PROCESSORS
 # ----------------------------------------
-
 # Payment Gateways - Global
 2checkout.com
 adyen.com
@@ -161,7 +142,6 @@ razorpay.com
 squareup.com
 stripe.com
 worldpay.com
-
 # Payment Gateways - European
 bancontact.com
 bluesnap.com
@@ -182,7 +162,6 @@ vipps.no
 vippsmobilepay.com
 worldline.com
 zettle.com
-
 # Payment Gateways - Middle East (Saudi Arabia)
 bayanpay.sa
 clickpay.com.sa
@@ -195,14 +174,12 @@ stcbank.com.sa
 stcpay.com.sa
 tap.company
 urpay.com.sa
-
 # Payment Gateways - Middle East (UAE)
 cashu.com
 network.ae
 noonpayments.com
 paymennt.com
 telr.com
-
 # Payment Gateways - Middle East (GCC & Egypt)
 benefit.bh
 fawaterk.com
@@ -217,7 +194,6 @@ paymob.com
 sadad.qa
 thawani.om
 valu.com.eg
-
 # Payment Gateways - Malaysia
 billplz.com
 curlec.com
@@ -231,7 +207,6 @@ revenuemonster.my
 senangpay.com
 tngdigital.com.my
 touchngo.com.my
-
 # Payment Gateways - Indonesia
 akulaku.com
 dana.id
@@ -245,7 +220,6 @@ midtrans.com
 ovo.id
 shopeepay.co.id
 xendit.co
-
 # Payment Gateways - Turkey
 bkm.com.tr
 craftgate.io
@@ -258,11 +232,9 @@ paytr.com
 sipay.com.tr
 tosla.com
 troyodeme.com
-
 # Payment Gateways - India
 paytm.com
 phonepe.com
-
 # Payment Gateways - Pakistan
 1link.net.pk
 easypaisa.com.pk
@@ -274,7 +246,6 @@ niftepay.pk
 paypro.com.pk
 sadapay.pk
 zindigi.pk
-
 # Payment Gateways - Africa
 chargily.com
 cmi.co.ma
@@ -284,12 +255,10 @@ paga.com
 palmpay.com
 paystack.com
 wave.com
-
 # Payment Gateways - Cross-Border
 neteller.com
 payoneer.com
 skrill.com
-
 # Buy Now, Pay Later (BNPL)
 affirm.com
 afterpay.com
@@ -298,33 +267,28 @@ klarna.com
 postpay.io
 tabby.ai
 tamara.co
-
 # Neobanks & Digital Finance
 monzo.com
 n26.com
 revolut.com
 wise.com
-
 # ----------------------------------------
 # STOCK EXCHANGES & FINANCIAL DATA
 # ----------------------------------------
-
 # Stock Exchanges - Americas
 nasdaq.com
 nyse.com
 tmx.com
 tsx.com
-
 # Stock Exchanges - Europe
 deutsche-boerse.com
 euronext.com
 londonstockexchange.com
 lseg.com
 six-group.com
-
 # Stock Exchanges - Asia-Pacific
-bursamalaysia.com
 bseindia.com
+bursamalaysia.com
 hkex.com.hk
 idx.co.id
 jpx.co.jp
@@ -335,23 +299,19 @@ sgx.com
 sse.com.cn
 szse.cn
 twse.com.tw
-
 # Stock Exchanges - Middle East
 borsaistanbul.com
 saudiexchange.sa
 tadawul.com.sa
-
 # Financial Data & Analytics
 investing.com
 marketwatch.com
 morningstar.com
 seekingalpha.com
 tradingview.com
-
 # ----------------------------------------
 # CRYPTO EXCHANGES
 # ----------------------------------------
-
 binance.com
 bitget.com
 bybit.com
@@ -360,11 +320,9 @@ gemini.com
 kraken.com
 kucoin.com
 okx.com
-
 # ----------------------------------------
 # EMAIL MARKETING & DELIVERY
 # ----------------------------------------
-
 activehosted.com
 aweber.com
 awstrack.me
@@ -388,8 +346,8 @@ hsforms.com
 hsforms.net
 hubspotlinks.com
 iterable.com
-klclick.com
 klaviyo.com
+klclick.com
 list-manage.com
 litmus.com
 mailchi.mp
@@ -412,11 +370,9 @@ sendinblue.com
 sibforms.com
 sparkpostmail.com
 substackcdn.com
-
 # ----------------------------------------
 # ANALYTICS, AD TECH & TRACKING
 # ----------------------------------------
-
 api.mixpanel.com
 app.appsflyer.com
 appsflyer.com
@@ -435,11 +391,9 @@ revive-adserver.com
 sdk.split.io
 segment.io
 split.io
-
 # ----------------------------------------
 # COLLABORATION & PRODUCTIVITY
 # ----------------------------------------
-
 calendly.com
 canva.com
 figma.com
@@ -451,11 +405,9 @@ teamviewer.com
 trello.com
 zoom.com
 zoom.us
-
 # ----------------------------------------
 # PROFESSIONAL SERVICES
 # ----------------------------------------
-
 # Software & Tools
 adobe.com
 adobe.io
@@ -469,14 +421,11 @@ ghost.io
 grammarly.com
 salesforce.com
 zendesk.com
-
 # Consulting
 deloitte.com
 mckinsey.com
-
 # AI
 openai.com
-
 # CRM & Customer Support
 acompli.com
 eloqua.com
@@ -487,7 +436,6 @@ intercom.io
 qualtrics.com
 snapengage.com
 whoson.com
-
 # Travel & Transport
 agoda.com
 airbnb.com
@@ -495,11 +443,9 @@ ryanair.com
 tripadvisor.com
 uber.com
 ups.com
-
 # ----------------------------------------
 # OTHER
 # ----------------------------------------
-
 # Marketplace & Services
 eventbrite.com
 fiverr.com
@@ -512,19 +458,16 @@ typeform.com
 yelp.com
 zillow.com
 zoho.com
-
 # Entertainment
 marriott.com
 netflix.com
-
 # Financial - Other
 cur8.capital
 prudential.com
 wahed.com
-
 # Misc
 amazonses.com
 brwkx0h3.r.us-east-2.awstrack.me
 eurofins.com
-vitasave.ca
 ordhekdeen.com
+vitasave.ca
