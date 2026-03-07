@@ -1,5 +1,11 @@
-# KahfGuard Technology Allowlist - Major Tech Platforms & Developer Tools
-# Google
+# ============================================================
+# KahfGuard Technology Allowlist
+# Major Tech Platforms, Developer Tools & AI Services
+# ============================================================
+
+# ------------------------------
+# Google - Core & YouTube
+# ------------------------------
 g.co
 g.page
 gmail.com
@@ -15,7 +21,26 @@ telephony.goog
 withgoogle.com
 youtube-nocookie.com
 youtube.com
+
+# ------------------------------
+# Google - Additional Services
+# ------------------------------
+analytics.google.com
+forms.gle
+goo.gl
+youtu.be
+
+# ------------------------------
+# Google - Infrastructure
+# ------------------------------
+beacons.gcp.gvt2.com
+beacons.gvt2.com
+beacons5.gvt3.com
+pki.goog
+
+# ------------------------------
 # Microsoft - Core Services
+# ------------------------------
 c1.microsoft.com
 cloud.microsoft
 compliance.microsoft.com
@@ -39,8 +64,13 @@ technet.microsoft.com
 windows.com
 windows.net
 wns.windows.com
+
+# ------------------------------
 # Microsoft - Office & 365
+# ------------------------------
+lync.com
 o15.officeredir.microsoft.com
+o365weve.com
 ocos-office365-s2s.msedge.net
 office.com
 office.live.com
@@ -58,13 +88,18 @@ outlook.com
 outlook.office.com
 outlook.office365.com
 powerapps.com
+powerautomate.com
 r.office.microsoft.com
 sharepoint.com
 sharepointonline.com
+staffhub.ms
 sway.com
 yammer.com
 yammerusercontent.com
+
+# ------------------------------
 # Microsoft - Auth & Identity
+# ------------------------------
 account.live.com
 accounts.accesscontrol.windows.net
 activation.sls.microsoft.com
@@ -110,13 +145,30 @@ smtp.office365.com
 ssw.live.com
 storage.live.com
 wus-www.sway-extensions.com
+
+# ------------------------------
 # Microsoft - Bing & Search
+# ------------------------------
 appex-rf.msn.com
 appex.bing.com
 bing.com
 c.bing.com
+c.bing.net
 c.live.com
+tse1.mm.bing.net
+
+# ------------------------------
+# Microsoft - Additional Services
+# ------------------------------
+appcenter.ms
+in.appcenter.ms
+mem.gfx.ms
+oneclient.sfx.ms
+phonefactor.net
+
+# ------------------------------
 # Apple
+# ------------------------------
 app.searchads.apple.com
 apple.com
 apps.apple.com
@@ -126,12 +178,16 @@ iadsdk.apple.com
 icloud-content.com
 icloud.com
 itunes.apple.com
+me.com
 mzstatic.com
 osrecovery.apple.com
 store.apple.com
 support.apple.com
 updates.apple.com
+
+# ------------------------------
 # Meta / Facebook
+# ------------------------------
 facebook.com
 fb.com
 graph.facebook.com
@@ -146,7 +202,10 @@ video.facebook.com
 web.facebook.com
 whatsapp.com
 whatsapp.net
+
+# ------------------------------
 # Amazon
+# ------------------------------
 amazon.ca
 amazon.co.jp
 amazon.co.uk
@@ -164,16 +223,35 @@ amazonvideo.com
 amzn.to
 primevideo.com
 ring.com
+
+# ------------------------------
 # Samsung
+# ------------------------------
 samsung.com
+
+# ------------------------------
 # LG
+# ------------------------------
 lg.com
+
+# ------------------------------
 # Netflix
+# ------------------------------
 nflximg.com
+
+# ------------------------------
 # LinkedIn
+# ------------------------------
 linkedin.com
 platform.linkedin.com
+
+# ============================================================
+# AI & Machine Learning
+# ============================================================
+
+# ------------------------------
 # AI - Companies & Platforms
+# ------------------------------
 ai.com
 anthropic.com
 cerebras.ai
@@ -212,7 +290,28 @@ synthesia.io
 together.ai
 wandb.ai
 x.ai
+
+# ------------------------------
+# AI - Inference Platforms
+# ------------------------------
+banana.dev
+baseten.co
+beam.cloud
+bentoml.com
+build.nvidia.com
+coreweave.com
+deepinfra.com
+lambdalabs.com
+lepton.ai
+nvidia.com
+runpod.io
+salad.com
+vast.ai
+vllm.ai
+
+# ------------------------------
 # AI - Frameworks & Data
+# ------------------------------
 anyscale.com
 databricks.com
 kaggle.com
@@ -223,62 +322,164 @@ pytorch.org
 ray.io
 tensorflow.org
 weaviate.io
+
+# ============================================================
+# Web & Productivity
+# ============================================================
+
+# ------------------------------
+# Search Engines & Browsers
+# ------------------------------
+aol.com
+brave.com
+duckduckgo.com
+mozilla.com
+mozilla.org
+opera.com
+yahoo.com
+
+# ------------------------------
+# Software & Productivity
+# ------------------------------
+autodesk.com
+camscanner.com
+macromedia.com
+wps.com
+
+# ------------------------------
+# Design & Productivity
+# ------------------------------
+canva.com
+figma.com
+grammarly.com
+notion.so
+tally.so
+
+# ------------------------------
+# Creative & Design Platforms
+# ------------------------------
+behance.net
+dribbble.com
+freepik.com
+pexels.com
+pixabay.com
+unsplash.com
+
+# ------------------------------
+# Maps & Geospatial
+# ------------------------------
+arcgis.com
+ecn.dev.virtualearth.net
+openstreetmap.org
+virtualearth.net
+
+# ------------------------------
+# File Sharing
+# ------------------------------
+mediafire.com
+mega.co.nz
+sharedrop.io
+
+# ------------------------------
+# Communication
+# ------------------------------
+agora.io
+wbx2.com
+
+# ============================================================
+# Developer & Infrastructure
+# ============================================================
+
+# ------------------------------
 # Developer - Platforms & Hosting
+# ------------------------------
+0xrpc.io
 ampproject.org
 android.com
 appspot.com
+assets.adobedtm.com
 blogger.com
 bugsnag.com
 creativecommons.org
+example.com
+fontawesome.com
 github.com
 github.io
 gitlab.com
+gravatar.com
 jetbrains.com
+jquery.com
 jsdelivr.net
 launchpad.net
 otlp.bugsnag.com
+prodregistryv2.org
 readthedocs.io
 replit.com
 sourceforge.net
 sourcegraph.com
 stackoverflow.com
+themeforest.net
+typekit.net
 unpkg.com
 vercel.com
 visualstudio.com
 w3.org
 w3schools.com
+wordpress.org
+wp.com
+
+# ------------------------------
 # Developer - Code AI Assistants
+# ------------------------------
 codeium.com
 cursor.com
 phind.com
 tabnine.com
 v0.dev
 windsurf.com
+
+# ------------------------------
 # Linux & Open Source
+# ------------------------------
 debian.org
 gnu.org
 php.net
 python.org
 ubuntu.com
-# Design & Productivity
-canva.com
-figma.com
-grammarly.com
-notion.so
-tally.so
-# Google Infrastructure
-beacons.gcp.gvt2.com
-beacons.gvt2.com
-beacons5.gvt3.com
-pki.goog
+
+# ------------------------------
+# Monitoring & DevOps
+# ------------------------------
+browser-intake-datadoghq.com
+crashlytics.com
+launchdarkly.com
+newrelic.com
+sentry.io
+
+# ============================================================
+# Other
+# ============================================================
+
+# ------------------------------
+# IoT & Smart Home
+# ------------------------------
+life360.com
+smartthings.com
+
+# ------------------------------
 # Gaming
+# ------------------------------
 xbox.com
 xboxlive.com
-# Other
+
+# ------------------------------
+# Miscellaneous
+# ------------------------------
 archive.org
 arxiv.org
-bloomberg.com
 booking.com
+byteconnect.io
 dynatrace.com
-nvidia.com
+hath.network
+tbcache.com
 zerotier.com

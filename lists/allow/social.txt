@@ -1,23 +1,44 @@
-# KahfGuard Social Allowlist - Social Media & Communication Platforms
+# ============================================================
+# KahfGuard Social Allowlist
+# Social Media, Communication & Content Platforms
+# ============================================================
+
+# ------------------------------
 # Discord
+# ------------------------------
 discord.com
 discord.gg
 discord.media
 discordapp.com
+
+# ------------------------------
 # Meta / Facebook
+# ------------------------------
 fbsbx.com
+
+# ------------------------------
 # Reddit
+# ------------------------------
 reddit.com
+
+# ------------------------------
 # Twitter / X
+# ------------------------------
 t.co
 twitter.com
 x.com
+
+# ------------------------------
 # TikTok
+# ------------------------------
 capcut.com
 m.tiktok.com
 tiktok.com
 tiktokv.com
+
+# ------------------------------
 # Other Social Platforms
+# ------------------------------
 bsky.app
 line.me
 ok.ru
@@ -28,21 +49,60 @@ telegram.org
 viber.com
 vk.ru
 weibo.com
+
+# ------------------------------
+# Content Platforms
+# ------------------------------
+change.org
+disqus.com
+fandom.com
+flickr.com
+giphy.com
+goodreads.com
+imgur.com
+letterboxd.com
+medium.com
+meetup.com
+myspace.com
+patreon.com
+quora.com
+redd.it
+substack.com
+t.me
+tenor.com
+wa.me
+
+# ------------------------------
+# Sharing Widgets
+# ------------------------------
+addtoany.com
+
+# ------------------------------
 # Messaging & Collaboration
+# ------------------------------
 box.com
 dropbox.com
 hubspot.com
 salesforceliveagent.com
 webex.com
+
+# ------------------------------
 # News & Publishing
+# ------------------------------
 ft.com
 huffpost.com
 independent.co.uk
 nypost.com
 washingtonpost.com
+
+# ------------------------------
 # AI & Chat Platforms
+# ------------------------------
 chatgpt.com
+
+# ------------------------------
 # Analytics & Marketing
+# ------------------------------
 adjust.com
 ambitionbox.com
 app-measurement.com
@@ -50,7 +110,10 @@ app.hubspot.com
 astg.widerplanet.com
 omniconvert.com
 segment.com
+
+# ------------------------------
 # Security & Network Vendors
+# ------------------------------
 avast.com
 checkpoint.com
 comcast.com
@@ -60,7 +123,10 @@ onetrust.com
 redhat.com
 ubnt.com
 xerox.com
+
+# ------------------------------
 # Tech, Media & Review Sites
+# ------------------------------
 cnet.com
 deviantart.com
 firefox.com
@@ -71,7 +137,10 @@ quizlet.com
 sciencedirect.com
 tencent.com
 trustpilot.com
+
+# ------------------------------
 # Retail, Hosting & Services
+# ------------------------------
 bluehost.com
 boldchat.com
 dreamhost.com
