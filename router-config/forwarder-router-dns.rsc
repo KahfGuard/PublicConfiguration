@@ -7,10 +7,10 @@
 #  Vector              Port        Protocol    Mitigation
 #  ──────────────────────────────────────────────────────────────────
 #  Plain DNS           53   TCP/UDP            NAT redirect → forwarder
-#  DNS-over-TLS (DoT)  853  TCP                DROP (except KAHF)
-#  DNS-over-QUIC (DoQ) 853  UDP                DROP (except KAHF)
-#  QUIC/HTTP3          443  UDP                DROP (except KAHF)
-#  DoH via HTTP/2      443  TCP                DROP to known DoH IPs
+#  DNS-over-TLS (DoT)  853  TCP                REJECT (except KAHF)
+#  DNS-over-QUIC (DoQ) 853  UDP                REJECT (except KAHF)
+#  QUIC/HTTP3          443  UDP                REJECT (except KAHF)
+#  DoH via HTTP/2      443  TCP                REJECT to known DoH IPs
 #  ──────────────────────────────────────────────────────────────────
 #
 #  ADDRESS LISTS:
@@ -20,7 +20,7 @@
 #  DoH_Providers     = Known DoH provider IPs (always blocked for clients)
 #  ──────────────────────────────────────────────────────────────────
 #
-#  IMPORTANT: Rules 853/443 use DROP (firewall filter), NOT dst-nat.
+#  IMPORTANT: Rules 853/443 use REJECT (firewall filter), NOT dst-nat.
 #  NAT redirect fails for encrypted protocols — TLS/QUIC validates the
 #  server certificate, so redirecting to a different server causes a
 #  silent TLS handshake failure, NOT a block.
@@ -50,7 +50,7 @@
 # ─────────────────────────────────
 
 /ip firewall nat remove [find where comment~"DNS to Core"]
-/ip firewall filter remove [find where comment~"Drop Do"]
+/ip firewall filter remove [find where comment~"KAHF-DNS" or comment~"Drop Do" or comment~"Drop QUIC"]
 /ip firewall address-list remove [find where list=$clientList or list=$safeList or list=DoH_Providers]
 
 
@@ -105,9 +105,11 @@ add chain=dstnat protocol=tcp dst-port=53 src-address-list=$clientList \
 
 
 # ─────────────────────────────────
-#  FILTER: Encrypted DNS → DROP (except KAHF)
+#  FILTER: Encrypted DNS → REJECT (except KAHF)
 # ─────────────────────────────────
-# Uses firewall filter (DROP), NOT NAT redirect.
+# Uses firewall filter (REJECT), NOT NAT redirect.
+# REJECT returns ICMP unreachable (UDP) or TCP RST (TCP) for instant
+# client fallback. DROP causes silent 5-30s timeouts as clients retry.
 # NAT redirect of encrypted protocols fails silently (TLS cert mismatch).
 # Rules are placed before fasttrack to ensure new connections are evaluated.
 
@@ -116,22 +118,30 @@ add chain=dstnat protocol=tcp dst-port=53 src-address-list=$clientList \
 /ip firewall filter
 :if ([:len $ftRule] > 0) do={
     add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=drop comment="Drop DoT" place-before=$ftRule
+        dst-address-list=$notSafeList action=reject reject-with=tcp-reset \
+        comment="KAHF-DNS: Reject DoT" place-before=$ftRule
     add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=drop comment="Drop DoQ" place-before=$ftRule
+        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+        comment="KAHF-DNS: Reject DoQ" place-before=$ftRule
     add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=drop comment="Drop QUIC/DoH3" place-before=$ftRule
+        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+        comment="KAHF-DNS: Reject QUIC/DoH3" place-before=$ftRule
     add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
-        dst-address-list=DoH_Providers action=drop comment="Drop DoH to known providers" place-before=$ftRule
+        dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
+        comment="KAHF-DNS: Reject DoH" place-before=$ftRule
 } else={
     add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=drop comment="Drop DoT"
+        dst-address-list=$notSafeList action=reject reject-with=tcp-reset \
+        comment="KAHF-DNS: Reject DoT"
     add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=drop comment="Drop DoQ"
+        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+        comment="KAHF-DNS: Reject DoQ"
     add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=drop comment="Drop QUIC/DoH3"
+        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+        comment="KAHF-DNS: Reject QUIC/DoH3"
     add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
-        dst-address-list=DoH_Providers action=drop comment="Drop DoH to known providers"
+        dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
+        comment="KAHF-DNS: Reject DoH"
 }
 
 # ─────────────────────────────────
