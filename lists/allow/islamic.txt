@@ -2,21 +2,19 @@
 # KahfGuard Islamic Allowlist
 # Islamic Resources & Education
 # ============================================================
-
 # ------------------------------
 # Quran & Hadith
 # ------------------------------
 alhadith.free.nf
 quran.com
 sunnah.com
-
 # ------------------------------
 # Islamic Knowledge & Media
 # ------------------------------
+fajr.com
 islamicfinder.org
 islamqa.info
 muslimcentral.com
-
 # ------------------------------
 # Miscellaneous
 # ------------------------------

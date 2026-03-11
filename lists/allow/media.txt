@@ -2,7 +2,6 @@
 # KahfGuard Media Allowlist
 # News, Streaming, Gaming & Entertainment
 # ============================================================
-
 # ------------------------------
 # Major News Outlets - USA
 # ------------------------------
@@ -26,8 +25,8 @@ latimes.com
 msn.com
 msnbc.com
 nbcnews.com
-newyorker.com
 newsweek.com
+newyorker.com
 npr.org
 nypost.com
 nytimes.com
@@ -46,7 +45,6 @@ vox.com
 washingtonpost.com
 wired.com
 wsj.com
-
 # ------------------------------
 # Major News Outlets - UK
 # ------------------------------
@@ -61,7 +59,6 @@ news.sky.com
 telegraph.co.uk
 theguardian.com
 thetimes.com
-
 # ------------------------------
 # Major News Outlets - Europe
 # ------------------------------
@@ -81,10 +78,9 @@ marca.com
 n-tv.de
 repubblica.it
 spiegel.de
-tagesschau.de
 t-online.de
+tagesschau.de
 welt.de
-
 # ------------------------------
 # Major News Outlets - Canada
 # ------------------------------
@@ -92,14 +88,12 @@ cbc.ca
 nationalpost.com
 theglobeandmail.com
 thestar.com
-
 # ------------------------------
 # Major News Outlets - Australia
 # ------------------------------
 abc.net.au
 smh.com.au
 theaustralian.com.au
-
 # ------------------------------
 # Major News Outlets - Middle East
 # ------------------------------
@@ -112,7 +106,6 @@ haaretz.com
 khaleejtimes.com
 thenationalnews.com
 timesofisrael.com
-
 # ------------------------------
 # Major News Outlets - India
 # ------------------------------
@@ -124,7 +117,6 @@ livemint.com
 ndtv.com
 scroll.in
 thehindu.com
-
 # ------------------------------
 # Major News Outlets - East Asia
 # ------------------------------
@@ -136,7 +128,6 @@ mainichi.jp
 nhk.or.jp
 nikkei.com
 scmp.com
-
 # ------------------------------
 # Major News Outlets - Southeast Asia
 # ------------------------------
@@ -145,14 +136,12 @@ channelnewsasia.com
 detik.com
 straitstimes.com
 thejakartapost.com
-
 # ------------------------------
 # Major News Outlets - Pakistan
 # ------------------------------
 dawn.com
 geo.tv
 tribune.com.pk
-
 # ------------------------------
 # Major News Outlets - Africa
 # ------------------------------
@@ -163,7 +152,6 @@ news24.com
 premiumtimesng.com
 punchng.com
 vanguardngr.com
-
 # ------------------------------
 # Major News Outlets - Latin America
 # ------------------------------
@@ -177,13 +165,11 @@ globo.com
 infobae.com
 lanacion.com.ar
 reforma.com
-
 # ------------------------------
 # Major News Outlets - Wire Services
 # ------------------------------
 prnewswire.com
 reuters.com
-
 # ------------------------------
 # Reference & Utility
 # ------------------------------
@@ -203,7 +189,6 @@ statista.com
 theconversation.com
 weather.com
 webmd.com
-
 # ------------------------------
 # Entertainment
 # ------------------------------
@@ -211,14 +196,12 @@ amagi.tv
 moe.video
 nexusmods.com
 warnerbros.com
-
 # ------------------------------
 # Academic & Research
 # ------------------------------
 frontiersin.org
 nature.com
 springer.com
-
 # ------------------------------
 # Streaming & Video
 # ------------------------------
@@ -230,7 +213,6 @@ soundcloud.com
 spotify.com
 twitch.tv
 vimeo.com
-
 # ------------------------------
 # Gaming
 # ------------------------------
@@ -240,7 +222,6 @@ gamepass.com
 playstation.com
 steampowered.com
 supercell.com
-
 # ------------------------------
 # Gaming - Unity Engine
 # ------------------------------
@@ -248,14 +229,12 @@ docs.unity3d.com
 download.unity3d.com
 store.unity3d.com
 unity3d.com
-
 # ------------------------------
 # Media & Images
 # ------------------------------
 bandcamp.com
 dreamstime.com
 kick.com
-
 # ------------------------------
 # Government Services
 # ------------------------------
