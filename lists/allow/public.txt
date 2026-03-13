@@ -32,6 +32,7 @@ khanacademy.org
 ted.com
 thinkific.com
 udemy.com
+thedailycampus.com
 
 # ------------------------------
 # Research & Reference
