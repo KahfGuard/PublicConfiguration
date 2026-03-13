@@ -2,7 +2,6 @@
 # KahfGuard Infrastructure Allowlist
 # CDNs, Cloud, Certificates & Core Internet Services
 # ============================================================
-
 # ------------------------------
 # CDN Providers
 # ------------------------------
@@ -19,14 +18,15 @@ ngenix.net
 okcdn.ru
 rocketcdn.me
 trbcdn.net
-
 # ------------------------------
 # Cloud Providers & Services
 # ------------------------------
 amazonaws.com
+aws.com
 azure.com
 azure.microsoft.com
 azurerms.com
+builder.aws.com
 cloudinary.com
 digitalocean.com
 elasticbeanstalk.com
@@ -37,8 +37,6 @@ rackspace.com
 rackspace.net
 run.app
 workers.dev
-builder.aws.com
-
 # ------------------------------
 # Certificate Authorities & PKI
 # ------------------------------
@@ -63,7 +61,6 @@ pki.goog
 secure.globalsign.com
 verisign.com
 verisign.net
-
 # ------------------------------
 # Microsoft Infrastructure
 # ------------------------------
@@ -86,14 +83,12 @@ otelrules.azureedge.net
 shellprod.msocdn.com
 spoprod-a.akamaihd.net
 wus-www.sway-cdn.com
-
 # ------------------------------
 # Cloudflare
 # ------------------------------
 cloudflare.com
 cloudflare.net
 cloudflareinsights.com
-
 # ------------------------------
 # Domain Registrars & DNS
 # ------------------------------
@@ -116,7 +111,6 @@ spaceweb.pro
 superhosting.bg
 uk.com
 worldnic.com
-
 # ------------------------------
 # Web Hosting & Website Builders
 # ------------------------------
@@ -129,7 +123,6 @@ squarespace.com
 webempresa.eu
 websitewelcome.com
 weebly.com
-
 # ------------------------------
 # Networking & Hardware
 # ------------------------------
@@ -153,7 +146,6 @@ tp-link.com
 tplinkcloud.com
 ui.com
 wyzecam.com
-
 # ------------------------------
 # Server Software
 # ------------------------------
@@ -165,7 +157,6 @@ nginx.com
 nginx.org
 ngrok.com
 oracle.com
-
 # ------------------------------
 # Network Tools
 # ------------------------------
@@ -180,7 +171,6 @@ ntp.org
 nwtools.com
 speedtest.net
 whoer.net
-
 # ------------------------------
 # Telecom
 # ------------------------------
@@ -189,7 +179,6 @@ comcast.net
 t-mobile.com
 telekom.de
 telekom.net
-
 # ------------------------------
 # URL Shorteners
 # ------------------------------
@@ -209,13 +198,11 @@ shorte.st
 tinyurl.com
 u.nu
 x.co
-
 # ------------------------------
 # Captive Portals
 # ------------------------------
 avsxappcaptiveportal.com
 firetvcaptiveportal.com
-
 # ------------------------------
 # IoT & Smart Home
 # ------------------------------
