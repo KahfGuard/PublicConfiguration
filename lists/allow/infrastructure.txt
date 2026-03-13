@@ -37,6 +37,7 @@ rackspace.com
 rackspace.net
 run.app
 workers.dev
+builder.aws.com
 
 # ------------------------------
 # Certificate Authorities & PKI
