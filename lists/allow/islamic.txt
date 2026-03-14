@@ -12,6 +12,7 @@ sunnah.com
 # Islamic Knowledge & Media
 # ------------------------------
 fajr.com
+ifatwa.info
 islamicfinder.org
 islamqa.info
 muslimcentral.com
