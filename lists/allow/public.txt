@@ -2,7 +2,6 @@
 # KahfGuard Public Allowlist
 # Education, Government & Knowledge
 # ============================================================
-
 # ------------------------------
 # Universities
 # ------------------------------
@@ -18,7 +17,6 @@ stanford.edu
 sust.edu
 uap-bd.edu
 washington.edu
-
 # ------------------------------
 # Online Learning
 # ------------------------------
@@ -30,10 +28,9 @@ duolingo.com
 edx.org
 khanacademy.org
 ted.com
+thedailycampus.com
 thinkific.com
 udemy.com
-thedailycampus.com
-
 # ------------------------------
 # Research & Reference
 # ------------------------------
@@ -42,7 +39,6 @@ arxiv.org
 britannica.com
 ieee.org
 researchgate.net
-
 # ------------------------------
 # Academic Publishers
 # ------------------------------
@@ -54,14 +50,12 @@ sagepub.com
 tandfonline.com
 weforum.org
 wiley.com
-
 # ------------------------------
 # Health & Reference
 # ------------------------------
 biblegateway.com
 mayoclinic.org
 merriam-webster.com
-
 # ------------------------------
 # US Government
 # ------------------------------
@@ -80,7 +74,6 @@ noaa.gov
 usda.gov
 usps.com
 whitehouse.gov
-
 # ------------------------------
 # International Government & Organizations
 # ------------------------------
@@ -92,12 +85,10 @@ un.org
 unesco.org
 who.int
 worldbank.org
-
 # ------------------------------
 # Brazil Government
 # ------------------------------
 caixa.gov.br
-
 # ------------------------------
 # Knowledge Bases
 # ------------------------------
