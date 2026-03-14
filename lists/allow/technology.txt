@@ -2,7 +2,6 @@
 # KahfGuard Technology Allowlist
 # Major Tech Platforms, Developer Tools & AI Services
 # ============================================================
-
 # ------------------------------
 # Google - Core & YouTube
 # ------------------------------
@@ -21,7 +20,6 @@ telephony.goog
 withgoogle.com
 youtube-nocookie.com
 youtube.com
-
 # ------------------------------
 # Google - Additional Services
 # ------------------------------
@@ -29,7 +27,6 @@ analytics.google.com
 forms.gle
 goo.gl
 youtu.be
-
 # ------------------------------
 # Google - Infrastructure
 # ------------------------------
@@ -37,7 +34,6 @@ beacons.gcp.gvt2.com
 beacons.gvt2.com
 beacons5.gvt3.com
 pki.goog
-
 # ------------------------------
 # Microsoft - Core Services
 # ------------------------------
@@ -64,7 +60,6 @@ technet.microsoft.com
 windows.com
 windows.net
 wns.windows.com
-
 # ------------------------------
 # Microsoft - Office & 365
 # ------------------------------
@@ -96,7 +91,6 @@ staffhub.ms
 sway.com
 yammer.com
 yammerusercontent.com
-
 # ------------------------------
 # Microsoft - Auth & Identity
 # ------------------------------
@@ -145,7 +139,6 @@ smtp.office365.com
 ssw.live.com
 storage.live.com
 wus-www.sway-extensions.com
-
 # ------------------------------
 # Microsoft - Bing & Search
 # ------------------------------
@@ -156,7 +149,6 @@ c.bing.com
 c.bing.net
 c.live.com
 tse1.mm.bing.net
-
 # ------------------------------
 # Microsoft - Additional Services
 # ------------------------------
@@ -165,7 +157,6 @@ in.appcenter.ms
 mem.gfx.ms
 oneclient.sfx.ms
 phonefactor.net
-
 # ------------------------------
 # Apple
 # ------------------------------
@@ -184,7 +175,6 @@ osrecovery.apple.com
 store.apple.com
 support.apple.com
 updates.apple.com
-
 # ------------------------------
 # Meta / Facebook
 # ------------------------------
@@ -202,7 +192,6 @@ video.facebook.com
 web.facebook.com
 whatsapp.com
 whatsapp.net
-
 # ------------------------------
 # Amazon
 # ------------------------------
@@ -223,32 +212,26 @@ amazonvideo.com
 amzn.to
 primevideo.com
 ring.com
-
 # ------------------------------
 # Samsung
 # ------------------------------
 samsung.com
-
 # ------------------------------
 # LG
 # ------------------------------
 lg.com
-
 # ------------------------------
 # Netflix
 # ------------------------------
 nflximg.com
-
 # ------------------------------
 # LinkedIn
 # ------------------------------
 linkedin.com
 platform.linkedin.com
-
 # ============================================================
 # AI & Machine Learning
 # ============================================================
-
 # ------------------------------
 # AI - Companies & Platforms
 # ------------------------------
@@ -290,7 +273,6 @@ synthesia.io
 together.ai
 wandb.ai
 x.ai
-
 # ------------------------------
 # AI - Inference Platforms
 # ------------------------------
@@ -308,7 +290,6 @@ runpod.io
 salad.com
 vast.ai
 vllm.ai
-
 # ------------------------------
 # AI - Frameworks & Data
 # ------------------------------
@@ -322,11 +303,9 @@ pytorch.org
 ray.io
 tensorflow.org
 weaviate.io
-
 # ============================================================
 # Web & Productivity
 # ============================================================
-
 # ------------------------------
 # Search Engines & Browsers
 # ------------------------------
@@ -337,7 +316,6 @@ mozilla.com
 mozilla.org
 opera.com
 yahoo.com
-
 # ------------------------------
 # Software & Productivity
 # ------------------------------
@@ -345,7 +323,6 @@ autodesk.com
 camscanner.com
 macromedia.com
 wps.com
-
 # ------------------------------
 # Design & Productivity
 # ------------------------------
@@ -354,7 +331,6 @@ figma.com
 grammarly.com
 notion.so
 tally.so
-
 # ------------------------------
 # Creative & Design Platforms
 # ------------------------------
@@ -364,7 +340,6 @@ freepik.com
 pexels.com
 pixabay.com
 unsplash.com
-
 # ------------------------------
 # Maps & Geospatial
 # ------------------------------
@@ -372,24 +347,20 @@ arcgis.com
 ecn.dev.virtualearth.net
 openstreetmap.org
 virtualearth.net
-
 # ------------------------------
 # File Sharing
 # ------------------------------
 mediafire.com
 mega.co.nz
 sharedrop.io
-
 # ------------------------------
 # Communication
 # ------------------------------
 agora.io
 wbx2.com
-
 # ============================================================
 # Developer & Infrastructure
 # ============================================================
-
 # ------------------------------
 # Developer - Platforms & Hosting
 # ------------------------------
@@ -427,7 +398,6 @@ w3.org
 w3schools.com
 wordpress.org
 wp.com
-
 # ------------------------------
 # Developer - Code AI Assistants
 # ------------------------------
@@ -437,7 +407,6 @@ phind.com
 tabnine.com
 v0.dev
 windsurf.com
-
 # ------------------------------
 # Linux & Open Source
 # ------------------------------
@@ -446,7 +415,6 @@ gnu.org
 php.net
 python.org
 ubuntu.com
-
 # ------------------------------
 # Monitoring & DevOps
 # ------------------------------
@@ -455,23 +423,19 @@ crashlytics.com
 launchdarkly.com
 newrelic.com
 sentry.io
-
 # ============================================================
 # Other
 # ============================================================
-
 # ------------------------------
 # IoT & Smart Home
 # ------------------------------
 life360.com
 smartthings.com
-
 # ------------------------------
 # Gaming
 # ------------------------------
 xbox.com
 xboxlive.com
-
 # ------------------------------
 # Miscellaneous
 # ------------------------------
@@ -481,5 +445,6 @@ booking.com
 byteconnect.io
 dynatrace.com
 hath.network
+tailscale.com
 tbcache.com
 zerotier.com
