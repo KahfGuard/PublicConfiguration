@@ -17,7 +17,9 @@ caab.gov.bd
 cabinet.gov.bd
 customs.gov.bd
 dghs.gov.bd
+finance.gov.bd
 gd.police.gov.bd
+gov.bd
 imed.gov.bd
 lgd.gov.bd
 mincom.gov.bd
@@ -47,7 +49,6 @@ nu.ac.bd
 ru.ac.bd
 ruet.ac.bd
 uiu.ac.bd
-
 # ------------------------------
 # Bangladesh - Banking (State-Owned)
 # ------------------------------
@@ -259,7 +260,6 @@ biman-airlines.com
 boimate.com
 chintaporadh.com
 daymoncomputer.com
-gov.bd
 ieducationbd.com
 iikv.org
 ikhlasstore.com
