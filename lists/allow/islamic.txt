@@ -16,6 +16,7 @@ ifatwa.info
 islamicfinder.org
 islamqa.info
 muslimcentral.com
+
 # ------------------------------
 # Miscellaneous
 # ------------------------------
