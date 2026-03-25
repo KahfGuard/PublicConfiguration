@@ -10,6 +10,7 @@ alibaba.com
 aliexpress.com
 allegro.pl
 amazon.com
+bdshop.com
 bestbuy.com
 costco.com
 ebay.co.uk
