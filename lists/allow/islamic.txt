@@ -16,8 +16,8 @@ ifatwa.info
 islamicfinder.org
 islamqa.info
 muslimcentral.com
-
 # ------------------------------
 # Miscellaneous
 # ------------------------------
+ahmadullah.info
 hmsharif.com
