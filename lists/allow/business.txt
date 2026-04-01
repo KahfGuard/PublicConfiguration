@@ -472,7 +472,24 @@ brwkx0h3.r.us-east-2.awstrack.me
 eurofins.com
 medex.com.bd
 ordhekdeen.com
+vitasave.ca
+# OnnoRokom Group
+# -------------------
+bigganbaksho.com
+bikeguardbd.com
+onnorokom.com
+onnorokomelectronics.bd
+onnorokomelectronics.com
+onnorokomsoftware.bd
+onnorokomsoftware.com
+onnorokomsoftware.net
+orgbd.net
+pilabsbd.com
+pilabsbd.net
+prohori.bd
 prohori.com
 prohori.net
+rokomari.bd
 rokomari.com
-vitasave.ca
+techshopbd.com
+techshopbd.net
