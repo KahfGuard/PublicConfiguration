@@ -46,19 +46,19 @@
 
 
 # ===== CHANGE THESE PER ISP =====
-:global forwarderStart "203.190.10.116"
-:global forwarderEnd   "203.190.10.117"
-:global safeList "Bypass_Safe"
-:global clientList "Safe_Package_IPs"
+:global kahfFwdStart "203.190.10.116"
+:global kahfFwdEnd   "203.190.10.117"
+:global kahfSafeList "Bypass_Safe"
+:global kahfClientList "Safe_Package_IPs"
 # =================================
 
 # ===== FEATURE TOGGLES =====
-:global blockVPN true
-:global blockTOR true
+:global kahfBlockVPN true
+:global kahfBlockTOR true
 # ============================
 
-:global forwarderRange ($forwarderStart . "-" . $forwarderEnd)
-:global notSafeList ("!" . $safeList)
+:global kahfFwdRange ($kahfFwdStart . "-" . $kahfFwdEnd)
+:global kahfNotSafe ("!" . $kahfSafeList)
 
 
 # ---------------------------------
@@ -71,8 +71,8 @@
 /ip firewall filter remove [find where comment~"KAHF-TOR"]
 /ip firewall filter remove [find where comment~"Drop Do"]
 /ip firewall filter remove [find where comment~"Drop QUIC"]
-/ip firewall address-list remove [find where list=$clientList]
-/ip firewall address-list remove [find where list=$safeList]
+/ip firewall address-list remove [find where list=$kahfClientList]
+/ip firewall address-list remove [find where list=$kahfSafeList]
 /ip firewall address-list remove [find where list=DoH_Providers]
 /ip firewall address-list remove [find where list=TOR_Relays]
 
@@ -82,11 +82,11 @@
 # ---------------------------------
 
 # Client IPs to be filtered -- CHANGE per ISP
-/ip firewall address-list add list=$clientList address=0.0.0.0/0 comment="All traffic"
+/ip firewall address-list add list=$kahfClientList address=0.0.0.0/0 comment="All traffic"
 
 # KahfGuard servers -- encrypted DNS is ALLOWED to these
-/ip firewall address-list add list=$safeList address=203.190.10.112/28 comment="KAHF-BDIX"
-/ip firewall address-list add list=$safeList address=40.120.32.128/26  comment="KAHF-Azure"
+/ip firewall address-list add list=$kahfSafeList address=203.190.10.112/28 comment="KAHF-BDIX"
+/ip firewall address-list add list=$kahfSafeList address=40.120.32.128/26  comment="KAHF-Azure"
 
 # Known DoH provider IPs -- blocked on TCP 443 to prevent browser DoH bypass
 /ip firewall address-list add list=DoH_Providers address=1.1.1.1         comment="Cloudflare DNS"
@@ -114,10 +114,10 @@
 #  NAT: Plain DNS (port 53) -> Forwarder
 # ---------------------------------
 
-/ip firewall nat add chain=dstnat protocol=udp dst-port=53 src-address-list=$clientList \
-    action=dst-nat to-addresses=$forwarderRange to-ports=53 comment="DNS to Core: UDP"
-/ip firewall nat add chain=dstnat protocol=tcp dst-port=53 src-address-list=$clientList \
-    action=dst-nat to-addresses=$forwarderRange to-ports=53 comment="DNS to Core: TCP"
+/ip firewall nat add chain=dstnat protocol=udp dst-port=53 src-address-list=$kahfClientList \
+    action=dst-nat to-addresses=$kahfFwdRange to-ports=53 comment="DNS to Core: UDP"
+/ip firewall nat add chain=dstnat protocol=tcp dst-port=53 src-address-list=$kahfClientList \
+    action=dst-nat to-addresses=$kahfFwdRange to-ports=53 comment="DNS to Core: TCP"
 
 
 # ---------------------------------
@@ -127,29 +127,29 @@
 :local ftRule [/ip firewall filter find where action=fasttrack-connection chain=forward]
 
 :if ([:len $ftRule] > 0) do={
-    /ip firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=reject reject-with=tcp-reset \
+    /ip firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT" place-before=$ftRule
-    /ip firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+    /ip firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject DoQ" place-before=$ftRule
-    /ip firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+    /ip firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject QUIC/DoH3" place-before=$ftRule
-    /ip firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
+    /ip firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoH" place-before=$ftRule
 } else={
-    /ip firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=reject reject-with=tcp-reset \
+    /ip firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT"
-    /ip firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+    /ip firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject DoQ"
-    /ip firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$clientList \
-        dst-address-list=$notSafeList action=reject reject-with=icmp-network-unreachable \
+    /ip firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject QUIC/DoH3"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$clientList \
+    /ip firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoH"
 }
@@ -159,42 +159,42 @@
 #  FILTER: VPN Protocol Blocking
 # ---------------------------------
 
-:if ($blockVPN) do={
+:if ($kahfBlockVPN) do={
 
-:global ftRule2 [/ip firewall filter find where action=fasttrack-connection chain=forward]
+:global kahfFtVPN [/ip firewall filter find where action=fasttrack-connection chain=forward]
 
-:if ([:len $ftRule2] > 0) do={
-    /ip firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN UDP" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN Alt Ports" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block WireGuard" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IKEv2" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IPSec NAT-T" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=gre src-address-list=$clientList action=drop comment="KAHF-VPN: Block GRE" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block L2TP" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Shadowsocks UDP" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Tailscale" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block ZeroTier" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther" place-before=$ftRule2
-    /ip firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt" place-before=$ftRule2
+:if ([:len $kahfFtVPN] > 0) do={
+    /ip firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN UDP" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN Alt Ports" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block WireGuard" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IKEv2" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IPSec NAT-T" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=gre src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block L2TP" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Shadowsocks UDP" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Tailscale" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block ZeroTier" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther" place-before=$kahfFtVPN
+    /ip firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt" place-before=$kahfFtVPN
 } else={
-    /ip firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN UDP"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP"
-    /ip firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN Alt Ports"
-    /ip firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block WireGuard"
-    /ip firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IKEv2"
-    /ip firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IPSec NAT-T"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP"
-    /ip firewall filter add chain=forward protocol=gre src-address-list=$clientList action=drop comment="KAHF-VPN: Block GRE"
-    /ip firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block L2TP"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP"
-    /ip firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Shadowsocks UDP"
-    /ip firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Tailscale"
-    /ip firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block ZeroTier"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt"
+    /ip firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN UDP"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP"
+    /ip firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN Alt Ports"
+    /ip firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block WireGuard"
+    /ip firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IKEv2"
+    /ip firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block IPSec NAT-T"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP"
+    /ip firewall filter add chain=forward protocol=gre src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE"
+    /ip firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block L2TP"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP"
+    /ip firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Shadowsocks UDP"
+    /ip firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block Tailscale"
+    /ip firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block ZeroTier"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt"
 }
 
 }
@@ -204,39 +204,27 @@
 #  FILTER: TOR Network Blocking
 # ---------------------------------
 
-:if ($blockTOR) do={
+:if ($kahfBlockTOR) do={
 
-:global ftRule3 [/ip firewall filter find where action=fasttrack-connection chain=forward]
+:global kahfFtTOR [/ip firewall filter find where action=fasttrack-connection chain=forward]
 
-:if ([:len $ftRule3] > 0) do={
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP" place-before=$ftRule3
-    /ip firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-TOR: Block ORPort UDP" place-before=$ftRule3
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort" place-before=$ftRule3
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS" place-before=$ftRule3
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control" place-before=$ftRule3
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser" place-before=$ftRule3
+:if ([:len $kahfFtTOR] > 0) do={
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP" place-before=$kahfFtTOR
+    /ip firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-TOR: Block ORPort UDP" place-before=$kahfFtTOR
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort" place-before=$kahfFtTOR
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS" place-before=$kahfFtTOR
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control" place-before=$kahfFtTOR
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser" place-before=$kahfFtTOR
 } else={
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP"
-    /ip firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$clientList action=reject reject-with=icmp-network-unreachable comment="KAHF-TOR: Block ORPort UDP"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$clientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP"
+    /ip firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-TOR: Block ORPort UDP"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control"
+    /ip firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser"
 }
 
 }
 
 
-:log info ("KahfGuard DNS enforcement loaded: 53->" . $forwarderRange . ", 853/443u->KAHF only, DoH IPs blocked, TOR ports blocked")
-
-# Cleanup globals
-:set forwarderStart
-:set forwarderEnd
-:set safeList
-:set clientList
-:set blockVPN
-:set blockTOR
-:set forwarderRange
-:set notSafeList
-:set ftRule2
-:set ftRule3
+:log info ("KahfGuard DNS enforcement loaded: 53->" . $kahfFwdRange . ", 853/443u->KAHF only, DoH IPs blocked, TOR ports blocked")

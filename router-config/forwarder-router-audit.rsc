@@ -42,8 +42,8 @@
 
 # --- [2] NAT redirects for plain DNS ---
 :put "[2] Plain DNS NAT redirect (port 53):"
-:local natUdp [:len [/ip firewall nat find where chain=dstnat and protocol=udp and dst-port=53 and src-address-list=$clientList]]
-:local natTcp [:len [/ip firewall nat find where chain=dstnat and protocol=tcp and dst-port=53 and src-address-list=$clientList]]
+:local natUdp [:len [/ip firewall nat find where comment="DNS to Core: UDP"]]
+:local natTcp [:len [/ip firewall nat find where comment="DNS to Core: TCP"]]
 :if ($natUdp>0) do={
   :put "  UDP/53 -> forwarder:  OK"
   :set cntPass ($cntPass+1)
@@ -61,30 +61,26 @@
 
 # --- [3] Forwarder reachability ---
 :put "[3] Forwarder reachability:"
-:foreach r in=[/ip firewall nat find where chain=dstnat and dst-port=53] do={
+:foreach r in=[/ip firewall nat find where comment~"DNS to Core"] do={
   :local addrs [/ip firewall nat get $r to-addresses]
   :put "  Configured: $addrs"
-  :local first $addrs
-  :local dashPos [:find $addrs "-"]
-  :if ($dashPos != "") do={
-    :set first [:pick $addrs 0 $dashPos]
-  }
-  :local received [/ping address=$first count=2]
+  :local firstIP [:pick $addrs 0 [:find $addrs "/"]]
+  :local received [/ping address=$firstIP count=2]
   :if ($received > 0) do={
-    :put "  Ping $first: replies received"
+    :put "  Ping $firstIP: OK"
     :set cntPass ($cntPass+1)
   } else={
-    :put "  Ping $first: UNREACHABLE"
+    :put "  Ping $firstIP: UNREACHABLE"
     :set cntFail ($cntFail+1)
   }
 }
 
 # --- [4] Encrypted DNS reject rules ---
 :put "[4] Encrypted DNS REJECT rules (forward chain):"
-:local dot  [:len [/ip firewall filter find where chain=forward and protocol=tcp and dst-port=853 and action=reject]]
-:local doq  [:len [/ip firewall filter find where chain=forward and protocol=udp and dst-port=853 and action=reject]]
-:local quic [:len [/ip firewall filter find where chain=forward and protocol=udp and dst-port=443 and action=reject]]
-:local doh  [:len [/ip firewall filter find where chain=forward and protocol=tcp and dst-port=443 and dst-address-list=$dohList and action=reject]]
+:local dot  [:len [/ip firewall filter find where comment="KAHF-DNS: Reject DoT"]]
+:local doq  [:len [/ip firewall filter find where comment="KAHF-DNS: Reject DoQ"]]
+:local quic [:len [/ip firewall filter find where comment="KAHF-DNS: Reject QUIC/DoH3"]]
+:local doh  [:len [/ip firewall filter find where comment="KAHF-DNS: Reject DoH"]]
 :if ($dot>0) do={
   :put "  DoT  (TCP/853):       OK"
   :set cntPass ($cntPass+1)
@@ -183,8 +179,3 @@
 } else={
   :put "  Fix FAILs before connecting clients."
 }
-
-# Cleanup globals
-:set cntPass
-:set cntFail
-:set cntWarn
