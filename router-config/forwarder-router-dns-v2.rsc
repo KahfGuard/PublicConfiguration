@@ -61,7 +61,7 @@
 # ===== CHANGE THESE PER ISP =====
 :global kahfFwdStart "203.190.10.116"
 :global kahfFwdEnd   "203.190.10.117"
-:global kahfFwdIPv6  "2a01:4f9:3051:4d60::100"  # Forwarder IPv6 address (CHANGE THIS)
+:global kahfFwdIPv6  "2400:fa40:400:1::a-2400:fa40:400:1::c"  # Forwarder IPv6 range (CHANGE THIS)
 :global kahfSafeList "Bypass_Safe"
 :global kahfClientList "Safe_Package_IPs"
 # =================================
@@ -274,9 +274,12 @@
 :if ($kahfBlockIPv6) do={
 
 # ====================================================================
-#  KahfGuard Hetzner IPv6 Addresses — encrypted DNS is ALLOWED to these
+#  KahfGuard BDIX and Hetzner IPv6 Addresses — encrypted DNS is ALLOWED to these
 # ====================================================================
 
+/ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::a  comment="KAHF-Forwarder-IPv6"
+/ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::b  comment="KAHF-Forwarder-IPv6"
+/ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::c  comment="KAHF-Forwarder-IPv6"
 /ip6 firewall address-list add list=$kahfSafeList address=2a01:4f9:3051:4d60::2  comment="KAHF-Ubuntu-Desktop-IPv6"
 
 
