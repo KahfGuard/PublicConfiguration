@@ -1,0 +1,45 @@
+# =====================================================================
+#  ISP Router Inventory
+#  Each router needs SSH access with MikroTik RouterOS
+# =====================================================================
+#
+#  Required GitHub Secrets per router:
+#    ROUTER_<NAME>_HOST     - IP address or hostname
+#    ROUTER_<NAME>_SSH_KEY  - SSH private key (ed25519 or RSA)
+#    ROUTER_<NAME>_USER     - SSH username (default: admin)
+#    ROUTER_<NAME>_PORT     - SSH port (default: 22)
+#
+#  Example for router "isp-dhaka":
+#    ROUTER_ISP_DHAKA_HOST     = 103.25.100.1
+#    ROUTER_ISP_DHAKA_SSH_KEY  = -----BEGIN OPENSSH PRIVATE KEY-----...
+#    ROUTER_ISP_DHAKA_USER     = admin
+#    ROUTER_ISP_DHAKA_PORT     = 22
+#
+#  Usage: Referenced by deploy-router-config.yml workflow
+# =====================================================================
+
+routers:
+  # ===== Example ISP Routers =====
+  # Uncomment and add your routers below
+
+  # - name: "isp-dhaka"
+  #   host: "${{ secrets.ROUTER_ISP_DHAKA_HOST }}"
+  #   ssh_key: "${{ secrets.ROUTER_ISP_DHAKA_SSH_KEY }}"
+  #   user: "${{ secrets.ROUTER_ISP_DHAKA_USER || 'admin' }}"
+  #   port: "${{ secrets.ROUTER_ISP_DHAKA_PORT || '22' }}"
+  #   tags: ["production", "dhaka"]
+
+  # - name: "isp-chittagong"
+  #   host: "${{ secrets.ROUTER_ISP_CHITTAGONG_HOST }}"
+  #   ssh_key: "${{ secrets.ROUTER_ISP_CHITTAGONG_SSH_KEY }}"
+  #   user: "${{ secrets.ROUTER_ISP_CHITTAGONG_USER || 'admin' }}"
+  #   port: "${{ secrets.ROUTER_ISP_CHITTAGONG_PORT || '22' }}"
+  #   tags: ["production", "chittagong"]
+
+  # ===== Development/Test Routers =====
+  # - name: "isp-test"
+  #   host: "${{ secrets.ROUTER_ISP_TEST_HOST }}"
+  #   ssh_key: "${{ secrets.ROUTER_ISP_TEST_SSH_KEY }}"
+  #   user: "${{ secrets.ROUTER_ISP_TEST_USER || 'admin' }}"
+  #   port: "${{ secrets.ROUTER_ISP_TEST_PORT || '22' }}"
+  #   tags: ["test"]
