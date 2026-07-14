@@ -274,7 +274,7 @@
 :if ($kahfBlockIPv6) do={
 
 # ====================================================================
-#  KahfGuard Hetzner IPv6 Addresses — encrypted DNS is ALLOWED to these
+#  KahfGuard BDIX and Hetzner IPv6 Addresses — encrypted DNS is ALLOWED to these
 # ====================================================================
 
 /ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::a  comment="KAHF-Forwarder-IPv6"
