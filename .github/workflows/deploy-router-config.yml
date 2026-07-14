@@ -1,0 +1,197 @@
+# =====================================================================
+#  Deploy Router Config to MikroTik Routers
+#  Triggers on push to router-config/ or manual dispatch
+# =====================================================================
+
+name: Deploy Router Config
+
+on:
+  # Auto-deploy on push to router-config directory
+  push:
+    branches: ["main"]
+    paths:
+      - "router-config/**"
+      - "scripts/deploy-router.sh"
+
+  # Manual deployment with options
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        default: "test"
+        type: choice
+        options:
+          - test
+          - staging
+          - production
+      dry_run:
+        description: "Dry run (show commands without executing)"
+        required: false
+        default: false
+        type: boolean
+      rollback:
+        description: "Rollback to previous config"
+        required: false
+        default: false
+        type: boolean
+
+# Prevent concurrent deployments
+concurrency:
+  group: router-deploy-${{ github.event.inputs.environment || 'auto' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  # ====================================================================
+  #  Pre-flight checks
+  # ====================================================================
+  preflight:
+    name: "Pre-flight Checks"
+    runs-on: ubuntu-latest
+    outputs:
+      routers: ${{ steps.inventory.outputs.routers }}
+      deploy: ${{ steps.changes.outputs.deploy }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for changes in router-config/
+        id: changes
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "deploy=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate RSC syntax
+        if: steps.changes.outputs.deploy == 'true'
+        run: |
+          echo "Validating RSC files..."
+          for f in router-config/*.rsc; do
+            echo "  Checking: $f"
+            # Basic syntax check: ensure no unterminated quotes
+            if grep -Pn '["\s]$' "$f" | grep -v '^\s*#' | grep -v 'comment='; then
+              echo "  WARNING: Possible unterminated string in $f"
+            fi
+            # Check for required cleanup section
+            if [[ "$f" == *"dns-v2"* ]]; then
+              if ! grep -q "cleanup\|remove.*find" "$f"; then
+                echo "  ERROR: v2 config missing cleanup section (not idempotent)"
+                exit 1
+              fi
+            fi
+          done
+          echo "RSC validation passed ✓"
+
+      - name: Load router inventory
+        id: inventory
+        if: steps.changes.outputs.deploy == 'true'
+        run: |
+          # Parse router inventory from YAML
+          # This outputs a JSON array of routers for the matrix
+          python3 - << 'EOF'
+          import yaml, json, os
+
+          with open("router-inventory.yml") as f:
+              data = yaml.safe_load(f)
+
+          routers = data.get("routers", [])
+
+          # Filter by environment tag if manual dispatch
+          env_filter = os.environ.get("INPUT_ENVIRONMENT", "")
+          if env_filter and env_filter != "all":
+              routers = [r for r in routers if env_filter in r.get("tags", [])]
+
+          # Output as JSON for matrix
+          output = json.dumps(routers)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"routers={output}\n")
+
+          print(f"Found {len(routers)} routers to deploy")
+          for r in routers:
+              print(f"  - {r['name']} ({r['host']})")
+          EOF
+
+  # ====================================================================
+  #  Deploy to each router (parallel)
+  # ====================================================================
+  deploy:
+    name: "Deploy → ${{ matrix.router.name }}"
+    needs: preflight
+    if: needs.preflight.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        router: ${{ fromJson(needs.preflight.outputs.routers) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ matrix.router.ssh_key }}" > ~/.ssh/router_key
+          chmod 600 ~/.ssh/router_key
+
+      - name: Deploy config
+        env:
+          ROUTER_HOST: ${{ matrix.router.host }}
+          ROUTER_USER: ${{ matrix.router.user || 'admin' }}
+          ROUTER_PORT: ${{ matrix.router.port || '22' }}
+          SSH_KEY: ~/.ssh/router_key
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          ROLLBACK: ${{ github.event.inputs.rollback || 'false' }}
+        run: |
+          chmod +x scripts/deploy-router.sh
+
+          EXTRA_ARGS=""
+          if [[ "$DRY_RUN" == "true" ]]; then
+            EXTRA_ARGS="$EXTRA_ARGS --dry-run"
+          fi
+          if [[ "$ROLLBACK" == "true" ]]; then
+            EXTRA_ARGS="$EXTRA_ARGS --rollback"
+          fi
+
+          ./scripts/deploy-router.sh \
+            --host "$ROUTER_HOST" \
+            --ssh-key "$SSH_KEY" \
+            --user "$ROUTER_USER" \
+            --ssh-port "$ROUTER_PORT" \
+            --cleanup \
+            --verify \
+            --verbose \
+            $EXTRA_ARGS
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/router_key
+
+  # ====================================================================
+  #  Post-deploy summary
+  # ====================================================================
+  summary:
+    name: "Deployment Summary"
+    needs: [preflight, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Summary
+        run: |
+          echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Field | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| **Trigger** | ${{ github.event_name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Commit** | ${{ github.sha }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Routers** | ${{ needs.preflight.outputs.routers }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Dry Run** | ${{ github.event.inputs.dry_run || 'false' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Rollback** | ${{ github.event.inputs.rollback || 'false' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Job Results" >> $GITHUB_STEP_SUMMARY
+          echo "- Pre-flight: ${{ needs.preflight.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Deploy: ${{ needs.deploy.result }}" >> $GITHUB_STEP_SUMMARY
