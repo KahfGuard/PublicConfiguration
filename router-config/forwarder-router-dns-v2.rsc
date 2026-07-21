@@ -1,6 +1,6 @@
 # =====================================================================
 #  Distribution Router -- DNS Filtering Enforcement
-#  VERSION 2.0 — IPv6 Mirror + Comprehensive DoH Blocklist
+#  VERSION 2.1 — IPv6 Mirror + Comprehensive DoH Blocklist
 # =====================================================================
 #
 #  BYPASS VECTORS AND MITIGATIONS:
@@ -24,6 +24,17 @@
 #  TOR SOCKS proxy     9050 TCP                REJECT (KAHF-TOR)
 #  TOR control port    9051 TCP                REJECT (KAHF-TOR)
 #  TOR Browser         9150-9151 TCP           REJECT (KAHF-TOR)
+#  ----------------------------------------------------------------
+#
+#  VERSION 2.1 CHANGES (from 2.0):
+#  ----------------------------------------------------------------
+#  - RouterOS 7.x compatibility: /ip6 -> /ipv6 for all firewall cmds
+#  - Fix: reject-with=icmp6-no-route invalid in ROS 7.x /ipv6 filter;
+#    use action=reject (default ICMPv6) for UDP rules
+#  - Fix: protocol=44 is IPv6 fragment header, not GRE; use protocol=gre
+#  - Fix: /ipv6 firewall nat uses to-address (singular), no range support;
+#    use single forwarder IP variable kahfFwdIPv6Addr
+#  - Remove duplicate PPTP Control / GRE rules
 #  ----------------------------------------------------------------
 #
 #  VERSION 2.0 ADDITIONS:
@@ -61,7 +72,10 @@
 # ===== CHANGE THESE PER ISP =====
 :global kahfFwdStart "203.190.10.116"
 :global kahfFwdEnd   "203.190.10.117"
-:global kahfFwdIPv6  "2400:fa40:400:1::a-2400:fa40:400:1::c"  # Forwarder IPv6 range (CHANGE THIS)
+:global kahfFwdIPv6Addr "2400:fa40:400:1::a"  # Single forwarder IPv6 address (CHANGE THIS)
+# NOTE: /ipv6 firewall nat to-address does NOT support ranges.
+# For load balancing across multiple IPv6 forwarders, use multiple
+# NAT rules with nth matching.
 :global kahfSafeList "Bypass_Safe"
 :global kahfClientList "Safe_Package_IPs"
 # =================================
@@ -92,16 +106,17 @@
 /ip firewall address-list remove [find where list=DoH_Providers]
 /ip firewall address-list remove [find where list=TOR_Relays]
 
-# IPv6 cleanup
-/ip6 firewall filter remove [find where comment~"KAHF-DNS"]
-/ip6 firewall filter remove [find where comment~"KAHF-VPN"]
-/ip6 firewall filter remove [find where comment~"KAHF-TOR"]
-/ip6 firewall filter remove [find where comment~"Drop Do"]
-/ip6 firewall filter remove [find where comment~"Drop QUIC"]
-/ip6 firewall address-list remove [find where list=$kahfClientList]
-/ip6 firewall address-list remove [find where list=$kahfSafeList]
-/ip6 firewall address-list remove [find where list=DoH_Providers]
-/ip6 firewall address-list remove [find where list=TOR_Relays]
+# IPv6 cleanup (RouterOS 7.x uses /ipv6, not /ip6)
+/ipv6 firewall filter remove [find where comment~"KAHF-DNS"]
+/ipv6 firewall filter remove [find where comment~"KAHF-VPN"]
+/ipv6 firewall filter remove [find where comment~"KAHF-TOR"]
+/ipv6 firewall filter remove [find where comment~"Drop Do"]
+/ipv6 firewall filter remove [find where comment~"Drop QUIC"]
+/ipv6 firewall address-list remove [find where list=$kahfClientList]
+/ipv6 firewall address-list remove [find where list=$kahfSafeList]
+/ipv6 firewall address-list remove [find where list=DoH_Providers]
+/ipv6 firewall address-list remove [find where list=TOR_Relays]
+/ipv6 firewall nat remove [find where comment~"DNS to Core"]
 
 
 # ====================================================================
@@ -277,10 +292,10 @@
 #  KahfGuard BDIX and Hetzner IPv6 Addresses — encrypted DNS is ALLOWED to these
 # ====================================================================
 
-/ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::a  comment="KAHF-Forwarder-IPv6"
-/ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::b  comment="KAHF-Forwarder-IPv6"
-/ip6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::c  comment="KAHF-Forwarder-IPv6"
-/ip6 firewall address-list add list=$kahfSafeList address=2a01:4f9:3051:4d60::2  comment="KAHF-Ubuntu-Desktop-IPv6"
+/ipv6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::a  comment="KAHF-Forwarder-IPv6"
+/ipv6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::b  comment="KAHF-Forwarder-IPv6"
+/ipv6 firewall address-list add list=$kahfSafeList address=2400:fa40:400:1::c  comment="KAHF-Forwarder-IPv6"
+/ipv6 firewall address-list add list=$kahfSafeList address=2a01:4f9:3051:4d60::2  comment="KAHF-Ubuntu-Desktop-IPv6"
 
 
 # ====================================================================
@@ -288,79 +303,79 @@
 # ====================================================================
 
 # --- Cloudflare IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1111  comment="Cloudflare IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1001  comment="Cloudflare IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1112  comment="Cloudflare Malware IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1002  comment="Cloudflare Malware IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1113  comment="Cloudflare Family IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1003  comment="Cloudflare Family IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1111  comment="Cloudflare IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1001  comment="Cloudflare IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1112  comment="Cloudflare Malware IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1002  comment="Cloudflare Malware IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1113  comment="Cloudflare Family IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:4700:4700::1003  comment="Cloudflare Family IPv6"
 
 # --- Google IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8888  comment="Google DNS IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8844  comment="Google DNS IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8889  comment="Google DNS (TLS) IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8855  comment="Google DNS (TLS) IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8888  comment="Google DNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8844  comment="Google DNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8889  comment="Google DNS (TLS) IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:4860:4860::8855  comment="Google DNS (TLS) IPv6"
 
 # --- Quad9 IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2620:fe::fe              comment="Quad9 IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2620:fe::9              comment="Quad9 IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2620:fe::10             comment="Quad9 Unfiltered IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2620:fe::fe:10          comment="Quad9 Unfiltered IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:fe::fe              comment="Quad9 IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:fe::9              comment="Quad9 IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:fe::10             comment="Quad9 Unfiltered IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:fe::fe:10          comment="Quad9 Unfiltered IPv6"
 
 # --- OpenDNS IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2620:119:35::35         comment="OpenDNS IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2620:119:53::53         comment="OpenDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:119:35::35         comment="OpenDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:119:53::53         comment="OpenDNS IPv6"
 
 # --- AdGuard IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad1:ff       comment="AdGuard IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad2:ff       comment="AdGuard IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad1:1ff      comment="AdGuard Family IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad2:2ff      comment="AdGuard Family IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad1:ff       comment="AdGuard IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad2:ff       comment="AdGuard IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad1:1ff      comment="AdGuard Family IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a10:50c0::ad2:2ff      comment="AdGuard Family IPv6"
 
 # --- NextDNS IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a07:a8c0::17:a8c1      comment="NextDNS IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2a07:a8c1::17:a8c1      comment="NextDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a07:a8c0::17:a8c1      comment="NextDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a07:a8c1::17:a8c1      comment="NextDNS IPv6"
 
 # --- CleanBrowsing IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a0d:2a00:1::1           comment="CleanBrowsing IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2a0d:2a00:2::1           comment="CleanBrowsing IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a0d:2a00:1::1           comment="CleanBrowsing IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a0d:2a00:2::1           comment="CleanBrowsing IPv6"
 
 # --- ControlD IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2606:1a40::              comment="ControlD IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2606:1a40:1::            comment="ControlD IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:1a40::              comment="ControlD IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2606:1a40:1::            comment="ControlD IPv6"
 
 # --- Mullvad IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a07:bec4::              comment="Mullvad IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a07:bec4::              comment="Mullvad IPv6"
 
 # --- Comodo IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a02:bc8::1              comment="Comodo IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a02:bc8::1              comment="Comodo IPv6"
 
 # --- Hurricane Electric IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2001:470:20::2           comment="HE DNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:470:20::2           comment="HE DNS IPv6"
 
 # --- Verisign IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2620:74:1b::1:1          comment="Verisign IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2620:74:1c::2:2          comment="Verisign IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:74:1b::1:1          comment="Verisign IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2620:74:1c::2:2          comment="Verisign IPv6"
 
 # --- Neustar IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2610:a1:1018::1          comment="UltraDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2610:a1:1018::1          comment="UltraDNS IPv6"
 
 # --- AliDNS IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2400:3200::1             comment="AliDNS IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2400:3200:baba::1        comment="AliDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2400:3200::1             comment="AliDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2400:3200:baba::1        comment="AliDNS IPv6"
 
 # --- Tencent DNSPod IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2402:4e00::              comment="Tencent DNSPod IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2402:4e00::              comment="Tencent DNSPod IPv6"
 
 # --- DNS4EU IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a05:fc44::              comment="DNS4EU IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a05:fc44::              comment="DNS4EU IPv6"
 
 # --- Yandex IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2a02:6f8::fec            comment="Yandex IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2a02:6f8::fec            comment="Yandex IPv6"
 
 # --- FreeDNS IPv6 ---
-/ip6 firewall address-list add list=DoH_Providers address=2001:4b98::c0c0          comment="FreeDNS IPv6"
-/ip6 firewall address-list add list=DoH_Providers address=2001:4b98::dc01          comment="FreeDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:4b98::c0c0          comment="FreeDNS IPv6"
+/ipv6 firewall address-list add list=DoH_Providers address=2001:4b98::dc01          comment="FreeDNS IPv6"
 
 } # end kahfBlockIPv6
 
@@ -416,32 +431,32 @@
 
 :if ($kahfBlockIPv6) do={
 
-:local ftRule6 [/ip6 firewall filter find where action=fasttrack-connection chain=forward]
+:local ftRule6 [/ipv6 firewall filter find where action=fasttrack-connection chain=forward]
 
 :if ([:len $ftRule6] > 0) do={
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$kahfClientList \
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$kahfClientList \
         dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT v6" place-before=$ftRule6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp6-no-route \
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject \
         comment="KAHF-DNS: Reject DoQ v6" place-before=$ftRule6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp6-no-route \
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject \
         comment="KAHF-DNS: Reject QUIC/DoH3 v6" place-before=$ftRule6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoH v6" place-before=$ftRule6
 } else={
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$kahfClientList \
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=853 src-address-list=$kahfClientList \
         dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp6-no-route \
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject \
         comment="KAHF-DNS: Reject DoQ v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp6-no-route \
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
+        dst-address-list=$kahfNotSafe action=reject \
         comment="KAHF-DNS: Reject QUIC/DoH3 v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoH v6"
 }
@@ -474,8 +489,6 @@
     /ip firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block ZeroTier" place-before=$kahfFtVPN
     /ip firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther" place-before=$kahfFtVPN
     /ip firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt" place-before=$kahfFtVPN
-    /ip firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP Control" place-before=$kahfFtVPN
-    /ip firewall filter add chain=forward protocol=gre src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE" place-before=$kahfFtVPN
 } else={
     /ip firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block OpenVPN UDP"
     /ip firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP"
@@ -493,8 +506,6 @@
     /ip firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject reject-with=icmp-network-unreachable comment="KAHF-VPN: Block ZeroTier"
     /ip firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther"
     /ip firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt"
-    /ip firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP Control"
-    /ip firewall filter add chain=forward protocol=gre src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE"
 }
 
 }
@@ -506,42 +517,42 @@
 
 :if ($kahfBlockVPN) do={
 
-:global kahfFtVPN6 [/ip6 firewall filter find where action=fasttrack-connection chain=forward]
+:global kahfFtVPN6 [/ipv6 firewall filter find where action=fasttrack-connection chain=forward]
 
 :if ([:len $kahfFtVPN6] > 0) do={
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block OpenVPN UDP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block OpenVPN Alt v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block WireGuard v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block IKEv2 v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block IKEv2 TCP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block IPSec NAT-T v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=44 src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block L2TP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block Shadowsocks UDP v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block Tailscale v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block ZeroTier v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther v6" place-before=$kahfFtVPN6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block OpenVPN UDP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block OpenVPN Alt v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block WireGuard v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block IKEv2 v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block IKEv2 TCP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block IPSec NAT-T v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=gre src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block L2TP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block Shadowsocks UDP v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block Tailscale v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block ZeroTier v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther v6" place-before=$kahfFtVPN6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt v6" place-before=$kahfFtVPN6
 } else={
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block OpenVPN UDP v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block OpenVPN Alt v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block WireGuard v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block IKEv2 v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block IKEv2 TCP v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block IPSec NAT-T v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP v6"
-    /ip6 firewall filter add chain=forward protocol=44 src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block L2TP v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block Shadowsocks UDP v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block Tailscale v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-VPN: Block ZeroTier v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=1194 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block OpenVPN UDP v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=1194 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block OpenVPN TCP v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=1195-1198 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block OpenVPN Alt v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=51820 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block WireGuard v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=500 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block IKEv2 v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=500 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block IKEv2 TCP v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=4500 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block IPSec NAT-T v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=1723 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block PPTP v6"
+    /ipv6 firewall filter add chain=forward protocol=gre src-address-list=$kahfClientList action=drop comment="KAHF-VPN: Block GRE v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=1701 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block L2TP v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=8388 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block Shadowsocks TCP v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=8388 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block Shadowsocks UDP v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=41641 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block Tailscale v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=9993 src-address-list=$kahfClientList action=reject comment="KAHF-VPN: Block ZeroTier v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=992 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=5555 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-VPN: Block SoftEther Alt v6"
 }
 
 }
@@ -580,22 +591,22 @@
 
 :if ($kahfBlockTOR) do={
 
-:global kahfFtTOR6 [/ip6 firewall filter find where action=fasttrack-connection chain=forward]
+:global kahfFtTOR6 [/ipv6 firewall filter find where action=fasttrack-connection chain=forward]
 
 :if ([:len $kahfFtTOR6] > 0) do={
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP v6" place-before=$kahfFtTOR6
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-TOR: Block ORPort UDP v6" place-before=$kahfFtTOR6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort v6" place-before=$kahfFtTOR6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS v6" place-before=$kahfFtTOR6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control v6" place-before=$kahfFtTOR6
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser v6" place-before=$kahfFtTOR6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP v6" place-before=$kahfFtTOR6
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$kahfClientList action=reject comment="KAHF-TOR: Block ORPort UDP v6" place-before=$kahfFtTOR6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort v6" place-before=$kahfFtTOR6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS v6" place-before=$kahfFtTOR6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control v6" place-before=$kahfFtTOR6
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser v6" place-before=$kahfFtTOR6
 } else={
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP v6"
-    /ip6 firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=icmp6-no-route comment="KAHF-TOR: Block ORPort UDP v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control v6"
-    /ip6 firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9001 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block ORPort TCP v6"
+    /ipv6 firewall filter add chain=forward protocol=udp dst-port=9001 src-address-list=$kahfClientList action=reject comment="KAHF-TOR: Block ORPort UDP v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9030 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block DirPort v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9050 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block SOCKS v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9051 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Control v6"
+    /ipv6 firewall filter add chain=forward protocol=tcp dst-port=9150-9151 src-address-list=$kahfClientList action=reject reject-with=tcp-reset comment="KAHF-TOR: Block Browser v6"
 }
 
 }
@@ -616,20 +627,23 @@
 :if ($kahfBlockIPv6) do={
 
 :if ($kahfBlockIPv6NAT) do={
+# NOTE: /ipv6 firewall nat uses to-address (singular), NOT to-addresses.
+# Address ranges are NOT supported. For load balancing, use multiple
+# NAT rules with nth matching.
 /ipv6 firewall nat add chain=dstnat protocol=udp dst-port=53 src-address-list=$kahfClientList \
-    action=dst-nat to-addresses=$kahfFwdIPv6 to-ports=53 \
+    action=dst-nat to-address=$kahfFwdIPv6Addr to-ports=53 \
     comment="DNS to Core: UDP v6"
 
 /ipv6 firewall nat add chain=dstnat protocol=tcp dst-port=53 src-address-list=$kahfClientList \
-    action=dst-nat to-addresses=$kahfFwdIPv6 to-ports=53 \
+    action=dst-nat to-address=$kahfFwdIPv6Addr to-ports=53 \
     comment="DNS to Core: TCP v6"
 } else={
 # IPv6 NAT disabled — use filter-based approach instead
 # WARNING: This BREAKS users with manual DNS (e.g. 8.8.8.8)
-/ip6 firewall filter add chain=forward protocol=udp dst-port=53 src-address-list=$kahfClientList \
+/ipv6 firewall filter add chain=forward protocol=udp dst-port=53 src-address-list=$kahfClientList \
     dst-address-list=$kahfNotSafe action=drop \
     comment="KAHF-DNS: Drop DNS UDP to non-forwarder v6"
-/ip6 firewall filter add chain=forward protocol=tcp dst-port=53 src-address-list=$kahfClientList \
+/ipv6 firewall filter add chain=forward protocol=tcp dst-port=53 src-address-list=$kahfClientList \
     dst-address-list=$kahfNotSafe action=drop \
     comment="KAHF-DNS: Drop DNS TCP to non-forwarder v6"
 }
@@ -637,4 +651,4 @@
 }
 
 
-:log info ("KahfGuard DNS enforcement v2.0 loaded: 53->" . $kahfFwdRange . ", 853/443u->KAHF only, DoH IPs blocked (IPv4+IPv6), VPN/TOR ports blocked (IPv4+IPv6)")
+:log info ("KahfGuard DNS enforcement v2.1 loaded: 53->" . $kahfFwdRange . ", 853/443u->KAHF only, DoH IPs blocked (IPv4+IPv6), VPN/TOR ports blocked (IPv4+IPv6)")
