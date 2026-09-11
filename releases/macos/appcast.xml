@@ -4,11 +4,11 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Fri, 11 Sep 2026 15:16:48 +0600</pubDate>
-            <sparkle:version>202609111509</sparkle:version>
+            <pubDate>Fri, 11 Sep 2026 19:04:18 +0600</pubDate>
+            <sparkle:version>202609111858</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="29916356" type="application/octet-stream" sparkle:edSignature="kU4rDQqgQ3zLaduJnTrLzqX7zf/o4W3TxSDPzo8XKEDoCAehh4By1yRmW9sJB8tSupKQYAhAH7WobKG3BhWYBA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="30950736" type="application/octet-stream" sparkle:edSignature="PX7wbzRM7JA7Z1NW5LIp2oqC/E7e5lDELoGgpcyRuyIDAMlluIqTY8p1M3+FT8VJKPY+UTYRs56Czhd3erVbDA=="/>
         </item>
     </channel>
 </rss>
