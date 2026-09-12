@@ -4,21 +4,22 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Sat, 12 Sep 2026 19:06:20 +0600</pubDate>
+            <pubDate>Sat, 12 Sep 2026 22:40:43 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609121859</sparkle:version>
+            <sparkle:version>202609122233</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### A simpler, more reliable sign-in
+            <description sparkle:format="markdown"><![CDATA[### See what's blocking, right on Home
 
-Signing in, subscribing and managing children now open as an ordinary tab in your
-default browser, already signed in to your Kahf ID — instead of a separate window
-that was easy to lose behind everything else.
+Your running sessions now sit in a card at the bottom of the Home screen: what
+each one is called, how many apps and sites it covers, how long is left, and a
+bar showing how far along it is. Click one to open it, edit it, or end it.
 
-The whole flow is more robust: one shared session across sign-in, subscriptions and
-parental controls, and a clear way back if you close the page part-way through.
+The card counts down live and tidies itself away as sessions finish. Fold it
+down to a small pill with the chevron if you would rather keep Home clear — it
+stays that way until you open it again.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="30985792" type="application/octet-stream" sparkle:edSignature="L+ISQcpGPoUsIy4jdEuZ+Htid0h5AJ9Ks7lyn2CsdWwqhcgPP2uOSkRGWI4CZUzBwy5kAoY/8MELQrfnWWyPAw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31075906" type="application/octet-stream" sparkle:edSignature="dIrEPlu/IdT0QEvUaONMuTi4MfCVeUrMIs9MRSOAS+r4X+KRO6IlyUtvZBIfyw+A4pl60549bflrV+LBGKtSBg=="/>
         </item>
     </channel>
 </rss>
