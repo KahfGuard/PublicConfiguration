@@ -4,11 +4,21 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Sat, 12 Sep 2026 18:39:13 +0600</pubDate>
-            <sparkle:version>202609121832</sparkle:version>
+            <pubDate>Sat, 12 Sep 2026 19:06:20 +0600</pubDate>
+            <sparkle:criticalUpdate/>
+            <sparkle:version>202609121859</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31031565" type="application/octet-stream" sparkle:edSignature="JYdsPr/QPmmoYVSHDShXJD2pHAYPOb6EQN1d2yhqBG/y5Xr/cvVBHolinjD6qRksLwcamyqrfILkPeHSq5ctCA=="/>
+            <description sparkle:format="markdown"><![CDATA[### A simpler, more reliable sign-in
+
+Signing in, subscribing and managing children now open as an ordinary tab in your
+default browser, already signed in to your Kahf ID — instead of a separate window
+that was easy to lose behind everything else.
+
+The whole flow is more robust: one shared session across sign-in, subscriptions and
+parental controls, and a clear way back if you close the page part-way through.
+]]></description>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="30985792" type="application/octet-stream" sparkle:edSignature="L+ISQcpGPoUsIy4jdEuZ+Htid0h5AJ9Ks7lyn2CsdWwqhcgPP2uOSkRGWI4CZUzBwy5kAoY/8MELQrfnWWyPAw=="/>
         </item>
     </channel>
 </rss>
