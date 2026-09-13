@@ -4,22 +4,31 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Sat, 12 Sep 2026 22:40:43 +0600</pubDate>
+            <pubDate>Sun, 13 Sep 2026 12:51:48 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609122233</sparkle:version>
+            <sparkle:version>202609131244</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### See what's blocking, right on Home
+            <description sparkle:format="markdown"><![CDATA[### One screen to build a block list
 
-Your running sessions now sit in a card at the bottom of the Home screen: what
-each one is called, how many apps and sites it covers, how long is left, and a
-bar showing how far along it is. Click one to open it, edit it, or end it.
+Choosing what a session blocks used to open an empty picker, and then a second
+card on top of it just to make a list. Now the screen *is* the editor: it opens
+ready for a new list, with **Use Existing** at the bottom to pull in one you
+already saved — pre-filled, so you can adjust it before saving. Save sets it on
+the session in one step.
 
-The card counts down live and tidies itself away as sessions finish. Fold it
-down to a small pill with the chevron if you would rather keep Home clear — it
-stays that way until you open it again.
+### Sessions appear on Home right away
+
+Start an instant block from the Blocker screen and it now shows up in Home's
+running-sessions card immediately, instead of waiting until you switched tabs
+and came back.
+
+### Also in this build
+
+- Removed a duplicate close button that appeared at the top of the window
+  alongside the one on the card itself.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31075906" type="application/octet-stream" sparkle:edSignature="dIrEPlu/IdT0QEvUaONMuTi4MfCVeUrMIs9MRSOAS+r4X+KRO6IlyUtvZBIfyw+A4pl60549bflrV+LBGKtSBg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31025227" type="application/octet-stream" sparkle:edSignature="mRaWO7LFWtvjO4BX8K6kufyaoKGtaIi87SiPkeRT5qU4JCE16ktxJpRU5vsyYW8PaGtXOA4dHj0Z/oNS6KfpBQ=="/>
         </item>
     </channel>
 </rss>
