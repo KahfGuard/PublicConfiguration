@@ -4,31 +4,27 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Sun, 13 Sep 2026 12:51:48 +0600</pubDate>
+            <pubDate>Sun, 13 Sep 2026 15:46:06 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609131244</sparkle:version>
+            <sparkle:version>202609131538</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### One screen to build a block list
+            <description sparkle:format="markdown"><![CDATA[### Website blocking now holds in Firefox and Zen
 
-Choosing what a session blocks used to open an empty picker, and then a second
-card on top of it just to make a list. Now the screen *is* the editor: it opens
-ready for a new list, with **Use Existing** at the bottom to pull in one you
-already saved — pre-filled, so you can adjust it before saving. Save sets it on
-the session in one step.
+Firefox and Zen only build the page structure Kahf Guard reads once they're
+asked to, and that request could quietly go unanswered — a browser that started
+while the machine was busy stayed unreadable for as long as it ran, and blocked
+sites opened normally in it. Kahf Guard now keeps asking until the browser
+actually answers, so blocking comes up within a moment of the window appearing
+instead of not at all.
 
-### Sessions appear on Home right away
+### Your exact build, on the Profile screen
 
-Start an instant block from the Blocker screen and it now shows up in Home's
-running-sessions card immediately, instead of waiting until you switched tabs
-and came back.
-
-### Also in this build
-
-- Removed a duplicate close button that appeared at the top of the window
-  alongside the one on the card itself.
+Every release carries the version 1.0, which made it impossible to tell support
+which build you were on. The Profile screen now shows the build number
+alongside it.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31025227" type="application/octet-stream" sparkle:edSignature="mRaWO7LFWtvjO4BX8K6kufyaoKGtaIi87SiPkeRT5qU4JCE16ktxJpRU5vsyYW8PaGtXOA4dHj0Z/oNS6KfpBQ=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31082502" type="application/octet-stream" sparkle:edSignature="aHxRrHWChacK5L+wqcNUL8GaWumyBZkB6fVuVRZ/tnq/dbmrdkhYMKxB9aQ7Rxlpm7j/yiFbNhgPMiNZ98k0Ag=="/>
         </item>
     </channel>
 </rss>
