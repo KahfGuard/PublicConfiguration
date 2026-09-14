@@ -4,27 +4,36 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Sun, 13 Sep 2026 15:46:06 +0600</pubDate>
+            <pubDate>Mon, 14 Sep 2026 15:07:36 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609131538</sparkle:version>
+            <sparkle:version>202609141459</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Website blocking now holds in Firefox and Zen
+            <description sparkle:format="markdown"><![CDATA[### A clearer block list editor
 
-Firefox and Zen only build the page structure Kahf Guard reads once they're
-asked to, and that request could quietly go unanswered — a browser that started
-while the machine was busy stayed unreadable for as long as it ran, and blocked
-sites opened normally in it. Kahf Guard now keeps asking until the browser
-actually answers, so blocking comes up within a moment of the window appearing
-instead of not at all.
+Creating a list used to mean scrolling one long column, with the category chips
+wrapping over five rows and Save waiting below the fold. The editor is now two
+columns: the list's name, its Blocklist/Exceptions switch and its apps on the
+left, the websites — domain field, categories, and everything you have picked —
+on the right, with a line at the bottom telling you exactly what the list will
+block once it is active. Nothing is hidden below the fold any more, and it reads
+the same in light and dark mode.
 
-### Your exact build, on the Profile screen
+### Setup asks for Accessibility once, and waits with you
 
-Every release carries the version 1.0, which made it impossible to tell support
-which build you were on. The Profile screen now shows the build number
-alongside it.
+Kahf Guard needs macOS Accessibility to block apps and websites. Onboarding now
+holds at that step until the permission is actually granted, with a small
+floating guide showing where the switch lives in System Settings, and moves on by
+itself the moment you flip it — instead of letting you walk past it and finding
+nothing blocked later.
+
+### Sheets no longer darken the whole window
+
+Opening a block or session sheet used to turn the entire app dark, and closing it
+left the window chrome light with dark content inside. Sheets now keep their own
+appearance to themselves, over a softer blurred backdrop.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31082502" type="application/octet-stream" sparkle:edSignature="aHxRrHWChacK5L+wqcNUL8GaWumyBZkB6fVuVRZ/tnq/dbmrdkhYMKxB9aQ7Rxlpm7j/yiFbNhgPMiNZ98k0Ag=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31101141" type="application/octet-stream" sparkle:edSignature="X5H8tKDj4STduvg8Xupr33md1TcSoWst2MvWaTcKmzNu/KWcogM/HiXXFFeuG4oKagwm9Mw+qf6ZiA0RePuKBw=="/>
         </item>
     </channel>
 </rss>
