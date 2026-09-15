@@ -4,36 +4,42 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Mon, 14 Sep 2026 15:07:36 +0600</pubDate>
+            <pubDate>Tue, 15 Sep 2026 13:06:14 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609141459</sparkle:version>
+            <sparkle:version>202609151258</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### A clearer block list editor
+            <description sparkle:format="markdown"><![CDATA[### Block a whole category, except the one site you need
 
-Creating a list used to mean scrolling one long column, with the category chips
-wrapping over five rows and Save waiting below the fold. The editor is now two
-columns: the list's name, its Blocklist/Exceptions switch and its apps on the
-left, the websites — domain field, categories, and everything you have picked —
-on the right, with a line at the bottom telling you exactly what the list will
-block once it is active. Nothing is hidden below the fold any more, and it reads
-the same in light and dark mode.
+Block lists used to be all-or-nothing: adding the Social category blocked all 30
+of its sites, and there was no way to keep one of them. The Exceptions tab now
+carves sites out of what the list blocks — block Social, except linkedin.com —
+and it works down to a single subdomain, so you can block reddit.com while
+old.reddit.com still opens. A spent daily limit still wins over an exception.
 
-### Setup asks for Accessibility once, and waits with you
+Exceptions used to mean something else: a list could be a whitelist that blocked
+everything on the Mac except a few chosen apps. That mode is gone, and any list
+you had set up that way now shows its sites under Exceptions with nothing
+blocked, ready for you to say what it should block.
 
-Kahf Guard needs macOS Accessibility to block apps and websites. Onboarding now
-holds at that step until the permission is actually granted, with a small
-floating guide showing where the switch lives in System Settings, and moves on by
-itself the moment you flip it — instead of letting you walk past it and finding
-nothing blocked later.
+### Website time limits actually count
 
-### Sheets no longer darken the whole window
+A limit on youtube.com never counted the time you spent there. Browsers send you
+to www.youtube.com, and the minutes were filed under that name instead — so the
+budget never filled, the countdown never appeared, and the site was never
+blocked. Time now counts against the site you named, subdomains included: a
+limit on youtube.com covers m.youtube.com too.
 
-Opening a block or session sheet used to turn the entire app dark, and closing it
-left the window chrome light with dark content inside. Sheets now keep their own
-appearance to themselves, over a softer blurred backdrop.
+A new limit also starts from zero. It used to count the whole day, so a 10-minute
+limit set up after an hour on a site blocked it immediately.
+
+### A countdown you can read, and ignore
+
+The remaining-time pill sat over the browser's address bar in small type. It now
+sits in the bottom-right corner at a readable size, faded back so it doesn't
+compete with the page — move the pointer over it and it comes up to full.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31101141" type="application/octet-stream" sparkle:edSignature="X5H8tKDj4STduvg8Xupr33md1TcSoWst2MvWaTcKmzNu/KWcogM/HiXXFFeuG4oKagwm9Mw+qf6ZiA0RePuKBw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31072517" type="application/octet-stream" sparkle:edSignature="1qhQom1zC46LqJkZSpvQ9kj70sFZVUS7+wxBsAcGxUNtTEQhy8ayowtRyGcZwqaiP3zhRkLpMl1HYdDgdimqDw=="/>
         </item>
     </channel>
 </rss>
