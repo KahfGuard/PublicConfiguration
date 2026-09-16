@@ -4,42 +4,52 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Tue, 15 Sep 2026 13:06:14 +0600</pubDate>
+            <pubDate>Wed, 16 Sep 2026 19:03:42 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609151258</sparkle:version>
+            <sparkle:version>202609161857</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Block a whole category, except the one site you need
+            <description sparkle:format="markdown"><![CDATA[### Macs a parent or an organisation looks after
 
-Block lists used to be all-or-nothing: adding the Social category blocked all 30
-of its sites, and there was no way to keep one of them. The Exceptions tab now
-carves sites out of what the list blocks — block Social, except linkedin.com —
-and it works down to a single subdomain, so you can block reddit.com while
-old.reddit.com still opens. A spent daily limit still wins over an exception.
+This Mac can now be set up as someone else's to look after. On first run it asks
+what kind of device it is — your own, a child's, or one belonging to an
+organisation — and a child or organisation device takes its rules from the person
+managing it rather than from whoever is sitting at the keyboard. The Profile
+screen says plainly who that is, and signing back in after a sign-out offers the
+same three paths instead of only the personal one.
 
-Exceptions used to mean something else: a list could be a whitelist that blocked
-everything on the Mac except a few chosen apps. That mode is gone, and any list
-you had set up that way now shows its sites under Exceptions with nothing
-blocked, ready for you to say what it should block.
+A managed Mac also has to finish its setup: Accessibility, notifications and Safe
+Internet are all required before it can be used, and it cannot be quit while it is
+enforcing. Uninstall protection switches itself on, so nobody has to remember to.
 
-### Website time limits actually count
+### The rules a parent or administrator sets are now enforced here
 
-A limit on youtube.com never counted the time you spent there. Browsers send you
-to www.youtube.com, and the minutes were filed under that name instead — so the
-budget never filled, the countdown never appeared, and the site was never
-blocked. Time now counts against the site you named, subdomains included: a
-limit on youtube.com covers m.youtube.com too.
+Everything set on the parent or organisation console reaches this Mac:
 
-A new limit also starts from zero. It used to count the whole day, so a 10-minute
-limit set up after an hour on a site blocked it immediately.
+- whole apps and whole sites blocked together, so blocking YouTube covers the site
+  as well as the app, and Telegram covers its web client
+- YouTube Shorts, Instagram Reels and Facebook Reels, without blocking the rest of
+  the site
+- WhatsApp's Updates tab and Telegram's search, in the apps and on the web
+- your own list of sites to block, with an exceptions list beside it
+- risky words rendered on a page, now in Discord and WhatsApp as well as browsers
+- the DNS filter level, and a lock on changing DNS settings
 
-### A countdown you can read, and ignore
+Changes land within a minute. When the console can reach the Mac directly they
+land in seconds.
 
-The remaining-time pill sat over the browser's address bar in small type. It now
-sits in the bottom-right corner at a readable size, faded back so it doesn't
-compete with the page — move the pointer over it and it comes up to full.
+### Fixes
+
+The block screen now covers only the browser window it belongs to, rather than
+the whole display — a blocked site no longer looks like the Mac has been taken
+over. Repeatedly visiting one blocked site no longer starts closing tabs.
+
+Only one copy of Kahf Guard runs at a time. Two could disagree about the current
+rules, and the older one would go on enforcing yesterday's.
+
+The background helper no longer steals focus while you work.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31072517" type="application/octet-stream" sparkle:edSignature="1qhQom1zC46LqJkZSpvQ9kj70sFZVUS7+wxBsAcGxUNtTEQhy8ayowtRyGcZwqaiP3zhRkLpMl1HYdDgdimqDw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31115303" type="application/octet-stream" sparkle:edSignature="yOpFcHC9BVI7J8C/wT6ojujoJot+t9y1DjRk51NY7vHgrHmVrralmBD6WGfmuLVcYlsyr4OSfBpsEiC7wcFPBA=="/>
         </item>
     </channel>
 </rss>
