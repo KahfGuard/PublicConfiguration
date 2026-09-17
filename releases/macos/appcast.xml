@@ -3,52 +3,37 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.0</title>
-            <pubDate>Thu, 17 Sep 2026 13:27:14 +0600</pubDate>
-            <sparkle:version>202609171322</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <title>1.1</title>
+            <pubDate>Thu, 17 Sep 2026 14:30:15 +0600</pubDate>
+            <sparkle:version>202609171425</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Macs a parent or an organisation looks after
+            <description sparkle:format="markdown"><![CDATA[### Staying signed in
 
-This Mac can now be set up as someone else's to look after. On first run it asks
-what kind of device it is — your own, a child's, or one belonging to an
-organisation — and a child or organisation device takes its rules from the person
-managing it rather than from whoever is sitting at the keyboard. The Profile
-screen says plainly who that is, and signing back in after a sign-out offers the
-same three paths instead of only the personal one.
+A Mac looked after by an organisation no longer signs itself out on its own.
 
-A managed Mac also has to finish its setup: Accessibility, notifications and Safe
-Internet are all required before it can be used, and it cannot be quit while it is
-enforcing. Uninstall protection switches itself on, so nobody has to remember to.
+Its session renews quietly in the background, and an error from the server is no
+longer mistaken for the session ending — a message about one thing you are not
+allowed to see used to sign you out of everything. If the session really has
+ended, Kahf Guard now says so and offers to reconnect, instead of quietly
+showing an organisation's name while enforcing nothing.
 
-### The rules a parent or administrator sets are now enforced here
+### Uninstall protection is yours to decide
 
-Everything set on the parent or organisation console reaches this Mac:
+Uninstall protection no longer switches itself on when a Mac is set up for a
+child or an organisation, and whoever uses the Mac can now turn it off again
+through the usual 24-hour wait. Before, on a managed Mac the setting could be
+switched on but never off, and tapping it did nothing at all.
 
-- whole apps and whole sites blocked together, so blocking YouTube covers the site
-  as well as the app, and Telegram covers its web client
-- YouTube Shorts, Instagram Reels and Facebook Reels, without blocking the rest of
-  the site
-- WhatsApp's Updates tab and Telegram's search, in the apps and on the web
-- your own list of sites to block, with an exceptions list beside it
-- risky words rendered on a page, now in Discord and WhatsApp as well as browsers
-- the DNS filter level, and a lock on changing DNS settings
-
-Changes land within a minute. When the console can reach the Mac directly they
-land in seconds.
+Turning it on is unchanged, and so is the wait — the point of the delay is that
+it cannot be removed in the moment you want to get past it.
 
 ### Fixes
 
-The block screen now covers only the browser window it belongs to, rather than
-the whole display — a blocked site no longer looks like the Mac has been taken
-over. Repeatedly visiting one blocked site no longer starts closing tabs.
-
-Only one copy of Kahf Guard runs at a time. Two could disagree about the current
-rules, and the older one would go on enforcing yesterday's.
-
-The background helper no longer steals focus while you work.
+Kahf Guard no longer claims to be managed by an organisation while signed out of
+that organisation.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31127397" type="application/octet-stream" sparkle:edSignature="/L8QdtIqYSMO+9tsd0VdEumT9exI9CPJLVpWCu/j/S3b+YQQm8rhST9dxNCN6KelHnyqUMaYk+v2mlO1GymFBw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.1/KahfGuard_v1.1_202609171425.dmg" length="31128501" type="application/octet-stream" sparkle:edSignature="Sp6CnZY9rTORx4CSXFMgO3LJofrq467zQ2LJPsWBCm0jq0zm5atre+sf1Niwlj2ne2SpGn8Mk+P+VchQhNI0Aw=="/>
         </item>
     </channel>
 </rss>
