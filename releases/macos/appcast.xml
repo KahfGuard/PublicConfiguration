@@ -4,28 +4,35 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.1</title>
-            <pubDate>Thu, 17 Sep 2026 16:23:55 +0600</pubDate>
+            <pubDate>Thu, 17 Sep 2026 23:23:26 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609171618</sparkle:version>
+            <sparkle:version>202609172318</sparkle:version>
             <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Setting up picks up where you left off
+            <description sparkle:format="markdown"><![CDATA[### Turn off reels and shorts for yourself
 
-Closing Kahf Guard part-way through setup no longer starts you over. Reopen it
-and you are back on the step you were on, with the answers you already gave.
+Two new cards on the home screen. **Reels & Shorts** sends YouTube Shorts,
+Instagram Reels and Facebook Reels links back to the site's home page in your
+browser, so the endless feed is not one tap away. **Telegram & WhatsApp** closes
+Telegram's global search and sends you back to Chats when you open WhatsApp's
+Updates — in the apps and on the web.
 
-### A Mac that has already joined is not asked to join again
+These already existed for Macs looked after by a family or an organisation.
+Now anyone can switch them on for themselves.
 
-If this Mac is set up for a child or looked after by an organisation, setting up
-no longer asks who the Mac is for a second time, and no longer asks for a join
-code. That code is issued by whoever manages the Mac and works only once — so
-being asked for another one, on a device that had already joined, left nowhere
-to go.
+Turning a guard on is immediate. Turning one off asks for your PIN, if you have
+set one — the point of these is the moment you would rather not be asked twice.
 
-Safe Internet is the last step for those Macs, and finishing it is all that is
-left: no sign-in, because the Mac signed in when it joined.
+Each card shows what is running at a glance, and a lock where the choice belongs
+to whoever manages the Mac rather than to you.
+
+### Website filtering for managed Macs that block only risky words
+
+On a Mac whose organisation had turned on risky-word blocking without also
+blocking any sites, the browser check never started — the protection read as on
+and did nothing. It now runs.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.1/KahfGuard_v1.1_202609171618.dmg" length="31129706" type="application/octet-stream" sparkle:edSignature="E9JQSVd+XcwvYE32ukJ6bi++IzE0G3YU+EFzZB8NnKAzhvb++sNIPprFRe8EjHjhdM8t4llQ43Stf/BaZRGhAg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.1/KahfGuard_v1.1_202609172318.dmg" length="31197356" type="application/octet-stream" sparkle:edSignature="NrDZeyqX3NiAabaZfwqJ2bgRuJw/KXVZ2qmryH0R8jVOp8jStRH0AEqZX8DihHYqgc9rottNoUQJKi25YLrWCA=="/>
         </item>
     </channel>
 </rss>
