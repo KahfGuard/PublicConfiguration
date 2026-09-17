@@ -4,9 +4,8 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.0</title>
-            <pubDate>Wed, 16 Sep 2026 19:03:42 +0600</pubDate>
-            <sparkle:criticalUpdate/>
-            <sparkle:version>202609161857</sparkle:version>
+            <pubDate>Thu, 17 Sep 2026 13:27:14 +0600</pubDate>
+            <sparkle:version>202609171322</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[### Macs a parent or an organisation looks after
@@ -49,7 +48,7 @@ rules, and the older one would go on enforcing yesterday's.
 
 The background helper no longer steals focus while you work.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31115303" type="application/octet-stream" sparkle:edSignature="yOpFcHC9BVI7J8C/wT6ojujoJot+t9y1DjRk51NY7vHgrHmVrralmBD6WGfmuLVcYlsyr4OSfBpsEiC7wcFPBA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.0/KahfGuard_v1.0.dmg" length="31127397" type="application/octet-stream" sparkle:edSignature="/L8QdtIqYSMO+9tsd0VdEumT9exI9CPJLVpWCu/j/S3b+YQQm8rhST9dxNCN6KelHnyqUMaYk+v2mlO1GymFBw=="/>
         </item>
     </channel>
 </rss>
