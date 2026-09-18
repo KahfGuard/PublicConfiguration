@@ -4,41 +4,48 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.2</title>
-            <pubDate>Fri, 18 Sep 2026 17:43:32 +0600</pubDate>
+            <pubDate>Fri, 18 Sep 2026 18:44:07 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609181738</sparkle:version>
+            <sparkle:version>202609181839</sparkle:version>
             <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### The blocked screen now tells you what happened
+            <description sparkle:format="markdown"><![CDATA[### Time limits now appear on Home
 
-Until now every block looked the same: one screen, one message, whether you had
-run out of time on a site, opened something your organisation blocks, or reached
-for something you had asked to be kept away from.
+The list along the bottom of Home showed instant blocks, always-on blocks and
+scheduled ones, but never a time limit — so a limit that was quietly counting
+down had nothing on screen to say so.
 
-It is a new screen, and it says which of those it was. Adult and gambling sites
-carry a reminder from the Qur'an. A spent daily limit says your time is up and
-that the site opens again tomorrow — nothing more, because running out of
-minutes is not something to be lectured about. A site your organisation blocks
-says so, and points you at your administrator. The same screen now appears for a
-blocked app as for a blocked site, in light and dark to match your Mac.
+It is there now, and it counts the right thing: while you still have budget it
+shows what is left of your allowance; once the budget is spent it switches to
+counting the block down. A limit whose block has already run and expired drops
+off the list, because those apps are open again until tomorrow and a row reading
+"0m" would say the opposite.
 
-**Go back** now closes the tab instead of stepping through your history.
+The Blocker card no longer keeps a stale count after you stop a session, and the
+list itself folds away from a handle on its bottom edge rather than a button
+sitting in a strip of its own.
 
-### Signing out clears the Mac
+### Choosing how long a limit blocks for
 
-A Mac has no separate space per person, so block lists, schedules, limits, your
-habits, your usage history and your PIN all belonged to whoever was signed in —
-and stayed behind for whoever signed in next.
+The screen that asks how long to block for after a limit runs out has been
+rebuilt. It opens on "Until tomorrow", offers the common lengths as one tap, and
+keeps the hours and minutes fields for anything else.
 
-Signing out now clears them and returns the app to first-run setup. Two things
-survive on purpose: the Safe Internet DNS profile, which you consented to by name
-and which protects you signed in or out, and this Mac's place against your
-account's device limit, so signing in again does not use up another slot.
+A schedule or a time limit can no longer be saved with no day selected — it
+would never have run, and nothing said so.
 
-This applies to signing out yourself. Being signed out by an expired session
-leaves everything exactly where it was.
+### Managed Macs
+
+On a Mac managed by an organisation or by a parent, the protection level is no
+longer the device's to change. "No Protection" sits inside that chooser, so
+reaching it was a way out of the policy, one tap from Home, for exactly the
+person the policy is meant to protect. Setting up Safe Internet still works, and
+your administrator still chooses the level.
+
+Policy changes also arrive as soon as the app comes back to the front, rather
+than waiting for the next check.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2/KahfGuard_v1.2_202609181738.dmg" length="32330704" type="application/octet-stream" sparkle:edSignature="kzlMkgnwugz+t6+fObigAVe487tFUjkkchRbz16/QAAEYAPkA/4Cgp7rhYOiAzN3wnMyPjt8lFOXc+3qgUGrDw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2/KahfGuard_v1.2_202609181839.dmg" length="32552378" type="application/octet-stream" sparkle:edSignature="Sqle0jRylBxZjO1qDMv/+Sw14m5JPW8bV0Zcbkxg/c7kcCPbdhMnDUI9+RfVzOqpeXnY5X8W04J9ogVVsAIJCA=="/>
         </item>
     </channel>
 </rss>
