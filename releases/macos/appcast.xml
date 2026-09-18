@@ -3,11 +3,11 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.1</title>
-            <pubDate>Fri, 18 Sep 2026 22:01:07 +0600</pubDate>
+            <title>1.2.2</title>
+            <pubDate>Fri, 18 Sep 2026 23:36:18 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609182155</sparkle:version>
-            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+            <sparkle:version>202609182330</sparkle:version>
+            <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[### Blocking has its own place in the sidebar
 
@@ -36,7 +36,7 @@ something that isn't a domain and it says so, under the field.
 
 A long name no longer gets cut off at the bottom of the sidebar.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.1/KahfGuard_v1.2.1_202609182155.dmg" length="32569082" type="application/octet-stream" sparkle:edSignature="23HuqjDNhNGMnrex2+i40+VpN3kQctxt3hgP8jY2j7mVX03Hr31nx9jVLFajOVS1V/8kw/8jdGz+7JxYBqVmAg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.2/KahfGuard_v1.2.2_202609182330.dmg" length="32566309" type="application/octet-stream" sparkle:edSignature="2Y6r5IlgXnHwBoZP6FxiabzbW5dsvpPyjELmhhtRLCrlH2Bwwwgst4d/pRZmxFohPzJ2O39loUhtzR/2WklADA=="/>
         </item>
     </channel>
 </rss>
