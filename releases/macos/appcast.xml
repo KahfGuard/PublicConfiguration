@@ -3,36 +3,42 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.1</title>
-            <pubDate>Thu, 17 Sep 2026 23:23:26 +0600</pubDate>
+            <title>1.2</title>
+            <pubDate>Fri, 18 Sep 2026 17:43:32 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609172318</sparkle:version>
-            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:version>202609181738</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Turn off reels and shorts for yourself
+            <description sparkle:format="markdown"><![CDATA[### The blocked screen now tells you what happened
 
-Two new cards on the home screen. **Reels & Shorts** sends YouTube Shorts,
-Instagram Reels and Facebook Reels links back to the site's home page in your
-browser, so the endless feed is not one tap away. **Telegram & WhatsApp** closes
-Telegram's global search and sends you back to Chats when you open WhatsApp's
-Updates — in the apps and on the web.
+Until now every block looked the same: one screen, one message, whether you had
+run out of time on a site, opened something your organisation blocks, or reached
+for something you had asked to be kept away from.
 
-These already existed for Macs looked after by a family or an organisation.
-Now anyone can switch them on for themselves.
+It is a new screen, and it says which of those it was. Adult and gambling sites
+carry a reminder from the Qur'an. A spent daily limit says your time is up and
+that the site opens again tomorrow — nothing more, because running out of
+minutes is not something to be lectured about. A site your organisation blocks
+says so, and points you at your administrator. The same screen now appears for a
+blocked app as for a blocked site, in light and dark to match your Mac.
 
-Turning a guard on is immediate. Turning one off asks for your PIN, if you have
-set one — the point of these is the moment you would rather not be asked twice.
+**Go back** now closes the tab instead of stepping through your history.
 
-Each card shows what is running at a glance, and a lock where the choice belongs
-to whoever manages the Mac rather than to you.
+### Signing out clears the Mac
 
-### Website filtering for managed Macs that block only risky words
+A Mac has no separate space per person, so block lists, schedules, limits, your
+habits, your usage history and your PIN all belonged to whoever was signed in —
+and stayed behind for whoever signed in next.
 
-On a Mac whose organisation had turned on risky-word blocking without also
-blocking any sites, the browser check never started — the protection read as on
-and did nothing. It now runs.
+Signing out now clears them and returns the app to first-run setup. Two things
+survive on purpose: the Safe Internet DNS profile, which you consented to by name
+and which protects you signed in or out, and this Mac's place against your
+account's device limit, so signing in again does not use up another slot.
+
+This applies to signing out yourself. Being signed out by an expired session
+leaves everything exactly where it was.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.1/KahfGuard_v1.1_202609172318.dmg" length="31197356" type="application/octet-stream" sparkle:edSignature="NrDZeyqX3NiAabaZfwqJ2bgRuJw/KXVZ2qmryH0R8jVOp8jStRH0AEqZX8DihHYqgc9rottNoUQJKi25YLrWCA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2/KahfGuard_v1.2_202609181738.dmg" length="32330704" type="application/octet-stream" sparkle:edSignature="kzlMkgnwugz+t6+fObigAVe487tFUjkkchRbz16/QAAEYAPkA/4Cgp7rhYOiAzN3wnMyPjt8lFOXc+3qgUGrDw=="/>
         </item>
     </channel>
 </rss>
