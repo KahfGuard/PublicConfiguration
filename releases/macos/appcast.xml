@@ -3,49 +3,40 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2</title>
-            <pubDate>Fri, 18 Sep 2026 18:44:07 +0600</pubDate>
+            <title>1.2.1</title>
+            <pubDate>Fri, 18 Sep 2026 22:01:07 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609181839</sparkle:version>
-            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:version>202609182155</sparkle:version>
+            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Time limits now appear on Home
+            <description sparkle:format="markdown"><![CDATA[### Blocking has its own place in the sidebar
 
-The list along the bottom of Home showed instant blocks, always-on blocks and
-scheduled ones, but never a time limit — so a limit that was quietly counting
-down had nothing on screen to say so.
+Blocking is what the app is for, and it sat one tap behind a card on Home. It is
+now a section of its own, second in the sidebar, so schedules, block lists and
+time limits are always one click away. Everything that used to open it — the
+Home card, "More" on the templates row, a running limit in the sessions list —
+now takes you there.
 
-It is there now, and it counts the right thing: while you still have budget it
-shows what is left of your allowance; once the budget is spent it switches to
-counting the block down. A limit whose block has already run and expired drops
-off the list, because those apps are open again until tomorrow and a row reading
-"0m" would say the opposite.
+### You can see when your settings arrive
 
-The Blocker card no longer keeps a stale count after you stop a session, and the
-list itself folds away from a handle on its bottom edge rather than a button
-sitting in a strip of its own.
+On a Mac managed by an organisation or by a parent, a change made in the console
+used to apply in silence: nothing on screen said the device had caught up. A
+short "Settings updated" note now appears when a sync actually brings something
+new. It stays quiet the rest of the time, so a normal day shows nothing.
 
-### Choosing how long a limit blocks for
+### Smaller things
 
-The screen that asks how long to block for after a limit runs out has been
-rebuilt. It opens on "Until tomorrow", offers the common lengths as one tap, and
-keeps the hours and minutes fields for anything else.
+The Reels & Shorts and other guard cards have a close button, like every other
+card in the app — clicking outside or pressing Esc always worked, but neither
+was visible.
 
-A schedule or a time limit can no longer be saved with no day selected — it
-would never have run, and nothing said so.
+When you build a block list, "Add Apps" now looks like the button it is, and
+"Add" beside the website field no longer sits greyed out — press it with
+something that isn't a domain and it says so, under the field.
 
-### Managed Macs
-
-On a Mac managed by an organisation or by a parent, the protection level is no
-longer the device's to change. "No Protection" sits inside that chooser, so
-reaching it was a way out of the policy, one tap from Home, for exactly the
-person the policy is meant to protect. Setting up Safe Internet still works, and
-your administrator still chooses the level.
-
-Policy changes also arrive as soon as the app comes back to the front, rather
-than waiting for the next check.
+A long name no longer gets cut off at the bottom of the sidebar.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2/KahfGuard_v1.2_202609181839.dmg" length="32552378" type="application/octet-stream" sparkle:edSignature="Sqle0jRylBxZjO1qDMv/+Sw14m5JPW8bV0Zcbkxg/c7kcCPbdhMnDUI9+RfVzOqpeXnY5X8W04J9ogVVsAIJCA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.1/KahfGuard_v1.2.1_202609182155.dmg" length="32569082" type="application/octet-stream" sparkle:edSignature="23HuqjDNhNGMnrex2+i40+VpN3kQctxt3hgP8jY2j7mVX03Hr31nx9jVLFajOVS1V/8kw/8jdGz+7JxYBqVmAg=="/>
         </item>
     </channel>
 </rss>
