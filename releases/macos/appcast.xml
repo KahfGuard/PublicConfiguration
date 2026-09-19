@@ -3,48 +3,34 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.3</title>
-            <pubDate>Sat, 19 Sep 2026 12:55:58 +0600</pubDate>
+            <title>1.2.4</title>
+            <pubDate>Sat, 19 Sep 2026 18:52:57 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609191250</sparkle:version>
-            <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
+            <sparkle:version>202609191847</sparkle:version>
+            <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Home stops working when nothing is happening
+            <description sparkle:format="markdown"><![CDATA[### Safe Internet survives closing the window
 
-The status dot on the Safe Internet card was animating forever, whether or not
-the app was even in front of you. One small dot was costing about a third of a
-processor core, all day, because every frame of it re-laid out the whole window.
-It is a static icon now, and the progress bar on the Blocking screen has stopped
-breathing while you are somewhere else. Expect a quieter fan and a longer
-battery.
+Closing the Kahf Guard window could remove the Safe Internet filter from the
+Mac. Home then reported protection as off and offered to set up something you
+had already set up, and until you did, nothing was filtering. The filter now
+stays exactly where you put it, and a failed save no longer takes it with it.
 
-### A blocked page stays in the tab
+### Kahf Browser is protected like every other browser
 
-Opening YouTube Shorts on a Mac where it is turned off could black out the whole
-screen instead of showing the explanation inside the tab, which read less like a
-rule and more like the Mac had been taken over. The page now lands in the tab it
-belongs to. When there is genuinely no tab to put it in, the notice covers only
-the browser window, never the display — and it no longer describes a blocked
-website as an app.
+Blocking did nothing at all in Kahf Browser — no blocked sites, no Shorts or
+Reels, no Telegram or WhatsApp guards, no website time limits. It was simply not
+recognised as a browser. It now gets the same protection Safari, Chrome, Brave
+and Firefox get.
 
-### Signing out really does reset the Mac
+### A guard you switch on looks switched on
 
-Signing out left the Safe Internet filter installed but no longer recognised, so
-Home reported protection as off while the filter was quietly still running, and
-offered to set up something you already had. A sign-out now clears it properly
-and setup starts from the beginning, the filter included.
-
-### For managed Macs
-
-An organisation can now require Uninstall Protection, and turn it on for a
-device from the console. Setup asks for the administrator password once, so a
-change made later does not put a password box in front of whoever is holding the
-Mac.
-
-If protection needs to come off and your organisation allows it, support can now
-issue an emergency code that removes it immediately, instead of a 24-hour wait.
+Turning on YouTube Shorts, Instagram Reels or any of the other guards moved the
+switch back to off, as though the Mac had refused you. It had not: the guard was
+already running, and closing and reopening the card showed it on. The switch now
+stays where you put it.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.3/KahfGuard_v1.2.3_202609191250.dmg" length="32623832" type="application/octet-stream" sparkle:edSignature="mDPY2DppOwrjctwm9zkiIkk8VGThAA6e3xydVDfDv3qbcf24Na1tMfrjmQZ2BVIRs4f0fyZIDwyTTjhYrNvCAg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.4/KahfGuard_v1.2.4_202609191847.dmg" length="32594377" type="application/octet-stream" sparkle:edSignature="obbCzpZSutgd8Zy7lfOLPC2QEi0gl13ZmY+Fqu4ekuLrV4M8kTxOF3RxjeJ6omYW8JSzI33a3BF6hMPn8/plAg=="/>
         </item>
     </channel>
 </rss>
