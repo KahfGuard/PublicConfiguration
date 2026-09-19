@@ -3,40 +3,48 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.2</title>
-            <pubDate>Fri, 18 Sep 2026 23:36:18 +0600</pubDate>
+            <title>1.2.3</title>
+            <pubDate>Sat, 19 Sep 2026 12:55:58 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609182330</sparkle:version>
-            <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
+            <sparkle:version>202609191250</sparkle:version>
+            <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Blocking has its own place in the sidebar
+            <description sparkle:format="markdown"><![CDATA[### Home stops working when nothing is happening
 
-Blocking is what the app is for, and it sat one tap behind a card on Home. It is
-now a section of its own, second in the sidebar, so schedules, block lists and
-time limits are always one click away. Everything that used to open it — the
-Home card, "More" on the templates row, a running limit in the sessions list —
-now takes you there.
+The status dot on the Safe Internet card was animating forever, whether or not
+the app was even in front of you. One small dot was costing about a third of a
+processor core, all day, because every frame of it re-laid out the whole window.
+It is a static icon now, and the progress bar on the Blocking screen has stopped
+breathing while you are somewhere else. Expect a quieter fan and a longer
+battery.
 
-### You can see when your settings arrive
+### A blocked page stays in the tab
 
-On a Mac managed by an organisation or by a parent, a change made in the console
-used to apply in silence: nothing on screen said the device had caught up. A
-short "Settings updated" note now appears when a sync actually brings something
-new. It stays quiet the rest of the time, so a normal day shows nothing.
+Opening YouTube Shorts on a Mac where it is turned off could black out the whole
+screen instead of showing the explanation inside the tab, which read less like a
+rule and more like the Mac had been taken over. The page now lands in the tab it
+belongs to. When there is genuinely no tab to put it in, the notice covers only
+the browser window, never the display — and it no longer describes a blocked
+website as an app.
 
-### Smaller things
+### Signing out really does reset the Mac
 
-The Reels & Shorts and other guard cards have a close button, like every other
-card in the app — clicking outside or pressing Esc always worked, but neither
-was visible.
+Signing out left the Safe Internet filter installed but no longer recognised, so
+Home reported protection as off while the filter was quietly still running, and
+offered to set up something you already had. A sign-out now clears it properly
+and setup starts from the beginning, the filter included.
 
-When you build a block list, "Add Apps" now looks like the button it is, and
-"Add" beside the website field no longer sits greyed out — press it with
-something that isn't a domain and it says so, under the field.
+### For managed Macs
 
-A long name no longer gets cut off at the bottom of the sidebar.
+An organisation can now require Uninstall Protection, and turn it on for a
+device from the console. Setup asks for the administrator password once, so a
+change made later does not put a password box in front of whoever is holding the
+Mac.
+
+If protection needs to come off and your organisation allows it, support can now
+issue an emergency code that removes it immediately, instead of a 24-hour wait.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.2/KahfGuard_v1.2.2_202609182330.dmg" length="32566309" type="application/octet-stream" sparkle:edSignature="2Y6r5IlgXnHwBoZP6FxiabzbW5dsvpPyjELmhhtRLCrlH2Bwwwgst4d/pRZmxFohPzJ2O39loUhtzR/2WklADA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.3/KahfGuard_v1.2.3_202609191250.dmg" length="32623832" type="application/octet-stream" sparkle:edSignature="mDPY2DppOwrjctwm9zkiIkk8VGThAA6e3xydVDfDv3qbcf24Na1tMfrjmQZ2BVIRs4f0fyZIDwyTTjhYrNvCAg=="/>
         </item>
     </channel>
 </rss>
