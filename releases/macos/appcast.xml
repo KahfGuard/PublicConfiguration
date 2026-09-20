@@ -3,34 +3,31 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.4</title>
-            <pubDate>Sat, 19 Sep 2026 18:52:57 +0600</pubDate>
+            <title>1.2.5</title>
+            <pubDate>Sun, 20 Sep 2026 20:57:50 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609191847</sparkle:version>
-            <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
+            <sparkle:version>202609202052</sparkle:version>
+            <sparkle:shortVersionString>1.2.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Safe Internet survives closing the window
+            <description sparkle:format="markdown"><![CDATA[### Your organisation's filter strength now applies
 
-Closing the Kahf Guard window could remove the Safe Internet filter from the
-Mac. Home then reported protection as off and offered to set up something you
-had already set up, and until you did, nothing was filtering. The filter now
-stays exactly where you put it, and a failed save no longer takes it with it.
+If your Mac is managed, the filtering level your administrator or parent
+chooses — Low, Medium or High — is now the level this Mac actually uses. It is
+applied as soon as the device checks in, and the Home card names the level that
+is really in force rather than one you picked earlier.
 
-### Kahf Browser is protected like every other browser
+### Setup follows the level you were given
 
-Blocking did nothing at all in Kahf Browser — no blocked sites, no Shorts or
-Reels, no Telegram or WhatsApp guards, no website time limits. It was simply not
-recognised as a browser. It now gets the same protection Safari, Chrome, Brave
-and Firefox get.
+Safe Internet's setup screen no longer starts you on a level of its own. On a
+managed Mac it opens on the one your organisation set, so turning protection on
+never quietly changes it.
 
-### A guard you switch on looks switched on
+### A newly enrolled Mac is protected sooner
 
-Turning on YouTube Shorts, Instagram Reels or any of the other guards moved the
-switch back to off, as though the Mac had refused you. It had not: the guard was
-already running, and closing and reopening the card showed it on. The switch now
-stays where you put it.
+After enrolling, the Mac now asks for its settings every few seconds until the
+first answer arrives instead of waiting for the next minute's check-in.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.4/KahfGuard_v1.2.4_202609191847.dmg" length="32594377" type="application/octet-stream" sparkle:edSignature="obbCzpZSutgd8Zy7lfOLPC2QEi0gl13ZmY+Fqu4ekuLrV4M8kTxOF3RxjeJ6omYW8JSzI33a3BF6hMPn8/plAg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.5/KahfGuard_v1.2.5_202609202052.dmg" length="32627002" type="application/octet-stream" sparkle:edSignature="DolOS3VR42mUgZNkQhhKHWYJp02Cmb5ya2KapL7XhhRm735Du4TcG+BePT2VtVYVZqUsmB8gDsT8Y0hI7fC3CA=="/>
         </item>
     </channel>
 </rss>
