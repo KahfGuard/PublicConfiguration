@@ -3,31 +3,34 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.5</title>
-            <pubDate>Sun, 20 Sep 2026 20:57:50 +0600</pubDate>
+            <title>1.2.6</title>
+            <pubDate>Mon, 21 Sep 2026 08:52:56 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609202052</sparkle:version>
-            <sparkle:shortVersionString>1.2.5</sparkle:shortVersionString>
+            <sparkle:version>202609210847</sparkle:version>
+            <sparkle:shortVersionString>1.2.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Your organisation's filter strength now applies
+            <description sparkle:format="markdown"><![CDATA[### Leaving an organisation now takes effect straight away
 
-If your Mac is managed, the filtering level your administrator or parent
-chooses — Low, Medium or High — is now the level this Mac actually uses. It is
-applied as soon as the device checks in, and the Home card names the level that
-is really in force rather than one you picked earlier.
+When an administrator removes this Mac from their organisation, the Mac finds
+out at its next check-in rather than up to a day later. Until now it kept
+enforcing the organisation's settings for the rest of the day, even though it had
+already been removed.
 
-### Setup follows the level you were given
+### Nothing is left behind when it does
 
-Safe Internet's setup screen no longer starts you on a level of its own. On a
-managed Mac it opens on the one your organisation set, so turning protection on
-never quietly changes it.
+Removal now clears everything the organisation put here: its blocked apps and
+sites, its guards, its filtering level, its name, and the account it signed you
+in with. The Mac returns to the opening setup screen as a personal Mac, with the
+lists and schedules you made yourself untouched. Safe Internet stays installed —
+you set that up yourself, and it keeps protecting you either way.
 
-### A newly enrolled Mac is protected sooner
+### A suspended organisation no longer leaves the Mac stuck
 
-After enrolling, the Mac now asks for its settings every few seconds until the
-first answer arrives instead of waiting for the next minute's check-in.
+If an organisation was suspended rather than removed, the Mac could keep trying
+to reach it every minute, indefinitely, while still enforcing settings nobody
+could change any more. It now signs out the same way a removed device does.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.5/KahfGuard_v1.2.5_202609202052.dmg" length="32627002" type="application/octet-stream" sparkle:edSignature="DolOS3VR42mUgZNkQhhKHWYJp02Cmb5ya2KapL7XhhRm735Du4TcG+BePT2VtVYVZqUsmB8gDsT8Y0hI7fC3CA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.6/KahfGuard_v1.2.6_202609210847.dmg" length="32628556" type="application/octet-stream" sparkle:edSignature="iifhwO7smyYmq32P4ZxcqsunLYfaf9EuA/jZV3cjZ3tqITmtDjpf/ygELMz3LGWkWyyrVUfhXs4xhRP6H0LwAw=="/>
         </item>
     </channel>
 </rss>
