@@ -3,34 +3,21 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.6</title>
-            <pubDate>Mon, 21 Sep 2026 08:52:56 +0600</pubDate>
+            <title>1.2.7</title>
+            <pubDate>Mon, 21 Sep 2026 13:19:05 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609210847</sparkle:version>
-            <sparkle:shortVersionString>1.2.6</sparkle:shortVersionString>
+            <sparkle:version>202609211313</sparkle:version>
+            <sparkle:shortVersionString>1.2.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Leaving an organisation now takes effect straight away
+            <description sparkle:format="markdown"><![CDATA[### WhatsApp Web's Status and Channels are blocked in Chrome again
 
-When an administrator removes this Mac from their organisation, the Mac finds
-out at its next check-in rather than up to a day later. Until now it kept
-enforcing the organisation's settings for the rest of the day, even though it had
-already been removed.
-
-### Nothing is left behind when it does
-
-Removal now clears everything the organisation put here: its blocked apps and
-sites, its guards, its filtering level, its name, and the account it signed you
-in with. The Mac returns to the opening setup screen as a personal Mac, with the
-lists and schedules you made yourself untouched. Safe Internet stays installed —
-you set that up yourself, and it keeps protecting you either way.
-
-### A suspended organisation no longer leaves the Mac stuck
-
-If an organisation was suspended rather than removed, the Mac could keep trying
-to reach it every minute, indefinitely, while still enforcing settings nobody
-could change any more. It now signs out the same way a removed device does.
+With the WhatsApp guard on, opening Status or Channels in WhatsApp Web let you
+straight through in Chrome, Brave, Edge and the other Chrome-based browsers. The
+Mac could not see which tab WhatsApp was showing, so it allowed all of them.
+Safari and Firefox were never affected, and the same block inside the WhatsApp
+app kept working throughout.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.6/KahfGuard_v1.2.6_202609210847.dmg" length="32628556" type="application/octet-stream" sparkle:edSignature="iifhwO7smyYmq32P4ZxcqsunLYfaf9EuA/jZV3cjZ3tqITmtDjpf/ygELMz3LGWkWyyrVUfhXs4xhRP6H0LwAw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.7/KahfGuard_v1.2.7_202609211313.dmg" length="32627788" type="application/octet-stream" sparkle:edSignature="DRLVuuaswp7XJAvRXmioMlEAAa7qK+5HvuTciiF9dXHYxZvcOUXe4trzLku1iyjtKv2+qG2WAsluXlck5ydWAA=="/>
         </item>
     </channel>
 </rss>
