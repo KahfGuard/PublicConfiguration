@@ -3,21 +3,33 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.7</title>
-            <pubDate>Mon, 21 Sep 2026 13:19:05 +0600</pubDate>
+            <title>1.2.8</title>
+            <pubDate>Mon, 21 Sep 2026 15:09:12 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609211313</sparkle:version>
-            <sparkle:shortVersionString>1.2.7</sparkle:shortVersionString>
+            <sparkle:version>202609211503</sparkle:version>
+            <sparkle:shortVersionString>1.2.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### WhatsApp Web's Status and Channels are blocked in Chrome again
+            <description sparkle:format="markdown"><![CDATA[### Risky Words is yours now, with your own word list
 
-With the WhatsApp guard on, opening Status or Channels in WhatsApp Web let you
-straight through in Chrome, Brave, Edge and the other Chrome-based browsers. The
-Mac could not see which tab WhatsApp was showing, so it allowed all of them.
-Safari and Firefox were never affected, and the same block inside the WhatsApp
-app kept working throughout.
+The risky-word guard used to be something only an organisation could switch on.
+On a personal Mac it is now your own: turn it on from the Home screen, see how
+many words are being shielded, and add your own on top of the built-in list.
+Words you add stay on this Mac.
+
+### Uninstall Protection has its own card on Home
+
+It was a row near the bottom of the Home screen, which meant most people never
+found it. It now sits on the Home grid beside Risky Words, showing at a glance
+whether it is on, pending, or needs attention — and tapping it opens the same
+screen as before.
+
+### Clearer wording: it protects Kahf Guard, not every app
+
+The screen said "Apps cannot be uninstalled". On a Mac it only ever protected
+Kahf Guard itself — every other app on your Mac can be removed normally. The
+wording now says so.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.7/KahfGuard_v1.2.7_202609211313.dmg" length="32627788" type="application/octet-stream" sparkle:edSignature="DRLVuuaswp7XJAvRXmioMlEAAa7qK+5HvuTciiF9dXHYxZvcOUXe4trzLku1iyjtKv2+qG2WAsluXlck5ydWAA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.8/KahfGuard_v1.2.8_202609211503.dmg" length="33086278" type="application/octet-stream" sparkle:edSignature="4K/mNNYwd26ROlr8LRNcQJ8CpZ3J3M8q7106YeUMqYTS2zTOEO8JJ9LeDXX6MAqXXCIEWEBUg8aW/jSoYVgyDA=="/>
         </item>
     </channel>
 </rss>
