@@ -3,33 +3,30 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.8</title>
-            <pubDate>Mon, 21 Sep 2026 15:09:12 +0600</pubDate>
+            <title>1.2.9</title>
+            <pubDate>Tue, 22 Sep 2026 14:06:08 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609211503</sparkle:version>
-            <sparkle:shortVersionString>1.2.8</sparkle:shortVersionString>
+            <sparkle:version>202609221401</sparkle:version>
+            <sparkle:shortVersionString>1.2.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Risky Words is yours now, with your own word list
+            <description sparkle:format="markdown"><![CDATA[### Signing out now really does end the protection
 
-The risky-word guard used to be something only an organisation could switch on.
-On a personal Mac it is now your own: turn it on from the Home screen, see how
-many words are being shielded, and add your own on top of the built-in list.
-Words you add stay on this Mac.
+Kahf Guard kept enforcing after the account behind it was gone: block lists,
+schedules, guards and website rules all carried on, and a subscription that
+ended after the sign-out was never noticed. Protection now stops with the
+session. Nothing is deleted — your lists, schedules, habits and word lists are
+all still there when you sign back in.
 
-### Uninstall Protection has its own card on Home
+A Mac managed by an organisation is deliberately unaffected: its protection
+belongs to the organisation, and ends when the organisation removes the device.
 
-It was a row near the bottom of the Home screen, which meant most people never
-found it. It now sits on the Home grid beside Risky Words, showing at a glance
-whether it is on, pending, or needs attention — and tapping it opens the same
-screen as before.
+### Sign Out says what it costs before it does it
 
-### Clearer wording: it protects Kahf Guard, not every app
-
-The screen said "Apps cannot be uninstalled". On a Mac it only ever protected
-Kahf Guard itself — every other app on your Mac can be removed normally. The
-wording now says so.
+Signing out erases this Mac and returns it to setup. It now says so first, and
+asks. Deleting your account does the same clean-up instead of leaving a policy
+behind with no account to answer for it.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.8/KahfGuard_v1.2.8_202609211503.dmg" length="33086278" type="application/octet-stream" sparkle:edSignature="4K/mNNYwd26ROlr8LRNcQJ8CpZ3J3M8q7106YeUMqYTS2zTOEO8JJ9LeDXX6MAqXXCIEWEBUg8aW/jSoYVgyDA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.9/KahfGuard_v1.2.9_202609221401.dmg" length="33153366" type="application/octet-stream" sparkle:edSignature="cx29I2aptu2gza2F659xefh7UInYKPeAKxuCmH9cfNq62XAMoUwL7LpnDNPwm0oxVjxRc2g5YOSqbyLi4gaGBA=="/>
         </item>
     </channel>
 </rss>
