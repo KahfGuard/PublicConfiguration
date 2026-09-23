@@ -3,36 +3,31 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.12</title>
-            <pubDate>Wed, 23 Sep 2026 13:00:43 +0600</pubDate>
+            <title>1.2.13</title>
+            <pubDate>Wed, 23 Sep 2026 15:42:19 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609231254</sparkle:version>
-            <sparkle:shortVersionString>1.2.12</sparkle:shortVersionString>
+            <sparkle:version>202609231536</sparkle:version>
+            <sparkle:shortVersionString>1.2.13</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Type your PIN
+            <description sparkle:format="markdown"><![CDATA[### A clearer view behind popups
 
-The PIN screen takes the keyboard now: type the digits, Delete to correct.
-Clicking still works.
+The window behind a popup is softly blurred now, so the card in front is what
+you read. Every popup's close button is the same glass button, sitting where
+you expect it.
 
-### Links no longer lock the app
+### Analytics
 
-Opening Report Site — or any link in Profile — left an empty panel behind in
-the app. Coming back from the browser, it sat over the PIN screen and made the
-PIN impossible to enter. Links now open straight in your browser.
-
-### Cleaner, calmer popups
-
-- The backdrop behind a popup is clear glass, not a grey sheet, and the
-  screen behind it stays quiet.
-- The Emergency Code sheet has a close button.
-- A whole Profile row is clickable, not only its text.
+Day, Week and Month switch with a new sliding control — click a period or drag
+across to it.
 
 ### Smaller fixes
 
-- Parental no longer shows an error when you have not added a child yet.
-- The Safe Internet setup shows it working on a Mac.
+- Emergency code errors now show when a code is wrong, and Return submits it.
+- Parental's refresh button matches the rest of the app, and the Family Pack
+  sheet has a close button and a clearer layout.
+- The selected sidebar row stands out better in Dark Mode.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.12/KahfGuard_v1.2.12_202609231254.dmg" length="31760523" type="application/octet-stream" sparkle:edSignature="BbtvwEvOz35dzG8ikoHAS47YyqG/pGZb70iRLDD1PLg7Q1tZF53qLseWT12orn3HZD8c3qkAo6BEp/yabmxvCA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.13/KahfGuard_v1.2.13_202609231536.dmg" length="31735412" type="application/octet-stream" sparkle:edSignature="xhjJBcjp4jNylL0rdGJspVvxUyXdgGi1oih7qj3Tnv69xK0aCDV3huUhHDhjpjA3gUy92EV7PcIWGZOM7W/cAQ=="/>
         </item>
     </channel>
 </rss>
