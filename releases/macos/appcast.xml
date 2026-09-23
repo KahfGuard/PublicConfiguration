@@ -3,37 +3,40 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.10</title>
-            <pubDate>Tue, 22 Sep 2026 21:39:03 +0600</pubDate>
+            <title>1.2.11</title>
+            <pubDate>Wed, 23 Sep 2026 10:57:24 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609222133</sparkle:version>
-            <sparkle:shortVersionString>1.2.10</sparkle:shortVersionString>
+            <sparkle:version>202609231051</sparkle:version>
+            <sparkle:shortVersionString>1.2.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Strict Mode
+            <description sparkle:format="markdown"><![CDATA[### Emergency Pass
 
-A block session or a Time Limit can now be saved as **strict**. A strict one
-can't be stopped, edited or deleted. For a repeating schedule that holds
-between its windows too, not only while it is running — so a 9pm block can't
-be moved or switched off at 8:59.
+A way out when you genuinely need one. Hold the button to release blocking for
+a short window, then everything snaps back on its own — no waiting, no undoing
+your setup. A banner stays on screen while it runs so the pause is never
+something you forget about.
 
-The block list a strict session uses is locked along with it, so emptying the
-list is not a way around the session.
+Blocks your organisation or parent set stay in force throughout.
 
-Turn it on with the Strict Mode switch when you set up a session or a limit.
-**Choose it deliberately: once saved, there is no way to undo it from inside
-the app.**
+### A new version no longer waits in silence
 
-### Setup cards close from any edge again
+When an update is ready while you are working elsewhere, the Mac tells you.
 
-Clicking outside a setup card to dismiss it works along the top and bottom
-edges, not only at the sides.
+### Picking "Pause again after" works
 
-### Deleting your account
+The Pause Before Opening interval opened an empty menu with no choices in it.
+It is now a proper sheet, like Appearance.
 
-Clearing this Mac as part of deleting your account is no longer prone to
-failing partway.
+### Smaller fixes
+
+- The PIN screen is legible in Light Mode.
+- Home cards — Pin Code, Emergency Pass, Safe Internet, Protection — match
+  each other again.
+- Setup and result sheets no longer clip at the bottom edge.
+- Onboarding and Habits say "Mac" instead of "phone".
+- Report Site points at the current form.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.10/KahfGuard_v1.2.10_202609222133.dmg" length="33210771" type="application/octet-stream" sparkle:edSignature="4aE2K7sDcDd0oa8HHKcIg8DtPcjOGckICySzZrbqk8BU/Y49arjqnZzpTgM8ukT8HfOFn8Ps7iHc9GXb9OPuCA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.11/KahfGuard_v1.2.11_202609231051.dmg" length="33822275" type="application/octet-stream" sparkle:edSignature="xYCDS6CdWlP/rZR0Sctx4SMpw2lfLj3tAGX7bcJy0UpCV/1rZnafX8BQ2kKwykn+3T0zFIfyHSLEdKjhlca3BQ=="/>
         </item>
     </channel>
 </rss>
