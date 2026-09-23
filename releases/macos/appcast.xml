@@ -3,40 +3,36 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.11</title>
-            <pubDate>Wed, 23 Sep 2026 10:57:24 +0600</pubDate>
+            <title>1.2.12</title>
+            <pubDate>Wed, 23 Sep 2026 13:00:43 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609231051</sparkle:version>
-            <sparkle:shortVersionString>1.2.11</sparkle:shortVersionString>
+            <sparkle:version>202609231254</sparkle:version>
+            <sparkle:shortVersionString>1.2.12</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Emergency Pass
+            <description sparkle:format="markdown"><![CDATA[### Type your PIN
 
-A way out when you genuinely need one. Hold the button to release blocking for
-a short window, then everything snaps back on its own — no waiting, no undoing
-your setup. A banner stays on screen while it runs so the pause is never
-something you forget about.
+The PIN screen takes the keyboard now: type the digits, Delete to correct.
+Clicking still works.
 
-Blocks your organisation or parent set stay in force throughout.
+### Links no longer lock the app
 
-### A new version no longer waits in silence
+Opening Report Site — or any link in Profile — left an empty panel behind in
+the app. Coming back from the browser, it sat over the PIN screen and made the
+PIN impossible to enter. Links now open straight in your browser.
 
-When an update is ready while you are working elsewhere, the Mac tells you.
+### Cleaner, calmer popups
 
-### Picking "Pause again after" works
-
-The Pause Before Opening interval opened an empty menu with no choices in it.
-It is now a proper sheet, like Appearance.
+- The backdrop behind a popup is clear glass, not a grey sheet, and the
+  screen behind it stays quiet.
+- The Emergency Code sheet has a close button.
+- A whole Profile row is clickable, not only its text.
 
 ### Smaller fixes
 
-- The PIN screen is legible in Light Mode.
-- Home cards — Pin Code, Emergency Pass, Safe Internet, Protection — match
-  each other again.
-- Setup and result sheets no longer clip at the bottom edge.
-- Onboarding and Habits say "Mac" instead of "phone".
-- Report Site points at the current form.
+- Parental no longer shows an error when you have not added a child yet.
+- The Safe Internet setup shows it working on a Mac.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.11/KahfGuard_v1.2.11_202609231051.dmg" length="33822275" type="application/octet-stream" sparkle:edSignature="xYCDS6CdWlP/rZR0Sctx4SMpw2lfLj3tAGX7bcJy0UpCV/1rZnafX8BQ2kKwykn+3T0zFIfyHSLEdKjhlca3BQ=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.12/KahfGuard_v1.2.12_202609231254.dmg" length="31760523" type="application/octet-stream" sparkle:edSignature="BbtvwEvOz35dzG8ikoHAS47YyqG/pGZb70iRLDD1PLg7Q1tZF53qLseWT12orn3HZD8c3qkAo6BEp/yabmxvCA=="/>
         </item>
     </channel>
 </rss>
