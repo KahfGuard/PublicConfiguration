@@ -3,24 +3,28 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.14</title>
-            <pubDate>Wed, 23 Sep 2026 21:25:17 +0600</pubDate>
+            <title>1.2.15</title>
+            <pubDate>Thu, 24 Sep 2026 10:14:40 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609232119</sparkle:version>
-            <sparkle:shortVersionString>1.2.14</sparkle:shortVersionString>
+            <sparkle:version>202609241009</sparkle:version>
+            <sparkle:shortVersionString>1.2.15</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### For organisation and family Macs
+            <description sparkle:format="markdown"><![CDATA[### For organisation-managed Macs
 
-A Mac managed by an organisation or a parent now keeps to what matters there:
-plans, upgrade offers, the Parental tab and personal account items are hidden.
-Profile shows which organisation manages the Mac, under your name.
+- Apps your organisation blocks are now blocked on this Mac, and their
+  websites too — blocking Discord also blocks discord.com.
+- Blocks your organisation schedules apply only during their set hours, and
+  start and stop right on time.
+- See what your organisation blocks: under Always Block and Custom Schedule
+  in Blocker, and in the active list on Home. Tap one to see every app and
+  website it covers.
 
-### PIN Code
+### Smaller fixes
 
-- You can now remove your PIN while Uninstall Protection is on.
-- The PIN Code card sits at half width on Home.
+- "1 app" and "1 site" now read correctly.
+- The Habits icon for laptop-free time shows on macOS 14.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.14/KahfGuard_v1.2.14_202609232119.dmg" length="31753283" type="application/octet-stream" sparkle:edSignature="qIg8YkUQBWq8ZW0InWf6pnaubR/br0jXoWJ0IGHoyuQT7UnjeYD0Uj7i7KUCenLo8WuIocmHKT6J+/avbwedAg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.15/KahfGuard_v1.2.15_202609241009.dmg" length="31828266" type="application/octet-stream" sparkle:edSignature="QhxoZU6Mg8DCfoBKjGb9rChTWQ2/5fPQ1bHJZom5uD9qoHPMdWC31Xp5m1Bqe/kU0R/DkYFc8Q1FJwB3PnSkBg=="/>
         </item>
     </channel>
 </rss>
