@@ -3,28 +3,27 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.15</title>
-            <pubDate>Thu, 24 Sep 2026 10:14:40 +0600</pubDate>
+            <title>1.2.16</title>
+            <pubDate>Fri, 25 Sep 2026 12:02:03 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609241009</sparkle:version>
-            <sparkle:shortVersionString>1.2.15</sparkle:shortVersionString>
+            <sparkle:version>202609251154</sparkle:version>
+            <sparkle:shortVersionString>1.2.16</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### For organisation-managed Macs
+            <description sparkle:format="markdown"><![CDATA[### Prayers
 
-- Apps your organisation blocks are now blocked on this Mac, and their
-  websites too — blocking Discord also blocks discord.com.
-- Blocks your organisation schedules apply only during their set hours, and
-  start and stop right on time.
-- See what your organisation blocks: under Always Block and Custom Schedule
-  in Blocker, and in the active list on Home. Tap one to see every app and
-  website it covers.
-
-### Smaller fixes
-
-- "1 app" and "1 site" now read correctly.
-- The Habits icon for laptop-free time shows on macOS 14.
+- A Prayers tab: today's times under the sky of the current prayer, a
+  live countdown, and the times computed on your Mac from your location —
+  nothing is tracked.
+- The countdown follows Muslims Day exactly: Duha and the prohibited
+  windows around sunrise and noon count down as "Waqt ends in", in
+  HH:MM:SS.
+- The timeline's gradient advances with the clock toward the next prayer.
+- Set your city by search — tapping a result applies it immediately — or
+  use Detect my location.
+- A desktop prayer widget (small and medium) shows the countdown and
+  today's times.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.15/KahfGuard_v1.2.15_202609241009.dmg" length="31828266" type="application/octet-stream" sparkle:edSignature="QhxoZU6Mg8DCfoBKjGb9rChTWQ2/5fPQ1bHJZom5uD9qoHPMdWC31Xp5m1Bqe/kU0R/DkYFc8Q1FJwB3PnSkBg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.16/KahfGuard_v1.2.16_202609251154.dmg" length="36844603" type="application/octet-stream" sparkle:edSignature="kCd5FMBnw9015k6OC1j+ImbWeOsWwVPuXMaml6REfTqDG8sUF/DSyZ+AbbNX8S6I3eDv5iqe8D3SXsB61bmrBw=="/>
         </item>
     </channel>
 </rss>
