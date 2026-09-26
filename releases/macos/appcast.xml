@@ -4,9 +4,9 @@
         <title>Kahf Guard</title>
         <item>
             <title>1.2.17</title>
-            <pubDate>Sat, 26 Sep 2026 10:36:11 +0600</pubDate>
+            <pubDate>Sat, 26 Sep 2026 13:16:22 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609261030</sparkle:version>
+            <sparkle:version>202609261310</sparkle:version>
             <sparkle:shortVersionString>1.2.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[### Prayers
@@ -32,7 +32,7 @@
 - Screen-time reports no longer count the time the Mac spends at the
   login window.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.17/KahfGuard_v1.2.17_202609261030.dmg" length="37845258" type="application/octet-stream" sparkle:edSignature="GJ3b8DBdVzGdlTN7Q0letvMBM+rmM9gag1KpWhnur19JIc3SiYuKbsjtEpnztq/JtoUw//OelYuL8VE0qi7xDg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.17/KahfGuard_v1.2.17_202609261310.dmg" length="37856858" type="application/octet-stream" sparkle:edSignature="4T7mC+iwiy2yFO62ByyX7R4LewQETokakEnKgFlyxsY5cH5rJuIRPz7ii6uX0mJ+ZQE9gXE9PaiAuOH35SIhCg=="/>
         </item>
     </channel>
 </rss>
