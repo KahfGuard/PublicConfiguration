@@ -3,27 +3,36 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.16</title>
-            <pubDate>Fri, 25 Sep 2026 12:02:03 +0600</pubDate>
+            <title>1.2.17</title>
+            <pubDate>Sat, 26 Sep 2026 10:36:11 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609251154</sparkle:version>
-            <sparkle:shortVersionString>1.2.16</sparkle:shortVersionString>
+            <sparkle:version>202609261030</sparkle:version>
+            <sparkle:shortVersionString>1.2.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[### Prayers
 
-- A Prayers tab: today's times under the sky of the current prayer, a
-  live countdown, and the times computed on your Mac from your location —
-  nothing is tracked.
-- The countdown follows Muslims Day exactly: Duha and the prohibited
-  windows around sunrise and noon count down as "Waqt ends in", in
-  HH:MM:SS.
-- The timeline's gradient advances with the clock toward the next prayer.
-- Set your city by search — tapping a result applies it immediately — or
-  use Detect my location.
-- A desktop prayer widget (small and medium) shows the countdown and
-  today's times.
+- Prayer-time notifications with the adhan of Makkah or Madinah. The first
+  time you set your city, a single question asks which prayers should
+  call you — the five fard prayers come pre-selected — and which sound:
+  Adhan Makkah, Adhan Madinah, beep, system or silent. Fine-tune any of
+  it, per prayer, in Prayer Settings.
+- A brighter prayer sky, the countdown and the next prayer side by side,
+  and a timeline whose gradient advances with the clock.
+
+### Kahf Guard Premium
+
+- Protection is now part of Kahf Guard Premium in personal mode: app and
+  website blocking, the Shorts/Reels and risky-word guards, time limits,
+  schedules and templates, and uninstall protection. A subscription
+  sheet explains everything the moment you reach for one of them.
+- Safe Internet, Habits, Prayers and today's analytics stay free.
+
+### Fixes
+
+- Screen-time reports no longer count the time the Mac spends at the
+  login window.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.16/KahfGuard_v1.2.16_202609251154.dmg" length="36844603" type="application/octet-stream" sparkle:edSignature="kCd5FMBnw9015k6OC1j+ImbWeOsWwVPuXMaml6REfTqDG8sUF/DSyZ+AbbNX8S6I3eDv5iqe8D3SXsB61bmrBw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.17/KahfGuard_v1.2.17_202609261030.dmg" length="37845258" type="application/octet-stream" sparkle:edSignature="GJ3b8DBdVzGdlTN7Q0letvMBM+rmM9gag1KpWhnur19JIc3SiYuKbsjtEpnztq/JtoUw//OelYuL8VE0qi7xDg=="/>
         </item>
     </channel>
 </rss>
