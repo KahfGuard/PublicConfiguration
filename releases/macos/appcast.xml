@@ -3,36 +3,39 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.17</title>
-            <pubDate>Sat, 26 Sep 2026 13:16:22 +0600</pubDate>
+            <title>1.2.18</title>
+            <pubDate>Sun, 27 Sep 2026 13:32:57 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609261310</sparkle:version>
-            <sparkle:shortVersionString>1.2.17</sparkle:shortVersionString>
+            <sparkle:version>202609271326</sparkle:version>
+            <sparkle:shortVersionString>1.2.18</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[### Prayers
 
-- Prayer-time notifications with the adhan of Makkah or Madinah. The first
-  time you set your city, a single question asks which prayers should
-  call you — the five fard prayers come pre-selected — and which sound:
-  Adhan Makkah, Adhan Madinah, beep, system or silent. Fine-tune any of
-  it, per prayer, in Prayer Settings.
-- A brighter prayer sky, the countdown and the next prayer side by side,
-  and a timeline whose gradient advances with the clock.
+- Upgraded with a city already set? The one-time notification chooser now
+  appears at launch instead of never — pick which prayers should call you
+  and which sound, exactly as a fresh install does.
+- Prayer Settings › Notifications gains "Send test notification": a Dhuhr
+  reminder five seconds out, with your Dhuhr sound, so a silent Mac can be
+  diagnosed in one press.
+- The Tahajjud offset now reads as it works — "20 min before Fajr" instead
+  of a bare negative number — and the −/+ steppers respond to taps that
+  land on the glyph's edge, not only its centre.
 
-### Kahf Guard Premium
+### Risky Words
 
-- Protection is now part of Kahf Guard Premium in personal mode: app and
-  website blocking, the Shorts/Reels and risky-word guards, time limits,
-  schedules and templates, and uninstall protection. A subscription
-  sheet explains everything the moment you reach for one of them.
-- Safe Internet, Habits, Prayers and today's analytics stay free.
+- The built-in list grew from 21 to 649 words across English, Arabic and
+  Bengali — explicit terms, slurs and abuse, in Bangla script and
+  romanized. Words whose innocent reading is ordinary content (animal
+  names, anatomy, crime-report and religious-text vocabulary) are left
+  out, so news, health and tafsir pages stay reachable; the insult
+  phrases carry them instead.
 
-### Fixes
+### Fleet
 
-- Screen-time reports no longer count the time the Mac spends at the
-  login window.
+- Organisation sign-in now talks to the production fleet. The question
+  about pointing the Mac at a development server is gone.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.17/KahfGuard_v1.2.17_202609261310.dmg" length="37856858" type="application/octet-stream" sparkle:edSignature="4T7mC+iwiy2yFO62ByyX7R4LewQETokakEnKgFlyxsY5cH5rJuIRPz7ii6uX0mJ+ZQE9gXE9PaiAuOH35SIhCg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.18/KahfGuard_v1.2.18_202609271326.dmg" length="36988438" type="application/octet-stream" sparkle:edSignature="ROKnjO7/B9gGP02wpR4HVicZf6na60ORlmds/a+aMitYVmdeWCXQjNtVE0M2O6sDWPUak4tOulWiN9Si5E9UBw=="/>
         </item>
     </channel>
 </rss>
