@@ -3,20 +3,24 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.19</title>
-            <pubDate>Sun, 27 Sep 2026 15:06:25 +0600</pubDate>
+            <title>1.2.20</title>
+            <pubDate>Sun, 27 Sep 2026 21:52:55 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609271500</sparkle:version>
-            <sparkle:shortVersionString>1.2.19</sparkle:shortVersionString>
+            <sparkle:version>202609272147</sparkle:version>
+            <sparkle:shortVersionString>1.2.20</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Updates
+            <description sparkle:format="markdown"><![CDATA[### Prayers
 
-- Installing an update on an organisation-managed Mac no longer starts the
-  five-minute emergency-quit countdown. Kahf Guard now recognises the
-  updater's own request to quit and steps aside for it, however long the
-  install takes to get there.
+- Adhan reminders play again. The notification sounds were missing from
+  1.2.19, and the full adhan now plays from the app itself, since macOS cuts
+  notification sounds off after about five seconds.
+- Clearer adhan recordings for Makkah and Madinah.
+- Fixed notifications for the coming week sometimes being deleted right
+  after they were scheduled.
+- The Today timeline now fills from midnight to Fajr and from Isha to
+  midnight, so the line always shows where the day is.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.19/KahfGuard_v1.2.19_202609271500.dmg" length="36992670" type="application/octet-stream" sparkle:edSignature="NmLOAyM+5dPht3BN/WYQErK8QRd7QG0Ycyr8d9xU1CU82144N134No318gzx039jc3N7FEl9KpQag/RgBbqEBA=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.20/KahfGuard_v1.2.20_202609272147.dmg" length="40546676" type="application/octet-stream" sparkle:edSignature="e9pGjMce3ltFOt6a3KicOXbS/eikWCiCMHCkZB0mAly/TOSzFumoVQKSY9vIjz8DsS7yII6dlhlSWJnyYRW6Bg=="/>
         </item>
     </channel>
 </rss>
