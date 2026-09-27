@@ -3,39 +3,20 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.18</title>
-            <pubDate>Sun, 27 Sep 2026 13:32:57 +0600</pubDate>
+            <title>1.2.19</title>
+            <pubDate>Sun, 27 Sep 2026 15:06:25 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609271326</sparkle:version>
-            <sparkle:shortVersionString>1.2.18</sparkle:shortVersionString>
+            <sparkle:version>202609271500</sparkle:version>
+            <sparkle:shortVersionString>1.2.19</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Prayers
+            <description sparkle:format="markdown"><![CDATA[### Updates
 
-- Upgraded with a city already set? The one-time notification chooser now
-  appears at launch instead of never — pick which prayers should call you
-  and which sound, exactly as a fresh install does.
-- Prayer Settings › Notifications gains "Send test notification": a Dhuhr
-  reminder five seconds out, with your Dhuhr sound, so a silent Mac can be
-  diagnosed in one press.
-- The Tahajjud offset now reads as it works — "20 min before Fajr" instead
-  of a bare negative number — and the −/+ steppers respond to taps that
-  land on the glyph's edge, not only its centre.
-
-### Risky Words
-
-- The built-in list grew from 21 to 649 words across English, Arabic and
-  Bengali — explicit terms, slurs and abuse, in Bangla script and
-  romanized. Words whose innocent reading is ordinary content (animal
-  names, anatomy, crime-report and religious-text vocabulary) are left
-  out, so news, health and tafsir pages stay reachable; the insult
-  phrases carry them instead.
-
-### Fleet
-
-- Organisation sign-in now talks to the production fleet. The question
-  about pointing the Mac at a development server is gone.
+- Installing an update on an organisation-managed Mac no longer starts the
+  five-minute emergency-quit countdown. Kahf Guard now recognises the
+  updater's own request to quit and steps aside for it, however long the
+  install takes to get there.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.18/KahfGuard_v1.2.18_202609271326.dmg" length="36988438" type="application/octet-stream" sparkle:edSignature="ROKnjO7/B9gGP02wpR4HVicZf6na60ORlmds/a+aMitYVmdeWCXQjNtVE0M2O6sDWPUak4tOulWiN9Si5E9UBw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.19/KahfGuard_v1.2.19_202609271500.dmg" length="36992670" type="application/octet-stream" sparkle:edSignature="NmLOAyM+5dPht3BN/WYQErK8QRd7QG0Ycyr8d9xU1CU82144N134No318gzx039jc3N7FEl9KpQag/RgBbqEBA=="/>
         </item>
     </channel>
 </rss>
