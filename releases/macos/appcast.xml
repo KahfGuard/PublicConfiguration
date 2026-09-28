@@ -3,24 +3,25 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.20</title>
-            <pubDate>Sun, 27 Sep 2026 21:52:55 +0600</pubDate>
+            <title>1.2.21</title>
+            <pubDate>Mon, 28 Sep 2026 11:42:41 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609272147</sparkle:version>
-            <sparkle:shortVersionString>1.2.20</sparkle:shortVersionString>
+            <sparkle:version>202609281136</sparkle:version>
+            <sparkle:shortVersionString>1.2.21</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Prayers
+            <description sparkle:format="markdown"><![CDATA[### Protection
 
-- Adhan reminders play again. The notification sounds were missing from
-  1.2.19, and the full adhan now plays from the app itself, since macOS cuts
-  notification sounds off after about five seconds.
-- Clearer adhan recordings for Makkah and Madinah.
-- Fixed notifications for the coming week sometimes being deleted right
-  after they were scheduled.
-- The Today timeline now fills from midnight to Fajr and from Isha to
-  midnight, so the line always shows where the day is.
+- New "VPN & Tor Block" on Home: blocks VPN and Tor apps and their
+  websites, and disconnects a VPN tunnel left running by a blocked app.
+  Organisation-managed Macs follow the console's VPN & Tor setting.
+
+### Managed Macs
+
+- App usage, website visits and block counts now report to your
+  organisation or family console, so its usage charts fill in for this Mac.
+- The macOS password prompt no longer counts as app usage.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.20/KahfGuard_v1.2.20_202609272147.dmg" length="40546676" type="application/octet-stream" sparkle:edSignature="e9pGjMce3ltFOt6a3KicOXbS/eikWCiCMHCkZB0mAly/TOSzFumoVQKSY9vIjz8DsS7yII6dlhlSWJnyYRW6Bg=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.21/KahfGuard_v1.2.21_202609281136.dmg" length="40616706" type="application/octet-stream" sparkle:edSignature="gS3UxA3ZGG3zqSoXC83wEd/iwdcMsJngPIoB1V/wF/pQ+XD17eqFZ42e36ZvzjdvCKNWbVdplkppxtzv7R7RAw=="/>
         </item>
     </channel>
 </rss>
