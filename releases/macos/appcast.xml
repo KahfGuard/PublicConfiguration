@@ -3,29 +3,24 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.23</title>
-            <pubDate>Tue, 29 Sep 2026 12:03:15 +0600</pubDate>
+            <title>1.2.24</title>
+            <pubDate>Tue, 29 Sep 2026 13:22:02 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609291157</sparkle:version>
-            <sparkle:shortVersionString>1.2.23</sparkle:shortVersionString>
+            <sparkle:version>202609291316</sparkle:version>
+            <sparkle:shortVersionString>1.2.24</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Devices
+            <description sparkle:format="markdown"><![CDATA[### Prayers
 
-- Hitting your account's device limit no longer signs you out. A list of
-  your other devices appears; remove one right there to continue on this
-  Mac, or log out instead.
-- A Mac removed from your account registers itself again when there is
-  room, so notifications keep arriving.
-- Fixed notifications and remote settings failing to load.
+- Fixed prayer reminders not sounding the adhan at the scheduled time,
+  including reminders set to fire after the prayer starts and after the
+  Mac wakes from sleep.
 
-### Home & Guards
+### Blocker
 
-- Softer card glow in light mode.
-- VPN & Tor Block has its own background art.
-- Risky Words: the add button is easier to see and needs at least 3
-  letters.
+- You can now turn on Strict Mode for an Instant Block session that is
+  already running.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.23/KahfGuard_v1.2.23_202609291157.dmg" length="41389884" type="application/octet-stream" sparkle:edSignature="sAiMQDdyLSz4YSQ6rVDEEdVXqOm11Um7VhwANU57GJ59cSc3DwxCeZvdQbSXFAKxX344tDdNRLxKVMC4oE6CBQ=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.24/KahfGuard_v1.2.24_202609291316.dmg" length="41396296" type="application/octet-stream" sparkle:edSignature="wLsWK+W6xsdnvq+HzyLPYBz2l4HdNVT6dr1QjlJsN/Xxbr+VdaWcopG56rcuxoR9GN77e0UEnzWt/9DXdX1FAQ=="/>
         </item>
     </channel>
 </rss>
