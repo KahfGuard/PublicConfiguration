@@ -3,25 +3,21 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.21</title>
-            <pubDate>Mon, 28 Sep 2026 11:42:41 +0600</pubDate>
+            <title>1.2.22</title>
+            <pubDate>Tue, 29 Sep 2026 10:37:18 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609281136</sparkle:version>
-            <sparkle:shortVersionString>1.2.21</sparkle:shortVersionString>
+            <sparkle:version>202609291031</sparkle:version>
+            <sparkle:shortVersionString>1.2.22</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Protection
+            <description sparkle:format="markdown"><![CDATA[### Parental Controls
 
-- New "VPN & Tor Block" on Home: blocks VPN and Tor apps and their
-  websites, and disconnects a VPN tunnel left running by a blocked app.
-  Organisation-managed Macs follow the console's VPN & Tor setting.
-
-### Managed Macs
-
-- App usage, website visits and block counts now report to your
-  organisation or family console, so its usage charts fill in for this Mac.
-- The macOS password prompt no longer counts as app usage.
+- Blocking an app is now one sheet: pick Quick, Always or Schedule on the
+  left and the app on the right. Scheduling no longer takes three sheets.
+- Screen time limits use the same two-pane sheet for adding and editing.
+- Refreshed Emergency Code, Device Details and Websites screens to match
+  the rest of the app, with a close button on every card.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.21/KahfGuard_v1.2.21_202609281136.dmg" length="40616706" type="application/octet-stream" sparkle:edSignature="gS3UxA3ZGG3zqSoXC83wEd/iwdcMsJngPIoB1V/wF/pQ+XD17eqFZ42e36ZvzjdvCKNWbVdplkppxtzv7R7RAw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.22/KahfGuard_v1.2.22_202609291031.dmg" length="40481268" type="application/octet-stream" sparkle:edSignature="GZ7l8g92l/s5VNaBXox+C2LOMLBJgQiwlrJeOe9FNWHsXyCqdjBHgVbw2AGW+6zDGpqM32lcOfeLTV39OVkmAw=="/>
         </item>
     </channel>
 </rss>
