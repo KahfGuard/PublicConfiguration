@@ -3,21 +3,29 @@
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.22</title>
-            <pubDate>Tue, 29 Sep 2026 10:37:18 +0600</pubDate>
+            <title>1.2.23</title>
+            <pubDate>Tue, 29 Sep 2026 12:03:15 +0600</pubDate>
             <sparkle:criticalUpdate/>
-            <sparkle:version>202609291031</sparkle:version>
-            <sparkle:shortVersionString>1.2.22</sparkle:shortVersionString>
+            <sparkle:version>202609291157</sparkle:version>
+            <sparkle:shortVersionString>1.2.23</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Parental Controls
+            <description sparkle:format="markdown"><![CDATA[### Devices
 
-- Blocking an app is now one sheet: pick Quick, Always or Schedule on the
-  left and the app on the right. Scheduling no longer takes three sheets.
-- Screen time limits use the same two-pane sheet for adding and editing.
-- Refreshed Emergency Code, Device Details and Websites screens to match
-  the rest of the app, with a close button on every card.
+- Hitting your account's device limit no longer signs you out. A list of
+  your other devices appears; remove one right there to continue on this
+  Mac, or log out instead.
+- A Mac removed from your account registers itself again when there is
+  room, so notifications keep arriving.
+- Fixed notifications and remote settings failing to load.
+
+### Home & Guards
+
+- Softer card glow in light mode.
+- VPN & Tor Block has its own background art.
+- Risky Words: the add button is easier to see and needs at least 3
+  letters.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.22/KahfGuard_v1.2.22_202609291031.dmg" length="40481268" type="application/octet-stream" sparkle:edSignature="GZ7l8g92l/s5VNaBXox+C2LOMLBJgQiwlrJeOe9FNWHsXyCqdjBHgVbw2AGW+6zDGpqM32lcOfeLTV39OVkmAw=="/>
+            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.23/KahfGuard_v1.2.23_202609291157.dmg" length="41389884" type="application/octet-stream" sparkle:edSignature="sAiMQDdyLSz4YSQ6rVDEEdVXqOm11Um7VhwANU57GJ59cSc3DwxCeZvdQbSXFAKxX344tDdNRLxKVMC4oE6CBQ=="/>
         </item>
     </channel>
 </rss>
