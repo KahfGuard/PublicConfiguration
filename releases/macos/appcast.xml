@@ -31,10 +31,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 - Updates are now delivered from Kahf servers.
 ]]></description>
-            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.25_202609300832.dmg" length="41398533" type="application/octet-stream" sparkle:edSignature="hxjyh7bNCVped1JWCXjxeoZVDljCa/ObclragfgvvkJ69d+VgauBo7be0L/j+8W6EhGP0mOzVm5HCW1x42H1DA=="></enclosure>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.25_202609300832.dmg?r=1" length="41398533" type="application/octet-stream" sparkle:edSignature="hxjyh7bNCVped1JWCXjxeoZVDljCa/ObclragfgvvkJ69d+VgauBo7be0L/j+8W6EhGP0mOzVm5HCW1x42H1DA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 6JKw4n5aD3IkchFhbSWynvO9jO2xUF5ctNJFNLPfLw9qZRosiy+CitwdBaiu2xHLrnxp4Q95Fz99JiNdV4CjAw==
-length: 1666
+edSignature: cNlYmzl2j685zfJ2SMVKA4Z9UjqimjlVOu4Uc8JhZsyIBEG7+1/0KfW+iMYXJB63F9aEAbN7wPsO/VeHnZR0Dg==
+length: 1670
 -->
