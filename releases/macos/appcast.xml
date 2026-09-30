@@ -4,37 +4,48 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.25</title>
-            <pubDate>Wed, 30 Sep 2026 08:37:55 +0600</pubDate>
+            <title>1.2.26</title>
+            <pubDate>Wed, 30 Sep 2026 19:50:47 +0600</pubDate>
             <sparkle:criticalUpdate></sparkle:criticalUpdate>
-            <sparkle:version>202609300832</sparkle:version>
-            <sparkle:shortVersionString>1.2.25</sparkle:shortVersionString>
+            <sparkle:version>202609301944</sparkle:version>
+            <sparkle:shortVersionString>1.2.26</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Schedules
+            <description sparkle:format="markdown"><![CDATA[### Organisation Policy
 
-- Fixed scheduled blocks that stayed on after their end time instead of
-  lifting.
+- Screen-time limits set in the console are now enforced: the app is blocked
+  once its daily budget is used, and a countdown shows while it is in front.
+- Mindful Pause apps set in the console now pause before they open, with the
+  console's breath length and delay before pausing again.
+- The Blocker and Mindful Pause screens list what your organisation has set.
+
+### Mindful Pause
+
+- The breathing screen now covers only the app's window, so it appears on the
+  right display when you use more than one.
+- The buttons are no wider than other buttons in the app.
 
 ### Website Blocker
 
-- Typing in Chrome's address bar no longer blocks a site that autocomplete
-  suggests before you press Enter.
-- The block page now shows the right site when two blocks happen back to
-  back.
+- The block page names the right app when two apps are blocked back to back.
 
-### Uninstall Protection
+### Prayers
 
-- The emergency code screen now has a close button and matches the PIN
-  screen.
+- Signing out now clears your prayer location, so the notification prompt no
+  longer appears over onboarding when you sign back in.
+
+### Onboarding
+
+- The "How To Activate" screen has a centred title and a fixed header, with
+  only the steps scrolling.
 
 ### Updates
 
-- Updates are now delivered from Kahf servers.
+- Update information is now verified before it is trusted.
 ]]></description>
-            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.25_202609300832.dmg?r=1" length="41398533" type="application/octet-stream" sparkle:edSignature="hxjyh7bNCVped1JWCXjxeoZVDljCa/ObclragfgvvkJ69d+VgauBo7be0L/j+8W6EhGP0mOzVm5HCW1x42H1DA=="></enclosure>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.26_202609301944.dmg" length="41472027" type="application/octet-stream" sparkle:edSignature="fRL217cxyiS0Rfk53TIPFewkqvv9C+g9ISr0q7KPZ1bmCGgA1XPKmk88u7fzdqQchoaNzMxp+Y+IKVocRgrbBg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: cNlYmzl2j685zfJ2SMVKA4Z9UjqimjlVOu4Uc8JhZsyIBEG7+1/0KfW+iMYXJB63F9aEAbN7wPsO/VeHnZR0Dg==
-length: 1670
+edSignature: 6lASMwRDSQUMYwQ5R3qksjT3PtciDj0DgBuus0uCgNwy1r/EtbQ6sc1b5YyVSaR3kn3hm5Kid+3/3Hse44blBQ==
+length: 2217
 -->
