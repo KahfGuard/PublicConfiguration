@@ -1,26 +1,40 @@
-<?xml version="1.0" standalone="yes"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.24</title>
-            <pubDate>Tue, 29 Sep 2026 13:22:02 +0600</pubDate>
-            <sparkle:criticalUpdate/>
-            <sparkle:version>202609291316</sparkle:version>
-            <sparkle:shortVersionString>1.2.24</sparkle:shortVersionString>
+            <title>1.2.25</title>
+            <pubDate>Wed, 30 Sep 2026 08:37:55 +0600</pubDate>
+            <sparkle:criticalUpdate></sparkle:criticalUpdate>
+            <sparkle:version>202609300832</sparkle:version>
+            <sparkle:shortVersionString>1.2.25</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Prayers
+            <description sparkle:format="markdown"><![CDATA[### Schedules
 
-- Fixed prayer reminders not sounding the adhan at the scheduled time,
-  including reminders set to fire after the prayer starts and after the
-  Mac wakes from sleep.
+- Fixed scheduled blocks that stayed on after their end time instead of
+  lifting.
 
-### Blocker
+### Website Blocker
 
-- You can now turn on Strict Mode for an Instant Block session that is
-  already running.
+- Typing in Chrome's address bar no longer blocks a site that autocomplete
+  suggests before you press Enter.
+- The block page now shows the right site when two blocks happen back to
+  back.
+
+### Uninstall Protection
+
+- The emergency code screen now has a close button and matches the PIN
+  screen.
+
+### Updates
+
+- Updates are now delivered from Kahf servers.
 ]]></description>
-            <enclosure url="https://github.com/KahfGuard/PublicConfiguration/releases/download/mac-v1.2.24/KahfGuard_v1.2.24_202609291316.dmg" length="41396296" type="application/octet-stream" sparkle:edSignature="wLsWK+W6xsdnvq+HzyLPYBz2l4HdNVT6dr1QjlJsN/Xxbr+VdaWcopG56rcuxoR9GN77e0UEnzWt/9DXdX1FAQ=="/>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.25_202609300832.dmg" length="41398533" type="application/octet-stream" sparkle:edSignature="hxjyh7bNCVped1JWCXjxeoZVDljCa/ObclragfgvvkJ69d+VgauBo7be0L/j+8W6EhGP0mOzVm5HCW1x42H1DA=="></enclosure>
         </item>
     </channel>
-</rss>
+</rss><!-- sparkle-signatures:
+edSignature: 6JKw4n5aD3IkchFhbSWynvO9jO2xUF5ctNJFNLPfLw9qZRosiy+CitwdBaiu2xHLrnxp4Q95Fz99JiNdV4CjAw==
+length: 1666
+-->
