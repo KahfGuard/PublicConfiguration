@@ -4,48 +4,31 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.26</title>
-            <pubDate>Wed, 30 Sep 2026 19:50:47 +0600</pubDate>
+            <title>1.2.27</title>
+            <pubDate>Thu, 01 Oct 2026 18:37:24 +0600</pubDate>
             <sparkle:criticalUpdate></sparkle:criticalUpdate>
-            <sparkle:version>202609301944</sparkle:version>
-            <sparkle:shortVersionString>1.2.26</sparkle:shortVersionString>
+            <sparkle:version>202610011831</sparkle:version>
+            <sparkle:shortVersionString>1.2.27</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Organisation Policy
+            <description sparkle:format="markdown"><![CDATA[### Safe Internet
 
-- Screen-time limits set in the console are now enforced: the app is blocked
-  once its daily budget is used, and a countdown shows while it is in front.
-- Mindful Pause apps set in the console now pause before they open, with the
-  console's breath length and delay before pausing again.
-- The Blocker and Mindful Pause screens list what your organisation has set.
-
-### Mindful Pause
-
-- The breathing screen now covers only the app's window, so it appears on the
-  right display when you use more than one.
-- The buttons are no wider than other buttons in the app.
-
-### Website Blocker
-
-- The block page names the right app when two apps are blocked back to back.
-
-### Prayers
-
-- Signing out now clears your prayer location, so the notification prompt no
-  longer appears over onboarding when you sign back in.
-
-### Onboarding
-
-- The "How To Activate" screen has a centred title and a fixed header, with
-  only the steps scrolling.
-
-### Updates
-
-- Update information is now verified before it is trusted.
+- Wi-Fi with a sign-in page (hotels, airports, cafés) now works: Safe Internet
+  steps aside so the sign-in page can load, and comes back on its own once you
+  are online.
+- If Kahf's filter cannot be reached but the internet works, your Mac switches
+  to Cloudflare's family filter, so you stay online and adult and malware sites
+  stay blocked. It returns to Kahf automatically.
+- Home and the menu bar show "Paused" while this is happening, and the menu bar
+  has a Retry button.
+- On a Mac where changing the filter is locked (by your organisation or by
+  you), the network's own unfiltered DNS is used for at most 30 minutes a day.
+  After that it uses Cloudflare's family filter if it can; otherwise the
+  internet stays off until Kahf can be reached, and Home says so.
 ]]></description>
-            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.26_202609301944.dmg" length="41472027" type="application/octet-stream" sparkle:edSignature="fRL217cxyiS0Rfk53TIPFewkqvv9C+g9ISr0q7KPZ1bmCGgA1XPKmk88u7fzdqQchoaNzMxp+Y+IKVocRgrbBg=="></enclosure>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.27_202610011831.dmg" length="41524272" type="application/octet-stream" sparkle:edSignature="UUGbbzTp8Q+hkNO2knYvhGDY9PBQA8KT5SZnJ+52Po+LlD/FGIfU7fKqAv/yzDvhyuoY15FtF5VtZcxfHG5kDw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 6lASMwRDSQUMYwQ5R3qksjT3PtciDj0DgBuus0uCgNwy1r/EtbQ6sc1b5YyVSaR3kn3hm5Kid+3/3Hse44blBQ==
-length: 2217
+edSignature: Mc/5iQjeplBXgvUZL0pxZe1TEvnFuJR6oGYMMmqwpIvSyF0428XtYSyUliJXAYmgug3okvj9Za24J5ZHg4ZhBw==
+length: 1982
 -->
