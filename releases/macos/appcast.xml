@@ -4,26 +4,40 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.28</title>
-            <pubDate>Fri, 02 Oct 2026 09:37:04 +0600</pubDate>
+            <title>1.2.29</title>
+            <pubDate>Sat, 03 Oct 2026 12:49:40 +0600</pubDate>
             <sparkle:criticalUpdate></sparkle:criticalUpdate>
-            <sparkle:version>202610020931</sparkle:version>
-            <sparkle:shortVersionString>1.2.28</sparkle:shortVersionString>
+            <sparkle:version>202610031244</sparkle:version>
+            <sparkle:shortVersionString>1.2.29</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Risky words
+            <description sparkle:format="markdown"><![CDATA[### Family: protect your child's Mac
 
-- Two new switches under Block risky words: **Block high risk words** (on by
-  default) and **Block medium risk words** (off by default). Medium adds
-  profanity and words that can also have an innocent meaning.
-- Much larger built-in word lists in English, Bangla, romanised Bangla and
-  Arabic, the same lists your organisation's console uses.
-- On a managed Mac, the organisation's choice of lists applies. You can switch
-  on an extra list, but not turn off one your organisation set.
+- Pair a child's Mac with your Kahf ID using a pairing code. The child's
+  settings come from you, and the child can't change them on their own.
+- **Parent mode:** at the child's Mac, enter your lock PIN to unlock its
+  settings for 15 minutes. Changes are saved to your account and show on
+  your phone too.
+- The child can still open every card to see what's on; changing anything
+  asks for the lock PIN.
+- Uninstall protection follows your choice, and you can switch it from the
+  child's Mac in parent mode.
+
+### Organisations
+
+- When your organisation turns off uninstall protection, you can disable it
+  right away, with no 24-hour wait.
+- A Mac managed by an organisation no longer has Sign Out. When the
+  organisation removes it, it resets itself to a fresh install.
+
+### Mindful Pause
+
+- No more introduction screens: it opens straight to your apps, with a short
+  "How it works" card the first time.
 ]]></description>
-            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.28_202610020931.dmg" length="41540577" type="application/octet-stream" sparkle:edSignature="UCFI5UfN7UNYr7A8kw1jA4p6VaAqVQAA0zy4soO0gdkEWsDvzjfOfw0/1R9CPHjZMGBdgl1V2FzGYdakZXY8Dg=="></enclosure>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.29_202610031244.dmg" length="38598431" type="application/octet-stream" sparkle:edSignature="oOVNYsWMsPdhW67X6ZOoUhU2pyyVnm8B3xtsSqgDzz5mGbdph/Zzi2O5RbOddqt8PXDHTWAnov/nz/EvWXrnCw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: vFK8kT5D8F0cX5Ec+I7HffOkkQpi8Al1LePRVg+I23xdOuko2uYhuEfldFUCoN0Mphs+IbYvH+65eY51MxooDw==
-length: 1692
+edSignature: 8aKks2XPVfZhMIGG/C8N+msI5NjYiwGKxkZUtdkPnvCWc2kl92ODGPCQAOcS7AeYmLINQdKVGTEUM4sLCnmeCA==
+length: 2136
 -->
