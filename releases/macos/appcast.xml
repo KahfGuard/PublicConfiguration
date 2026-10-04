@@ -4,40 +4,38 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.29</title>
-            <pubDate>Sat, 03 Oct 2026 12:49:40 +0600</pubDate>
+            <title>1.2.30</title>
+            <pubDate>Sun, 04 Oct 2026 13:44:54 +0600</pubDate>
             <sparkle:criticalUpdate></sparkle:criticalUpdate>
-            <sparkle:version>202610031244</sparkle:version>
-            <sparkle:shortVersionString>1.2.29</sparkle:shortVersionString>
+            <sparkle:version>202610041339</sparkle:version>
+            <sparkle:shortVersionString>1.2.30</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Family: protect your child's Mac
+            <description sparkle:format="markdown"><![CDATA[### Websites: "Allow only these sites"
 
-- Pair a child's Mac with your Kahf ID using a pairing code. The child's
-  settings come from you, and the child can't change them on their own.
-- **Parent mode:** at the child's Mac, enter your lock PIN to unlock its
-  settings for 15 minutes. Changes are saved to your account and show on
-  your phone too.
-- The child can still open every card to see what's on; changing anything
-  asks for the lock PIN.
-- Uninstall protection follows your choice, and you can switch it from the
-  child's Mac in parent mode.
+- Block lists have a new mode: allow only the websites you list, and block
+  every other site in your browsers. Apps on the list stay blocked.
+- Organisations and parents can now set "Allow only these sites" for a Mac
+  too, and the Blocker shows which sites are allowed.
+- A site your organisation blocks can no longer be reopened by an exception
+  on one of your own lists.
 
 ### Organisations
 
-- When your organisation turns off uninstall protection, you can disable it
-  right away, with no 24-hour wait.
-- A Mac managed by an organisation no longer has Sign Out. When the
-  organisation removes it, it resets itself to a fresh install.
+- A Mac managed by an organisation is covered by the organisation's plan:
+  no more "Get PRO" on its protection cards, and every card works.
 
-### Mindful Pause
+### Also in this update
 
-- No more introduction screens: it opens straight to your apps, with a short
-  "How it works" card the first time.
+- A redesigned upgrade screen that leads with the free trial.
+- Risky Words uses the reviewed word lists, and hides its count when off.
+- Parent-mode edits on a child's Mac to Mindful Pause and guards now match
+  what the parent's phone shows.
+- More of the app is translated into all 11 languages.
 ]]></description>
-            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.29_202610031244.dmg" length="38598431" type="application/octet-stream" sparkle:edSignature="oOVNYsWMsPdhW67X6ZOoUhU2pyyVnm8B3xtsSqgDzz5mGbdph/Zzi2O5RbOddqt8PXDHTWAnov/nz/EvWXrnCw=="></enclosure>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.30_202610041339.dmg" length="38684974" type="application/octet-stream" sparkle:edSignature="npr0AuBKrjRFyfr7Nvi3eFEbffsGjuzwwUAo3rwTwunEBtQsbTpwXhxV8hRzN9yvQVoP2dixWcDARpbREDgRAA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 8aKks2XPVfZhMIGG/C8N+msI5NjYiwGKxkZUtdkPnvCWc2kl92ODGPCQAOcS7AeYmLINQdKVGTEUM4sLCnmeCA==
-length: 2136
+edSignature: PeRMlvnBcal6IVGDAeJ1h2qQQdmLBlZp0VL98002Uu3RILph2nG50XI5XXuEKdL+DrbJUe0+sglupB7TLFWNBQ==
+length: 2088
 -->
