@@ -4,38 +4,32 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Kahf Guard</title>
         <item>
-            <title>1.2.30</title>
-            <pubDate>Sun, 04 Oct 2026 13:44:54 +0600</pubDate>
+            <title>1.2.31</title>
+            <pubDate>Mon, 05 Oct 2026 17:24:03 +0600</pubDate>
             <sparkle:criticalUpdate></sparkle:criticalUpdate>
-            <sparkle:version>202610041339</sparkle:version>
-            <sparkle:shortVersionString>1.2.30</sparkle:shortVersionString>
+            <sparkle:version>202610051718</sparkle:version>
+            <sparkle:shortVersionString>1.2.31</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[### Websites: "Allow only these sites"
+            <description sparkle:format="markdown"><![CDATA[### VPN & Tor: browser extensions
 
-- Block lists have a new mode: allow only the websites you list, and block
-  every other site in your browsers. Apps on the list stay blocked.
-- Organisations and parents can now set "Allow only these sites" for a Mac
-  too, and the Blocker shows which sites are allowed.
-- A site your organisation blocks can no longer be reopened by an exception
-  on one of your own lists.
-
-### Organisations
-
-- A Mac managed by an organisation is covered by the organisation's plan:
-  no more "Get PRO" on its protection cards, and every card works.
+- With VPN & Tor blocking on, over 100 VPN and Tor browser extensions are
+  now recognised. Opening one closes it, and the browser shows a page asking
+  you to remove it, with a button that opens the extensions page.
+- In Chrome and similar browsers an extension is caught when it is opened; in
+  browsers whose files macOS lets Kahf Guard read, it is caught as soon as the
+  browser is in front.
+- More VPN apps are blocked, including Safari VPN apps from the App Store,
+  Touch VPN, nthLink, Ultrasurf, Shadowsocks, V2rayU and sing-box.
 
 ### Also in this update
 
-- A redesigned upgrade screen that leads with the free trial.
-- Risky Words uses the reviewed word lists, and hides its count when off.
-- Parent-mode edits on a child's Mac to Mindful Pause and guards now match
-  what the parent's phone shows.
-- More of the app is translated into all 11 languages.
+- The block page for a filtered Reels or Shorts screen offers "Back to" the
+  site instead of closing the tab.
 ]]></description>
-            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.30_202610041339.dmg" length="38684974" type="application/octet-stream" sparkle:edSignature="npr0AuBKrjRFyfr7Nvi3eFEbffsGjuzwwUAo3rwTwunEBtQsbTpwXhxV8hRzN9yvQVoP2dixWcDARpbREDgRAA=="></enclosure>
+            <enclosure url="https://s3.kahf.co/kahfguard/macos/KahfGuard_v1.2.31_202610051718.dmg" length="38688581" type="application/octet-stream" sparkle:edSignature="bebR8E51Mo0njfWvILLxHWT5LgGertoY+rQAZPAFNwXHqdkxNJmCE4K7k45Dy4wsO+5ZFTLoaFxtTIeovW4tCw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: PeRMlvnBcal6IVGDAeJ1h2qQQdmLBlZp0VL98002Uu3RILph2nG50XI5XXuEKdL+DrbJUe0+sglupB7TLFWNBQ==
-length: 2088
+edSignature: lHK4hwE+HMhUfKxam9IDpneygKJwiv7aC0aFW9iofOx74YkKWab0wZvvrKQDsOZAqXO0LwxcTrrHPAVRAS3iAQ==
+length: 1897
 -->
