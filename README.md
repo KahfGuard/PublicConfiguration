@@ -10,7 +10,7 @@ Public configuration files and assets for the KahfGuard DNS filtering system.
 - `block.txt` - Blocked IP addresses
 
 ### Router Configuration
-**`router-config/`** - Network router configurations
+Router scripts are no longer published here. The source of truth is the `dns-config` repository (`router/`); partners receive a static copy.
 
 ### Assets
 **`banner/`** - Visual assets and banners
