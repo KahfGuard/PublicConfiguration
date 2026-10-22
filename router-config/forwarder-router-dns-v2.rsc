@@ -9,8 +9,9 @@
 #  ----------------------------------------------------------------
 #  Plain DNS           53   TCP/UDP            NAT redirect -> forwarder
 #  DNS-over-TLS (DoT)  853  TCP                REJECT (except KAHF)
-#  DNS-over-QUIC (DoQ) 853  UDP                REJECT (except KAHF)
-#  QUIC/HTTP3          443  UDP                REJECT (except KAHF)
+#  DNS-over-QUIC (DoQ) 853  UDP                REJECT to known DoH_Providers only
+#  DoH3 (DoH over QUIC) 443 UDP                REJECT to known DoH_Providers only
+#                                              (other QUIC/HTTP3 is NOT blocked)
 #  DoH via HTTP/2      443  TCP                REJECT to known DoH IPs
 #  OpenVPN             1194 TCP/UDP            REJECT
 #  WireGuard/NordLynx  51820 UDP               REJECT
@@ -33,6 +34,11 @@
 #    over the healthy forwarders, survivor-only when one is down, and
 #    kahfHcFallbacks (srcnat-masqueraded) when all are down.
 #    Set kahfHealthcheck false for the old static range NAT.
+#  - DoQ (udp/853) and DoH3 (udp/443) are now rejected only towards the
+#    DoH_Providers address list, not towards every non-Kahf destination.
+#    Rejecting all UDP/443 also killed ordinary QUIC/HTTP3 (YouTube, Google,
+#    Meta, Cloudflare sites), forcing a TCP fallback and slowing browsing.
+#    DoT (tcp/853) and DoH over TCP (tcp/443 to DoH_Providers) are unchanged.
 #  - Everything else is unchanged from 2.1.
 #  ----------------------------------------------------------------
 #
@@ -630,10 +636,10 @@
         dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT" place-before=$ftRule
     /ip firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
+        dst-address-list=DoH_Providers action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject DoQ" place-before=$ftRule
     /ip firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
+        dst-address-list=DoH_Providers action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject QUIC/DoH3" place-before=$ftRule
     /ip firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
@@ -643,10 +649,10 @@
         dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT"
     /ip firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
+        dst-address-list=DoH_Providers action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject DoQ"
     /ip firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject reject-with=icmp-network-unreachable \
+        dst-address-list=DoH_Providers action=reject reject-with=icmp-network-unreachable \
         comment="KAHF-DNS: Reject QUIC/DoH3"
     /ip firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
@@ -667,10 +673,10 @@
         dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT v6" place-before=$ftRule6
     /ipv6 firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject \
+        dst-address-list=DoH_Providers action=reject \
         comment="KAHF-DNS: Reject DoQ v6" place-before=$ftRule6
     /ipv6 firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject \
+        dst-address-list=DoH_Providers action=reject \
         comment="KAHF-DNS: Reject QUIC/DoH3 v6" place-before=$ftRule6
     /ipv6 firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
@@ -680,10 +686,10 @@
         dst-address-list=$kahfNotSafe action=reject reject-with=tcp-reset \
         comment="KAHF-DNS: Reject DoT v6"
     /ipv6 firewall filter add chain=forward protocol=udp dst-port=853 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject \
+        dst-address-list=DoH_Providers action=reject \
         comment="KAHF-DNS: Reject DoQ v6"
     /ipv6 firewall filter add chain=forward protocol=udp dst-port=443 src-address-list=$kahfClientList \
-        dst-address-list=$kahfNotSafe action=reject \
+        dst-address-list=DoH_Providers action=reject \
         comment="KAHF-DNS: Reject QUIC/DoH3 v6"
     /ipv6 firewall filter add chain=forward protocol=tcp dst-port=443 src-address-list=$kahfClientList \
         dst-address-list=DoH_Providers action=reject reject-with=tcp-reset \
